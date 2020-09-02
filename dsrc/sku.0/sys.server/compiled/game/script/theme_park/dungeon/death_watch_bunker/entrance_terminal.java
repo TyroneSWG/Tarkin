@@ -68,7 +68,6 @@ public class entrance_terminal extends script.base_script
         {
             sendSystemMessage(player, ENTRANCE_DENIED);
         }
-        return;
     }
     public void unlockDoors(obj_id structure, obj_id player) throws InterruptedException
     {
@@ -80,7 +79,6 @@ public class entrance_terminal extends script.base_script
             info.put("player", player);
             info.put("room", openRoom);
             messageTo(openRoom, "addToList", info, 1, false);
-            return;
         }
         if (group.isGrouped(player))
         {
@@ -103,6 +101,5 @@ public class entrance_terminal extends script.base_script
                 }
             }
         }
-        return;
     }
 }

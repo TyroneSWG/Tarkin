@@ -184,8 +184,6 @@ void ServerBuildoutManager::onChunkComplete(int nodeX, int nodeZ)
 
 void ServerBuildoutManager::saveArea(std::string const &serverFileName, std::string const &clientFileName, float x1, float z1, float x2, float z2)
 {
-	FATAL(true, ("ServerBuildoutManager::saveArea\n"));
-
 	if (!ConfigServerGame::getBuildoutAreaEditingEnabled())
 	{
 		WARNING(true, ("Tried to save a buildout area with buildout area editing disabled?"));
