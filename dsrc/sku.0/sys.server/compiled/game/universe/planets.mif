@@ -51,5 +51,6 @@ FORM "PLTS"
 		Planet("space_npe_falcon_3")
 		Planet("adventure1")
 		Planet("adventure2")
+		Planet("taanab")
 	}
 }
