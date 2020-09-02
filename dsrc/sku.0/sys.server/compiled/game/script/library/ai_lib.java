@@ -192,6 +192,14 @@ public class ai_lib extends script.base_script
             doAnimationAction(npc, anim);
         }
     }
+    public static int spawnAdd(obj_id self, String spawn, location loc) throws InterruptedException
+    {  
+        String template = spawn;
+        location where = loc;
+        obj_id object = create.object(template, loc);
+        attachScript(object, "heroic.mob.normal_mob");
+        return SCRIPT_CONTINUE;
+    }
     public static void setPatrolPath(obj_id npc, String[] waypoints) throws InterruptedException
     {
         setPatrolPath(npc, waypoints, 0);
