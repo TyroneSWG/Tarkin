@@ -6,6 +6,9 @@
 package script;
 
 import java.io.File;
+import java.io.IOException;
+import java.awt.Color;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Vector;
@@ -1621,6 +1624,49 @@ public class base_class
     public static void LOG(String channel, String msg)
     {
         LOG(channel, msg, null, null);
+    }
+
+    /**
+     * Discord Log
+     * @param channel Which channel (Ex: HEROICS_NEW, GM, ADMIN, ETC);
+     * @param msg     What to send
+     */
+    public static void DISCORD_LOG(String channel, String msg)
+    {
+        String apiKey = getConfigSetting("Redemption", "AdminLogDiscordWebhook");
+        String avatar = "https://avatars1.githubusercontent.com/u/63135406";
+        String avatar_pic = "https://i.imgur.com/9Yg9lN7.png";
+        String url = "https://i.imgur.com/9Yg9lN7.png";
+        String gally = getGalaxyName();
+        DiscordWebhook webhook = new DiscordWebhook(apiKey);
+        webhook.setContent(msg);
+        webhook.setAvatarUrl(avatar_pic);
+        webhook.setUsername("Admin Log: " + gally);
+        try {
+            webhook.execute();
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+    }
+
+    /**
+     * Discord Log but not cancer and just plain text
+     * @param msg     What to send
+     */
+
+    public static void DISCORD_LOG_NOCANCER(String msg)
+    {
+        String apiKey = getConfigSetting("Redemption", "AdminLogDiscordWebhook");
+        String gally = getGalaxyName();
+        DiscordWebhook webhook = new DiscordWebhook(apiKey);
+        webhook.setContent(msg);
+        webhook.setUsername("Admin Log: " + gally);
+        try {
+            webhook.execute();
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+
     }
 
     /**
@@ -11071,6 +11117,33 @@ public class base_class
         {
             return _getGodLevel(getLongWithNull(target));
         }
+
+        /**
+         * Returns if a character's account's station ID is listed in the admin table of either the live server or test center.
+         * @param target        the object to test
+         * @return true if the character's account is in the admin table, false if it isn't.
+         */
+        public static boolean isInAdminTable(obj_id target)
+        {
+            String TCAdminTable = "datatables/admin/swgr_admin_testcenter.iff";
+            String LiveAdminTable = "datatables/admin/swgr_admin_live.iff";
+
+                if (dataTableOpen(TCAdminTable)) {
+                    int godUser = dataTableSearchColumnForInt(getPlayerStationId(target), "AdminSuid", TCAdminTable);
+                    if (godUser >= 0) {
+                        return true;
+                    }
+                } else if (dataTableOpen(LiveAdminTable)) {
+                    int godUser = dataTableSearchColumnForInt(getPlayerStationId(target), "AdminSuid", LiveAdminTable);
+                    if (godUser >= 0) {
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
+            return false;
+        }
+
 
         /**
          * Get the master of a creature (for pet support).
