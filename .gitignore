@@ -1,0 +1,10 @@
+build/
+chat/
+configs/
+serverdata/
+data/
+dependencies/
+miff/
+.setup
+local.properties
+*.log
