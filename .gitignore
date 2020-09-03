@@ -1,10 +1,11 @@
 build/
-chat/
+chat/exe/win32/
 configs/
 serverdata/
 data/
 dependencies/
 miff/
+exe/win32/
 .setup
 local.properties
 *.log
