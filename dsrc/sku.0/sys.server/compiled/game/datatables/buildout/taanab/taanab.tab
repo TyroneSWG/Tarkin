@@ -559,9 +559,9 @@ object/mobile/azure_cabal_greel_smuggler_m_01.iff	0	13312	75	3717	0.534032	0	0.8
 object/mobile/peacewar_drennic_hunter_m_01.iff	0	13312	75	3715	0.958532	0	0.284984	0	systems.combat.credit_for_kills:npe.make_invulnerable	$|
 object/static/structure/general/streetlamp_medium_blue_style_01_on.iff	0	13304	81.1868	3667.77	0.884675	0.466208	0	0		$|
 object/static/structure/general/streetlamp_medium_blue_style_01_on.iff	0	13334	75	3668	1	0	0	0		$|
-object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13315.7	75	3771.54	0.721386	0	-0.692533	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_24x16_s01.iff	0	13347	74.9993	3746.78	0.872744	0	0.488179	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_24x16_s02.iff	0	13354.3	75	3771.93	0.9998	0	0.0199993	0	structure.filler.filler	$|
+object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13315.7	75	3771.54	0.721386	0	-0.692533	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_24x16_s01.iff	0	13347	74.9993	3746.78	0.872744	0	0.488179	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_24x16_s02.iff	0	13354.3	75	3771.93	0.9998	0	0.0199993	0	theme_park.stp.stp_filler	$|
 object/tangible/furniture/tatooine/frn_tato_chair_cafe_style_01.iff	0	13309.3	143.512	3783.93	1	0	0	0		occupied.limit|0|1|$|
 object/tangible/furniture/tatooine/frn_tato_fruit_stand_large_style_01.iff	0	13311	143	3709.82	0.656217	0	0.754571	0		$|
 object/tangible/furniture/tatooine/frn_tato_fruit_stand_small_style_01.iff	0	13317	143	3719.89	0.265963	0	0.963983	0		$|
@@ -591,10 +591,10 @@ object/static/structure/general/slab_concrete_imperial.iff	0	13229	71	3641	1	0	0
 object/static/structure/general/slab_concrete_imperial.iff	0	13245	71	3641	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13221	75	3641	0.707104	0	0.707108	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13253	75	3641	0.706996	-3.68784e-08	0.707108	-0.0123407		$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13103	75	3770	0	0	1	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13103	75	3722	1.89661e-07	0	1	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_24x16_s01.iff	0	13181.8	75	3698.1	0.9998	0	-0.019995	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s01.iff	0	13061.5	75.0001	3640.65	0.981048	0	0.193766	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13103	75	3770	0	0	1	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13103	75	3722	1.89661e-07	0	1	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_24x16_s01.iff	0	13181.8	75	3698.1	0.9998	0	-0.019995	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s01.iff	0	13061.5	75.0001	3640.65	0.981048	0	0.193766	0	theme_park.stp.stp_filler	$|
 object/building/corellia/garage_corellia.iff	0	13222.2	75	3529.11	0.703279	0	0.710913	0	systems.vehicle_system.vehicle_garage:planet_map.map_loc_both	$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13328	75	3666	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13280	75	3666	1	0	0	0		$|
@@ -666,7 +666,7 @@ object/factory/factory_crate_electronics.iff	0	13148.6	143	3544.49	0.998201	0	0.
 object/factory/factory_crate_weapon.iff	0	13147.8	143.385	3544.78	0.992809	0	-0.119712	0		$|
 object/factory/factory_crate_installation.iff	0	13147.8	143	3544.75	0.997189	0	-0.0749296	0		$|
 object/static/worldbuilding/terminal/floor_imperial_01.iff	0	13158.3	143	3545.12	0	0	1	0		$|
-object/building/corellia/filler_historic_32x16_s01.iff	0	13337.6	75	3796.91	0.86281	0	-0.505529	0	structure.filler.filler	$|
+object/building/corellia/filler_historic_32x16_s01.iff	0	13337.6	75	3796.91	0.86281	0	-0.505529	0	theme_park.stp.stp_filler	$|
 object/static/vehicle/static_speeder_tantive4.iff	0	13128.4	75	3648.81	0.220863	0	0.975305	0		$|
 object/static/vehicle/static_speeder_bike.iff	0	13137	75	3650.75	0.25785	0	0.966185	0		$|
 object/static/vehicle/static_speeder_bike.iff	0	13132.9	75	3648.99	0.204347	0	0.978899	0		$|
@@ -674,9 +674,9 @@ object/static/vehicle/static_speeder_bike.iff	0	13135.1	75	3649.38	0.0491838	0	0
 object/static/vehicle/static_speeder_bike.iff	0	13139	75	3651.15	0.238476	0	0.971148	0		$|
 object/static/vehicle/static_speeder_usv5.iff	0	13123.1	75	3645.34	0.00420365	0	0.999991	0		$|
 object/static/space/ship/corellian_corvette.iff	0	12501.8	574.692	3970.71	0.926798	0	0.375559	0		$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	13039.1	75	3687.47	0.714422	0	0.699715	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	13039.4	75	3673.15	-0.696135	0	0.717911	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s01.iff	0	12983.3	74.9999	3607.99	0.691962	0	0.721933	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	13039.1	75	3687.47	0.714422	0	0.699715	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	13039.4	75	3673.15	-0.696135	0	0.717911	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s01.iff	0	12983.3	74.9999	3607.99	0.691962	0	0.721933	0	theme_park.stp.stp_filler	$|
 object/static/item/item_container_plain_s01.iff	0	13328	75	3680	0.917121	0	0.398609	0		$|
 object/static/item/item_fruit_melon.iff	0	13331.8	75.9048	3679.91	1	0	0	0		$|
 object/static/item/item_items_container_lg.iff	0	13182	75	3590.96	-0.536088	0	0.844162	0		$|
@@ -707,9 +707,9 @@ object/tangible/furniture/tatooine/frn_tato_fruit_stand_large_style_01.iff	0	131
 object/tangible/furniture/tatooine/frn_tato_fruit_stand_large_style_01.iff	0	13191	75	3584	0.707115	0	-0.707098	0		$|
 object/tangible/furniture/tatooine/frn_tato_fruit_stand_large_style_01.iff	0	13193	75	3584	0.707107	0	0.707107	0		$|
 object/tangible/furniture/tatooine/frn_tato_fruit_stand_small_style_01.iff	0	13192	75	3597	1	0	0	0		$|
-object/building/tatooine/filler_building_tatt_style01_09.iff	0	13218.3	74.9177	3844.61	1	0	0	0	structure.filler.filler	$|
-object/building/tatooine/filler_building_tatt_style01_06.iff	0	13275	74.811	3843.68	1	0	0	0	structure.filler.filler	$|
-object/building/tatooine/filler_building_tatt_style01_02.iff	0	13247.1	74.8642	3836.24	1	0	0	0	structure.filler.filler	$|
+object/building/tatooine/filler_building_tatt_style01_09.iff	0	13218.3	74.9177	3844.61	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/tatooine/filler_building_tatt_style01_06.iff	0	13275	74.811	3843.68	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/tatooine/filler_building_tatt_style01_02.iff	0	13247.1	74.8642	3836.24	1	0	0	0	theme_park.stp.stp_filler	$|
 object/tangible/sign/player/house_address.iff	0	13218.1	76.7095	3690.88	0.92388	0	-0.382683	0	systems.sign.sign	$|
 object/building/general/hotel_general_style_1.iff	0	13312.6	75	3574.59	1	0	0	0	planet_map.map_loc	healing.canhealshock|0|1|safeLogout|0|1|$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13336	75	3598	1	0	0	0		$|
@@ -774,10 +774,10 @@ object/tangible/furniture/city/flag_city_05.iff	0	13095	81	3746	0.707109	0	-0.70
 object/tangible/furniture/city/flag_city_05.iff	0	13095	82	3735	0.707114	0	-0.707099	0	systems.city.city_furniture:systems.city.city_flag	$|
 object/tangible/furniture/city/flag_city_05.iff	0	13095	82	3757	0.707112	0	-0.707101	0	systems.city.city_furniture:systems.city.city_flag	$|
 object/static/structure/general/cave_wall_tato_style_01.iff	0	13068.6	-0.314072	3856.29	0.969872	0	-0.243617	0		$|
-object/building/endor/endor_lake_platform.iff	0	11774	1	4619	1	0	0	0	structure.filler.filler	$|
-object/building/endor/endor_lake_platform.iff	0	11774	1	4634.92	1	0	0	0	structure.filler.filler	$|
-object/building/endor/endor_lake_platform_cap.iff	0	11774	-9.81289	4609	1	0	0	0	structure.filler.filler	$|
-object/building/endor/endor_lake_platform_cap.iff	0	11774	-9.41972	4611	1	0	0	0	structure.filler.filler	$|
+object/building/endor/endor_lake_platform.iff	0	11774	1	4619	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/endor/endor_lake_platform.iff	0	11774	1	4634.92	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/endor/endor_lake_platform_cap.iff	0	11774	-9.81289	4609	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/endor/endor_lake_platform_cap.iff	0	11774	-9.41972	4611	1	0	0	0	theme_park.stp.stp_filler	$|
 object/building/endor/endr_lake_rail16m.iff	0	11766.2	1.2	4618.93	0.707109	0	-0.707104	0		$|
 object/building/endor/endr_lake_rail16m.iff	0	11766.2	1.2	4634.89	0.707105	0	0.707108	0		$|
 object/building/endor/endr_lake_rail16m.iff	0	11781.8	1.2	4634.93	0.707105	0	0.707108	0		$|
@@ -820,13 +820,13 @@ object/static/structure/corellia/corl_imprv_column_s02.iff	0	13370	75	3656.19	0	
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13362.1	75	3656.29	0.999989	0	0.004621	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13346.4	75	3656.43	0.999989	0	0.004621	0		$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13337.6	75	3656.42	0	0	1	0		$|
-object/building/corellia/filler_block_corellia_64x32_s01.iff	0	13593	74.9173	3731.46	0.999881	8.54478e-05	-0.00499822	-0.0145662	structure.filler.filler	$|
-object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13439	74.9694	3700.82	0.707393	0	0.70682	0	structure.filler.filler	$|
-object/building/corellia/filler_building_corellia_style_02.iff	0	13395.9	74.1462	3763.75	0.956802	0	0.29074	0	structure.filler.filler	$|
-object/building/corellia/filler_building_corellia_style_03.iff	0	13415	74.9802	3821.01	0.707388	0	-0.706826	0	structure.filler.filler	$|
-object/building/corellia/filler_building_corellia_style_05.iff	0	13356.9	74.9724	3819.5	0.966393	0	0.257071	0	structure.filler.filler	$|
-object/building/corellia/filler_historic_32x16_s01.iff	0	13446.9	73.8244	3752.85	-0.0641593	0	0.997939	0	structure.filler.filler	$|
-object/building/corellia/filler_historic_32x16_s02.iff	0	13484	74.0529	3870.75	1	0	0	0	structure.filler.filler	$|
+object/building/corellia/filler_block_corellia_64x32_s01.iff	0	13593	74.9173	3731.46	0.999881	8.54478e-05	-0.00499822	-0.0145662	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13439	74.9694	3700.82	0.707393	0	0.70682	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_building_corellia_style_02.iff	0	13395.9	74.1462	3763.75	0.956802	0	0.29074	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_building_corellia_style_03.iff	0	13415	74.9802	3821.01	0.707388	0	-0.706826	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_building_corellia_style_05.iff	0	13356.9	74.9724	3819.5	0.966393	0	0.257071	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_historic_32x16_s01.iff	0	13446.9	73.8244	3752.85	-0.0641593	0	0.997939	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_historic_32x16_s02.iff	0	13484	74.0529	3870.75	1	0	0	0	theme_park.stp.stp_filler	$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13381.7	75	3598.52	0	0	1	0		$|
 object/static/structure/corellia/corl_imprv_arch_lg_s01.iff	0	13374.9	75	3598.19	0.999538	0	-0.030386	0		$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13368.2	75	3597.77	0	0	1	0		$|
@@ -859,20 +859,20 @@ object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13374.6	74.925	3
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13407.6	74.8555	3496.39	0.999808	0	0.0196002	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13220.1	75	3545.5	0.999538	0	-0.0303873	0		$|
 object/static/structure/corellia/corl_imprv_column_s01.iff	0	13211.5	75	3544.92	1	0	0	0		$|
-object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13435.5	74.9574	3562.92	0.713301	0	-0.700857	0	structure.filler.filler	$|
-object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13438.9	74.9289	3873.05	-0.0241907	0	0.999707	0	structure.filler.filler	$|
-object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13454.3	74.5812	3841.65	1	0	0	0	structure.filler.filler	$|
-object/building/corellia/filler_building_corellia_style_02.iff	0	13436.7	74.194	3911.34	0.999888	0	-0.0149993	0	structure.filler.filler	$|
-object/building/corellia/filler_building_corellia_style_05.iff	0	13374.6	74.9489	3864.15	0.966393	0	0.257071	0	structure.filler.filler	$|
-object/building/corellia/filler_historic_32x16_s01.iff	0	13383.3	74.7608	3905.24	0.919103	0	0.394017	0	structure.filler.filler	$|
-object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13454.8	74.7512	3800.06	1	0	0	0	structure.filler.filler	$|
-object/building/corellia/filler_historic_32x16_s01.iff	0	13312.3	74.993	3868.49	-0.108985	0	0.994043	0	structure.filler.filler	$|
-object/building/corellia/filler_historic_32x16_s02.iff	0	13340.4	74.9341	3882.77	0.860269	0	-0.509841	0	structure.filler.filler	$|
-object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13354.2	74.9423	3909.08	0.942755	0	-0.333486	0	structure.filler.filler	$|
+object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13435.5	74.9574	3562.92	0.713301	0	-0.700857	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_block_corellia_64x32_s02.iff	0	13438.9	74.9289	3873.05	-0.0241907	0	0.999707	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13454.3	74.5812	3841.65	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_building_corellia_style_02.iff	0	13436.7	74.194	3911.34	0.999888	0	-0.0149993	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_building_corellia_style_05.iff	0	13374.6	74.9489	3864.15	0.966393	0	0.257071	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_historic_32x16_s01.iff	0	13383.3	74.7608	3905.24	0.919103	0	0.394017	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13454.8	74.7512	3800.06	1	0	0	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_historic_32x16_s01.iff	0	13312.3	74.993	3868.49	-0.108985	0	0.994043	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_historic_32x16_s02.iff	0	13340.4	74.9341	3882.77	0.860269	0	-0.509841	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_block_corellia_32x16_s01.iff	0	13354.2	74.9423	3909.08	0.942755	0	-0.333486	0	theme_park.stp.stp_filler	$|
 object/tangible/terminal/terminal_elevator_down_click.iff	0	13077.6	74.6651	3450.7	1	0	0	0	npe.elevator_down	$|
 object/tangible/terminal/terminal_elevator_down_click.iff	0	13083.6	74.7122	3454.28	1	0	0	0	npe.elevator_down	$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13007	74.8313	3650.88	-0.0142031	0	0.999899	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s01.iff	0	12964.3	74.8117	3637.78	1	0	0	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13007	74.8313	3650.88	-0.0142031	0	0.999899	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s01.iff	0	12964.3	74.8117	3637.78	1	0	0	0	theme_park.stp.stp_filler	$|
 object/building/military/military_base_gate_house_imperial.iff	0	13034.8	74.9237	3798.36	-0.0242011	0	0.999707	0		$|
 object/building/military/military_outpost_guard_tower_1.iff	0	13011	74.9432	3858	-0.00920358	0	0.999957	0		$|
 object/building/mustafar/structures/must_smuggler_bunker.iff	0	13034	74.8622	3884	1	0	0	0		$|
@@ -900,15 +900,15 @@ object/building/mustafar/structures/must_miner_tower.iff	0	13109.4	74.8732	3876.
 object/building/mustafar/structures/must_miner_tower.iff	0	13104.9	74.8647	3875.43	1	0	0	0		$|
 object/building/mustafar/structures/must_miner_tower.iff	0	13101.6	74.8623	3873.55	1	0	0	0		$|
 object/building/mustafar/structures/must_smuggler_bunker.iff	0	13273	75	3581	0.707106	0	0.707107	0		$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	12995.2	74.9564	3686.35	0.714426	0	0.69971	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	12995.5	74.9687	3672.04	-0.696135	0	0.717911	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	12947.7	74.8255	3684.84	0.714426	0	0.69971	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x32_s02.iff	0	12948	74.848	3670.52	-0.696135	0	0.717911	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	12995.2	74.9564	3686.35	0.714426	0	0.69971	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	12995.5	74.9687	3672.04	-0.696135	0	0.717911	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	12947.7	74.8255	3684.84	0.714426	0	0.69971	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x32_s02.iff	0	12948	74.848	3670.52	-0.696135	0	0.717911	0	theme_park.stp.stp_filler	$|
 object/static/item/item_container_inorganic_minerals.iff	0	13273	75	3577.8	0	0	1	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13274	75	3577.8	0	0	1	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13273.2	75	3579.76	-0.605186	0	0.796084	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13272	75	3577.79	0	0	1	0		$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13031.9	74.9778	3652.58	0.99995	0	0.0100003	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13031.9	74.9778	3652.58	0.99995	0	0.0100003	0	theme_park.stp.stp_filler	$|
 object/static/item/item_container_inorganic_minerals.iff	0	13273	75.8863	3577.8	0	0	1	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13272	75.8863	3577.79	0	0	1	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13274	75.8863	3577.8	0	0	1	0		$|
@@ -924,8 +924,8 @@ object/static/item/item_container_inorganic_minerals.iff	0	13271.8	75.8863	3573.
 object/static/item/item_container_inorganic_minerals.iff	0	13271.8	75	3573.08	0	0	1	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13273	75	3578.11	1	0	0	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13273.8	75	3573.08	0	0	1	0		$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13005.8	74.9825	3633.63	-0.014203	0	0.999899	0	structure.filler.filler	$|
-object/building/corellia/filler_slum_16x16_s01.iff	0	13031	74.9923	3633.3	0.99995	0	0.01	0	structure.filler.filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13005.8	74.9825	3633.63	-0.014203	0	0.999899	0	theme_park.stp.stp_filler	$|
+object/building/corellia/filler_slum_16x16_s01.iff	0	13031	74.9923	3633.3	0.99995	0	0.01	0	theme_park.stp.stp_filler	$|
 object/static/item/item_container_inorganic_minerals.iff	0	13272.7	75	3584.57	1	0	0	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13271.7	75	3584.57	1	0	0	0		$|
 object/static/item/item_container_inorganic_minerals.iff	0	13272.5	75	3582.6	0.796084	0	0.605186	0		$|
