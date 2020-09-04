@@ -2,6 +2,7 @@ package script.theme_park.stp.wendle;
 
 import script.*;
 import script.library.ai_lib;
+import script.working.jfreeman.dressnpc;
 /**
  *
  * @author Roachie
