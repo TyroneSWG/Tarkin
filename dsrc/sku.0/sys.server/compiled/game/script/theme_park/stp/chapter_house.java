@@ -2,6 +2,7 @@ package script.theme_park.stp;
 
 import script.*;
 import script.library.utils;
+import script.library.factions;
 /**
  *
  * @author Roachie
@@ -17,12 +18,12 @@ public class chapter_house extends script.base_script {
         if (utils.getTemplateName(self).equals(JEDI));
         {
             setName(self, "Jedi Chapter House");
-            setFaction(self, "Rebel");
+            factions.setFaction(self, "Rebel");
         }
         if (utils.getTemplateName(self).equals(SITH));
         {
             setName(self, "Sith Chapter House");
-            setFaction(self, "Imperial");
+            factions.setFaction(self, "Imperial");
         }
         return SCRIPT_CONTINUE;
     }
