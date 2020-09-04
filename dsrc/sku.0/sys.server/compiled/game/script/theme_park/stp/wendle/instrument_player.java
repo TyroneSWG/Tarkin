@@ -14,7 +14,6 @@ public class instrument_player extends script.base_script {
         setName(self, "a dancer");
         setInvulnerable(self, true);
         ai_lib.setMood(self, "themepark_oola");
-        playClient
         return SCRIPT_CONTINUE;
     }
     public int OnInitialize(obj_id self) throws InterruptedException
