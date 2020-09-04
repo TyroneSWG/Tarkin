@@ -80,3 +80,14 @@ object/building/dathomir/dathomir_quarantine_zone_starport.iff	20.34	0	17.76	WOR
 									object/creature/npc/theme_park/player_transport.iff	0	-9	0	WORLD_DELTA	-90	0	1	0
 									object/tangible/travel/ticket_collector/ticket_collector.iff	1	0.2	10	WORLD_DELTA	315	0	0	1
 									object/tangible/terminal/terminal_space.iff	-7.6	0	-19.5	r1	0	1	0	0
+object/building/taanab/shuttleport_taanab.iff	20	0	0	WORLD_DELTA	300	60	1	1									
+									object/tangible/terminal/terminal_travel.iff	13.3	-0.6	9.4	WORLD_DELTA	270	1	0	0
+									object/creature/npc/theme_park/player_shuttle.iff	0	-0.6	-5	WORLD_DELTA	180	0	1	0
+									object/tangible/travel/ticket_collector/ticket_collector.iff	13.3	-0.6	-9.4	WORLD_DELTA	270	0	0	1
+object/building/taanab/starport_taanab.iff	-21	0	-18.69	WORLD_DELTA	300	60	0	1									
+									object/tangible/terminal/terminal_travel.iff	11.255	0.64	51.64	foyer4	-35	1	0	0
+									object/tangible/terminal/terminal_travel.iff	2.52	0.64	50.02	foyer4	0	1	0	0
+									object/tangible/terminal/terminal_travel.iff	-3.23	0.64	50.05	foyer4	0	1	0	0
+									object/tangible/terminal/terminal_travel.iff	-12.71	0.64	52.04	foyer4	35	1	0	0
+									object/creature/npc/theme_park/player_transport.iff	1.72	0	-5.06	WORLD_DELTA	180	0	1	0
+									object/tangible/travel/ticket_collector/ticket_collector.iff	-7.92	0	4.75	WORLD_DELTA	90	0	0	1
