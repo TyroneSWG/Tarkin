@@ -11,13 +11,14 @@ public class instrument_player extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException
     {
-        setName(self, "a dancer");
-        setInvulnerable(self, true);
-        ai_lib.setMood(self, "themepark_oola");
+        detachScript(self, "systems.combat.credit_for_kills");
         return SCRIPT_CONTINUE;
     }
     public int OnInitialize(obj_id self) throws InterruptedException
     {
+        setName(self, "a dancer");
+        setInvulnerable(self, true);
+        ai_lib.setMood(self, "themepark_oola");
         return SCRIPT_CONTINUE;
     }
 }
