@@ -970,6 +970,18 @@ public class qatool extends script.base_script
                 return SCRIPT_CONTINUE;
             }
         }
+        else if ((toLower(command)).equals("attachtocell"))
+        {
+            if (st.hasMoreTokens())
+            {
+                obj_id building = utils.stringToObjId(st.nextToken());
+                String cell_name = st.nextToken();
+                String cellScript = st.nextToken();
+                obj_id cellId = getCellId(building, cell_name);
+                attachScript(cellId, cellScript);
+                return SCRIPT_CONTINUE;
+            }
+        }
         else if ((toLower(command)).equals("collectionclickbypass"))
         {
             cleanAllScriptVars(self);
