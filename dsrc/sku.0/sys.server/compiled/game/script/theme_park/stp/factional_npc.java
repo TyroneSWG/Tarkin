@@ -32,7 +32,7 @@ public class factional_npc extends script.base_script {
         {
             factions.setFaction(self, "Rebel");
             setInvulnerable(self, true);
-            setName(self, getName(self) + REBEL_SUFFIX);
+            setName(self, getName(self) + " " + REBEL_SUFFIX);
             ai_lib.setDefaultCalmBehavior(self, 1);
         }
         return SCRIPT_CONTINUE;
