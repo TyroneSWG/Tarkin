@@ -872,8 +872,8 @@ object/static/structure/corellia/corl_imprv_column_s01.iff	0	13212	75	3546	1	0	0
 object/building/taanab/filler_block_taanab_64x32_s02.iff	0	13436.8	74.9569	3567.64	-0.669992	0	0.742368	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_block_taanab_64x32_s02.iff	0	13438.9	74.9289	3873.05	-0.0241907	0	0.999707	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_block_taanab_32x16_s01.iff	0	13454.3	74.7408	3841.65	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
-object/building/taanab/filler_building_corellia_style_02.iff	0	13436.7	74.194	3911.34	0.999888	0	-0.0149993	0	structure.filler.filler:theme_park.stp.stp_filler	$|
-object/building/taanab/filler_building_corellia_style_05.iff	0	13374.6	74.9489	3864.15	0.966393	0	0.257071	0	structure.filler.filler:theme_park.stp.stp_filler	$|
+object/building/taanab/filler_building_taanab_style_02.iff	0	13436.7	74.194	3911.34	0.999888	0	-0.0149993	0	structure.filler.filler:theme_park.stp.stp_filler	$|
+object/building/taanab/filler_building_taanab_style_05.iff	0	13374.6	74.9489	3864.15	0.966393	0	0.257071	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_historic_32x16_s01.iff	0	13383.3	74.7608	3905.24	0.919103	0	0.394017	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_block_taanab_32x16_s01.iff	0	13454.8	74.882	3800.06	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_historic_32x16_s01.iff	0	13312.3	74.993	3868.49	-0.108985	0	0.994043	0	structure.filler.filler:theme_park.stp.stp_filler	$|
