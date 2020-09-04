@@ -1,6 +1,12 @@
 package script.theme_park.stp;
 
-import script.*;
+import script.menu_info;
+import script.menu_info_data;
+import script.menu_info_types;
+import script.obj_id;
+import script.dictionary;
+import script.string_id;
+import script.library.sui;
 /**
  *
  * @author Roachie
