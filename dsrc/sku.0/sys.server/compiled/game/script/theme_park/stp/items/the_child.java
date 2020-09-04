@@ -12,5 +12,6 @@ public class the_child extends script.base_script {
     public int OnAttach(obj_id self) throws InterruptedException
     {
         setName(self, "a mysterious child");
+        return SCRIPT_CONTINUE;
     }
 }
