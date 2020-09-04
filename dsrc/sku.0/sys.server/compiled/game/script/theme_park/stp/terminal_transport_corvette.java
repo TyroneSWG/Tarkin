@@ -32,8 +32,8 @@ public class terminal_transport_corvette extends script.base_script {
         if (item == menu_info_types.ITEM_USE)
         {
             obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(self), 16000.0f, CORVETTE);
-            obj_id cell = getCellId(targetLocs[0], "elevator57");
-            warpPlayer(player, getCurrentSceneName(), 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
+            obj_id cell = getCellId(targetLocs[0], "hall2");
+            warpPlayer(player, getCurrentSceneName(), -35.1f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
         }
         return SCRIPT_CONTINUE;
     }
