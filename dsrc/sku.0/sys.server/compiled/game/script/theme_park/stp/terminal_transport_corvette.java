@@ -33,7 +33,7 @@ public class terminal_transport_corvette extends script.base_script {
         {
             obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(self), 16000.0f, CORVETTE);
             obj_id cell = getCellId(targetLocs[0], "hall2");
-            warpPlayer(player, getCurrentSceneName(), -35.1f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
+            warpPlayer(player, getCurrentSceneName(), -35.1f, 0.0f, 0.0f, cell, -35.1f, 0.0f, 0.0f);
         }
         return SCRIPT_CONTINUE;
     }

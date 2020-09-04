@@ -1,0 +1,31 @@
+//            Filename:     salon_taanab
+//            Directory:    object/building/taanab
+//
+//            Description:
+//            taanab Salon
+//
+//            Notes:
+//
+//
+//            Category:                   Building
+//            Sub-Category:               taanab
+//            Classification:             Null
+//            
+
+@base object/building/base/base_salon.iff
+
+@class building_object_template 0
+
+
+@class tangible_object_template 0
+
+
+@class object_template 0
+
+sharedTemplate = "object/building/taanab/shared_salon_taanab.iff"
+
+objvars = +["salon" = 1]
+scripts =+["planet_map.map_loc"]
+
+
+
