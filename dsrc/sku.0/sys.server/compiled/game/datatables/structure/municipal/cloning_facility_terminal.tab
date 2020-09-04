@@ -24,3 +24,6 @@ object/building/military/small_imperial_cloning_facility_s02.iff	-5.2	0.1	-3.6	r
 object/building/player/city/cloning_corellia.iff	-12.2	-2.5	6.7	cloninglab	121		clone_droid
 object/building/player/city/cloning_naboo.iff	-12.2	-2.5	6.7	cloninglab	121		clone_droid
 object/building/player/city/cloning_tatooine.iff	-12.2	-2.5	6.7	cloninglab	121		clone_droid
+object/building/taanab/cloning_taanab.iff	1.04	0.1	2.57	insurance	0	object/tangible/terminal/terminal_cloning.iff	
+object/building/taanab/cloning_taanab.iff	1.04	0.1	-1.25	insurance	180	object/tangible/terminal/terminal_cloning.iff	
+object/building/taanab/cloning_taanab.iff	-5	0.1	1.8	insurance	90		clone_droid

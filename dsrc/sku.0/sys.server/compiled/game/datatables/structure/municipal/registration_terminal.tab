@@ -4,6 +4,8 @@ object/building/general/mun_all_hospital_s01.iff						object/tangible/terminal/t
 object/building/general/mun_all_hospital_s02.iff						object/tangible/terminal/terminal_pm_register.iff
 object/building/corellia/hospital_corellia.iff						object/tangible/terminal/terminal_pm_register.iff
 object/building/corellia/hospital_corellia_s02.iff						object/tangible/terminal/terminal_pm_register.iff
+object/building/taanab/hospital_taanab.iff						object/tangible/terminal/terminal_pm_register.iff
+object/building/taanab/hospital_taanab_s02.iff						object/tangible/terminal/terminal_pm_register.iff
 object/building/naboo/hospital_naboo_style01.iff						object/tangible/terminal/terminal_pm_register.iff
 object/building/naboo/hospital_naboo_style02.iff						object/tangible/terminal/terminal_pm_register.iff
 object/building/tatooine/hospital_tatooine_style01.iff	-16	0.2	-11.5	rooma	0	object/tangible/terminal/terminal_pm_register.iff

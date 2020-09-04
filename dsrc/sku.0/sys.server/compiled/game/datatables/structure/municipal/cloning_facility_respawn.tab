@@ -45,3 +45,4 @@ object/building/general/space_dungeon_star_destroyer.iff	-8.8	175.3	-30.5	room06
 object/building/heroic/echo_base.iff	0	0	-500		PRIVATE_INSTANCE	@clone_facility:echo_base	0
 object/building/military/military_rebel_clone_tent_small.iff	1	0	1		FACTION_REBEL	@clone_facility:rebel_aid_station	
 object/building/military/military_imperial_clone_tent_small.iff	1	0	1		FACTION_IMPERIAL	@clone_facility:imperial_aid_station	
+object/building/taanab/cloning_taanab.iff	2	-3	-10	spawn	STANDARD		0	7	-16.29	-14.21	90	-16.4	-10.43	90	-2.87	0.38	-180	1.83	0.41	-180	6.35	0.36	-180	16.28	-10.48	-90	16.28	-14.3	-90
