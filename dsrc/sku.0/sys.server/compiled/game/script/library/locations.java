@@ -22,7 +22,8 @@ public class locations extends script.base_script
         "dathomir",
         "lok",
         "rori",
-        "endor"
+        "endor",
+		"taanab"
     };
     public static final String NO_AREA = "no_area";
     public static final String PLANET_LEVEL_TABLE = "datatables/spawning/planetary_data/planet_level.iff";
