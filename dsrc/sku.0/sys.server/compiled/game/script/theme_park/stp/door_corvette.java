@@ -37,7 +37,7 @@ public class door_corvette extends script.base_script {
 		int btn = sui.getIntButtonPressed(params);
 		int idx = sui.getListboxSelectedRow(params);
 		if (btn == sui.BP_OK) {
-			warpPlayer(player, "tatooine", 3450.0f, 4.0f, -4334.0f, null, 0, 0, 0, "", true);
+			warpPlayer(player, "taanab", 5277.0f, 75.0f, -4198.0f, null, 0, 0, 0, "", true);
 			return SCRIPT_CONTINUE;
 		}
 		return SCRIPT_CONTINUE;
