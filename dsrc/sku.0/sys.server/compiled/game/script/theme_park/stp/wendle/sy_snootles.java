@@ -2,6 +2,7 @@ package script.theme_park.stp.wendle;
 
 import script.*;
 import script.library.ai_lib;
+import script.library.chat;
 /**
  *
  * @author Roachie
@@ -17,6 +18,7 @@ public class sy_snootles extends script.base_script {
     }
     public int OnInitialize(obj_id self) throws InterruptedException
     {
+        chat.chat(self, "Play that track back Dax!");
         return SCRIPT_CONTINUE;
     }
 }
