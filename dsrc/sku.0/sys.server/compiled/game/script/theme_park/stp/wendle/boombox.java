@@ -32,7 +32,15 @@ public class boombox extends script.base_script {
         }
         if (volumeName.equals("boombox_cantina"))
         {
-            play2dNonLoopingMusic(breacher, "sound/mus_pirate_cantina.snd");
+            int x = rand(0, 100);
+            if (x >= 50)
+            {
+                play2dNonLoopingMusic(breacher, "sound/mus_cantina_band_remix.snd");
+            }
+            else
+            {
+                play2dNonLoopingMusic(breacher, "sound/mus_pirate_cantina.snd");
+            }
         }
         else
         {
