@@ -982,6 +982,12 @@ public class qatool extends script.base_script
                 return SCRIPT_CONTINUE;
             }
         }
+        else if ((toLower(command)).equals("compile_java"))
+        {
+            String outputString = system_process.runAndGetOutput("/home/swg/swg-main/build_java.sh");
+            sui.msgbox(self, self, outputString);
+            sendSystemMessageTestingOnly(self, "If the pull and build was successful, update your data folder and reload!");
+        }
         else if ((toLower(command)).equals("collectionclickbypass"))
         {
             cleanAllScriptVars(self);

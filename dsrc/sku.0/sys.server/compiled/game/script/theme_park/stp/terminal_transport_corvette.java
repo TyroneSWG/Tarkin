@@ -15,7 +15,7 @@ import script.library.utils;
  * @author Roachie
  */
 public class terminal_transport_corvette extends script.base_script {
-    public static String CORVETTE = "object/building/general/space_dungeon_corellian_corvette.iff";
+    public static String CORVETTE = "object/building/general/space_dungeon_corellian_corvette_base.iff";
     public terminal_transport_corvette() {
     }
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
