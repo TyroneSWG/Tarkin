@@ -23,7 +23,8 @@ public class hub_transport extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            instance.requestInstanceMovement(player, hub);
+            sendSystemMessageTestingOnly(player, "Attempting to move you to the hub");
+            instance.requestInstanceMovement(player, "hub");
         }
         return SCRIPT_CONTINUE;
     }
