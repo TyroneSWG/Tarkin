@@ -9,3 +9,4 @@ exe/win32/
 .setup
 local.properties
 *.log
+build_java.sh
