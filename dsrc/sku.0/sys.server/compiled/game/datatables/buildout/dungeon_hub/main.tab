@@ -1,7 +1,7 @@
 server_template_crc	cell_index	px	py	pz	qw	qx	qy	qz	scripts	objvars
 h	i	f	f	f	f	f	f	f	s	p
 object/tangible/spawning/spawn_egg.iff	0	0	0	0	1	0	0	0		$|
-object/building/hub/space_station.iff	0	8001.03	-9.20963	8002.07	1	0	0	0	content_tools.interior_buildout:npe.npe_public_instance:structure.municipal.cloning_facility	instance_name|4|hub|isControllerObject|0|1|portalProperty.crc|0|1986195772|$|
+object/building/hub/space_station.iff	0	8001.03	-9.20963	8002.07	1	0	0	0	npe.npe_public_instance:structure.municipal.cloning_facility	instance_name|4|hub|isControllerObject|0|1|portalProperty.crc|0|1986195772|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
