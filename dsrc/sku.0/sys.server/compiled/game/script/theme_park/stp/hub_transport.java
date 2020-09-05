@@ -1,6 +1,7 @@
 package script.theme_park.stp;
 
 import script.*;
+import script.library.instance;
 import script.library.space_station;
 /**
  *
@@ -22,7 +23,7 @@ public class hub_transport extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            space_station.moveToHub(player);
+            instance.requestInstanceMovement(player, hub);
         }
         return SCRIPT_CONTINUE;
     }

@@ -1,5 +1,5 @@
 dungeon	enter_one	enter_two	exit_one	exit_two	min_players	max_players	key_required	failure_string	player_script	time_limit	lockoutTimer	vehicle_allowed
-s[required]	"s[0,0,0,none]"	"s[0,0,0,none]"	"s[0,0,0,tatooine]"	"s[0,0,0,tatooine]"	i[0]	i[8]	s[none]	s[no_key]	s[none]	i[3600]	"e(none=0,daily=1)[none]"	i[0]
+s[required]	"s[0,0,0,none]"	"s[0,0,0,none]"	"s[0,0,0,tatooine]"	"s[0,0,0,tatooine]"	i[0]	I[8]	s[none]	s[no_key]	s[none]	i[3600]	"e(none=0,daily=1)[none]"	i[0]
 heroic_axkva_min	"30,30,0,r1"		"-3956,0,-47,dathomir"				heroic_axkva_min				daily	
 heroic_ig88	"0,0,43,r1"		"416,0,5268,lok"				heroic_ig88				daily	
 heroic_tusken_army	"321,0,52,none"		"-3051,0,2611,tatooine"				heroic_tusken_army		theme_park.heroic.tusken.tusken_player	7200	daily	1
@@ -15,3 +15,4 @@ sher_kar_cave	"-56,-5,20,r1"		"-2017,82,4197,mustafar"				sher_kar_cave				daily
 obiwan_crystal_cave	"9.4,0,-3.5,mainroom"		"-2696,42,6077,mustafar"			1			theme_park.dungeon.mustafar_trials.obiwan_finale.obiwan_player	1800	daily	
 mtp_hideout_instance	"3.6,-12.0,29.7,entryb"		"-516,28,-4433,corellia"			1			theme_park.meatlump.hideout.mtp_instance_player	600	none	
 echo_base	"-255,73,531,r15"	"1241,55,1509,none"	"5426,0,-4169,dathomir"	"5426,0,-4169,dathomir"	4		echo_base		theme_park.heroic.echo_base.echo_player	7200	daily	1
+hub	"0,0,0,greenhouse"		5246,75,-4313,taanab			1000				18000	none	0
