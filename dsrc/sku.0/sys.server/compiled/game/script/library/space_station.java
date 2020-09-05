@@ -14,7 +14,7 @@ public class space_station extends script.base_script {
     public space_station() {
     }
     public static String HUB_TEMPLATE = "object/building/hub/space_station.iff";
-    public int moveToHub(obj_id player) throws InterruptedException
+    public static int moveToHub(obj_id player) throws InterruptedException
     {
         obj_id planet = getPlanetByName("dungeon_hub");
         if (isIdValid(planet))
