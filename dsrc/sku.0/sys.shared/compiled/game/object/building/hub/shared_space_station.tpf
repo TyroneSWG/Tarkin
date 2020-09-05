@@ -1,0 +1,21 @@
+// This file ws written by the template editor @ 5:23:55 PM -  Thu Nov 21 2002
+// Note: Is the flora needed?
+
+@base object/building/base/shared_base_association_hall.iff
+
+@class building_object_template 1
+
+@class tangible_object_template 5
+
+@class object_template 6
+
+clearFloraRadius = 48
+objectName = "space_hub" "space_station_n"
+
+detailedDescription = "space_hub" "space_station_d"
+
+lookAtText = "space_hub"  "space_station_lat"
+
+appearanceFilename = ""
+
+portalLayoutFilename = "appearance/thm_spc_nebula_orion_station.pob"
