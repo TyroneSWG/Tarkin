@@ -24,7 +24,8 @@ public class hub_transport extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, null, 0.0f, 0.0f, 0.0f, "doHubMove");
+            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, null, 0.0f, 0.0f, 0.0f);
+            messageTo(player, "doHubMove", null, 2.0f, true);
         }
         return SCRIPT_CONTINUE;
     }
