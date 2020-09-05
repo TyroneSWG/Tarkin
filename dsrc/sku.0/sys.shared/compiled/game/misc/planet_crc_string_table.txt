@@ -46,3 +46,4 @@ tutorial
 adventure1
 adventure2
 taanab
+dungeon_hub
