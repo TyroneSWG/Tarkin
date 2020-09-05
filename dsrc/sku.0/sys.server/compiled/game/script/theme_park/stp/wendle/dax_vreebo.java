@@ -10,13 +10,7 @@ import script.library.chat;
 public class dax_vreebo extends script.base_script {
     public dax_vreebo() {
     }
-    public int OnAddedToWorld(obj_id self) throws InterruptedException
-    {
-        detachScript(self, "systems.combat.credit_for_kills");
-        messageTo(self, "setupNPC", null, 60.0f, true);
-        return SCRIPT_CONTINUE;
-    }
-    public int setupNPC(obj_id self) throws InterruptedException
+    public int OnAttach(obj_id self) throws InterruptedException
     {
         grantSkill(self, "social_entertainer_novice");
         setName(self, "Dax Vreebo");

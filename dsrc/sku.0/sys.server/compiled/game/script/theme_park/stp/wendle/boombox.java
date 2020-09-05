@@ -1,16 +1,6 @@
 package script.theme_park.stp.wendle;
 
 import script.*;
-import static script.base_class.SCRIPT_CONTINUE;
-import static script.base_class.doAnimationAction;
-import static script.base_class.getIntendedTarget;
-import static script.base_class.sendSystemMessage;
-import static script.base_class.toLower;
-import static script.event.ewok_festival.chief.GIVE_GIFT;
-import static script.event.ewok_festival.chief.HAVE_GIFT;
-import static script.event.ewok_festival.chief.OBJ_BOUQUET_QUEST;
-import script.library.groundquests;
-import script.library.utils;
 /**
  *
  * @author Roachie
@@ -40,7 +30,7 @@ public class boombox extends script.base_script {
         }
         return SCRIPT_CONTINUE;
     }
-    public int OnTriggerVolumeExited(obj_id self, String volumeName, obj_id breacher) throws InterruptedException
+    /*public int OnTriggerVolumeExited(obj_id self, String volumeName, obj_id breacher) throws InterruptedException
     {
         if (!isPlayer(breacher))
         {
@@ -55,5 +45,5 @@ public class boombox extends script.base_script {
             return SCRIPT_CONTINUE;
         }
         return SCRIPT_CONTINUE;
-    }
+    }*/
 }
