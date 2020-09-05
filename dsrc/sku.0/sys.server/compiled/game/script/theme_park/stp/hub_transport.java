@@ -24,16 +24,16 @@ public class hub_transport extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            doHubMove(player);
+            obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(player), 16000.0f, "object/building/hub/space_station.iff");
+            obj_id cell = getCellId(targetLocs[0], "hangarbay1");
+            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
+            return SCRIPT_CONTINUE;
         }
         return SCRIPT_CONTINUE;
     }
     public int doHubMove(obj_id player) throws InterruptedException
     {
-            obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(player), 16000.0f, "object/building/hub/space_station.iff");
-            obj_id cell = getCellId(targetLocs[0], "hangarbay1");
-            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
-            return SCRIPT_CONTINUE;
+        return SCRIPT_CONTINUE;
     }
     
 }
