@@ -24,11 +24,9 @@ public class hub_transport extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            obj_id base = getPlanetByName("dungeon_hub");
-            obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(base), 16000.0f, SS);
-            obj_id cell = getCellId(targetLocs[0], "hangarbay1");
-            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
+            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, null, 0.0f, 0.0f, 0.0f, "doHubMove");
         }
         return SCRIPT_CONTINUE;
     }
+    
 }

@@ -12283,4 +12283,12 @@ public class base_player extends script.base_script
         }
         return true;
     }
+    public int doHubMove(obj_id self) throws InterruptedException
+    {
+            obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(self), 16000.0f, "object/building/hub/space_station.iff");
+            obj_id cell = getCellId(targetLocs[0], "hangarbay1");
+            warpPlayer(self, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
+            return SCRIPT_CONTINUE;
+
+    }
 }
