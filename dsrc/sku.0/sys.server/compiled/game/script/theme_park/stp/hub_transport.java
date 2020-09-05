@@ -10,7 +10,8 @@ import script.library.space_station;
 public class hub_transport extends script.base_script {
     public hub_transport() {
     }
-    public static int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
+    public static String SS = "object/building/hub/space_station.iff";
+    public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {
         menu_info_data data = mi.getMenuItemByType(menu_info_types.ITEM_USE);
         if (data != null)
@@ -19,12 +20,14 @@ public class hub_transport extends script.base_script {
         }
         return SCRIPT_CONTINUE;
     }
-    public static int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException
+    public int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            sendSystemMessageTestingOnly(player, "Attempting to move you to the hub");
-            instance.requestInstanceMovement(player, "hub");
+            obj_id base = getPlanetByName("dungeon_hub");
+            obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(base), 16000.0f, SS);
+            obj_id cell = getCellId(targetLocs[0], "hangarbay1");
+            warpPlayer(player, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
         }
         return SCRIPT_CONTINUE;
     }
