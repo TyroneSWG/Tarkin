@@ -108,3 +108,14 @@ object/building/naboo/rori_restuss_shuttleport.iff		shuttleport
 object/building/dathomir/dathomir_quarantine_zone_starport.iff		starport	
 object/building/dathomir/dathomir_quarantine_zone_cantina.iff		cantina	
 object/building/tatooine/bestine_museum.iff	@loc_n:bestine	museum
+object/building/taanab/cantina_taanab.iff		cantina			1
+object/building/taanab/cloning_taanab.iff		cloningfacility			
+object/building/taanab/guild_combat_taanab_style_01.iff		guild	guild_combat		
+object/building/taanab/guild_commerce_taanab_style_01.iff		guild	guild_commerce		
+object/building/taanab/guild_theater_taanab_s01.iff		guild	guild_theater		1
+object/building/taanab/guild_university_taanab_style_01.iff		guild	guild_university		
+object/building/taanab/hospital_taanab.iff		medicalcenter			1
+object/building/taanab/hospital_taanab_s02.iff		medicalcenter			1
+object/building/taanab/hotel_taanab.iff		hotel			
+object/building/taanab/shuttleport_taanab.iff		shuttleport			
+object/building/taanab/starport_taanab.iff		starport			
