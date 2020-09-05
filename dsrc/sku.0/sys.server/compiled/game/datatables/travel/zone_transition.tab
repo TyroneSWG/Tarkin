@@ -52,4 +52,4 @@ theed	naboo:-4856:0:4162
 nym_stronghold	lok:416:0:5268					
 station_nova_orion	instance:nova_orion_station:dungeon1:hangarbay2:62.7:0.9:-33.5					Shared space station
 exar_kun	yavin4:4923:103:5603	won:exar_kun_intro_02	won:exar_kun_intro_02			
-hub	instance:hub:dungeon_hub:cave_entrance:6.1:9.7:4.3					Shared space station dungeon player experience
+hub	instance:hub:dungeon_hub:hangarbay2:62.7:0.9:-33.5					Shared space station
