@@ -12289,6 +12289,5 @@ public class base_player extends script.base_script
             obj_id cell = getCellId(targetLocs[0], "hangarbay1");
             warpPlayer(self, "dungeon_hub", 0.0f, 0.0f, 0.0f, cell, 0.0f, 0.0f, 0.0f);
             return SCRIPT_CONTINUE;
-
     }
 }
