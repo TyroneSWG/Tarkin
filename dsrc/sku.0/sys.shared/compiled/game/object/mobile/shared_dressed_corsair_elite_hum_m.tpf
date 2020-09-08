@@ -16,6 +16,5 @@ objectName = "npc_name" "human_base_male"
 detailedDescription = "" ""
 lookAtText = "npc_lookat" "human_base_male"
 appearanceFilename = "appearance/hum_m.sat"
-clientDataFile = "clientdata/npc/client_shared_npc_dressed_corsair_elite_hum_m.cdf"
-scale = 1.00..1.12
+clientDataFile = ".cdf"scale = 1.00..1.12
 

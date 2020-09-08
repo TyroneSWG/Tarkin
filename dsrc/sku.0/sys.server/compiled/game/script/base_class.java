@@ -3886,7 +3886,16 @@ public class base_class
     {
         sendSystemMessage (to, localizedMessageText, null);
     }
-
+    /**
+     * Sends a localized system message to target
+     * @param target
+     * @param msg
+     */
+    public static void systemMsg (obj_id to, String localizedMessageText)
+    {
+        sendSystemMessage (to, localizedMessageText, null);
+    }
+    
     /**
     * Send a system message to an individual
     */
