@@ -19,11 +19,7 @@ public class shuttle extends script.base_script {
     }
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {
-        menu_info_data data = mi.getMenuItemByType(menu_info_types.ITEM_USE);
-        if (data != null)
-        {
-            data.setServerNotify(true);
-        }
+        mi.addRootMenuOrServerNotify(menu_info_types.ITEM_USE, new string_id("item", "use"));
         return SCRIPT_CONTINUE;
     }
     public int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException

@@ -28,7 +28,7 @@ public class shady extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException {
         setInvulnerable(self, true);
-        setName(self, NAMES[rand(0,NAMES.length)]);
+        setName(self, NAMES[rand(0,3)]);
         ai_lib.setDefaultCalmBehavior(self, 1);
         return SCRIPT_CONTINUE;
     }
