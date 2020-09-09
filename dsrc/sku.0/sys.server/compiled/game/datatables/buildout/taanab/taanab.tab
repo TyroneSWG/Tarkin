@@ -38,13 +38,13 @@ object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/tangible/tcg/series4/decorative_stuffed_wampa.iff	3	9.86178	0.242416	0.339216	0.849693	0	0.527278	0	theme_park.stp.wendle.boombox	$|
 object/mobile/dressed_droid_enemy_07.iff	3	11.4432	-0.894991	-9.93633	0.739124	0	0.673569	0	theme_park.stp.invuln	stp.npc.name|4|IG-X1|$|
 object/mobile/dressed_droid_enemy_09.iff	3	12.9794	-0.894992	-10.2785	0.900587	0	-0.434676	0	theme_park.stp.invuln	stp.npc.name|4|IG-X2|$|
-object/mobile/dressed_dark_trooper_black_hole.iff	3	7.99268	-0.894992	5.37646	-0.191862	0	0.981422	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|ai.defaultCalmMood|4|npc_imperial|faction|4|Imperial|stp.faction|4|imperial|$|
-object/mobile/dressed_dark_trooper_black_hole.iff	3	7.11017	-0.894992	5.66934	0.124275	0	0.992248	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|ai.defaultCalmMood|4|npc_imperial|faction|4|Imperial|stp.faction|4|imperial|$|
 object/static/worldbuilding/terminal/wall_monitorscreen_text_02.iff	3	22.8372	3.04462	12.6594	0.707108	0	0.707106	0		$|
 object/static/worldbuilding/terminal/floor_console_sectional_01.iff	3	27.7003	-0.894994	7.42235	0.70711	0	-0.707103	0		$|
 object/static/worldbuilding/terminal/floor_console_sectional_01.iff	3	27.6964	-0.894994	10.4927	0.70711	0	-0.707103	0		$|
 object/mobile/imp_security_01r.iff	3	25.6978	-0.894994	9.02713	0.674235	0	0.738517	0	theme_park.stp.invuln	stp.npc.name|4|Captain Pellaeon|$|
 object/tangible/terminal/terminal_character_builder.iff	3	12.4405	-0.894992	11.0302	0	0	1	0	terminal.terminal_character_builder	$|
+object/mobile/dressed_dark_trooper_black_hole.iff	3	6.39013	-0.894992	5.94791	-0.117921	0	0.993023	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|ai.defaultCalmMood|4|npc_imperial|faction|4|Imperial|stp.faction|4|imperial|$|
+object/mobile/dressed_dark_trooper_black_hole.iff	3	5.38009	-0.894992	6.02137	0.0830957	0	0.996542	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|ai.defaultCalmMood|4|npc_imperial|faction|4|Imperial|stp.faction|4|imperial|$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/tangible/furniture/modern/couch_modern_style_01.iff	4	23.8425	-0.894996	-15.7306	0	0	1	0		$|
 object/tangible/furniture/modern/couch_modern_style_01.iff	4	23.6575	-0.894996	-18.6178	0.999946	0	-0.0103984	0		$|
@@ -80,7 +80,7 @@ object/mobile/toydarian_m.iff	14	-31.9979	0.10501	-25.047	0.771646	0	-0.636053	0
 object/mobile/tabage.iff	14	-31.8382	0.0134385	-24.1601	0.79153	0	-0.611131	0	theme_park.stp.invuln	stp.npc.name|4|Rydo's pet|$|
 object/mobile/tt8l.iff	14	-30.2811	0.10499	-14.6594	0.787477	0	0.616344	0	theme_park.stp.invuln	stp.npc.name|4|TT-8L gatekeeper droid|$|
 object/cell/cell.iff	15	0	0	0	1	0	0	0		$|
-object/building/taanab/cloning_taanab.iff	0	13124	74.9963	3834	0.382683	0	0.92388	0	planet_map.map_loc:structure.municipal.cloning_facility	portalProperty.crc|0|-1072518653|$|
+object/building/taanab/cloning_taanab.iff	0	13133	74.9963	3826	0.382683	0	0.92388	0	planet_map.map_loc:structure.municipal.cloning_facility	portalProperty.crc|0|-1072518653|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -197,14 +197,14 @@ object/cell/cell.iff	16	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	17	0	0	0	1	0	0	0		$|
 object/building/taanab/merchant_tent_taanab_s01.iff	0	13021.2	74.9998	3614.12	0.346843	0	0.937923	0		portalProperty.crc|0|-1028664474|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
-object/building/military/outpost_shed_s05.iff	0	13108	75.2369	3795	0.368782	0	0.929516	0		portalProperty.crc|0|1376564094|$|
+object/building/military/outpost_shed_s05.iff	0	13115	75.2369	3789	0.368782	0	0.929516	0		portalProperty.crc|0|1376564094|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
-object/building/military/pirate_outpost.iff	0	13162	75	3851	0.388684	0	0.921371	0		portalProperty.crc|0|1376564094|$|
+object/building/military/pirate_outpost.iff	0	13169	75	3845	0.388684	0	0.921371	0		portalProperty.crc|0|1376564094|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -312,7 +312,7 @@ object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/building/player/player_house_tcg_relaxation_pool.iff	0	13611.2	76.4603	3737.3	-0.513489	0	0.858095	0		portalProperty.crc|0|-1451071247|structure.capacity_override|0|450|tcg.static_item_deed|4|item_tcg_loot_reward_series4_relaxation_pool_deed_02_01|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
-object/building/player/player_house_tcg_vehicle_garage.iff	0	13190	76.0731	3472	0.707117	0	-0.707096	0	theme_park.stp.stp_filler	playerStructure_noTransfer|0|1|portalProperty.crc|0|776313489|structure.capacity_override|0|250|tcg.static_item_deed|4|item_tcg_loot_reward_series7_deed_vehicle_garage|$|
+object/building/player/player_house_tcg_vehicle_garage.iff	0	13190	74.9699	3472	0.707125	0	-0.707088	0	theme_park.stp.stp_filler	playerStructure_noTransfer|0|1|portalProperty.crc|0|776313489|structure.capacity_override|0|250|tcg.static_item_deed|4|item_tcg_loot_reward_series7_deed_vehicle_garage|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/building/player/player_house_jedi_meditation_room.iff	0	13352.2	74.0362	3705.15	-0.00920344	0	0.999958	0	theme_park.stp.chapter_house	ai.defaultCalmMood|4|npc_imperial|faction|4|Imperial|portalProperty.crc|0|1713450467|structure.capacity_override|0|250|tcg.static_item_deed|4|item_tcg_loot_reward_series3_jedi_meditation_room_deed|$|
@@ -341,38 +341,38 @@ object/cell/cell.iff	8	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	9	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	10	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	11	0	0	0	1	0	0	0		$|
-object/building/military/outpost_starport_nonworking.iff	0	13070.5	74.9466	3810.84	-0.397878	0	0.917438	0		portalProperty.crc|0|-688757533|$|
+object/building/military/outpost_starport_nonworking.iff	0	13086	74.9001	3856	0.707107	0	-0.707106	0		portalProperty.crc|0|-688757533|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/tangible/terminal/terminal_command_console.iff	1	-3.94433	0.146595	-17.4672	0.707108	0	0.707105	0	theme_park.stp.terminal_transport_stardestroyer	$|
-object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13042	74.7323	3845.2	1	0	0	0		portalProperty.crc|0|-242217168|$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13053	74.7308	3852	1	0	0	0		portalProperty.crc|0|-242217168|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
-object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13027.1	74.6343	3845.42	1	0	0	0		portalProperty.crc|0|-242217168|$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13038	74.6265	3852	1	0	0	0		portalProperty.crc|0|-242217168|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
-object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13041.8	74.5724	3869.78	-0.0126104	0	0.99992	0		portalProperty.crc|0|-242217168|$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13038	74.562	3877	0	0	1	0		portalProperty.crc|0|-242217168|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
-object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13026.9	74.4439	3870	-0.0126104	0	0.99992	0		portalProperty.crc|0|-242217168|$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13053	74.4332	3877	0	0	1	0		portalProperty.crc|0|-242217168|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
-object/building/military/military_base_police_station_imperial_lok_otto.iff	0	12971.7	73.7569	3854.42	0.31381	0	0.949486	0		portalProperty.crc|0|-452900170|$|
+object/building/military/military_base_police_station_imperial_lok_otto.iff	0	12984	73.7569	3848	-8.6401e-07	0	1	0		portalProperty.crc|0|-452900170|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -385,7 +385,7 @@ object/cell/cell.iff	9	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	10	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	11	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	12	0	0	0	1	0	0	0		$|
-object/building/naboo/salon_naboo.iff	0	13182.6	74.7111	3594.01	0.707108	0	0.707106	0	planet_map.map_loc:theme_park.stp.stp_sign:theme_park.dim_u.temple_access	portalProperty.crc|0|-1344836679|salon|0|1|stp.sign.name|4|Dim-U Temple|$|
+object/building/naboo/salon_naboo.iff	0	13182.6	74.7111	3594.01	0.707108	0	0.707106	0	planet_map.map_loc:theme_park.stp.stp_sign:theme_park.dim_u.temple_access	portalProperty.crc|0|-1344836679|salon|0|1|stp.sign.name|4|an old salon|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/tangible/furniture/all/frn_all_rug_rectangle_large_style_02.iff	1	-4.17086	0.611579	-3.93553	-0.707107	0	0.707107	0		$|
 object/tangible/furniture/all/meatlump_reward_rock_chair_01.iff	1	-1.13486	0.611579	-5.73643	1	0	0	0		occupied.limit|0|1|$|
@@ -606,17 +606,116 @@ object/cell/cell.iff	65	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	66	0	0	0	1	0	0	0		$|
 object/building/taanab/starport_taanab.iff	0	13247	75	3771	0	0	1	0	planet_map.map_loc:structure.municipal.starport:city.ship_spawner:structure.municipal.starport_city	portalProperty.crc|0|-940528188|travel.air_time|0|60|travel.base_object|7|93000907:93000910:93000913:93000916:93000919:93000931:|travel.ground_time|0|300|travel.point_name|4|Pendath|travel.shuttle_available|0|1|travel.shuttle_timestamp|0|458696|travel.version|0|3|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/tangible/furniture/modern/bar_piece_curve_s2.iff	1	-9.01161	0.639421	74.6226	0.707107	0	0.707106	0		$|
+object/tangible/furniture/decorative/decorative_gift_box.iff	1	-8.60435	1.79171	74.0159	0.941076	0	0.338197	0		$|
+object/tangible/furniture/decorative/carved_bowl.iff	1	-10.0835	1.79166	76.4036	1	0	0	0		$|
+object/tangible/furniture/decorative/diagnostic_screen.iff	1	-8.92323	1.79166	75.6486	-0.505877	0	0.862605	0		$|
+object/tangible/furniture/modern/couch_modern_style_02.iff	1	-0.191126	0.639421	72.8392	1	0	0	0		$|
+object/tangible/furniture/decorative/wod_potted_plant_01.iff	1	-2.88097	0.639421	73.0707	1	0	0	0		$|
+object/tangible/furniture/decorative/wod_potted_plant_01.iff	1	2.48859	0.639421	73.1239	1	0	0	0		$|
+object/tangible/furniture/modern/couch_modern_style_02.iff	1	5.25702	0.639421	72.9016	1	0	0	0		$|
+object/tangible/furniture/decorative/wod_potted_plant_01.iff	1	7.96744	0.639421	73.0065	0	0	1	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/soundobject/soundobject_starport_announcer.iff	4	-0.654025	8.86558	56.3904	1	0	0	0		$|
+object/soundobject/soundobject_starport_interior.iff	4	-1.09569	8.61781	62.948	1	0	0	0		$|
+object/tangible/furniture/all/frn_all_tree_potted_s1.iff	4	-4	0.639421	57	0.707106	0	0.707107	0		$|
+object/tangible/furniture/all/frn_all_tree_potted_s1.iff	4	3	0.639421	57	-0.707107	0	0.707107	0		$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	0	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	3	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-1	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-4	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-3	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	0	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	3	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	1	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-2	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-3	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-1	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-2	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	2	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	1	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-4	0.639421	56	0	0	1	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	2	0.639421	58	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	4	0.639421	57	0.707107	0	0.707107	0		occupied.limit|0|1|$|
+object/tangible/furniture/all/frn_all_chair_upholstered_hue_s1.iff	4	-5.00997	0.639423	57.0027	0.707108	0	-0.707106	0		occupied.limit|0|1|$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	7	0	0	0	1	0	0	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	37.5822	0.741794	34.358	0.999638	0	0.026899	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	36.958	0.741794	35.6255	0.521404	0	0.85331	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	37.662	0.639417	35.27	1	0	0	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	38.5128	0.741794	36.0194	-0.382683	0	0.92388	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	38.5	0.741788	41.8014	-0.026899	0	0.999638	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	39.124	0.741788	40.5338	0.85331	0	-0.521404	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	38.4199	0.639417	40.8893	0	0	1	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	37.5693	0.741788	40.1398	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	41.667	0.741788	39.0092	-0.026899	0	0.999638	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	42.291	0.741788	37.7417	0.85331	0	-0.521404	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	41.5869	0.639417	38.0971	0	0	1	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	40.7363	0.741788	37.3476	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	49.5666	0.741789	49.8346	-0.026899	0	0.999638	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	50.1906	0.741789	48.5671	0.85331	0	-0.521404	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	49.4865	0.639418	48.9225	0	0	1	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	48.6359	0.741789	48.173	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	51.2783	0.74179	46.8442	-0.026899	0	0.999638	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	51.9024	0.74179	45.5766	0.85331	0	-0.521404	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	51.1982	0.639419	45.932	0	0	1	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	50.3477	0.74179	45.1825	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	44.8183	0.741788	48.9415	-0.026899	0	0.999638	0		occupied.limit|0|1|$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	45.4423	0.741788	47.6739	0.85331	0	-0.521404	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/table_modern_style_01.iff	7	44.7382	0.639417	48.0294	0	0	1	0		$|
+object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	7	43.8877	0.741788	47.2799	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/couch_modern_style_01.iff	7	54.4327	-0.521137	41.2049	0.120107	0	0.992761	0		$|
+object/tangible/furniture/modern/couch_modern_style_01.iff	7	57.1955	-0.52113	39.5361	-0.617372	0	0.78667	0		$|
+object/tangible/furniture/modern/couch_modern_style_01.iff	7	55.5752	-0.521137	36.8601	0.992761	0	-0.120107	0		$|
+object/tangible/furniture/modern/rug_oval_sml_s01.iff	7	54.604	-0.521137	38.8619	-0.617372	0	0.786671	0		$|
+object/tangible/furniture/modern/couch_modern_style_01.iff	7	42.8757	-0.521137	31.3952	0.382683	0	0.92388	0		$|
+object/tangible/furniture/modern/couch_modern_style_01.iff	7	42.1037	-0.521138	32.1573	0.92388	0	-0.382683	0		$|
+object/tangible/furniture/decorative/wod_sm_potted_plant.iff	7	44.0666	-0.521137	33.4331	1	0	0	0		$|
+object/tangible/furniture/decorative/wod_sm_potted_plant.iff	7	41.0045	-0.521138	30.2607	0	0	1	0		$|
+object/tangible/furniture/decorative/wod_sm_potted_plant.iff	7	53.5347	6.52298	39.6851	1	0	0	0		$|
 object/cell/cell.iff	8	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	9	0	0	0	1	0	0	0		$|
+object/tangible/furniture/modern/bar_counter_s1.iff	9	-42.4699	1.63942	59.6716	0.953847	0	-0.300293	0		$|
+object/tangible/furniture/decorative/bottle_fat.iff	9	-42.9151	2.79031	59.5057	1	0	0	0		$|
+object/tangible/furniture/decorative/bottle_pear.iff	9	-43.2044	2.79031	59.2718	1	0	0	0		$|
+object/tangible/furniture/decorative/bottle_tall.iff	9	-43.0933	2.79031	58.9552	1	0	0	0		$|
+object/tangible/furniture/decorative/beast_stuffed.iff	9	-41.7383	2.79031	60.1616	1	0	0	0		$|
+object/tangible/furniture/modern/rug_rect_sml_s01.iff	9	-38.7654	1.59801	62.7325	0.92388	0	0.382683	0		$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-38.2261	1.63942	63.8521	-0.00269912	0	0.999996	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-39.7773	1.63942	62.1367	0.705196	0	0.709013	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-37.5825	1.63942	62.7104	0.709013	0	-0.705195	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-38.6875	1.63942	61.6279	0.999996	0	0.00269899	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-39.3569	1.63942	63.3271	0.380188	0	0.924909	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/rug_rect_sml_s01.iff	9	-33.6929	1.63942	65.1629	-0.630888	0	0.775874	0		$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-34.7578	1.68083	64.5219	0.957469	0	0.288537	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-32.5202	1.68083	65.1068	0.881059	0	-0.473007	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-34.6704	1.68083	65.8296	0.473005	0	0.881059	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-33.153	1.68083	66.1294	-0.288537	0	0.957468	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-33.5243	1.68083	64.3413	0.995004	0	-0.0998328	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/rug_rect_sml_s01.iff	9	-28.6955	1.63942	51.9337	-0.382683	0	0.92388	0		$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-29.235	1.68084	50.814	0.999996	0	0.002699	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-27.6838	1.68084	52.5294	0.709012	0	-0.705197	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-29.8786	1.68084	51.9556	0.705195	0	0.709013	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-28.7736	1.68084	53.0382	-0.002699	0	0.999996	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/chair_modern_style_01.iff	9	-28.1042	1.68084	51.3389	0.924909	0	-0.380188	0		occupied.limit|0|1|$|
+object/tangible/furniture/modern/bar_counter_s1.iff	9	-30.119	1.63942	47.1786	0.953847	0	-0.300293	0		$|
+object/tangible/furniture/decorative/bottle_fat.iff	9	-30.5639	2.79031	47.013	1	0	0	0		$|
+object/tangible/furniture/decorative/bottle_pear.iff	9	-30.8537	2.79031	46.7792	1	0	0	0		$|
+object/tangible/furniture/decorative/bottle_tall.iff	9	-30.7425	2.79031	46.4622	1	0	0	0		$|
+object/tangible/furniture/decorative/beast_stuffed.iff	9	-29.3874	2.79031	47.669	1	0	0	0		$|
+object/tangible/furniture/modern/table_modern_style_01.iff	9	-33.7115	1.63942	65.2412	1	0	0	0		$|
+object/tangible/furniture/modern/table_modern_style_01.iff	9	-38.6059	1.63942	62.6668	1	0	0	0		$|
+object/tangible/furniture/modern/table_modern_style_01.iff	9	-28.7085	1.63942	52.0389	1	0	0	0		$|
 object/cell/cell.iff	10	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	11	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	12	0	0	0	1	0	0	0		$|
+object/tangible/furniture/terminal/terminal_bank_floor_on_01.iff	12	-59.2891	2.63942	37.6914	0.92388	0	0.382683	0		$|
+object/tangible/furniture/lifeday/lifeday_mini_tree.iff	12	-59.1512	6.62461	37.696	1	0	0	0		$|
+object/tangible/furniture/imperial/data_terminal_s1.iff	12	-47.9289	2.63942	25.617	0.922997	0	0.384808	0		$|
+object/tangible/furniture/imperial/data_terminal_s1.iff	12	-48.8603	2.63942	26.5438	0.922997	0	0.384808	0		$|
 object/cell/cell.iff	13	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	14	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	15	0	0	0	1	0	0	0		$|
@@ -804,7 +903,6 @@ object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13341.5	75	3733.
 object/mobile/dressed_corvette_neutral_yondalla.iff	0	13260	75	3659	0.928071	0	0.372402	0	systems.combat.credit_for_kills:npe.make_invulnerable:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13355.9	75	3740.5	0.976894	0	-0.213726	0		$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13363.6	75	3743.84	0	0	1	0		$|
-object/mobile/dressed_fed_dub_captain_twk_female_01.iff	0	13262	75	3659	-0.600175	0	0.799869	0	systems.combat.credit_for_kills:npe.make_invulnerable:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/mobile/dressed_geonosian_commoner_01.iff	0	13261	75	3660	0.15642	0	0.987691	0	systems.combat.credit_for_kills:npe.make_invulnerable:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13363.6	75	3752.64	0.707135	0	-0.707078	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13363.6	75	3768.46	0.707139	0	-0.707074	0		$|
@@ -1005,7 +1103,7 @@ object/building/player/city/garden_corellia_sml_05.iff	0	13334.1	74.7554	3771.29
 object/soundobject/soundobject_city_crowd_small.iff	0	13156.9	75	3656.66	1	0	0	0		$|
 object/soundobject/soundobject_city_crowd_medium.iff	0	13141	0	3711.59	1	0	0	0		$|
 object/soundobject/soundobject_city_crowd_sentients.iff	0	13148	75	3794.08	1	0	0	0		$|
-object/static/worldbuilding/vehicles/lambda_shuttle_static_destroyed.iff	0	13073.6	82.2793	3809.86	0.964674	0	-0.263445	0		$|
+object/static/worldbuilding/vehicles/lambda_shuttle_static_destroyed.iff	0	13089	81.9861	3866	0.00159134	0	0.999999	0		$|
 object/tangible/sign/player/house_address.iff	0	13218.1	77.8931	3690.88	0.92388	0	-0.382683	0	systems.sign.sign:theme_park.stp.stp_sign	stp.sign.name|4|Starport Master's Office|$|
 object/building/general/hotel_general_style_1.iff	0	13312.6	75	3574.59	1	0	0	0	planet_map.map_loc	healing.canhealshock|0|1|safeLogout|0|1|$|
 object/static/structure/corellia/corl_imprv_column_s02.iff	0	13336	75	3598	1	0	0	0		$|
@@ -1057,7 +1155,6 @@ object/tangible/door/som_droid_factory_door.iff	0	13109.4	75.2809	3720.35	0.7071
 object/tangible/furniture/city/flag_city_05.iff	0	13095	81	3746	0.70712	0	-0.707093	0	systems.city.city_furniture:systems.city.city_flag:theme_park.stp.stp_sign	stp.sign.name|4|a banner|$|
 object/tangible/furniture/city/flag_city_05.iff	0	13095	82	3735	0.707125	0	-0.707088	0	systems.city.city_furniture:systems.city.city_flag:theme_park.stp.stp_sign	stp.sign.name|4|a banner|$|
 object/tangible/furniture/city/flag_city_05.iff	0	13095	82	3757	0.707123	0	-0.70709	0	systems.city.city_furniture:systems.city.city_flag:theme_park.stp.stp_sign	stp.sign.name|4|a banner|$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13068.6	-0.314072	3856.29	0.969872	0	-0.243617	0		$|
 object/building/endor/endor_lake_platform.iff	0	11774	1	4619	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/endor/endor_lake_platform.iff	0	11774	1	4634.92	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/endor/endor_lake_platform_cap.iff	0	11774	-9.81289	4609	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
@@ -1157,28 +1254,13 @@ object/tangible/terminal/terminal_elevator_down_click.iff	0	13077.6	74.6651	3450
 object/tangible/terminal/terminal_elevator_down_click.iff	0	13083.6	74.7122	3454.28	1	0	0	0	npe.elevator_down	$|
 object/building/taanab/filler_slum_16x16_s01.iff	0	13007	74.8313	3650.88	-0.0142031	0	0.999899	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_slum_16x32_s01.iff	0	12964.3	74.8117	3637.78	1	0	0	0	structure.filler.filler:theme_park.stp.stp_filler	$|
-object/building/military/military_base_gate_house_imperial.iff	0	13034.8	74.9237	3798.36	-0.0242011	0	0.999707	0		$|
-object/building/military/military_outpost_guard_tower_1.iff	0	13011	74.9432	3858	-0.00920358	0	0.999957	0		$|
-object/building/mustafar/structures/must_smuggler_bunker.iff	0	13034	74.8622	3884	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13117.1	74.9914	3863.98	1	0	0	0		$|
-object/building/mustafar/structures/must_bandit_generator.iff	0	13085.8	74.9958	3842.74	0.988012	0	-0.154379	0		$|
+object/building/military/military_base_gate_house_imperial.iff	0	12978	74.9237	3799	0	0	1	0		$|
+object/building/military/military_outpost_guard_tower_1.iff	0	13018	74.9348	3865	0	0	1	0		$|
+object/building/mustafar/structures/must_smuggler_bunker.iff	0	13046	74.8622	3890	1	0	0	0		$|
 object/static/corellia/rock_crystal_geyser_agrilat_small.iff	0	12985.9	74.9692	3642.16	1	0	0	0		$|
-object/building/military/military_base_gate_house_imperial.iff	0	13017.1	74.6647	3799.48	-0.024201	0	0.999707	0		$|
-object/building/military/military_outpost_guard_tower_1.iff	0	13055.3	74.7815	3856.62	0.999687	0	0.0249979	0		$|
-object/building/mustafar/structures/must_smuggler_bunker.iff	0	13034	74.1924	3903	0.000796527	0	0.999999	0		$|
-object/building/mustafar/structures/must_bandit_generator.iff	0	13096.2	74.9495	3848.88	0.932328	0	-0.361614	0		$|
-object/building/mustafar/structures/must_bandit_generator.iff	0	13105	74.9462	3858.8	0.84459	0	-0.535414	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13113	74.9309	3865.52	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13116.9	74.9314	3867.91	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13112.7	74.915	3870.11	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13109.2	74.9107	3868.16	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13116.3	74.9165	3872.24	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13108.8	74.8888	3872.78	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13113	74.8977	3873.84	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13105.1	74.8865	3870.64	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13109.4	74.8732	3876.79	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13104.9	74.8647	3875.43	1	0	0	0		$|
-object/building/mustafar/structures/must_miner_tower.iff	0	13101.6	74.8623	3873.55	1	0	0	0		$|
+object/building/military/military_base_gate_house_imperial.iff	0	12998	74.6647	3799	0	0	1	0		$|
+object/building/military/military_outpost_guard_tower_1.iff	0	13018	74.7787	3824	0	0	1	0		$|
+object/building/mustafar/structures/must_smuggler_bunker.iff	0	13045	74.2033	3918	0.000796527	0	0.999999	0		$|
 object/building/taanab/filler_slum_16x32_s02.iff	0	12995.2	74.9564	3686.35	0.714437	0	0.699699	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_slum_16x32_s02.iff	0	12995.5	74.9687	3672.04	-0.696135	0	0.717911	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/building/taanab/filler_slum_16x32_s02.iff	0	12947.7	74.8255	3684.84	0.714437	0	0.699699	0	structure.filler.filler:theme_park.stp.stp_filler	$|
@@ -1188,48 +1270,6 @@ object/building/taanab/filler_slum_16x16_s01.iff	0	13005.8	74.9825	3633.63	-0.01
 object/building/taanab/filler_slum_16x16_s01.iff	0	13031	74.9923	3633.3	0.99995	0	0.01	0	structure.filler.filler:theme_park.stp.stp_filler	$|
 object/static/corellia/rock_crystal_geyser_agrilat_small.iff	0	13082.2	75	3659.6	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13275	75	3598	-4.65723e-06	0	1	0		$|
-object/static/structure/military/military_wall_strong_imperial_style_01.iff	0	13091.6	74.9716	3790.94	0.362357	0	0.932038	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13055.1	74.9409	3794.39	-0.123884	0	0.992297	0		$|
-object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13079.9	74.9244	3789.03	-0.0607591	0	0.998152	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13071.3	74.9366	3790.37	1	0	0	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13088.1	74.9995	3787.75	1	0	0	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13095	74.9996	3794.1	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13101.6	74.9997	3800.18	0.36553	0	0.930798	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13107.2	75	3806.04	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12996.4	74.703	3801.61	-0.0541765	0	0.998532	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12980.1	74.5406	3803.39	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12966.5	74.3283	3812.6	-0.285188	0	0.958472	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12952.7	74.0542	3821.31	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12933.8	73.7251	3865.37	0.720279	0	-0.693684	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12943	73.8338	3835.15	-0.461072	0	0.887363	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12933.2	73.3382	3848.66	1	0	0	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12934.3	72.7685	3882.04	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12949.8	72.5293	3888.67	0.979429	-0	-0.201788	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12965.1	73.2339	3895.55	1	0	0	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13076.9	73.441	3878.82	0.969872	0	-0.243617	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12980.6	73.5634	3902.57	0.979429	-0	-0.201788	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12995.9	74.2679	3909.44	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13012.5	73.7597	3909.7	0.999967	0	-0.00818297	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13029.2	74.4631	3910.13	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13044.9	74.1641	3910.37	0.999967	0	-0.008183	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13061.6	74.2915	3910.91	1	0	0	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13070.3	73.9216	3878.68	0.835863	0	-0.548938	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13078.3	73.9451	3884.46	0.783143	0	-0.621842	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13067.3	73.7234	3884.23	0.998547	0	0.0538805	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13073.1	73.7824	3885.29	0.757647	0	-0.652664	0		$|
-object/static/structure/general/cave_wall_tato_style_01.iff	0	13073.4	74.0904	3873.3	0.927209	0	0.374545	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13076.7	74.5684	3903.61	0.973251	0	0.229746	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13092.1	74.6724	3896.21	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13105.9	74.8022	3887.03	0.956272	0	0.292478	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13120.1	74.9062	3877.8	1	0	0	0		$|
-object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13127	74.9322	3872.15	0.942755	0	0.333487	0		$|
-object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13133.9	74.983	3866.71	0.999999	0.00116348	2.66299e-06	0.00076294		$|
-object/static/structure/military/military_wall_weak_imperial_16_style_01.iff	0	13011.6	74.8099	3847.65	0.993956	0	0.109778	0		$|
-object/static/structure/military/military_column_weak_imperial_style_01.iff	0	13019.9	74.4995	3845.91	1	0	0	0		$|
-object/static/structure/military/military_wall_weak_imperial_16_style_01.iff	0	13055.9	74.8679	3836.65	0.993956	0	0.109778	0		$|
-object/static/structure/military/military_wall_weak_imperial_16_style_01.iff	0	13071	74.9227	3829.14	0.941076	0	0.338196	0		$|
-object/static/structure/military/military_column_weak_imperial_style_01.iff	0	13077.5	74.9547	3823.77	1	0	0	0		$|
-object/static/structure/military/military_wall_weak_imperial_16_style_01.iff	0	12941.4	73.2663	3865.17	0.993956	0	0.109778	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13433.2	74.9997	3529.96	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_column_s01.iff	0	13449.7	74.7515	3530.07	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13465.4	74.7862	3535.22	0.986418	0	-0.164252	0		$|
@@ -1487,17 +1527,90 @@ object/mobile/dressed_velocity_chiss_m_01.iff	0	13016.1	74.9874	3634.37	0.745736
 object/mobile/dressed_unarmed_trainer_01.iff	0	12980.7	74.9565	3639.47	0.353133	0	0.935573	0	systems.combat.credit_for_kills:theme_park.stp.shady	ai.defaultCalmBehavior|0|1|$|
 object/mobile/emperor_royal_guard.iff	0	13370.6	75	3599.77	0.989976	0	-0.141234	0	systems.combat.credit_for_kills:player.species_innate	invulnerable|4|1|$|
 object/mobile/emperor_royal_guard.iff	0	13379.1	75	3600.13	0.990122	0	-0.140208	0	systems.combat.credit_for_kills:player.species_innate	invulnerable|4|1|$|
-object/mobile/dressed_jedi_trainer_twilek_female_01.iff	0	13380.6	75	3654.78	0.0305111	0	0.999534	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|faction|4|Rebel|stp.faction|4|rebel|$|
 object/mobile/dressed_scout_trainer_03.iff	0	13328.7	75	3592.01	-0.272149	0	0.962255	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/building/taanab/filler_historic_32x16_s02.iff	0	13515	73.8027	3884.46	0.382683	0	0.92388	0	structure.filler.filler	$|
 object/mobile/dressed_selonian_m_01.iff	0	13329.9	75	3704.24	0.89031	0	-0.455354	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/tangible/sign/municipal/municipal_sign_hanging_commerce.iff	0	13229.7	79.7581	3466.83	1	0	0	0	systems.sign.sign:theme_park.stp.stp_sign	stp.sign.name|4|Wendle's Private Residence|$|
-object/tangible/door/echo_base_door_large.iff	0	13304	72.9714	3627.13	1	0	0	0		$|
+object/tangible/door/echo_base_door_large.iff	0	13304	73.7034	3627.83	1	0	0	0		$|
 object/tangible/terminal/terminal_command_console.iff	0	12508.6	34.5128	4131.46	1	0	0	0	theme_park.stp.terminal_transport_corvette	$|
 object/tangible/terminal/terminal_command_console.iff	0	13266.8	75	3802.8	-0.241784	0	0.97033	0	theme_park.stp.stp_sign:theme_park.stp.terminal_transport_corvette	stp.sign.name|4|Departure Terminal|$|
-object/mobile/dressed_rsf_pilot.iff	0	13267	75	3803.03	-0.124036	0	0.992278	0	theme_park.stp.invuln	$|
-object/mobile/dressed_governor.iff	0	13179.5	75	3588.41	0.451676	0	0.892182	0	theme_park.stp.invuln	$|
+object/mobile/dressed_rsf_pilot.iff	0	13267	75	3803.03	-0.124036	0	0.992278	0	theme_park.stp.invuln	stp.npc.name|4|a Pendath Pilot|$|
+object/mobile/dressed_governor.iff	0	13179.5	75	3588.41	0.451676	0	0.892182	0	theme_park.stp.invuln	stp.sign.name|4|Jerooba Vir. a Dim-U Scholar|$|
 object/tangible/terminal/terminal_command_console.iff	0	8027.28	1404.2	7849.65	1	0	0	0	theme_park.stp.terminal_transport_stardestroyer	$|
 object/ship/star_destroyer_bridge_exterior.iff	0	8990.6	73.0747	8236.15	1	0	0	0	structure.filler.filler	$|
 object/ship/star_destroyer_bridge_exterior.iff	0	7770.71	1404.14	8257.72	1	0	0	0	structure.filler.filler	$|
 object/ship/star_destroyer_bridge_exterior.iff	0	7748.68	2091.9	8232.38	1	0	0	0	structure.filler.filler	$|
+object/mobile/dressed_jedi_trainer_twilek_female_01.iff	0	13372.1	75	3654.68	0.1578	0	0.987471	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|faction|4|Rebel|stp.faction|4|rebel|$|
+object/mobile/dressed_jedi_trainer_twilek_female_01.iff	0	13380.6	75	3655.1	-0.211293	0	0.977422	0	systems.combat.credit_for_kills:theme_park.stp.factional_npc	ai.defaultCalmBehavior|0|1|faction|4|Rebel|stp.faction|4|rebel|$|
+object/mobile/dressed_fed_dub_captain_twk_female_01.iff	0	13261.5	75	3658.55	0.901214	0	-0.433374	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
+object/static/structure/talus/talus_imprv_flagpole_s01.iff	0	13185.7	86.9748	3472.01	-0.592536	0	0.805544	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13111	74.6979	3875	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13094	74.6728	3892	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13045	74.4244	3925	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13061	74.5331	3925	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13072	74.4278	3914	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13029	73.662	3925	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13018	73.7187	3914	0.382684	0	0.923879	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12996	73.7651	3892	0.382684	0	0.923879	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12985	73.7381	3881	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12969	73.5302	3881	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12953	73.6992	3881	0.707108	0	0.707106	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12953	73.6968	3864	0.707114	0	0.707099	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	12953	73.474	3872	0.707107	0	-0.707107	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	12961	73.5814	3864	-1.87554e-06	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13095	74.9989	3795	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13069	74.9876	3799	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13038	75.0587	3799	1	0	0	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13053	74.9379	3799	1e-06	0	1	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13021	74.7095	3799	1e-06	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12994	74.8303	3795	1	0	0	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	12974	74.6088	3795	-2e-06	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12982	74.6531	3795	1	0	0	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	12961	74.383	3795	-2e-06	0	1	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12953	73.6594	3847	-0.707106	0	0.707107	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	12953	74.077	3816	-0.707103	0	0.70711	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	12953	74.2818	3804	0.707108	0	-0.707105	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	12953	74.3128	3795	1	0	0	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13006	74.7588	3811	-0.707106	0	0.707107	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13009	74.8124	3795	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13006	74.6397	3826	1	0	0	0		$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13053	74.8221	3837	1.89661e-07	0	1	0		portalProperty.crc|0|-242217168|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13038	74.7428	3837	1.89661e-07	0	1	0		portalProperty.crc|0|-242217168|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13038	74.8663	3811	1	0	0	0		portalProperty.crc|0|-242217168|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
+object/building/military/military_base_shed_imperial_style_prison_01.iff	0	13053	74.9194	3811	1	0	0	0		portalProperty.crc|0|-242217168|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13128	74.9289	3858	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13122	74.953	3864	0.92388	0	0.382683	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13117	74.9825	3847	0.382684	0	0.923879	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13095	74.9836	3825	0.382684	0	0.923879	0		$|
+object/static/structure/military/military_wall_strong_imperial_32_style_01.iff	0	13081	74.9821	3811	0.382684	0	0.923879	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s02.iff	0	13107	74.9995	3807	0.382645	0	0.923895	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13069	74.9798	3799	1	0	0	0		$|
+object/static/structure/military/military_wall_strong_imperial_16_style_01.iff	0	13001	74.7595	3795	-2e-06	0	1	0		$|
+object/building/mustafar/structures/must_smuggler_bunker.iff	0	13016	74.0411	3904	0.382683	0	0.92388	0		$|
+object/building/mustafar/structures/must_smuggler_bunker.iff	0	13074	74.4959	3905	-0.382683	0	0.92388	0		$|
+object/static/particle/particle_newbie_spotlight.iff	0	13021.1	81.3457	3824.12	0.796084	0	0	0.605186		$|
+object/static/particle/particle_newbie_spotlight.iff	0	13021.1	81.4096	3864.94	0.796084	0	0	0.605186		$|
