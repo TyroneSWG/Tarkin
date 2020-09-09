@@ -75,7 +75,6 @@ object/tangible/crafting/station/public_structure_station.iff	11	-34.1084	0.7999
 object/tangible/crafting/station/public_weapon_station.iff	11	-47.4861	0.627156	21.8436	0.952334	0	0.305058	0	systems.crafting.base_station	crafting.private|0|0|crafting.station|0|1|crafting.type|0|526369|$|
 object/tangible/crafting/station/space_station.iff	11	-50.4942	0.795161	27.7667	0.761612	0	0.648033	0	systems.crafting.base_station	crafting.private|0|1|crafting.station|0|1|crafting.type|0|393216|$|
 object/tangible/crafting/crafting_components_container.iff	11	-37.5991	0.613309	30.8022	1	0	0	0		$|
-object/tangible/crafting/base/base_incubator.iff	11	-40.0816	0.613309	33.7879	1	0	0	0	systems.beast.base_incubator	crafting.private|0|0|crafting.station|0|1|$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-41.4545	0.613309	30.3787	-0.652136	0	0.758102	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-39.3602	0.613309	30.4077	0.997189	0	-0.0749297	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-41.4151	0.613309	28.2811	0.0749297	0	0.997189	0		$|
