@@ -13,7 +13,7 @@ public class player_developer extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException
     {
-        if (!isGod(self) || getGodLevel(self) < 50)
+        if (!isGod(self))
         {
             detachScript(self, "developer.player_developer");
             return SCRIPT_CONTINUE;

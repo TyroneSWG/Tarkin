@@ -10,7 +10,7 @@ public class boombox extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException
     {
-       setName(self, "a magical item");
+       setName(self, "a radio");
        return SCRIPT_CONTINUE;
     }
     public int OnInitialize(obj_id self) throws InterruptedException
@@ -26,7 +26,17 @@ public class boombox extends script.base_script {
         }
         if (volumeName.equals("boombox_cantina"))
         {
-            play2dNonLoopingMusic(breacher, "sound/mus_pirate_cantina.snd");
+            String soundFile = "sound/mus_pirate_cantina.snd";
+            String soundFile2 = "sound/mus_cantina_band_remix.snd";
+            int whichOne = rand(1,100);
+            if (whichOne <= 50)
+            {
+                playClientEffectObj(breacher, soundFile2, self, "root", new transform(), "");
+            }
+            if (whichOne >= 50)
+            {
+                playClientEffectObj(breacher, soundFile, self, "root", new transform(), "");
+            }
         }
         else
         {
