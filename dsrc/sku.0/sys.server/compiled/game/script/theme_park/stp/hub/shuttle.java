@@ -14,7 +14,12 @@ public class shuttle extends script.base_script {
     public static String TITLE = "Confirm Departure";
     public int OnAttach(obj_id self) throws InterruptedException
     {
-        setObjVar(self, "hub_travel_point", "default");
+        setName(self, "a shuttle hatch");
+        return SCRIPT_CONTINUE;
+    }
+    public int OnInitialize(obj_id self) throws InterruptedException
+    {
+        setName(self, "a shuttle hatch");
         return SCRIPT_CONTINUE;
     }
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
