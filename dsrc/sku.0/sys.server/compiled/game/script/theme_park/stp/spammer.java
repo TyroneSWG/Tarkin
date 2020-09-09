@@ -20,7 +20,10 @@ public class spammer extends script.base_script {
         {
             return SCRIPT_CONTINUE;
         }
-        chat.chat(self, "Target Locked... Scanning " + getPlayerName(breacher));
+        if (volumeName.equals("hub_spammer"))
+        {
+            chat.chat(self, "Target Locked... Scanning " + getPlayerName(breacher));
+        }
         return SCRIPT_CONTINUE;
     }
 }

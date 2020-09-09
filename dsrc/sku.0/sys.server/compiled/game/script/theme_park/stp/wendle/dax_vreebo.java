@@ -15,7 +15,7 @@ public class dax_vreebo extends script.base_script {
         grantSkill(self, "social_entertainer_novice");
         setName(self, "Dax Vreebo");
         setPalcolorCustomVarClosestColor(self, "/private/index_color_1", 183, 85, 85, 0);
-        ai_lib.setMood(self, "themepark_music_3");
+        ai_lib.setMood(self, "themepark_music_2");
         chat.chat(self, "Feel the blues!");
         return SCRIPT_CONTINUE;
     }
@@ -24,7 +24,7 @@ public class dax_vreebo extends script.base_script {
         grantSkill(self, "social_entertainer_novice");
         setName(self, "Dax Vreebo");
         setPalcolorCustomVarClosestColor(self, "/private/index_color_1", 183, 85, 85, 0);
-        ai_lib.setMood(self, "themepark_music_3");
+        ai_lib.setMood(self, "themepark_music_2");
         chat.chat(self, "Feel the blues!");
         return SCRIPT_CONTINUE;
     }

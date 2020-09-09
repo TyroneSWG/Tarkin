@@ -23,7 +23,7 @@ public class door_corvette extends script.base_script {
 	public int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException {
 		if (item == menu_info_types.ITEM_USE) {
 			String title = "Confirm Departure";
-			String prompt = "Are you sure you want to head back the the Starport?";
+			String prompt = "Are you sure you want to head back to Pendath?";
 			sui.msgbox(self, player, prompt, sui.OK_CANCEL, title, "handleConfirm");
 		}
 		return SCRIPT_CONTINUE;

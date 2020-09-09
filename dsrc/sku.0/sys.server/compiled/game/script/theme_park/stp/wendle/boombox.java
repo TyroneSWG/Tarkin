@@ -10,7 +10,7 @@ public class boombox extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException
     {
-       setName(self, "a speaker");
+       setName(self, "a magical item");
        return SCRIPT_CONTINUE;
     }
     public int OnInitialize(obj_id self) throws InterruptedException

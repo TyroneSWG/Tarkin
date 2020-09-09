@@ -40,7 +40,7 @@ public class chapter_house extends script.base_script {
         }
         else 
         {
-            sendSystemMessageTestingOnly(item, "The Force has allowed you in.");
+            sendSystemMessageTestingOnly(item, "The Force has guided you in.");
             return SCRIPT_CONTINUE;
         }
     }

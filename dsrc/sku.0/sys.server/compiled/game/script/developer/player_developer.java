@@ -76,6 +76,7 @@ public class player_developer extends script.base_script {
         else if ((toLower(command)).equals("tab"))
         {
             String prompt = runShell("/home/swg/swg-main/build_tab.sh");
+            sendConsoleCommand(command, target);
             sui.msgbox(self, self, prompt, sui.OK_CANCEL, title, "noHandler");
         }
         else if ((toLower(command)).equals("tpf"))

@@ -62,7 +62,8 @@ public class shuttle extends script.base_script {
 	int btn = sui.getIntButtonPressed(params);
 	if (btn == sui.BP_OK) 
         {
-            warpPlayer(player, "tatooine", 5277.0f, 75.0f, -4198.0f, null, 0, 0, 0, "", true);
+            systemMsg(player, "TODO: add in tatooine's coord.");
+            //warpPlayer(player, "tatooine", 5277.0f, 75.0f, -4198.0f, null, 0, 0, 0, "", true);
             return SCRIPT_CONTINUE;
 	}
         return SCRIPT_CONTINUE;
