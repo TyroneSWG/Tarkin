@@ -33,15 +33,9 @@ object/mobile/max_rebo.iff	1	-15.9005	-2.57464e-09	-15.7518	0.916371	0	0.400331	
 object/soundobject/soundobject_cantina_large.iff	1	-0.0997909	3.8875	-0.023319	1	0	0	0		$|
 object/soundobject/soundobject_jabba_max_rebo_band.iff	1	-0.0535643	3.58616	-0.0621876	0.921061	0	0.389418	0		$|
 object/tangible/microphone/microphone.iff	1	-13.6072	0	-13.5662	0.932327	0	0.361616	0	item.microphone_and_speaker.microphone	microphone_is_active|0|0|$|
-object/static/particle/particle_effect_machine_neut.iff	1	-11.5482	-1	-9.72252	1	0	0	0		$|
-object/static/particle/particle_effect_machine_neut.iff	1	-11.2456	0	-14.0276	1	0	0	0		$|
 object/static/particle/particle_newbie_spotlight.iff	1	-0.382671	13.4499	-0.501101	0.772792	0.209719	-0.3201	-0.506306		$|
-object/static/particle/particle_love_machine_light.iff	1	-12.9848	-1	-9.33106	1	0	0	0		$|
 object/static/particle/particle_newbie_siren.iff	1	-15.4796	1.1049	-8.60575	1	0	0	0		$|
-object/static/particle/pt_smoke_blue_nowind.iff	1	-11.2375	-1	-10.0628	1	0	0	0		$|
-object/static/particle/pt_smoke_blue_nowind.iff	1	-10.0584	-1	-8.86211	1	0	0	0		$|
 object/static/particle/pt_water_drop_sound.iff	1	-1.80908	0.543081	-0.0434434	1	0	0	0		$|
-object/static/particle/pt_stunned_player.iff	1	-11.7723	-1	-8.24215	1	0	0	0		$|
 object/static/particle/pt_detector.iff	1	-0.200297	2.33553	-0.191551	1	0	0	0		$|
 object/tangible/speaker/speaker.iff	1	-19.7632	0	-6.62956	0.646584	0	0.762843	0	item.microphone_and_speaker.speaker	speaker.acceptingSignal|0|0|$|
 object/tangible/speaker/speaker.iff	1	-6.56727	0	-19.9165	0.996615	0	0.0822076	0	item.microphone_and_speaker.speaker	speaker.acceptingSignal|0|0|$|
