@@ -18,6 +18,10 @@ public class factional_npc extends script.base_script {
     public static String REBEL_SUFFIX = "(a Rebel Trooper)";
         
     public int OnInitialize(obj_id self) throws InterruptedException {
+        if (!hasObjVar(self, "stp.faction"))
+        {
+            setObjVar(self, "stp.faction", "rebel");
+        }
         if (getStringObjVar(self, "stp.faction").equals("imperial"))
         {
             factions.setFaction(self, "Imperial");
@@ -35,6 +39,10 @@ public class factional_npc extends script.base_script {
         return SCRIPT_CONTINUE;
     }
     public int OnAttach(obj_id self) throws InterruptedException {
+        if (!hasObjVar(self, "stp.faction"))
+        {
+            setObjVar(self, "stp.faction", "rebel");
+        }
         if (getStringObjVar(self, "stp.faction").equals("imperial"))
         {
             factions.setFaction(self, "Imperial");
