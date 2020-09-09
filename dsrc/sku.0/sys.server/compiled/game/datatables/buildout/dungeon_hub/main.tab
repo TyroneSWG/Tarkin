@@ -3,7 +3,7 @@ h	i	f	f	f	f	f	f	f	s	p
 object/tangible/spawning/spawn_egg.iff	0	0	0	0	1	0	0	0		$|
 object/building/hub/space_station.iff	0	8001.03	270.111	8002.07	1	0	0	0	structure.municipal.cloning_facility:content_tools.interior_buildout:npe.npe_public_instance	instance_name|4|hub|isControllerObject|0|1|portalProperty.crc|0|1986195772|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
-object/tangible/instrument/nalargon.iff	1	-15.5902	0	-15.5647	0.92388	0	0.382683	0	systems.skills.performance.instrument:theme_park.stp.wendle.dax_vreebo	ai.mood|4|themepark_music_3|instrument.unequippable|0|1|$|
+object/tangible/instrument/nalargon.iff	1	-15.5902	0	-15.5647	0.92388	0	0.382683	0	systems.skills.performance.instrument:theme_park.stp.wendle.dax_vreebo	ai.mood|4|themepark_music_2|instrument.unequippable|0|1|$|
 object/tangible/furniture/modern/couch_modern_style_01.iff	1	-11.607	-1	11.6526	0.382683	0	0.92388	0		$|
 object/tangible/furniture/modern/table_modern_style_01.iff	1	-10.6714	-1	10.754	1	0	0	0		$|
 object/tangible/furniture/modern/table_modern_style_01.iff	1	10.4253	-1	-10.5379	0	0	1	0		$|
@@ -29,7 +29,7 @@ object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	1	-21.0227	0.
 object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	1	-21.6469	0.102377	5.97869	0.521404	0	0.85331	0		occupied.limit|0|1|$|
 object/tangible/furniture/modern/table_modern_style_01.iff	1	-20.9429	0	5.62316	1	0	0	0		$|
 object/tangible/furniture/space/frn_chair_falcon_passenger_s01.iff	1	-20.0921	0.102377	6.37255	-0.382683	0	0.92388	0		occupied.limit|0|1|$|
-object/mobile/max_rebo.iff	1	-15.9005	-2.57464e-09	-15.7518	0.916371	0	0.400331	0	systems.combat.credit_for_kills:theme_park.stp.wendle.dax_vreebo	ai.mood|4|themepark_music_3|invulnerable|4|1|$|
+object/mobile/max_rebo.iff	1	-15.9005	-2.57464e-09	-15.7518	0.916371	0	0.400331	0	systems.combat.credit_for_kills:player.species_innate:theme_park.stp.wendle.dax_vreebo	ai.mood|4|themepark_music_2|invulnerable|4|1|$|
 object/soundobject/soundobject_cantina_large.iff	1	-0.0997909	3.8875	-0.023319	1	0	0	0		$|
 object/soundobject/soundobject_jabba_max_rebo_band.iff	1	-0.0535643	3.58616	-0.0621876	0.921061	0	0.389418	0		$|
 object/tangible/microphone/microphone.iff	1	-13.6072	0	-13.5662	0.932327	0	0.361616	0	item.microphone_and_speaker.microphone	microphone_is_active|0|0|$|
@@ -56,9 +56,9 @@ object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/tangible/sign/all_sign_city_s02.iff	5	27.6013	0.6	21.9179	-0.382683	0	0.92388	0	systems.sign.sign:object.sign:theme_park.stp.stp_sign	stp.sign.name|4|Hangar Bay Alpha|$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
 object/static/vehicle/player_shuttle.iff	6	62.3614	0.899998	34.0549	0.317127	0	0.948383	0		$|
-object/tangible/door/echo_base_door_small.iff	6	59.3976	2.47318	37.9219	0.946567	0.0711259	-0.313682	0.0235704		$|
+object/tangible/door/echo_base_door_small.iff	6	59.3976	2.47318	37.9219	0.946567	0.0711259	-0.313682	0.0235704	theme_park.stp.hub.shuttle	hub_travel_point|4|default|$|
 object/static/vehicle/player_shuttle.iff	6	52.6156	0.900001	27.0591	0.317127	0	0.948383	0		$|
-object/tangible/door/echo_base_door_small.iff	6	49.6518	2.47318	30.9262	0.946567	0.071126	-0.313682	0.02357		$|
+object/tangible/door/echo_base_door_small.iff	6	49.6518	2.47318	30.9262	0.946567	0.071126	-0.313682	0.02357	theme_park.stp.hub.shuttle	hub_travel_point|4|default|$|
 object/cell/cell.iff	7	0	0	0	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x32_s04.iff	7	96.2735	9.66663	20.8556	0	0.890343	0	-0.455291		$|
 object/static/structure/corellia/corl_imprv_wall_4x32_s04.iff	7	96.2639	1.76663	20.8745	-0.455291	0	0.890343	0		$|
@@ -80,14 +80,14 @@ object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-39.3602	0.613309	30.
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-41.4151	0.613309	28.2811	0.0749297	0	0.997189	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	11	-39.3175	0.613309	28.3152	0.758105	0	0.652133	0		$|
 object/cell/cell.iff	12	0	0	0	1	0	0	0		$|
-object/tangible/npc/junk_dealer_spawner.iff	12	-62.1188	-1.17923	-3.00887	0.707107	0	-0.707106	0	npc.celebrity.celebrity_spawner	spawns|4|junk_dealer|$|
-object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-63.025	-1.17923	-2.60857	0.707107	0	-0.707106	0		$|
+object/tangible/npc/junk_dealer_spawner.iff	12	-62.1188	-1.17923	-3.00887	0.707108	0	-0.707105	0	npc.celebrity.celebrity_spawner	spawns|4|junk_dealer|$|
+object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-63.025	-1.17923	-2.60857	0.707108	0	-0.707105	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-60.9496	-1.17923	-2.8791	1	0	0	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-61.3949	-1.17923	4.0843	-5.26836e-07	0	1	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-62.0788	-1.19738	-4.06667	-1e-06	0	1	0		$|
-object/static/structure/corellia/corl_imprv_column_s04.iff	12	-66.0523	-1.17923	3.81055	0.707107	0	-0.707107	0		$|
-object/static/structure/corellia/corl_imprv_column_s04.iff	12	-66.0391	-1.17923	-3.81965	0.707107	0	-0.707107	0		$|
-object/static/structure/corellia/corl_imprv_arch_sm_s03.iff	12	-66.4082	2.70662	0.0580352	0.707108	0	0.707105	0		$|
+object/static/structure/corellia/corl_imprv_column_s04.iff	12	-66.0523	-1.17923	3.81055	-0.707107	0	0.707107	0		$|
+object/static/structure/corellia/corl_imprv_column_s04.iff	12	-66.0391	-1.17923	-3.81965	-0.707107	0	0.707107	0		$|
+object/static/structure/corellia/corl_imprv_arch_sm_s03.iff	12	-66.4082	2.70662	0.0580352	0.707109	0	0.707104	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-46.1241	-1.19713	-4.06419	-1e-06	0	1	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-45.4218	-1.17923	4.0918	-1e-06	0	1	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-62.1409	6.74047	-4.08059	0	1e-06	0	1		$|
@@ -95,16 +95,16 @@ object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-61.3843	6.8336
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-46.1479	6.78426	-4.07658	0	1e-06	0	1		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-45.3889	6.79206	4.09482	0	1e-06	0	1		$|
 object/static/structure/corellia/corl_imprv_arch_sm_s03.iff	12	-66.4	4.71815	0.0672555	0	0.707108	0	-0.707105		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0871	-0.37273	-1.48611	0.707111	0	-0.707102	0		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0869	-0.37273	1.44821	0.707112	0	-0.707101	0		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0533	2.6601	-1.40389	0.707114	0	-0.707099	0		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0476	2.6601	1.5291	0.707115	0	-0.707098	0		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.068	5.60982	1.57216	0.707117	0	-0.707096	0		$|
-object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0737	5.60982	-1.36083	0.707116	0	-0.707097	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0871	-0.37273	-1.48611	0.707112	0	-0.707101	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0869	-0.37273	1.44821	0.707113	0	-0.7071	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0533	2.6601	-1.40389	0.707115	0	-0.707098	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0476	2.6601	1.5291	0.707116	0	-0.707097	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.068	5.60982	1.57216	0.707118	0	-0.707095	0		$|
+object/static/structure/naboo/nboo_imprv_lattice_wall_short_s01.iff	12	-66.0737	5.60982	-1.36083	0.707117	0	-0.707096	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-68.9424	-1.17924	-0.166982	0.707106	0	0.707107	0		$|
 object/static/structure/corellia/corl_imprv_wall_4x16_s04.iff	12	-68.9392	6.79804	-0.163454	0	0.707107	0	0.707106		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-52.9729	-1.17923	-2.77456	1	0	0	0		$|
-object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-55.0482	-1.17923	-2.50403	0.70711	0	-0.707103	0		$|
+object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-55.0482	-1.17923	-2.50403	0.707111	0	-0.707102	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-57.4334	-1.6256	2.591	0.707102	0	0.707111	0		$|
 object/tangible/furniture/modern/bar_piece_curve_s1.iff	12	-59.5087	-1.6256	2.86154	0	0	1	0		$|
 object/mobile/jawa.iff	12	-59.0807	-1.17924	2.66786	-0.119264	0	0.992863	0	theme_park.stp.invuln	stp.npc.name|4|Guild Station Vendor|$|
@@ -123,7 +123,7 @@ object/cell/cell.iff	20	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	21	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	22	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	23	0	0	0	1	0	0	0		$|
-object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	23	-54.8084	-30.993	19.9992	0.707107	0	-0.707106	0		$|
+object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	23	-54.8084	-30.993	19.9992	0.707108	0	-0.707105	0		$|
 object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	23	-54.8084	-30.993	29.9992	0.707108	0	-0.707106	0		$|
 object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	23	-54.8084	-30.993	24.9992	-0.707107	0	0.707107	0		$|
 object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	23	-60	-30.993	20	0.707107	0	0.707107	0		$|
@@ -134,7 +134,7 @@ object/tangible/storyteller/prop/pr_eqp_bacta_tank_lg.iff	23	-61	-30.993	34	0.38
 object/static/item/item_hoth_toolbox.iff	23	-55.0564	-30.993	32.4033	-0.338946	0	0.940806	0		$|
 object/static/item/item_hoth_hand_radio.iff	23	-52.6649	-30.6778	29.1623	0	0	1	0		$|
 object/static/item/item_hoth_floor_light.iff	23	-52.8941	-30.993	27.5928	0.707107	0	0.707107	0		$|
-object/static/item/item_hoth_floor_light.iff	23	-52.7656	-30.993	22.2647	0.707111	0	0.707102	0		$|
+object/static/item/item_hoth_floor_light.iff	23	-52.7656	-30.993	22.2647	0.707112	0	0.707101	0		$|
 object/cell/cell.iff	24	0	0	0	1	0	0	0		$|
 object/tangible/furniture/imperial/table_s1.iff	24	-11.0366	-29.2	48.8716	-0.589466	0	0.807793	0		$|
 object/tangible/furniture/imperial/table_s1.iff	24	-11.6934	-29.2	50.9251	-0.589466	0	0.807793	0		$|
@@ -154,7 +154,7 @@ object/tangible/terminal/terminal_command_console.iff	24	-17.156	-29.2	52.9148	0
 object/cell/cell.iff	25	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	26	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	27	0	0	0	1	0	0	0		$|
-object/tangible/terminal/terminal_elevator.iff	27	37.8016	-0.452129	1.22191	0.707107	0	0.707106	0	systems.elevator.elevator	$|
+object/tangible/terminal/terminal_elevator.iff	27	37.8016	-0.452129	1.22191	0.707108	0	0.707105	0	systems.elevator.elevator	$|
 object/tangible/terminal/terminal_elevator_up.iff	27	37.7797	-30.3512	1.23059	0.707107	0	0.707107	0	systems.elevator.elevator_up	$|
 object/tangible/terminal/terminal_elevator_down.iff	27	37.7773	29.6206	1.23323	0.707107	0	0.707107	0	systems.elevator.elevator_down	$|
 object/cell/cell.iff	28	0	0	0	1	0	0	0		$|

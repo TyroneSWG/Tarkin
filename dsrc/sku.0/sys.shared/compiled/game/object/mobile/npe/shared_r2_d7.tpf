@@ -18,4 +18,4 @@ lookAtText = "droid_lookat" "r2_base"
 appearanceFilename = "appearance/astromech_r2.sat"
 
 
-clientDataFile = "clientdata/droid/client_shared_dro_r2.cdf"
+clientDataFile = "clientdata/droid/astromech_golden.cdf"

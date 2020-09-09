@@ -14,16 +14,17 @@ public class shuttle extends script.base_script {
     public static String TITLE = "Confirm Departure";
     public int OnAttach(obj_id self) throws InterruptedException
     {
-        setObjVar(self, "hub_travel_point", "default");
+        setName(self, "a shuttle hatch");
+        return SCRIPT_CONTINUE;
+    }
+    public int OnInitialize(obj_id self) throws InterruptedException
+    {
+        setName(self, "a shuttle hatch");
         return SCRIPT_CONTINUE;
     }
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {
-        menu_info_data data = mi.getMenuItemByType(menu_info_types.ITEM_USE);
-        if (data != null)
-        {
-            data.setServerNotify(true);
-        }
+        mi.addRootMenuOrServerNotify(menu_info_types.ITEM_USE, new string_id("item", "use"));
         return SCRIPT_CONTINUE;
     }
     public int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException
