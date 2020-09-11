@@ -67,7 +67,7 @@ int taanab_pendath_corvette_pilot_handleBranch1 (obj_id player, obj_id npc, stri
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: I need transport to the Corvette hovering above Pendath.
-	if (response.equals("s_4")
+	if (response.equals("s_4"))
 	{
 		//-- [NOTE] 
 		if (taanab_pendath_corvette_pilot_condition__defaultCondition (player, npc))
@@ -124,7 +124,7 @@ int taanab_pendath_corvette_pilot_handleBranch2 (obj_id player, obj_id npc, stri
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: [Accept]
-	if (response.equals("s_6")
+	if (response.equals("s_6"))
 	{
 		//-- [NOTE] 
 		if (taanab_pendath_corvette_pilot_condition__defaultCondition (player, npc))
