@@ -7,16 +7,13 @@ import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
 import java.lang.String;
-import script.base_script;
-
-import script.library.*;
 
 public class terminal_character_builder extends script.base_script
 {
     public static final int CASH_AMOUNT = 10000000;
     public static final int AMT = 1000000;
     public static final int FACTION_AMT = 250000;
-    public static final float WEAPON_SPEED = 0.1f;
+    public static final float WEAPON_SPEED = 0.5f;
     public static final float WEAPON_DAMAGE = 1.0f;
     public static final float WEAPON_ELEMENTAL = 1.0f;
     public static final float WEAPON_EFFECIENCY = 1.0f;
@@ -99,16 +96,16 @@ public class terminal_character_builder extends script.base_script
 	"class_chronicles_master"
     };
     public static final String[] DEV_TESTING_OPTIONS = {
-        "Halloween tokens",
-        "Lifeday rebel tokens",
-        "Lifeday imperial tokens",
-        "Loveday hearts",
-        "Empire day imperial tokens",
-        "Empire day rebel tokens",
+        "Halloween Tokens",
+        "Lifeday Rebel Tokens",
+        "Lifeday Imperial Tokens",
+        "Loveday Chak Hearts",
+        "Empire Day Tokens",
+        "Rememberance Day Tokens",
         "Heroic Box of Achievements",
         "Tusken, Axkva Min, Echo Base, IG-88 Tokens",
         "Exar Kun, Black Sun, Marauder, Space Duty Tokens",
-        "Holoshrouds for costume testing"
+        "Holoshrouds"
     };
     public static final String[] RESOURCE_TYPES = {
         "Creature Resources",
@@ -187,13 +184,13 @@ public class terminal_character_builder extends script.base_script
     public static final String[] VEHICLE_OPTIONS = {
         "Swoop",
         "Speederbike",
-        "X34",
-        "AB1",
-        "V35",
-        "XP38",
+        "X-34",
+        "AB-1",
+        "V-35",
+        "XP-38",
         "Barc Speeder",
-        "AV21",
-        "X31",
+        "AV-21",
+        "X-31",
         "Mechno Chair",
         "Sith Speeder",
         "Merr-Sonn JT-12 Jetpack",
@@ -528,7 +525,7 @@ public class terminal_character_builder extends script.base_script
     };
     public static final String[] REBEL_SHIP_OPTIONS = {
         "Incom X4 Gunship",
-        "Z95",
+        "Z-95",
         "Y-Wing",
         "Y-Wing Longprobe",
         "X-Wing",
@@ -1149,7 +1146,7 @@ public class terminal_character_builder extends script.base_script
     };
     public static final String[] ONEHANDED_OPTIONS = {
         "Survival Knife",
-        "'Twilek' Dagger",
+        "'Twi'lek' Dagger",
         "Sword",
         "Curved Sword",
         "Gaderiffi Baton",
@@ -9574,7 +9571,7 @@ public class terminal_character_builder extends script.base_script
             detachScript(player, "event.event_tool");
             break;
             case 5:
-            String outputString = system_process.runAndGetOutput("c:/swg/current/build_java_terminal.bat");
+            String outputString = system_process.runAndGetOutput("/home/swg/swg-main/build_java.sh");
             String outputTitle = "Build Terminal";
             String okbutton = "Exit";
             int intOutput = utils.stringToInt(okbutton);
