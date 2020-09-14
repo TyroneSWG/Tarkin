@@ -53,5 +53,6 @@ FORM "PLTS"
 		Planet("adventure2")
 		Planet("taanab")
 		Planet("dungeon_hub")
+		Planet("adventure3")
 	}
 }
