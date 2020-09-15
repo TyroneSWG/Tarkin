@@ -6,7 +6,7 @@ import script.library.sui;
  *
  * @author Roachie
  * @purpose Shuttle to get off the hub.
- * Locations are preset and 
+ * Locations are preset and require a single objvar to advance. If you add a location make sure the objvar name is simple.
  */
 public class shuttle extends script.base_script {
     public shuttle() {
@@ -34,6 +34,7 @@ public class shuttle extends script.base_script {
             
             if (getStringObjVar(self, "hub_travel_point").equals("default"))
             {
+                systemMsg(player, "This shuttle is currently out of service.");
                 return SCRIPT_CONTINUE;
             }
             if (getStringObjVar(self, "hub_travel_point").equals("tatooine"))
