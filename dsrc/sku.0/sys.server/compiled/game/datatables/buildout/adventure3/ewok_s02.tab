@@ -1,0 +1,19 @@
+server_template_crc	cell_index	px	py	pz	qw	qx	qy	qz	scripts	objvars
+h	i	f	f	f	f	f	f	f	s	p
+object/building/endor/endor_village_tree.iff	0	1930.15	0	1913.11	1	0	0	0	structure.filler.filler	$|
+object/building/endor/endor_catwalk.iff	0	1930.13	20.066	1897.5	1	0	0	0		$|
+object/building/endor/endor_catwalk.iff	0	1930.15	20.0217	1887.88	1	0	0	0		$|
+object/building/endor/endor_catwalk.iff	0	1930.13	20.0063	1878.28	1	0	0	0		$|
+object/building/endor/endor_catwalk.iff	0	1930.16	20.0063	1868.67	1	0	0	0		$|
+object/building/endor/endor_village_tree.iff	0	1930.42	0	1853.31	0	0	1	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1944.95	4.76837e-07	1911.1	0.420688	0	0.907205	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1950.94	4.76837e-07	1914.24	-0.0557675	0	0.998444	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1956.93	4.76837e-07	1904.14	0.844588	0	-0.535417	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1957.04	4.76837e-07	1910.27	-0.493225	0	0.869902	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1927.25	19.9844	1916.34	0.948733	0	-0.316078	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1955.42	0	1888.05	-0.356206	0	0.934408	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1958.41	0	1881.98	0.754048	0	-0.65682	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1948.16	0	1876.27	0.972884	0	0.231293	0	structure.filler.filler	$|
+object/building/endor/endor_forest_hut.iff	0	1954.28	0	1875.99	0.967259	0	-0.25379	0	structure.filler.filler	$|
+object/building/endor/endor_giant_catwalk.iff	0	1887.72	8.14159	1853.27	0.695683	-0.126593	0.695682	0.126593		$|
+object/building/endor/endor_catwalk.iff	0	1865.32	0.170221	1853.2	0.707107	0	0.707106	0		$|
