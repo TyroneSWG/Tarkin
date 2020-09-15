@@ -1075,10 +1075,10 @@ public class healing extends script.base_script
         }
         if (woundPlayer)
         {
-            if (getConfigSetting("GameServer", "enableCybernetics") != null)
-            {
+            //if (getConfigSetting("GameServer", "enableCybernetics") != null)
+            //{
                 cybernetic.applyDeathCybernetic(player);
-            }
+            //}
         }
         return true;
     }

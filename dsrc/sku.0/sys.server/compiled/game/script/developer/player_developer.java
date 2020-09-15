@@ -67,6 +67,10 @@ public class player_developer extends script.base_script {
         {
             play2dNonLoopingMusic(self, "sound/" + st.nextToken() + ".snd");
         }
+        else if ((toLower(command)).equals("crc"))
+        {
+            systemMsg(self, Integer.toString(getStringCrc(st.nextToken())));
+        }
         else if ((toLower(command)).equals("update_dsrc"))
         {
             String prompt = runShell("/home/swg/swg-main/update_dsrc.sh");
