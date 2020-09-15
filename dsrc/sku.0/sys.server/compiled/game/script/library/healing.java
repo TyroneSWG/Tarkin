@@ -1047,6 +1047,9 @@ public class healing extends script.base_script
             case (-15259513):
             case (-1186872851):
             case (2130374697):
+            case (1566922523):
+            case (-89126179):
+            case (-1369855136):
             adventurePlanet = false;
             break;
             default:
