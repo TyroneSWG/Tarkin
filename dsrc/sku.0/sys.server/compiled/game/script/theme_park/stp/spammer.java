@@ -11,7 +11,7 @@ public class spammer extends script.base_script {
     }
     public static int OnAttach(obj_id self) throws InterruptedException
     {
-        createTriggerVolume("hub_spammer", 5.0f, false);
+        createTriggerVolume("hub_spammer", 5.0f, true);
         return SCRIPT_CONTINUE;
     }
     public int OnTriggerVolumeEntered(obj_id self, String volumeName, obj_id breacher) throws InterruptedException
