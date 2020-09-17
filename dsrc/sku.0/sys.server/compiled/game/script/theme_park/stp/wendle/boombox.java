@@ -16,6 +16,7 @@ public class boombox extends script.base_script {
     public int OnInitialize(obj_id self) throws InterruptedException
     {
        createTriggerVolume("boombox_cantina", 25.0f, true);
+       setName(self, "a radio");
        return SCRIPT_CONTINUE;
     }
     public int OnTriggerVolumeEntered(obj_id self, String volumeName, obj_id breacher) throws InterruptedException
@@ -31,11 +32,13 @@ public class boombox extends script.base_script {
             int whichOne = rand(1,100);
             if (whichOne <= 50)
             {
-                playClientEffectObj(breacher, soundFile2, self, "root", new transform(), "");
+                setName(self, getName(self) + "(Now Playing: Pirate Swing)");
+                play2dNonLoopingMusic(breacher, soundFile);
             }
             if (whichOne >= 50)
             {
-                playClientEffectObj(breacher, soundFile, self, "root", new transform(), "");
+                setName(self, getName(self) + "(Now Playing: Cantina Remix)");
+                play2dNonLoopingMusic(breacher, soundFile2);
             }
         }
         else
