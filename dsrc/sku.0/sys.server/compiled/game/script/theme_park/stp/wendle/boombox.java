@@ -27,9 +27,9 @@ public class boombox extends script.base_script {
         }
         if (volumeName.equals("boombox_cantina"))
         {
-            String soundFile = "sound/mus_pirate_cantina.snd";
-            String soundFile2 = "sound/mus_cantina_band_remix.snd";
-            int whichOne = rand(1,100);
+            String soundFile = "music/mus_pirate_cantina.mp3";
+            String soundFile2 = "music/mus_cantina_band_remix.mp3";
+            int whichOne = rand(0,100);
             if (whichOne <= 50)
             {
                 setName(self, getName(self) + "(Now Playing: Pirate Swing)");
