@@ -10,6 +10,7 @@ public class boombox extends script.base_script {
     }
     public int OnAttach(obj_id self) throws InterruptedException
     {
+       createTriggerVolume("boombox_cantina", 15.0f, false);
        setName(self, "a radio");
        return SCRIPT_CONTINUE;
     }
