@@ -1,5 +1,5 @@
-# SWG Source DSRC/Script Repo
+# Tarkin TC Data Source
 
-This repo was forked from Stella Bellum. Please credit them (notably Cekis) if you use any of the work here.
+This repo is constantly changing. Expect hella broken code.
 
-## Pull requests are welcome and encouraged
+## For now, avoid pull requests until we get to a distro stage with Taanab.
