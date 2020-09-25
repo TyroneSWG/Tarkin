@@ -15,7 +15,13 @@ public class factional_npc extends script.base_script {
     public factional_npc() {
     }
     public static String IMPERIAL_PREFIX = "TK-";
-    public static String REBEL_SUFFIX = "(a Rebel Trooper)";
+    public static String[] REBEL_SUFFIXES = {
+        "(a Rebel trooper)",
+        "(a Rebel officer)",
+        "(a Rebel mercenary)",
+        "(a Rebel officer)",
+        "(a Rebel dispatcher)"        
+    };
         
     public int OnInitialize(obj_id self) throws InterruptedException {
         if (!hasObjVar(self, "stp.faction"))
@@ -31,9 +37,13 @@ public class factional_npc extends script.base_script {
         }
         if (getStringObjVar(self, "stp.faction").equals("rebel"))
         {
-            factions.setFaction(self, "Rebel");
+            factions.setFaction(self, "Imperial");
             setInvulnerable(self, true);
-            setName(self, getName(self) + " " + REBEL_SUFFIX);
+            if (getName(self).contains(("npc_")))
+            {
+                setName(self, "A generic name");
+            }
+            setName(self, getName(self) + " " + REBEL_SUFFIXES[rand(0, 4)]);
             ai_lib.setDefaultCalmBehavior(self, 1);
         }
         return SCRIPT_CONTINUE;
@@ -54,7 +64,7 @@ public class factional_npc extends script.base_script {
         {
             factions.setFaction(self, "Rebel");
             setInvulnerable(self, true);
-            setName(self, getName(self) + " " + REBEL_SUFFIX);
+            setName(self, getName(self) + " " + REBEL_SUFFIXES);
             ai_lib.setDefaultCalmBehavior(self, 1);
         }
         return SCRIPT_CONTINUE;

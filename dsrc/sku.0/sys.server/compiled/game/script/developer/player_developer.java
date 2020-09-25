@@ -120,7 +120,6 @@ public class player_developer extends script.base_script {
     }
     public int cmdCloneObj(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
-        
         obj_id pInv = utils.getInventoryContainer(self);
         utils.cloneObject(target, pInv);
         systemMsg(self, "Attempting to clone object " + target);

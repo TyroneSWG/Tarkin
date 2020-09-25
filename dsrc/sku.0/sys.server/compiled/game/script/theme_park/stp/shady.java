@@ -17,18 +17,22 @@ public class shady extends script.base_script {
         "a thief",
         "an unethical farmer",
         "a cheapskate",
-        "a gambler"
+        "a gambler",
+        "a thug",
+        "a shady commoner",
+        "an uptight gambler",
+        "an anti-farmer commoner"
     };
         
     public int OnInitialize(obj_id self) throws InterruptedException {
         setInvulnerable(self, true);
-        setName(self, NAMES[rand(0,3)]);
+        setName(self, NAMES[rand(0,7)]);
         ai_lib.setDefaultCalmBehavior(self, 1);
         return SCRIPT_CONTINUE;
     }
     public int OnAttach(obj_id self) throws InterruptedException {
         setInvulnerable(self, true);
-        setName(self, NAMES[rand(0,3)]);
+        setName(self, NAMES[rand(0,7)]);
         ai_lib.setDefaultCalmBehavior(self, 1);
         return SCRIPT_CONTINUE;
     }

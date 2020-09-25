@@ -27,7 +27,8 @@ public class boombox extends script.base_script {
             String soundFile = "sound/mus_pirate_cantina.snd";
             String soundFile2 = "sound/mus_cantina_band_remix.snd";
             setName(self, getName(self) + " (active)");
-            play2dNonLoopingSound(breacher, soundFile);
+            playMusic(breacher, soundFile);
+            //playMusic(breacher, soundFile2);
             return SCRIPT_CONTINUE;
         }
         return SCRIPT_CONTINUE;

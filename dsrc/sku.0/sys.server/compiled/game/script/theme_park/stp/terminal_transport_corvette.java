@@ -1,15 +1,6 @@
 package script.theme_park.stp;
 
 import script.*;
-import static script.base_class.SCRIPT_CONTINUE;
-import static script.base_class.attachScript;
-import static script.base_class.dataTableGetNumRows;
-import static script.base_class.dataTableGetString;
-import static script.base_class.hasScript;
-import static script.base_class.sendSystemMessage;
-import static script.base_class.setObjVar;
-import script.library.sui;
-import script.library.utils;
 /**
  *
  * @author Roachie

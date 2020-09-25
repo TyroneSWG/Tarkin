@@ -12,7 +12,7 @@ public class spammer extends script.base_script {
     }
     public static int OnAttach(obj_id self) throws InterruptedException
     {
-        createTriggerVolume("hub_spammer", 5.0f, true);
+        createTriggerVolume("hub_spammer", 2.0f, true);
         return SCRIPT_CONTINUE;
     }
     public int OnTriggerVolumeEntered(obj_id self, String volumeName, obj_id breacher) throws InterruptedException
@@ -29,7 +29,7 @@ public class spammer extends script.base_script {
                 chat.chat(self, "Target locked: " + getFirstName(breacher).toUpperCase());
                 if (hasObjVar(breacher, "hub.generator_quest"))
                 {
-                   chat.chat(self, "Hostile target determined. Intializing Combat Routine");
+                    chat.chat(self, "Hostile target determined. Intializing Combat Routine");
                     startCombat(self, breacher);
                 }
                 else
