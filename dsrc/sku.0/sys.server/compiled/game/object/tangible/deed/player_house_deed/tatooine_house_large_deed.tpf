@@ -25,7 +25,7 @@ sharedTemplate = "object/tangible/deed/player_house_deed/shared_tatooine_house_l
 objvars = +[
 	"player_structure.deed.template" = "object/building/player/player_house_tatooine_large_style_01.iff",
 	"player_structure.deed.buildtime" = 300,
-	"player_structure.deed.scene" = "tatooine,lok,dantooine"]
+	"player_structure.deed.scene" = "taanab,tatooine,lok,dantooine"]
 
 scripts = +[
 	"item.structure_deed.player_structure_deed"]

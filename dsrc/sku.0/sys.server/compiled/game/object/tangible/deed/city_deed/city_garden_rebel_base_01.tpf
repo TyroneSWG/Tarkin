@@ -12,7 +12,7 @@ sharedTemplate = "object/tangible/deed/city_deed/shared_city_garden_rebel_base_0
 objvars = +[
 	"player_structure.deed.template" = "object/building/player/city/garden_rebel_01.iff",
 	"player_structure.deed.buildtime" = 10,
-	"player_structure.deed.scene" = "corellia,talus,naboo,rori,dantooine,tatooine,lok"]
+	"player_structure.deed.scene" = "corellia,talus,naboo,rori,dantooine,tatooine,lok,taanab"]
 
 scripts = +[
 	"item.structure_deed.player_structure_deed"]

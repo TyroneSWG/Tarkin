@@ -8,3 +8,4 @@ s	s	i
 @city/city:city_junk_dealer	object/tangible/terminal/terminal_city_junk_dealer.iff	0
 @city/city:mt_rebel	object/tangible/terminal/terminal_mission_rebel.iff	1
 @city/city:mt_imperial	object/tangible/terminal/terminal_mission_imperial.iff	1
+@city/city:frog	object/tangible/terminal/terminal_character_builder.iff	0

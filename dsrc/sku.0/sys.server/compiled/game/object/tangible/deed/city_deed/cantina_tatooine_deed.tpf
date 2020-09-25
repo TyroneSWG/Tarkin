@@ -12,7 +12,7 @@ sharedTemplate = "object/tangible/deed/city_deed/shared_cantina_tatooine_deed.if
 objvars = +[
 	"player_structure.deed.template" = "object/building/player/city/cantina_tatooine.iff",
 	"player_structure.deed.buildtime" = 10,
-	"player_structure.deed.scene" = "tatooine,lok,dantooine"]
+	"player_structure.deed.scene" = "tatooine,lok,dantooine,taanab"]
 
 scripts = +[
 	"item.structure_deed.player_structure_deed"]

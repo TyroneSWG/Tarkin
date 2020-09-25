@@ -12,7 +12,7 @@ sharedTemplate = "object/tangible/deed/player_house_deed/shared_wod_ns_hut_deed.
 objvars = +[
 	"player_structure.deed.template" = "object/building/player/player_house_wod_ns_hut.iff",
 	"player_structure.deed.buildtime" = 90,
-	"player_structure.deed.scene" = "corellia,talus,lok,naboo,dantooine,tatooine,rori"]
+	"player_structure.deed.scene" = "taanab,corellia,talus,lok,naboo,dantooine,tatooine,rori"]
 
 scripts = +[
 	"item.structure_deed.player_structure_deed"]

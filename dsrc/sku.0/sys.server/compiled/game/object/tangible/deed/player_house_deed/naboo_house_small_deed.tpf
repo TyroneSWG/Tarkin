@@ -23,7 +23,7 @@ sharedTemplate = "object/tangible/deed/player_house_deed/shared_naboo_house_smal
 objvars = +[
 	"player_structure.deed.template" = "object/building/player/player_house_naboo_small_style_02.iff",
 	"player_structure.deed.buildtime" = 90,
-	"player_structure.deed.scene" = "naboo,rori,dantooine"]
+	"player_structure.deed.scene" = "taanab,naboo,rori,dantooine"]
 
 scripts = +[
 	"item.structure_deed.player_structure_deed"]
