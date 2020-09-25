@@ -126,7 +126,10 @@ public class city extends script.base_script
         "mos entha",
         "mos taike",
         "wayfar",
-        "lake retreat"
+        "lake retreat",
+        "pendath",
+        "pandath",
+        "pirate outpost"
     };
     public static final String OBJVAR_DERANK_EXEMPT = "city.derank_exempt";
     public static final String CITIZEN_LIST_QUERIED = "cityhall.citizen_list_queried";
