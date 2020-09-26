@@ -6,6 +6,7 @@ data/
 dependencies/
 miff/
 exe/win32/
+exe/linux/logs/
 .setup
 local.properties
 *.log
