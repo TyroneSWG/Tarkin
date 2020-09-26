@@ -2056,11 +2056,11 @@ public class thicks_test extends script.base_script
         String[] abilities = 
         {
             "hoth_speeder_shoot",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "hoth_speeder_land",
+            "hoth_speeder_takeoff",
+            "hoth_speeder_up",
+            "hoth_speeder_down",
+            "hoth_speeder_bolt",
             "",
             "",
             ""
