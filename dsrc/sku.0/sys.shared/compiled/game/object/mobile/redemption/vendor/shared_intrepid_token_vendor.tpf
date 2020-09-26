@@ -17,4 +17,4 @@ detailedDescription = "" ""
 lookAtText = "npc_lookat" "klatooinian_base_male"
 appearanceFilename = "appearance/klaatu.sat"
 
-scale = 0.915
+clientDataFile = "clientdata/npc/intrepid_token_vendor.cdf"scale = 0.915
