@@ -24,7 +24,7 @@ object/cell/cell.iff	8	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	9	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	10	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	11	0	0	0	1	0	0	0		$|
-object/building/taanab/cantina_taanab.iff	0	13146	75	3598	-0.707107	0	0.707107	0	planet_map.map_loc:structure.municipal.cantina:systems.gcw.gcw_data_updater:city.imperial_crackdown.crackdown_cantina	Imperial.controlScore|0|50|Rebel.controlScore|0|50|crackdownHappened|0|1|healing.canhealshock|0|1|intSpawnBartender|0|1|portalProperty.crc|0|-1192614423|$|
+object/building/taanab/cantina_taanab.iff	0	13146	75	3598	-0.707107	0	0.707107	0	planet_map.map_loc:structure.municipal.cantina:systems.gcw.gcw_data_updater:city.imperial_crackdown.crackdown_cantina	Imperial.controlScore|0|50|Rebel.controlScore|0|50|healing.canhealshock|0|1|intSpawnBartender|0|1|portalProperty.crc|0|-1192614423|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0	city.imperial_crackdown.door_check	$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -106,7 +106,7 @@ object/cell/cell.iff	11	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	12	0	0	0	1	0	0	0		$|
 object/static/worldbuilding/terminal/floor_console_tableglobe_02.iff	12	-26.5669	-0.894991	22.1291	1	0	0	0		$|
 object/static/worldbuilding/building/frn_tech_droid_rack_arm.iff	12	-26.4433	0.581577	20.6609	0.990901	0.13459	0	0		$|
-object/static/particle/particle_newbie_spotlight.iff	12	-26.5448	1.88927	21.0481	0.961055	-0.276356	0	0		$|
+object/static/particle/particle_newbie_spotlight.iff	12	-26.3996	1.88927	21.3986	0.961055	-0.276356	0	0		$|
 object/static/item/item_carbine_imperial_e11.iff	12	-25.9892	-0.58501	23.4013	0.599339	0.351696	-0.375755	0.613117		$|
 object/static/item/item_carbine_imperial_e11.iff	12	-27.8292	-0.605806	23.0269	-0.158098	0.184853	0.689495	-0.682225		$|
 object/static/item/item_cloth_patches.iff	12	-26.5396	0.185013	22.3482	1	0	0	0		$|
@@ -221,7 +221,7 @@ object/tangible/furniture/modern/searchable_desk_02.iff	3	-2.76854	0.624998	-3.6
 object/static/item/item_camera.iff	3	-2.73274	1.11287	-2.66251	0.707105	0	0.707108	0		$|
 object/static/item/item_camera.iff	3	-2.74508	1.10213	-4.59551	0.707105	0	0.707107	0		$|
 object/static/item/item_shisha.iff	3	-2.91361	1.35581	-4.4917	1	0	0	0		$|
-object/building/taanab/association_hall_civilian_taanab.iff	0	13089.2	75	3686.14	0.717912	0	0.696134	0	systems.elevator.association_hall_elevators	alreadySpawned|0|1|portalProperty.crc|0|-1064564048|terminal1|6|196000194|terminal2|6|196000197|$|
+object/building/taanab/association_hall_civilian_taanab.iff	0	13089.2	75	3686.14	0.717912	0	0.696134	0	systems.elevator.association_hall_elevators	alreadySpawned|0|1|portalProperty.crc|0|-1064564048|terminal1|6|200000194|terminal2|6|200000197|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -315,7 +315,7 @@ object/cell/cell.iff	6	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
 object/cell/cell.iff	7	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
 object/cell/cell.iff	8	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
 object/cell/cell.iff	9	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
-object/building/taanab/hospital_taanab.iff	0	13442.7	74.9911	3679.23	0.707106	0	0.707107	0	planet_map.map_loc:npc.skillteacher.hospital_trainer_spawner:structure.municipal.hospital:systems.elevator.hospital_elevators	alreadySpawned|0|1|healing.canhealwound|0|1|portalProperty.crc|0|1673057872|terminal1|6|196000527|terminal3|6|196000536|terminal4|6|196000539|terminal6|6|196000548|terminalA1|6|196000530|terminalA2|6|196000533|terminalB1|6|196000542|terminalB2|6|196000545|$|
+object/building/taanab/hospital_taanab.iff	0	13442.7	74.9911	3679.23	0.707106	0	0.707107	0	planet_map.map_loc:npc.skillteacher.hospital_trainer_spawner:structure.municipal.hospital:systems.elevator.hospital_elevators	alreadySpawned|0|1|healing.canhealwound|0|1|portalProperty.crc|0|1673057872|terminal1|6|200000535|terminal3|6|200000544|terminal4|6|200000547|terminal6|6|200000556|terminalA1|6|200000538|terminalA2|6|200000541|terminalB1|6|200000550|terminalB2|6|200000553|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
@@ -368,10 +368,19 @@ object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
+object/tangible/furniture/jedi/frn_all_banner_light.iff	4	0.0737625	8.62339	9.29062	1	0	0	0		$|
 object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	6	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	7	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
 object/cell/cell.iff	8	0	0	0	1	0	0	0		$|
+object/tangible/furniture/jedi/frn_all_light_throne_hue.iff	8	0.413673	1.13306	-13.5433	1	0	0	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_light_chair_s01_hue.iff	8	-1.32226	1.13306	-12.8979	0.92388	0	0.382683	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_light_chair_s01_hue.iff	8	2.1572	1.13306	-12.9528	0.929222	0	-0.369523	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_light_chair_s01_hue.iff	8	2.1688	1.13306	-10.3036	-0.395767	0	0.918351	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_light_chair_s01_hue.iff	8	-1.30777	1.13306	-10.1498	0.356287	0	0.934376	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_banner_light_s01.iff	8	0.484671	1.13306	-14.6839	1	0	0	0		$|
+object/tangible/furniture/jedi/frn_all_light_chair_s01_hue.iff	8	0.468276	1.13306	-9.52094	0.00738808	0	0.999973	0		occupied.limit|0|1|$|
+object/tangible/furniture/jedi/frn_all_table_light_02.iff	8	0.411475	1.13306	-11.5277	1	0	0	0		$|
 object/cell/cell.iff	9	0	0	0	1	0	0	0	systems.crafting.station_cell	$|
 object/building/general/cave_06_flatland_s01.iff	0	13485.5	101.953	4287.51	0	0	1	0		portalProperty.crc|0|100702777|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
@@ -490,7 +499,7 @@ object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
-object/building/player/player_house_generic_medium_windowed_s02.iff	0	13237.1	76.3428	3474.93	0	0	1	0		portalProperty.crc|0|-313490316|$|
+object/building/player/player_house_generic_medium_windowed_s02.iff	0	13234	75.7165	3472	0.707106	0	0.707107	0		portalProperty.crc|0|-313490316|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/tangible/furniture/modern/rug_sqr_m_s01.iff	1	2.98097	0.875002	2.77569	1	0	0	0		$|
 object/tangible/furniture/modern/couch_modern_style_01.iff	1	3.07915	0.875002	-0.0274083	1	0	0	0		$|
@@ -542,7 +551,7 @@ object/tangible/furniture/all/frn_all_tree_potted_s2.iff	2	-10.0838	0.875002	1.8
 object/tangible/furniture/decorative/decorative_fedora_hat.iff	2	-4.18732	2.06185	-2.78832	0.633289	0	0.773915	0		$|
 object/tangible/furniture/decorative/decorative_whip_belt.iff	2	-4.09028	2.57717	-0.820771	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
-object/tangible/furniture/all/frn_all_rug_rectangle_large_style_02.iff	3	3.85421	4.11051	-9.51787	0.5	0.5	-0.5	-0.5		$|
+object/tangible/furniture/all/frn_all_rug_rectangle_large_style_02.iff	3	3	3	-10	0.5	0.5	-0.5	-0.5		$|
 object/tangible/furniture/all/frn_all_bed_lg_hue_s2.iff	3	3.9588	0.87501	-7.08678	1	0	0	0		$|
 object/tangible/furniture/all/frn_all_rug_rectangle_large_style_03.iff	3	3.92288	0.798995	-6.46785	0.707123	0	-0.70709	0		$|
 object/tangible/furniture/all/frn_all_stand_s01.iff	3	5.05029	0.890549	-8.9292	1	0	0	0		$|
@@ -1222,8 +1231,7 @@ object/static/vehicle/static_rattletrap.iff	0	13336	76.4356	3500	-0.387667	0	0.9
 object/building/player/city/garden_corellia_sml_04.iff	0	13312.1	75	3802.68	1	0	0	0		$|
 object/building/player/city/garden_corellia_sml_05.iff	0	13334.1	74.7554	3771.29	1	0	0	0		$|
 object/soundobject/soundobject_city_crowd_small.iff	0	13156.9	75	3656.66	1	0	0	0		$|
-object/soundobject/soundobject_city_crowd_medium.iff	0	13140	0	3703	1	0	0	0		$|
-object/soundobject/soundobject_city_crowd_sentients.iff	0	13148	75	3794.08	1	0	0	0		$|
+object/soundobject/soundobject_city_crowd_medium.iff	0	13141	0	3711.59	1	0	0	0		$|
 object/static/worldbuilding/vehicles/lambda_shuttle_static_destroyed.iff	0	13089	81.9861	3866	0.00159134	0	0.999999	0		$|
 object/tangible/sign/player/house_address.iff	0	13218.1	77.8931	3690.88	0.92388	0	-0.382683	0	systems.sign.sign:theme_park.stp.stp_sign	stp.sign.name|4|Starport Master's Office|$|
 object/building/general/hotel_general_style_1.iff	0	13312.6	75	3574.59	1	0	0	0	planet_map.map_loc	healing.canhealshock|0|1|safeLogout|0|1|$|
@@ -1651,7 +1659,7 @@ object/mobile/emperor_royal_guard.iff	0	13379.1	75	3600.13	0.990122	0	-0.140208	
 object/mobile/dressed_scout_trainer_03.iff	0	13316	75	3576	-0.298512	0	0.954405	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/building/taanab/filler_historic_32x16_s02.iff	0	13515	73.8027	3884.46	0.382683	0	0.92388	0	structure.filler.filler	$|
 object/mobile/dressed_selonian_m_01.iff	0	13329.9	75	3704.24	0.89031	0	-0.455354	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
-object/tangible/sign/municipal/municipal_sign_hanging_commerce.iff	0	13229.7	79.7581	3466.83	1	0	0	0	systems.sign.sign:theme_park.stp.stp_sign	stp.sign.name|4|Wendle's Private Residence|$|
+object/tangible/sign/municipal/municipal_sign_hanging_commerce.iff	0	13222	77	3454	0.707107	0	0.707106	0	systems.sign.sign:theme_park.stp.stp_sign	stp.sign.name|4|Wendle's Private Residence|$|
 object/tangible/door/echo_base_door_large.iff	0	13304	73.7034	3627.83	1	0	0	0		$|
 object/tangible/terminal/terminal_command_console.iff	0	12508.6	34.5128	4131.46	1	0	0	0	theme_park.stp.terminal_transport_corvette	$|
 object/tangible/terminal/terminal_command_console.iff	0	13276	75	3810	0.926199	0	-0.377034	0	theme_park.stp.stp_sign:theme_park.stp.terminal_transport_corvette	stp.sign.name|4|Departure Terminal|$|
@@ -1969,9 +1977,9 @@ object/mobile/dressed_tatooine_gunrunner.iff	0	13309	75	3530.88	0.284241	0	0.958
 object/mobile/dressed_tatooine_fixer.iff	0	13313.4	75	3522.48	0.0016005	0	0.999999	0	systems.combat.credit_for_kills:theme_park.stp.commoner	ai.defaultCalmBehavior|0|1|$|
 object/mobile/dressed_tatooine_jabba_scout.iff	0	13310.6	75	3526.52	-0.368216	0	0.92974	0	systems.combat.credit_for_kills:theme_park.stp.shady	ai.defaultCalmBehavior|0|1|$|
 object/mobile/dressed_commoner_tatooine_aqualish_male_08.iff	0	13267.6	75	3526.55	-0.587496	0	0.809228	0	systems.combat.credit_for_kills:theme_park.stp.shady	ai.defaultCalmBehavior|0|1|$|
-object/mobile/dressed_tatooine_squatter.iff	0	13222	74.9794	3470.63	-0.494659	0	0.869087	0	theme_park.stp.invuln	stp.npc.name|4|Wendle's Mechanic|$|
-object/static/worldbuilding/vehicles/pv_snowspeeder.iff	0	13218.9	74.9813	3478.11	0	0	1	0		$|
-object/static/worldbuilding/terminal/floor_data_terminal_01.iff	0	13224.7	74.9769	3471.59	-0.707107	0	0.707107	0		$|
+object/mobile/dressed_tatooine_squatter.iff	0	13220.7	74.7517	3469.13	0.717125	0	0.696945	0	theme_park.stp.invuln	stp.npc.name|4|Wendle's Mechanic|$|
+object/static/worldbuilding/vehicles/pv_snowspeeder.iff	0	13217.7	74.9904	3475.51	0	0	1	0		$|
+object/static/worldbuilding/terminal/floor_data_terminal_01.iff	0	13222	74.9769	3469	-0.707107	0	0.707107	0		$|
 object/static/vehicle/e3/landspeeder.iff	0	13202.5	75	3705.34	0.898261	0	0.439462	0		$|
 object/static/vehicle/e3/landspeeder.iff	0	13198.8	75	3710.43	0.852525	0	0.522687	0		$|
 object/static/structure/general/prp_engine.iff	0	13205.7	74.7655	3701.71	0.911039	0	0.412321	0		$|
@@ -1985,23 +1993,82 @@ object/static/structure/general/locked_container.iff	0	13202.8	75.4099	3698.67	0
 object/static/structure/general/prp_junk_s6.iff	0	13208.7	75	3707.21	1	0	0	0		$|
 object/static/structure/general/poi_ev9d9head.iff	0	13200.7	75.9641	3704.37	0.896053	0	0.443948	0		$|
 object/static/structure/general/debris_deathstar_conduit.iff	0	13208.3	80.5461	3698.45	0.857709	0	-0.514136	0		$|
-object/building/player/city/cityhall_corellia.iff	0	11372.1	45.304	7683.92	0.707107	0	0.707106	0	systems.city.city_hall:structure.permanent_structure:planet_map.map_loc_both	CITY_VERSION|0|4|city.derank_exempt|0|1|currentInterval|0|604800|faction|4|Rebel|founder.id|4|Roachie|founder.time|0|1417043|healing.canhealshock|0|1|healing.canhealwound|0|1|itemLimit|0|0|lastUpdateTime|0|1417043|packed_house.fix_contained_scene_ids|0|1|player_structure.admin.adminList|5|15019690:|player_structure.base_objects|7|196000090:196000093:196000097:|player_structure.city_cost|0|1|player_structure.civic|0|1|player_structure.deed.buildtime|0|10|player_structure.deed.scene|4|corellia,talus,taanab|player_structure.deed.template_crc|0|-1326873777|player_structure.last_maintanence|0|1417039|player_structure.maintanence.decay|0|0|player_structure.owner|4|roachie|player_structure.permissions_converted|0|1|player_structure.sign.id|6|196000103|player_structure.sign.name|4|City Hall|player_structure.sign.type|0|0|player_structure.version|0|4|player_structure.waypoint|6|177001781|portalProperty.crc|0|1155212255|safeLogout|0|1|spec_stamp|0|1417139|vote_terminal|6|196000093|$|
+object/building/taanab/ply_corl_house_s_s02_fp1.iff	0	13175.3	74.4451	3775.75	0.999954	0	-0.00960104	0		portalProperty.crc|0|1233848266|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
-object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
-object/cell/cell.iff	5	0	0	0	1	0	0	0		$|
-object/building/player/city/bank_corellia.iff	0	11428.1	46.9013	7683.92	1	0	0	0	structure.permanent_structure:planet_map.map_loc_both	city_id|0|11001|faction|4|Rebel|player_structure.admin.adminList|5|15019690:|player_structure.base_objects|7|196000117:196000120:196000123:196000126:|player_structure.city_cost|0|4|player_structure.city_rank|0|2|player_structure.civic|0|1|player_structure.deed.buildtime|0|10|player_structure.deed.scene|4|corellia,talus,taanab|player_structure.deed.template_crc|0|-1833608236|player_structure.hopper.hopperList|5|15019690:|player_structure.last_maintanence|0|1417252|player_structure.maintanence.decay|0|0|player_structure.owner|4|roachie|player_structure.permissions_converted|0|1|player_structure.version|0|4|player_structure.waypoint|6|177002011|$|
-object/building/player/city/cloning_corellia.iff	0	11396.1	47.1667	7731.92	0.707107	0	0.707107	0	structure.municipal.cloning_facility:structure.permanent_structure:planet_map.map_loc_both	faction|4|Rebel|healing.canhealshock|0|1|healing.canhealwound|0|1|itemLimit|0|0|packed_house.fix_contained_scene_ids|0|1|player_structure.admin.adminList|5|15019690:|player_structure.base_objects|7|196000071:196000074:196000077:|player_structure.city_cost|0|3|player_structure.city_rank|0|3|player_structure.civic|0|1|player_structure.deed.buildtime|0|10|player_structure.deed.scene|4|corellia,talus,taanab|player_structure.deed.template_crc|0|1007265165|player_structure.last_maintanence|0|1417313|player_structure.maintanence.decay|0|0|player_structure.owner|4|roachie|player_structure.permissions_converted|0|1|player_structure.sign.id|6|196000083|player_structure.sign.name|4|Cloning Facility|player_structure.sign.type|0|0|player_structure.version|0|4|player_structure.waypoint|6|177002096|portalProperty.crc|0|-1226513532|safeLogout|0|1|$|
+object/building/taanab/ply_corl_house_s_s02_fp1.iff	0	13175.1	74.4451	3767.48	-0.700285	0	0.713864	0		portalProperty.crc|0|1233848266|$|
 object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
 object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
-object/cell/cell.iff	4	0	0	0	1	0	0	0		$|
-object/tangible/terminal/terminal_character_builder.iff	0	11413	45.3079	7665.44	0.996085	0	-0.088401	0	terminal.terminal_character_builder:terminal.terminal_city_mission	city_id|0|11001|$|
-object/tangible/terminal/terminal_mission.iff	0	11410.6	45.3186	7704.67	-0.670705	0	0.741724	0	systems.missions.base.mission_terminal:planet_map.map_loc:planet_map.map_loc_attach:terminal.terminal_city_mission	city_id|0|11001|$|
-object/building/player/city/shuttleport_corellia.iff	0	11396.1	45.5185	7635.92	1	0	0	0	structure.municipal.starport_city:structure.permanent_structure:planet_map.map_loc_both	city_id|0|11001|player_structure.admin.adminList|5|15019690:|player_structure.base_objects|7|196000051:|player_structure.city_cost|0|2|player_structure.city_rank|0|4|player_structure.civic|0|1|player_structure.deed.buildtime|0|10|player_structure.deed.scene|4|corellia,talus,taanab|player_structure.deed.template_crc|0|-345376872|player_structure.hopper.hopperList|5|15019690:|player_structure.last_maintanence|0|1417755|player_structure.maintanence.decay|0|0|player_structure.owner|4|roachie|player_structure.permissions_converted|0|1|player_structure.version|0|4|player_structure.waypoint|6|177002699|travel.air_time|0|60|travel.arrival_location|8|3396.080078 42.882179 -353.579987 taanab 0|travel.base_object|7|196000057:196000060:196000067:|travel.cost|0|100|travel.ground_time|0|300|travel.is_shuttleport|0|1|travel.point_name|4|Bikini Bottom|travel.shuttle_available|0|0|travel.shuttle_timestamp|0|1501414|travel.version|0|3|$|
-object/tangible/terminal/terminal_bazaar.iff	0	13143	75.7979	3688	1	0	0	0	terminal.bazaar:planet_map.map_loc:planet_map.map_loc_attach	$|
-object/tangible/terminal/terminal_bazaar.iff	0	13143	75.7979	3686	0	0	1	0	terminal.bazaar:planet_map.map_loc:planet_map.map_loc_attach	$|
-object/tangible/terminal/terminal_bazaar.iff	0	13142	75.7979	3687	0.707108	0	-0.707106	0	terminal.bazaar:planet_map.map_loc:planet_map.map_loc_attach	$|
-object/tangible/terminal/terminal_bazaar.iff	0	13144	75.7979	3687	0.707107	0	0.707107	0	terminal.bazaar:planet_map.map_loc:planet_map.map_loc_attach	$|
-object/building/player/city/bank_corellia.iff	0	13143	75.7979	3687	1	0	0	0		$|
+object/building/taanab/ply_corl_house_s_s02_fp1.iff	0	13184.9	74.2757	3812	0.983915	0	0.178638	0		portalProperty.crc|0|1233848266|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/building/taanab/ply_corl_house_s_s02_fp1.iff	0	13181.7	74.2757	3804.39	0.82205	0	-0.569416	0		portalProperty.crc|0|1233848266|$|
+object/cell/cell.iff	1	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	2	0	0	0	1	0	0	0		$|
+object/cell/cell.iff	3	0	0	0	1	0	0	0		$|
+object/static/structure/general/slab_concrete_imperial.iff	0	13181.2	67.1399	3558.09	1	0	0	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13189	75	3555	0.707095	0	0.707118	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13189	75	3566	0	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13175	75	3566	0	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13173	75	3550	0	0	1	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13189	75	3562	0.707095	0	0.707118	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13178	75	3550	0	0	1	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13184	75	3550	0	0	1	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13189	75	3550	0	0	1	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13179	75	3566	1	0	0	0		$|
+object/static/structure/military/military_column_strong_imperial_style_01.iff	0	13183	75	3566	0	0	1	0		$|
+object/tangible/tcg/series7/garage_display_vehicles/hoverlifter_speeder.iff	0	13177	75	3563	0.707107	0	0.707107	0		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13174	79	3554	0.5	0.5	0.5	-0.5		$|
+object/static/structure/military/military_wall_med_imperial_style_01.iff	0	13174	79	3562	0.5	0.5	0.5	-0.5		$|
+object/static/worldbuilding/building/frn_tech_droid_rack_arm.iff	0	13177	75.6245	3558.07	0.707107	0	-0.707106	0		$|
+object/static/worldbuilding/building/frn_tech_droid_rack_base.iff	0	13174	76.0383	3556	1.3411e-07	-0.707107	-1.3411e-07	0.707107		$|
+object/static/worldbuilding/building/frn_tech_droid_rack_base.iff	0	13174	75.9617	3556	0.707107	0	-0.707107	0		$|
+object/static/creature/droids_r2.iff	0	13174	76	3557	1	0	0	0		$|
+object/static/creature/droids_eg6.iff	0	13174	76	3554	0.707107	0	0.707106	0		$|
+object/static/creature/droids_r5.iff	0	13174.4	75.6676	3563.72	1	0	0	0		$|
+object/static/creature/droids_eg6.iff	0	13174	76	3555	0.707112	0	0.707101	0		$|
+object/static/creature/droids_eg6.iff	0	13174	76	3556	0.707114	0	0.707099	0		$|
+object/static/creature/droids_r2.iff	0	13174	76	3558.03	0	0	1	0		$|
+object/static/creature/droids_lin_demolition.iff	0	13174.9	75.6676	3562.38	0.956802	0	0.29074	0		$|
+object/static/worldbuilding/battle_droid_powerdown.iff	0	13176.6	76.5827	3558.03	0.707107	0	-0.707106	0		$|
+object/static/worldbuilding/battle_droid_powerdown.iff	0	13176.1	75.6676	3562.69	-3.49819e-06	0	1	0		$|
+object/static/worldbuilding/battle_droid_powerdown.iff	0	13176.1	75.6676	3562.29	-1.87554e-06	0	1	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13365.6	74.908	3491.63	0.731688	0	-0.681639	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x16_s02.iff	0	13359	74.9267	3477.05	0.919103	0	-0.394018	0		$|
+object/static/structure/corellia/corl_imprv_column_s02.iff	0	13364.7	74.9201	3483.27	0.973666	0	0.227977	0		$|
+object/static/structure/corellia/corl_imprv_column_s02.iff	0	13353.2	74.889	3470.92	0.926799	0	0.375559	0		$|
+object/static/structure/corellia/corl_tent_small.iff	0	13351.4	74.9653	3500.9	0.884675	0	-0.466208	0		$|
+object/static/structure/corellia/corl_power_arial_thin.iff	0	13350.3	84.3883	3489.76	1	0	0	0		$|
+object/static/worldbuilding/camping/camping_cot.iff	0	13350.3	74.9746	3500.43	0.710914	0	0.703278	0		$|
+object/static/worldbuilding/camping/camping_cot.iff	0	13351.8	74.9844	3502.16	0.99955	0	-0.0299987	0		$|
+object/static/worldbuilding/camping/frn_all_glow_lantern_s2.iff	0	13351	74.9824	3501.34	-0.289978	0	0.957034	0		$|
+object/static/worldbuilding/camping/frn_all_exceptional_meat_rack.iff	0	13351.5	74.9813	3498.73	0.991562	0	0.129634	0		$|
+object/static/worldbuilding/camping/eqp_camping_chair_s2.iff	0	13353.1	74.9819	3500.71	-0.514819	0	0.857299	0		$|
+object/static/worldbuilding/camping/eqp_camping_chair_s2.iff	0	13353.1	74.9807	3499.4	0.828149	0	-0.560509	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13255	79.0836	3470	0.707108	0	0.707106	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13255	74.1045	3470	0.707108	0	0.707106	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13239	74.1291	3454	1	0	0	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13239	79.0836	3454	1	0	0	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13223	74.14	3474	0.707107	0	-0.707106	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13223	79.0836	3470	0.707108	0	-0.707106	0		$|
+object/static/structure/corellia/corl_imprv_wall_4x32_s01.iff	0	13223.2	82.1092	3470.04	0	0.707107	0	0.707106		$|
+object/static/structure/corellia/corl_imprv_bridge_insert_s01.iff	0	13223	83.0836	3456	0.707108	0	-0.707106	0		$|
+object/static/structure/corellia/corl_imprv_bridge_insert_s01.iff	0	13255	83.0836	3456	-0.707107	0	0.707107	0		$|
+object/static/structure/corellia/corl_imprv_bridge_insert_s02.iff	0	13186	82.8354	3566.31	1	0	0	0		$|
+object/static/worldbuilding/furniture/frn_all_painting_schematic_datapad.iff	0	13186	80.5624	3567.3	1	0	0	0		$|
+object/static/worldbuilding/furniture/ui_faction_imperial_small.iff	0	13184.5	82.1478	3567.34	1	0	0	0		$|
+object/static/worldbuilding/furniture/ui_faction_rebel_small.iff	0	13184.5	82.1293	3567.34	1	0	0	0		$|
+object/static/structure/general/streetlamp_small_red_style_01_on.iff	0	13189.2	83.349	3567.31	0.707107	0.707107	0	0		$|
+object/static/structure/general/streetlamp_small_red_style_01_on.iff	0	13182.7	83.3627	3567.3	0.707107	0.707107	0	0		$|
+object/static/structure/general/tankfarm_s01.iff	0	13183.5	75	3552.57	1	0	0	0		$|
+object/static/structure/general/prp_junk_s1.iff	0	13187.1	75.1399	3556.41	1	0	0	0		$|
+object/static/structure/general/prp_engine.iff	0	13186.3	75.1399	3557.81	0.995004	0	0.0998334	0		$|
+object/static/structure/general/prp_junk_s2.iff	0	13185.5	75.1399	3558.84	-0.00114466	-0.00404472	0.272311	0.9622		$|
+object/static/structure/general/streetlamp_small_red_style_01_on.iff	0	13188.6	81.6714	3567.31	0.707109	0.707104	0	0		$|
+object/static/structure/general/streetlamp_small_red_style_01_on.iff	0	13183.6	81.6852	3567.36	0.70711	0.707103	0	0		$|
+object/static/structure/general/planter_generic_style_2.iff	0	13251.3	74.9813	3463.8	1	0	0	0		$|
+object/static/structure/general/planter_generic_style_2.iff	0	13249.2	74.99	3472	1	0	0	0		$|
+object/static/structure/general/planter_generic_style_3.iff	0	13249.7	74.9829	3480.57	1	0	0	0		$|
