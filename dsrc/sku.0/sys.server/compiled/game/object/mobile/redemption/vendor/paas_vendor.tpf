@@ -7,4 +7,4 @@
 
 @class object_template 0
 
-sharedTemplate = "object/mobile/shared_paas_vendor.iff"
+sharedTemplate = "object/mobile/redemption/vendor/shared_paas_vendor.iff"

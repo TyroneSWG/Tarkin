@@ -16,5 +16,4 @@ objectName = "npc_name" "quarren_patron"
 detailedDescription = "" ""
 lookAtText = "npc_lookat" "quarren_patron"
 appearanceFilename = "appearance/quarren_m.sat"
-clientDataFile = "clientdata/npc/paas_vendor.cdf"scale = 1.12..1.24
-
+clientDataFile = "clientdata/npc/paas_vendor.cdf"
