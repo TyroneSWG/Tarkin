@@ -1,0 +1,19 @@
+
+@base object/mobile/skeleton/shared_humanoid.iff
+
+@class creature_object_template 10
+
+gender = GE_male
+species = SP_quarren
+
+@class tangible_object_template 3
+
+
+
+@class object_template 3
+
+objectName = "npc_name" "quarren_patron"
+detailedDescription = "" ""
+lookAtText = "npc_lookat" "quarren_patron"
+appearanceFilename = "appearance/quarren_m.sat"
+clientDataFile = "clientdata/npc/paas_vendor.cdf"
