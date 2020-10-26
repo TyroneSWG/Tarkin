@@ -5,8 +5,8 @@ import script.library.combat;
 import script.library.utils;
 import script.obj_id;
 
-public class healing_base extends script.base_script
-{
+public class healing_base extends script.base_script {
+
     public healing_base()
     {
     }
@@ -16,6 +16,7 @@ public class healing_base extends script.base_script
     public static final int TARGET_AREA = 3;
     public static final String NONCOMBAT_DATATABLE = "datatables/combat/non_combat_data.iff";
     public static final int MAX_TARGET_ARRAY_SIZE = 10;
+
     public obj_id validateEnhancer(String parms) throws InterruptedException
     {
         if (parms == null || parms.length() < 1)
@@ -29,6 +30,7 @@ public class healing_base extends script.base_script
         }
         return enhancer;
     }
+
     public int[] getActionCost(obj_id self, dictionary actionData) throws InterruptedException
     {
         int[] cost = new int[2];
@@ -40,11 +42,12 @@ public class healing_base extends script.base_script
         int maxHealth = getMaxAttrib(self, HEALTH);
         int maxAction = getMaxAttrib(self, ACTION);
         combat.combatLog(self, null, "getActionCost", "Max Attrib = [" + maxHealth + ", " + maxAction + "]");
-        cost[0] = (int)(maxHealth * healthCost);
-        cost[1] = (int)(maxAction * actionCost);
+        cost[0] = (int) (maxHealth * healthCost);
+        cost[1] = (int) (maxAction * actionCost);
         combat.combatLog(self, null, "getActionCost", "Final Action cost = [" + cost[0] + ", " + cost[1] + "]");
         return cost;
     }
+
     public String makeHealingPlaybackName(obj_id self, obj_id target, dictionary actionData) throws InterruptedException
     {
         String playbackName = actionData.getString("animDefault");
@@ -54,13 +57,11 @@ public class healing_base extends script.base_script
             if (self == target)
             {
                 playbackName += "self";
-            }
-            else 
+            } else
             {
                 playbackName += "other";
             }
-        }
-        else if (playbackName.contains("&"))
+        } else if (playbackName.contains("&"))
         {
             int index = playbackName.indexOf("&");
             String remain = playbackName.substring(index + 1, playbackName.length());
@@ -69,12 +70,10 @@ public class healing_base extends script.base_script
             if (dist < 10)
             {
                 playbackName += "_near" + remain;
-            }
-            else if (dist < 20)
+            } else if (dist < 20)
             {
                 playbackName += "_medium" + remain;
-            }
-            else 
+            } else
             {
                 playbackName += "_far" + remain;
             }
@@ -82,6 +81,7 @@ public class healing_base extends script.base_script
         combat.combatLog(null, null, "makePlaybackName", "playback name = " + playbackName);
         return playbackName;
     }
+
     public String[] makeStringArray(int intLength) throws InterruptedException
     {
         int intI = 0;

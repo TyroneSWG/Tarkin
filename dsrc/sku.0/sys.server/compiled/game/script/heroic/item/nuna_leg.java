@@ -19,6 +19,7 @@ public class nuna_leg extends script.base_script {
 
     public static String YUM_MSG = "Delicious!";
     public static String YUCK_MSG = "I think I'm going to be sick... -pukes-";
+    //TODO: refactor these!
 
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {

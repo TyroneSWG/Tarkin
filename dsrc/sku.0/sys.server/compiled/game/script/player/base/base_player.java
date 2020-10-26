@@ -3,7 +3,6 @@ package script.player.base;
 import script.*;
 import script.library.*;
 
-import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
 

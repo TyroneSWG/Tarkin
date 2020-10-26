@@ -7,8 +7,8 @@ import script.string_id;
 
 import java.util.Vector;
 
-public class live_conversions extends script.base_script
-{
+public class live_conversions extends script.base_script {
+
     public live_conversions()
     {
     }
@@ -32,22 +32,26 @@ public class live_conversions extends script.base_script
     public static final String UPDATE_COLLECTION_SLOT_TO_GRANT = "slot_to_grant";
     public static final String UPDATE_COLLECTION_INCREMENT_AMOUNT = "increment_amount";
     public static final String FORCE_RESPEC_OBJVAR = "configEnforcedRespecVersion";
+
     public int OnAttach(obj_id self) throws InterruptedException
     {
         runOncePerSessionConversions(self);
         runOncePerTravelConversions(self);
         return SCRIPT_CONTINUE;
     }
+
     public int OnInitialize(obj_id self) throws InterruptedException
     {
         runOncePerSessionConversions(self);
         return SCRIPT_CONTINUE;
     }
+
     public int OnLogin(obj_id self) throws InterruptedException
     {
         runOncePerTravelConversions(self);
         return SCRIPT_CONTINUE;
     }
+
     public int OnNewbieTutorialResponse(obj_id self, String action) throws InterruptedException
     {
         if (action.equals("clientReady"))
@@ -58,6 +62,7 @@ public class live_conversions extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void runOncePerSessionConversions(obj_id player) throws InterruptedException
     {
         grantFemaleMasterPilotMedals(player);
@@ -88,6 +93,7 @@ public class live_conversions extends script.base_script
         removeDeprecatedQuests(player);
         addPlayerScripts(player);
     }
+
     public void runOncePerTravelConversions(obj_id player) throws InterruptedException
     {
         if (buff.hasBuff(player, "crystal_buff"))
@@ -95,6 +101,7 @@ public class live_conversions extends script.base_script
             buff.removeBuff(player, "crystal_buff");
         }
     }
+
     public void setConversionFlag(obj_id player, int flag) throws InterruptedException
     {
         if ((!isIdValid(player)) || (flag < 0) || (flag > FLAG_MAX_BITS))
@@ -118,6 +125,7 @@ public class live_conversions extends script.base_script
             setFlags(player, flags);
         }
     }
+
     public boolean hasConversionFlag(obj_id player, int flag) throws InterruptedException
     {
         if (!isIdValid(player))
@@ -133,6 +141,7 @@ public class live_conversions extends script.base_script
         int bitIdx = flag % 32;
         return utils.checkBit(flags[arrayIdx], bitIdx);
     }
+
     public void clearConversionFlag(obj_id player, int flag) throws InterruptedException
     {
         if ((!isIdValid(player)) || (flag < 0) || (flag > FLAG_MAX_BITS))
@@ -156,6 +165,7 @@ public class live_conversions extends script.base_script
             setFlags(player, flags);
         }
     }
+
     public int[] getFlags(obj_id player) throws InterruptedException
     {
         int[] flags = getIntArrayObjVar(player, VAR_FLAGS);
@@ -171,6 +181,7 @@ public class live_conversions extends script.base_script
         }
         return flags;
     }
+
     public void setFlags(obj_id player, int[] flags) throws InterruptedException
     {
         setObjVar(player, VAR_FLAGS, flags);
@@ -178,6 +189,7 @@ public class live_conversions extends script.base_script
     public static final int NEUTRAL = 0;
     public static final int REBEL = 1;
     public static final int IMPERIAL = 2;
+
     public void grantFemaleMasterPilotMedals(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, FEMALE_PILOT_MEDAL_FLAG))
@@ -229,26 +241,29 @@ public class live_conversions extends script.base_script
         }
         setConversionFlag(player, FEMALE_PILOT_MEDAL_FLAG);
     }
+
     public void createFemaleMasterMedal(obj_id player, int type) throws InterruptedException
     {
         switch (type)
         {
             case NEUTRAL:
-            createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_neutral.iff", player);
-            break;
+                createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_neutral.iff", player);
+                break;
             case IMPERIAL:
-            createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_empire.iff", player);
-            break;
+                createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_empire.iff", player);
+                break;
             case REBEL:
-            createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_rebel.iff", player);
-            break;
+                createObjectInInventoryAllowOverload("object/tangible/wearables/necklace/necklace_ace_pilot_rebel.iff", player);
+                break;
         }
     }
+
     public void clearDotEffectObjvars(obj_id player) throws InterruptedException
     {
         removeObjVar(player, dot.VAR_DOT_ROOT);
         removeObjVar(player, "slowDotTime");
     }
+
     public void fixConsentList(obj_id player) throws InterruptedException
     {
         if (hasObjVar(player, pclib.VAR_CONSENT_TO_NAME))
@@ -258,16 +273,17 @@ public class live_conversions extends script.base_script
             {
                 Vector newConsentTo = new Vector();
                 newConsentTo.setSize(0);
-                for (obj_id consentTo1 : consentTo) {
-                    if (isPlayer(consentTo1)) {
+                for (obj_id consentTo1 : consentTo)
+                {
+                    if (isPlayer(consentTo1))
+                    {
                         newConsentTo = utils.addElement(newConsentTo, consentTo1);
                     }
                 }
                 if (newConsentTo.size() > 0)
                 {
                     setObjVar(player, pclib.VAR_CONSENT_TO_ID, newConsentTo);
-                }
-                else 
+                } else
                 {
                     removeObjVar(player, pclib.VAR_CONSENT_TO_ID);
                 }
@@ -281,16 +297,17 @@ public class live_conversions extends script.base_script
             {
                 Vector newConsentFrom = new Vector();
                 newConsentFrom.setSize(0);
-                for (obj_id obj_id : consentFrom) {
-                    if (isPlayer(obj_id)) {
+                for (obj_id obj_id : consentFrom)
+                {
+                    if (isPlayer(obj_id))
+                    {
                         newConsentFrom = utils.addElement(newConsentFrom, obj_id);
                     }
                 }
                 if (newConsentFrom.size() > 0)
                 {
                     setObjVar(player, pclib.VAR_CONSENT_FROM_ID, newConsentFrom);
-                }
-                else 
+                } else
                 {
                     removeObjVar(player, pclib.VAR_CONSENT_FROM_ID);
                 }
@@ -298,6 +315,7 @@ public class live_conversions extends script.base_script
             removeObjVar(player, pclib.VAR_CONSENT_FROM_NAME);
         }
     }
+
     public void setUnarmedDamageRanges(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, UNARMED_DAMAGE_SET))
@@ -321,6 +339,7 @@ public class live_conversions extends script.base_script
         weapons.setWeaponData(weapon);
         setConversionFlag(player, UNARMED_DAMAGE_SET);
     }
+
     public void doPoliticianSkillConversion(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, POLITICIAN_CONVERSION))
@@ -335,15 +354,19 @@ public class live_conversions extends script.base_script
         setConversionFlag(player, POLITICIAN_CONVERSION);
     }
     public static final int NPE_BIRTH_DATE = 1777;
+
     public void grantElderBuff(obj_id player) throws InterruptedException
     {
         String config = getConfigSetting("Custom", "grantElderBuff");
-        if(config != null && utils.stringToInt(config) == 1) {
-            if (!hasCommand(player, "veteranPlayerBuff")) {
+        if (config != null && utils.stringToInt(config) == 1)
+        {
+            if (!hasCommand(player, "veteranPlayerBuff"))
+            {
                 grantCommand(player, "veteranPlayerBuff");
             }
         }
     }
+
     public int handleBirthDateCallBack(obj_id self, dictionary params) throws InterruptedException
     {
         obj_id player = self;
@@ -352,8 +375,7 @@ public class live_conversions extends script.base_script
         {
             messageTo(self, "handleBirthDateCallBack", null, 10, false);
             return SCRIPT_CONTINUE;
-        }
-        else if (myBirthDate <= NPE_BIRTH_DATE)
+        } else if (myBirthDate <= NPE_BIRTH_DATE)
         {
             if (!hasCommand(player, "veteranPlayerBuff"))
             {
@@ -363,6 +385,7 @@ public class live_conversions extends script.base_script
         setConversionFlag(player, ELDER_BUFF_GRANT);
         return SCRIPT_CONTINUE;
     }
+
     public void validateSkills(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, SKILL_VALIDATION) && hasConversionFlag(player, SKILL_VALIDATION_2))
@@ -438,8 +461,8 @@ public class live_conversions extends script.base_script
         }
         setConversionFlag(player, SKILL_VALIDATION);
         setConversionFlag(player, SKILL_VALIDATION_2);
-        return;
     }
+
     public void correctMasterBadges(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, MASTER_BADGE_CORRECTIONS))
@@ -449,8 +472,10 @@ public class live_conversions extends script.base_script
         String[] allSkills = getSkillListingForPlayer(player);
         if (allSkills != null && allSkills.length > 0)
         {
-            for (String allSkill : allSkills) {
-                if (allSkill.endsWith("_master")) {
+            for (String allSkill : allSkills)
+            {
+                if (allSkill.endsWith("_master"))
+                {
                     badge.grantMasterSkillBadge(player, allSkill);
                 }
             }
@@ -458,6 +483,7 @@ public class live_conversions extends script.base_script
         badge.checkBadgeCount(player);
         setConversionFlag(player, MASTER_BADGE_CORRECTIONS);
     }
+
     public void correctEv9D9Quest(obj_id player) throws InterruptedException
     {
         if (groundquests.isTaskActive(player, "legacy_head_runaway", "locationOfCache"))
@@ -468,6 +494,7 @@ public class live_conversions extends script.base_script
             }
         }
     }
+
     public void correctSyrenQuests(obj_id player) throws InterruptedException
     {
         if (groundquests.isQuestActive(player, "c_story1_2_imp") && groundquests.isQuestActiveOrComplete(player, "c_story1_3_imp"))
@@ -483,6 +510,7 @@ public class live_conversions extends script.base_script
             groundquests.completeQuest(player, "c_story1_2_neu");
         }
     }
+
     public void checkForContentPathContinuation(obj_id player) throws InterruptedException
     {
         String prerequisiteQuest = "talus_nashal_goto_mother";
@@ -496,8 +524,8 @@ public class live_conversions extends script.base_script
             webster.put("questToGrant", pointerQuest01);
             messageTo(player, "handleContentPathContinuation", webster, 5, false);
         }
-        return;
     }
+
     public int handleContentPathContinuation(obj_id self, dictionary params) throws InterruptedException
     {
         if (params != null && !params.isEmpty())
@@ -511,11 +539,12 @@ public class live_conversions extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void updateBountyHunterMissions(obj_id player) throws InterruptedException
     {
         messageTo(player, "informantComm", null, 10.0f, false);
-        return;
     }
+
     public void updateChangedQuests(obj_id player) throws InterruptedException
     {
         if (utils.hasScriptVar(player, "alreadyCheckedUpdatedQuests"))
@@ -531,11 +560,14 @@ public class live_conversions extends script.base_script
         boolean updatedQuestsFound = false;
         if (oldQuests != null && oldQuests.length > 0)
         {
-            for (String oldQuestName : oldQuests) {
-                if (groundquests.isQuestActive(player, oldQuestName)) {
+            for (String oldQuestName : oldQuests)
+            {
+                if (groundquests.isQuestActive(player, oldQuestName))
+                {
                     String newQuestName = dataTableGetString(datatable, oldQuestName, newQuestColumn);
                     groundquests.clearQuest(player, oldQuestName);
-                    if (!newQuestName.equals("delete")) {
+                    if (!newQuestName.equals("delete"))
+                    {
                         updatedQuestsFound = true;
                         groundquests.grantQuestNoAcceptUI(player, newQuestName, false);
                         String questlistDatatable = "questlist";
@@ -559,8 +591,8 @@ public class live_conversions extends script.base_script
             setSUIProperty(pid, sui.MSGBOX_BTN_OK, sui.PROP_TEXT, OK_BUTTON);
             sui.showSUIPage(pid);
         }
-        return;
     }
+
     public void correctNabooKickQuests(obj_id player) throws InterruptedException
     {
         if (isIdValid(player))
@@ -581,6 +613,7 @@ public class live_conversions extends script.base_script
             }
         }
     }
+
     public void grantNextTraderAndEntertainerSkill(obj_id player) throws InterruptedException
     {
         if (hasConversionFlag(player, ENT_TRADER_FREE_SKILL_FLAG))
@@ -626,6 +659,7 @@ public class live_conversions extends script.base_script
         grantExperiencePoints(player, xpType, xpDifference);
         setConversionFlag(player, ENT_TRADER_FREE_SKILL_FLAG);
     }
+
     public void addPlayerScripts(obj_id player) throws InterruptedException
     {
         if (!hasScript(player, "systems.storyteller.storyteller_commands"))
@@ -669,6 +703,7 @@ public class live_conversions extends script.base_script
             attachScript(player, "player.player_saga_quest");
         }
     }
+
     public void updateResidencyLinks(obj_id player) throws InterruptedException
     {
         obj_id structure = getHouseId(player);
@@ -682,8 +717,7 @@ public class live_conversions extends script.base_script
         {
             setHouseId(player, obj_id.NULL_ID);
             messageTo(structure, "removeResidentVar", null, 0.0f, true);
-        }
-        else 
+        } else
         {
             dictionary dict = new dictionary();
             dict.put("player", player);
@@ -695,13 +729,13 @@ public class live_conversions extends script.base_script
             messageTo(structure, "checkResidenceLinks", dict, 1, false, player, "residentLinkFalse");
         }
     }
+
     public void updateLotOverLimitStructureLocation(obj_id player) throws InterruptedException
     {
         if (getAccountNumLots(getPlayerObject(player)) <= player_structure.MAX_LOTS)
         {
             removeObjVar(player, "lotOverlimit");
-        }
-        else 
+        } else
         {
             obj_id lotOverlimitStructure = getObjIdObjVar(player, "lotOverlimit.structure_id");
             if (isIdValid(lotOverlimitStructure))
@@ -717,6 +751,7 @@ public class live_conversions extends script.base_script
             }
         }
     }
+
     public void updateGuildTerminals(obj_id player) throws InterruptedException
     {
         int guildId = getGuildId(player);
@@ -728,11 +763,12 @@ public class live_conversions extends script.base_script
         }
         messageTo(player, "onGuildCreateTerminalDataObject", null, 0, false);
     }
+
     public void validateExpertises(obj_id player) throws InterruptedException
     {
         skill.validateExpertise(player);
-        return;
     }
+
     public boolean expertiseRespecCheck(obj_id player) throws InterruptedException
     {
         int version = respec.getRespecVersion(player);
@@ -755,15 +791,18 @@ public class live_conversions extends script.base_script
         }
         return false;
     }
+
     public boolean updatePermanentSchematics(obj_id player) throws InterruptedException
     {
         return craftinglib.updatePermanentSchematics(player);
     }
+
     public int fullExpertiseReset(obj_id self, dictionary params) throws InterruptedException
     {
         utils.fullExpertiseReset(self, false);
         return SCRIPT_CONTINUE;
     }
+
     public void updateCollectionSlots(obj_id player) throws InterruptedException
     {
         if (!isIdValid(player) && !exists(player))
@@ -773,13 +812,18 @@ public class live_conversions extends script.base_script
         String[] collectionList = dataTableGetStringColumn(UPDATE_COLLECTION_DATATABLE, UPDATE_COLLECTION_NAME_COLUMN);
         if (collectionList != null && collectionList.length > 0)
         {
-            for (String s1 : collectionList) {
-                if (hasCompletedCollection(player, s1)) {
+            for (String s1 : collectionList)
+            {
+                if (hasCompletedCollection(player, s1))
+                {
                     String slotToGrant = dataTableGetString(UPDATE_COLLECTION_DATATABLE, s1, UPDATE_COLLECTION_SLOT_TO_GRANT);
                     String[] slotList = split(slotToGrant, ',');
-                    if (slotList != null & slotList.length > 0) {
-                        for (String s : slotList) {
-                            if (!hasCompletedCollectionSlot(player, s)) {
+                    if (slotList != null & slotList.length > 0)
+                    {
+                        for (String s : slotList)
+                        {
+                            if (!hasCompletedCollectionSlot(player, s))
+                            {
                                 int incrementAmount = dataTableGetInt(UPDATE_COLLECTION_DATATABLE, s1, UPDATE_COLLECTION_INCREMENT_AMOUNT);
                                 modifyCollectionSlotValue(player, s, incrementAmount);
                                 CustomerServiceLog("Collection:", " onInitialize Collection Update: player " + getFirstName(player) + "(" + player + ") received a Collection Slot Update on Login for Collection" + s1 + " : Slot(s) Name: " + slotToGrant + ".");
@@ -790,6 +834,7 @@ public class live_conversions extends script.base_script
             }
         }
     }
+
     public void updateHothFlawless(obj_id player) throws InterruptedException
     {
         if (!isIdValid(player) && !exists(player))
@@ -809,6 +854,7 @@ public class live_conversions extends script.base_script
             setObjVar(player, "hoth.flawless_reward", 1);
         }
     }
+
     public void updateRenameCharacterComplete(obj_id player) throws InterruptedException
     {
         if (!isIdValid(player) || !exists(player))
@@ -826,6 +872,7 @@ public class live_conversions extends script.base_script
             removeObjVar(player, "renameCharacterRequest.requestNewName");
         }
     }
+
     public void forceRespecBasedOnConfig(obj_id player) throws InterruptedException
     {
         if (getConfigSetting("GameServer", "forceProfessionRespec") == null)
@@ -846,8 +893,7 @@ public class live_conversions extends script.base_script
                 respec.autoLevelPlayer(player, 90, false);
                 setObjVar(player, FORCE_RESPEC_OBJVAR, FORCED_RESPEC_VERSION);
             }
-        }
-        else 
+        } else
         {
             utils.fullExpertiseReset(player, false);
             respec.revokeAllSkillsAndExperience(player);
@@ -855,6 +901,7 @@ public class live_conversions extends script.base_script
             setObjVar(player, FORCE_RESPEC_OBJVAR, FORCED_RESPEC_VERSION);
         }
     }
+
     public boolean givePlayersDeathTroopersOutbreakQuest(obj_id player) throws InterruptedException
     {
         CustomerServiceLog("outbreak_themepark", "givePlayersDeathTroopersOutbreakQuest: Player: " + player + " is being checked for old prolog quest line.");
@@ -881,8 +928,7 @@ public class live_conversions extends script.base_script
                     CustomerServiceLog("outbreak_themepark", "givePlayersDeathTroopersOutbreakQuest: The Player: " + player + " is having quest quest_08_dathomir_outpost completed to avoid a gate!");
                     questCompleteQuest(questid, player);
                 }
-            }
-            else 
+            } else
             {
                 CustomerServiceLog("outbreak_themepark", "givePlayersDeathTroopersOutbreakQuest: The Player: " + player + " does not have the quest quest_08_dathomir_outpost task travelDathomir currently so we are not completing the quest prematurely.");
                 return false;
@@ -893,8 +939,7 @@ public class live_conversions extends script.base_script
             CustomerServiceLog("outbreak_themepark", "givePlayersDeathTroopersOutbreakQuest: Granting Player: " + player + " the outbreak_live_conversion_rebel quest because they are currently of rebel faction.");
             groundquests.grantQuest(player, "outbreak_live_conversion_rebel");
             return true;
-        }
-        else if (factions.isImperial(player))
+        } else if (factions.isImperial(player))
         {
             CustomerServiceLog("outbreak_themepark", "givePlayersDeathTroopersOutbreakQuest: Granting Player: " + player + " the outbreak_live_conversion_rebel quest because they are currently of imp faction.");
             groundquests.grantQuest(player, "outbreak_live_conversion_imperial");
@@ -904,6 +949,7 @@ public class live_conversions extends script.base_script
         groundquests.grantQuest(player, "outbreak_live_conversion_neutral");
         return true;
     }
+
     public boolean givePlayersDeathTroopersPrologQuestComlink(obj_id player) throws InterruptedException
     {
         if (isFreeTrialAccount(player))
@@ -937,6 +983,7 @@ public class live_conversions extends script.base_script
         setObjVar(player, "prologComlink", true);
         return true;
     }
+
     public boolean removeDeprecatedQuests(obj_id player) throws InterruptedException
     {
         if (groundquests.isQuestActive(player, "u16_nym_themepark_weed_pulling"))

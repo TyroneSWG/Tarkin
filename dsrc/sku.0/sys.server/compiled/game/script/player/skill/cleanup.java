@@ -5,11 +5,12 @@ import script.library.meditation;
 import script.library.metrics;
 import script.obj_id;
 
-public class cleanup extends script.base_script
-{
+public class cleanup extends script.base_script {
+
     public cleanup()
     {
     }
+
     public int OnRecapacitated(obj_id self) throws InterruptedException
     {
         if (hasObjVar(self, meditation.VAR_FORCE_OF_WILL_ACTIVE))
@@ -22,6 +23,7 @@ public class cleanup extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handlePowerBoostWane(obj_id self, dictionary params) throws InterruptedException
     {
         if (!hasObjVar(self, meditation.VAR_POWERBOOST_ACTIVE))
@@ -37,6 +39,7 @@ public class cleanup extends script.base_script
         sendSystemMessage(self, meditation.SID_POWERBOOST_WANE);
         return SCRIPT_CONTINUE;
     }
+
     public int handlePowerBoostEnd(obj_id self, dictionary params) throws InterruptedException
     {
         if (!hasObjVar(self, meditation.VAR_POWERBOOST_ACTIVE))
@@ -53,6 +56,7 @@ public class cleanup extends script.base_script
         removeObjVar(self, meditation.VAR_POWERBOOST_ACTIVE);
         return SCRIPT_CONTINUE;
     }
+
     public int handlePowerBoostLog(obj_id self, dictionary params) throws InterruptedException
     {
         metrics.logBuffStatus(self);

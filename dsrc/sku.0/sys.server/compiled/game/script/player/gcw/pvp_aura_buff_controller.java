@@ -88,7 +88,7 @@ public class pvp_aura_buff_controller extends script.base_script
                 }
             }
         }
-        if (filteredPlayers == null || filteredPlayers.size() == 0)
+        if (filteredPlayers == null || filteredPlayers.isEmpty())
         {
             applyBuff = false;
         }

@@ -8,8 +8,8 @@ import script.string_id;
 
 import java.util.Vector;
 
-public class veteran_rewards extends script.base_script
-{
+public class veteran_rewards extends script.base_script {
+
     public veteran_rewards()
     {
     }
@@ -59,6 +59,7 @@ public class veteran_rewards extends script.base_script
     public static final String SCRIPTVAR_FREE_CTS_REQUEST_TIMEOUT = "freeCtsRequestTimeout";
     public static final String SCRIPTVAR_CTS_SUI_ID = "ctsSuiId";
     public static final String SCRIPTVAR_CTS_REQUEST_TIMEOUT = "ctsRequestTimeout";
+
     public int OnLogin(obj_id self) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, SCRIPTVAR_ALREADY_LOGGED_IN))
@@ -71,15 +72,17 @@ public class veteran_rewards extends script.base_script
             if (onetimes != null)
             {
                 boolean hasSoro = false;
-                for (int onetime : onetimes) {
-                    if (onetime == (884375002)) {
+                for (int onetime : onetimes)
+                {
+                    if (onetime == (884375002))
+                    {
                         hasSoro = true;
                     }
                 }
                 if (hasSoro)
                 {
-                    setObjVar(self, OBJVAR_SOROSUUB_CLAIMED_ITEMS, (int)1);
-                    setObjVar(self, OBJVAR_6MOJTL_CONSUMED_EVENTS, (int)1);
+                    setObjVar(self, OBJVAR_SOROSUUB_CLAIMED_ITEMS, (int) 1);
+                    setObjVar(self, OBJVAR_6MOJTL_CONSUMED_EVENTS, (int) 1);
                 }
                 removeObjVar(self, OBJVAR_DEPRECATED_ONETIME_ITEMS);
             }
@@ -104,6 +107,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int OnLogout(obj_id self) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -114,6 +118,7 @@ public class veteran_rewards extends script.base_script
         utils.removeScriptVar(self, SCRIPTVAR_ALREADY_CHECKED_AUTOPROMPT);
         return SCRIPT_CONTINUE;
     }
+
     public int DoCreateVeteranReward(obj_id self, String[] rewardItemName) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -129,8 +134,7 @@ public class veteran_rewards extends script.base_script
                 if (static_item.isStaticItem(rewardItemName[0]))
                 {
                     createdItem = static_item.createNewItemFunction(rewardItemName[0], playerInventory);
-                }
-                else 
+                } else
                 {
                     createdItem = createObjectOverloaded(rewardItemName[0], playerInventory);
                 }
@@ -144,14 +148,14 @@ public class veteran_rewards extends script.base_script
                 rewardInfo[2] = "" + self;
                 rewardInfo[3] = "" + getPlayerStationId(self);
                 setObjVar(createdItem, "rewardGrantInfo", rewardInfo);
-            }
-            else 
+            } else
             {
                 rewardItemName[0] = "0";
             }
         }
         return SCRIPT_CONTINUE;
     }
+
     public int cmdClaimVeteranReward(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -163,8 +167,7 @@ public class veteran_rewards extends script.base_script
             if (veteranAccountFeatureIdRequest(self))
             {
                 setAccountFeatureIdRequestInProgress(self);
-            }
-            else 
+            } else
             {
                 if (!checkForVeteranRewards(self))
                 {
@@ -174,6 +177,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int veteranAccountFeatureIdResponse(obj_id self, dictionary params) throws InterruptedException
     {
         clearAccountFeatureIdRequestInProgress(self);
@@ -183,6 +187,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public boolean checkForVeteranRewards(obj_id self) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -207,8 +212,7 @@ public class veteran_rewards extends script.base_script
                         hasMore = true;
                         events[i] = events[i].substring(1);
                         choices.addElement("@veteran_new:color_lime_green " + veteranGetEventAnnouncement(events[i]));
-                    }
-                    else 
+                    } else
                     {
                         choices.addElement("@veteran_new:empty_string " + veteranGetEventAnnouncement(events[i]));
                     }
@@ -237,6 +241,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public boolean isVeteranRewardsPromptTime(obj_id self) throws InterruptedException
     {
         int nextPromptTime = getIntObjVar(self, OBJVAR_NEXT_PROMPT_TIME);
@@ -247,6 +252,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public int handleRewardAnnouncement(obj_id self, dictionary params) throws InterruptedException
     {
         String[] events = utils.getStringArrayScriptVar(self, SCRIPTVAR_ALL_EVENTS);
@@ -292,8 +298,7 @@ public class veteran_rewards extends script.base_script
                 {
                     sui.msgbox(self, self, REMIND_ONE_DAY_DESCRIPTION, sui.OK_ONLY, REMIND_DESCRIPTION_TITLE, "noHandler");
                     waitForNextPrompt = 24 * 60 * 60;
-                }
-                else 
+                } else
                 {
                     sui.msgbox(self, self, REMIND_ONE_WEEK_DESCRIPTION, sui.OK_ONLY, REMIND_DESCRIPTION_TITLE, "noHandler");
                     waitForNextPrompt = 7 * 24 * 60 * 60;
@@ -316,15 +321,13 @@ public class veteran_rewards extends script.base_script
         if (bp == sui.BP_OK)
         {
             chooseRewardForEvent(self, events[rowSelected]);
-        }
-        else 
+        } else
         {
             String webSite = veteranGetEventUrl(events[rowSelected]);
             if (webSite != null && !webSite.equals(""))
             {
                 launchClientWebBrowser(self, webSite);
-            }
-            else 
+            } else
             {
                 sendSystemMessage(self, SID_SORRY_NO_INFO);
             }
@@ -332,6 +335,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void chooseRewardForEvent(obj_id self, String event) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -343,12 +347,10 @@ public class veteran_rewards extends script.base_script
         if (rewardChoices.length == 0)
         {
             sui.msgbox(self, self, NO_OPTIONS, sui.OK_ONLY, NO_OPTIONS_BOX_TITLE, "noHandler");
-        }
-        else if (rewardChoices.length == 1)
+        } else if (rewardChoices.length == 1)
         {
             checkForUniquenessAndClaim(self, event, rewardChoicesTags[0]);
-        }
-        else 
+        } else
         {
             utils.setScriptVar(self, SCRIPTVAR_EVENT, event);
             utils.setScriptVar(self, SCRIPTVAR_REWARD_TAGS, rewardChoicesTags);
@@ -361,6 +363,7 @@ public class veteran_rewards extends script.base_script
             sui.listbox(self, self, veteranGetEventDescription(event), sui.OK_CANCEL, sui.DEFAULT_TITLE, choicesWithLaunchWeb, "rewardSelectHandler", true, false);
         }
     }
+
     public int rewardSelectHandler(obj_id self, dictionary params) throws InterruptedException
     {
         String event = utils.getStringScriptVar(self, SCRIPTVAR_EVENT);
@@ -394,14 +397,12 @@ public class veteran_rewards extends script.base_script
             if (webSite != null && !webSite.equals(""))
             {
                 launchClientWebBrowser(self, webSite);
-            }
-            else 
+            } else
             {
                 sendSystemMessage(self, SID_SORRY_NO_INFO);
             }
             checkForVeteranRewards(self);
-        }
-        else 
+        } else
         {
             if ((rowSelected > 0) && ((rowSelected - 1) < rewardChoicesTags.length))
             {
@@ -410,6 +411,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void checkForUniquenessAndClaim(obj_id self, String event, String item) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -423,30 +425,27 @@ public class veteran_rewards extends script.base_script
             utils.setScriptVar(self, SCRIPTVAR_EVENT, event);
             utils.setScriptVar(self, SCRIPTVAR_ITEM, item);
             sui.msgbox(self, self, ITEM_AND_EVENT_UNIQUE_ARE_YOU_SURE, sui.YES_NO, UNIQUE_ARE_YOU_SURE_BOX_TITLE, "handleUniqueConfirmation");
-        }
-        else if (itemAccountUnique)
+        } else if (itemAccountUnique)
         {
             utils.setScriptVar(self, SCRIPTVAR_EVENT, event);
             utils.setScriptVar(self, SCRIPTVAR_ITEM, item);
             sui.msgbox(self, self, ITEM_UNIQUE_ARE_YOU_SURE, sui.YES_NO, UNIQUE_ARE_YOU_SURE_BOX_TITLE, "handleUniqueConfirmation");
-        }
-        else if (eventAccountUnique)
+        } else if (eventAccountUnique)
         {
             utils.setScriptVar(self, SCRIPTVAR_EVENT, event);
             utils.setScriptVar(self, SCRIPTVAR_ITEM, item);
             sui.msgbox(self, self, EVENT_UNIQUE_ARE_YOU_SURE, sui.YES_NO, UNIQUE_ARE_YOU_SURE_BOX_TITLE, "handleUniqueConfirmation");
-        }
-        else if (veteranIsItemAccountUniqueFeatureId(item))
+        } else if (veteranIsItemAccountUniqueFeatureId(item))
         {
             utils.setScriptVar(self, SCRIPTVAR_EVENT, event);
             utils.setScriptVar(self, SCRIPTVAR_ITEM, item);
             sui.msgbox(self, self, ITEM_UNIQUE_FEATURE_ID_ARE_YOU_SURE, sui.YES_NO, UNIQUE_ARE_YOU_SURE_BOX_TITLE, "handleUniqueConfirmation");
-        }
-        else 
+        } else
         {
             lockAndClaim(self, event, item);
         }
     }
+
     public int handleUniqueConfirmation(obj_id self, dictionary params) throws InterruptedException
     {
         String event = utils.getStringScriptVar(self, SCRIPTVAR_EVENT);
@@ -467,13 +466,13 @@ public class veteran_rewards extends script.base_script
         if (bp == sui.BP_OK)
         {
             lockAndClaim(self, event, item);
-        }
-        else 
+        } else
         {
             checkForVeteranRewards(self);
         }
         return SCRIPT_CONTINUE;
     }
+
     public int veteranItemGrantSucceeded(obj_id self, dictionary params) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -488,14 +487,14 @@ public class veteran_rewards extends script.base_script
         if (!canTradeIn)
         {
             sui.msgbox(self, self, ITEM_GRANT_SUCCEEDED, sui.OK_ONLY, ITEM_GRANT_BOX_TITLE, "handleGrantAcknowledged");
-        }
-        else 
+        } else
         {
             sui.msgbox(self, self, ITEM_GRANT_SUCCEEDED_CAN_TRADE_IN, sui.OK_ONLY, ITEM_GRANT_BOX_TITLE, "handleGrantAcknowledged");
         }
         clearClaimInProgress(self);
         return SCRIPT_CONTINUE;
     }
+
     public int veteranItemGrantFailed(obj_id self, dictionary params) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -506,6 +505,7 @@ public class veteran_rewards extends script.base_script
         clearClaimInProgress(self);
         return SCRIPT_CONTINUE;
     }
+
     public int handleGrantAcknowledged(obj_id self, dictionary params) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -515,6 +515,7 @@ public class veteran_rewards extends script.base_script
         checkForVeteranRewards(self);
         return SCRIPT_CONTINUE;
     }
+
     public void lockAndClaim(obj_id self, String event, String item) throws InterruptedException
     {
         utils.removeScriptVar(self, SCRIPTVAR_EVENT);
@@ -525,12 +526,12 @@ public class veteran_rewards extends script.base_script
         {
             setClaimInProgress(self);
             veteranClaimReward(self, event, item);
-        }
-        else 
+        } else
         {
             sui.msgbox(self, NO_REWARDS_MESSAGE);
         }
     }
+
     public boolean shouldGetVeteranRewardsMessage(obj_id player) throws InterruptedException
     {
         String area = getCurrentSceneName();
@@ -540,6 +541,7 @@ public class veteran_rewards extends script.base_script
         }
         return true;
     }
+
     public void setClaimInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player))
@@ -548,6 +550,7 @@ public class veteran_rewards extends script.base_script
             utils.setScriptVar(player, SCRIPTVAR_CLAIM_IN_PROGRESS, timeOut);
         }
     }
+
     public boolean hasClaimInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player) && utils.hasScriptVar(player, SCRIPTVAR_CLAIM_IN_PROGRESS))
@@ -561,6 +564,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public void clearClaimInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player))
@@ -568,6 +572,7 @@ public class veteran_rewards extends script.base_script
             utils.removeScriptVar(player, SCRIPTVAR_CLAIM_IN_PROGRESS);
         }
     }
+
     public void setAccountFeatureIdRequestInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player))
@@ -576,6 +581,7 @@ public class veteran_rewards extends script.base_script
             utils.setScriptVar(player, SCRIPTVAR_ACCOUNT_FEATURE_ID_REQUEST_IN_PROGRESS, timeOut);
         }
     }
+
     public boolean hasAccountFeatureIdRequestInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player) && utils.hasScriptVar(player, SCRIPTVAR_ACCOUNT_FEATURE_ID_REQUEST_IN_PROGRESS))
@@ -589,6 +595,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public void clearAccountFeatureIdRequestInProgress(obj_id player) throws InterruptedException
     {
         if (isIdValid(player) && exists(player))
@@ -596,6 +603,7 @@ public class veteran_rewards extends script.base_script
             utils.removeScriptVar(player, SCRIPTVAR_ACCOUNT_FEATURE_ID_REQUEST_IN_PROGRESS);
         }
     }
+
     public boolean isFreeCtsPromptTime(obj_id self) throws InterruptedException
     {
         int nextPromptTime = getIntObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME);
@@ -606,6 +614,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public boolean checkForFreeCts(obj_id self) throws InterruptedException
     {
         String[] freeCtsClusters = qualifyForFreeCts(self);
@@ -620,7 +629,8 @@ public class veteran_rewards extends script.base_script
             choices.addElement("I am ready to transfer now.");
             String announcement = "This character is eligible for a Free Character Transfer to one of the following designated galaxy servers:";
             announcement += "\n\n";
-            for (String freeCtsCluster : freeCtsClusters) {
+            for (String freeCtsCluster : freeCtsClusters)
+            {
                 announcement += "\t";
                 announcement += freeCtsCluster;
                 announcement += "\n";
@@ -633,6 +643,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public int cmdFreeCts(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         int secondsUntilCanMakeAnotherFreeCtsRequest = getSecondsUntilCanMakeAnotherFreeCtsRequest(self);
@@ -654,6 +665,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsAnnouncement(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -673,21 +685,18 @@ public class veteran_rewards extends script.base_script
             {
                 removeObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME);
                 sui.msgbox(self, self, "You will be reminded the next time you log in.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
-            }
-            else if ((rowSelected == 1) || (rowSelected == 2) || (rowSelected == 3))
+            } else if ((rowSelected == 1) || (rowSelected == 2) || (rowSelected == 3))
             {
                 int waitForNextPrompt = 0;
                 if (rowSelected == 1)
                 {
                     sui.msgbox(self, self, "You will be reminded the next time you log in after 24 hours have passed.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
                     waitForNextPrompt = 24 * 60 * 60;
-                }
-                else if (rowSelected == 2)
+                } else if (rowSelected == 2)
                 {
                     sui.msgbox(self, self, "You will be reminded the next time you log in after a week has passed.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
                     waitForNextPrompt = 7 * 24 * 60 * 60;
-                }
-                else 
+                } else
                 {
                     sui.msgbox(self, self, "You will be reminded the next time you log in after 30 days have passed.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
                     waitForNextPrompt = 30 * 24 * 60 * 60;
@@ -695,8 +704,7 @@ public class veteran_rewards extends script.base_script
                 int gameTime = getGameTime();
                 int nextPromptTime = gameTime + waitForNextPrompt;
                 setObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME, nextPromptTime);
-            }
-            else if (rowSelected == 5)
+            } else if (rowSelected == 5)
             {
                 removeObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME);
                 if (isValidLocationForCts(self, true))
@@ -707,20 +715,19 @@ public class veteran_rewards extends script.base_script
                     showSUIPage(pid);
                     setFreeCtsSuiId(self, pid);
                 }
-            }
-            else 
+            } else
             {
                 removeObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME);
                 sui.msgbox(self, self, "You will be reminded the next time you log in.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
             }
-        }
-        else 
+        } else
         {
             removeObjVar(self, OBJVAR_FREE_CTS_NEXT_PROMPT_TIME);
             sui.msgbox(self, self, "You will be reminded the next time you log in.  You may also type \"/freeCts\" to initiate your character transfer at any time.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
         }
         return SCRIPT_CONTINUE;
     }
+
     public boolean isValidLocationForCts(obj_id self, boolean freeCts) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -739,13 +746,13 @@ public class veteran_rewards extends script.base_script
         if (freeCts)
         {
             sui.msgbox(self, self, "You must be located on one of the original 10 ground planets (Corellia, Dantooine, Dathomir, Endor, Lok, Naboo, Rori, Talus, Tatooine, and Yavin 4) before you can transfer.  Type \"/freeCts\" when you are ready to attempt your character transfer again.", sui.OK_ONLY, "Star Wars Galaxies Free Character Transfer Service", "noHandler");
-        }
-        else 
+        } else
         {
             sui.msgbox(self, self, "You must be located on one of the original 10 ground planets (Corellia, Dantooine, Dathomir, Endor, Lok, Naboo, Rori, Talus, Tatooine, and Yavin 4) before you can transfer.", sui.OK_ONLY, "Star Wars Galaxies Character Transfer Service", "noHandler");
         }
         return false;
     }
+
     public int handleFreeCtsLegal(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -759,6 +766,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void freeCtsDisplayDestGalaxyChoice(obj_id self, String messageHeader) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -771,7 +779,8 @@ public class veteran_rewards extends script.base_script
             return;
         }
         Vector choices = new Vector();
-        for (String freeCtsCluster : freeCtsClusters) {
+        for (String freeCtsCluster : freeCtsClusters)
+        {
             choices.addElement(freeCtsCluster);
         }
         String announcement = "";
@@ -787,6 +796,7 @@ public class veteran_rewards extends script.base_script
         showSUIPage(pid);
         setFreeCtsSuiId(self, pid);
     }
+
     public int handleFreeCtsDestinationGalaxyChoice(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -809,6 +819,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsValidateFailCannotCreateCharacter(obj_id self, dictionary params) throws InterruptedException
     {
         String destinationGalaxy = params.getString("destinationGalaxy");
@@ -818,6 +829,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsValidateFailDestGalaxyUnavailable(obj_id self, dictionary params) throws InterruptedException
     {
         String destinationGalaxy = params.getString("destinationGalaxy");
@@ -827,6 +839,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsValidateFailNameValidation(obj_id self, dictionary params) throws InterruptedException
     {
         String destinationGalaxy = params.getString("destinationGalaxy");
@@ -837,6 +850,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void freeCtsDisplayDestCharacterNameInput(obj_id self, String destinationGalaxy, String destinationCharacterName, String reason) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -866,6 +880,7 @@ public class veteran_rewards extends script.base_script
         setFreeCtsSuiId(self, pid);
         utils.setScriptVar(self, "freeCtsDestinationGalaxy", destinationGalaxy);
     }
+
     public int handleFreeCtsDestinationCharacerNameInput(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -890,14 +905,14 @@ public class veteran_rewards extends script.base_script
             if ((destinationCharacterName != null) && (destinationCharacterName.length() > 0))
             {
                 validateFreeCts(self, destinationGalaxy, destinationCharacterName);
-            }
-            else 
+            } else
             {
                 freeCtsDisplayDestCharacterNameInput(self, destinationGalaxy, "", "Please enter a name.");
             }
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsValidateSuccess(obj_id self, dictionary params) throws InterruptedException
     {
         String destinationGalaxy = params.getString("destinationGalaxy");
@@ -914,6 +929,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsAreYouSure(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -957,6 +973,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleFreeCtsConfirmation(obj_id self, dictionary params) throws InterruptedException
     {
         if (!verifyFreeCtsSuiId(self, params.getInt("pageId")))
@@ -988,6 +1005,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public boolean verifyFreeCtsSuiId(obj_id self, int pageId) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -1006,6 +1024,7 @@ public class veteran_rewards extends script.base_script
         }
         return false;
     }
+
     public void setFreeCtsSuiId(obj_id self, int pageId) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -1015,6 +1034,7 @@ public class veteran_rewards extends script.base_script
         utils.setScriptVar(self, SCRIPTVAR_FREE_CTS_SUI_ID, pageId);
         utils.removeScriptVar(self, SCRIPTVAR_FREE_CTS_REQUEST_TIMEOUT);
     }
+
     public int getSecondsUntilCanMakeAnotherFreeCtsRequest(obj_id self) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -1034,6 +1054,7 @@ public class veteran_rewards extends script.base_script
         }
         return (gameTimePreviousRequestTimeout - gameTimeNow);
     }
+
     public int handleRewardTradeInConfirmation(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, SCRIPTVAR_REWARD_TRADE_IN_SUI_ID))
@@ -1061,6 +1082,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int initiateCtsFromItem(obj_id self, dictionary params) throws InterruptedException
     {
         final int secondsUntilCanMakeAnotherCtsRequest = getSecondsUntilCanMakeAnotherCtsRequest(self);
@@ -1096,6 +1118,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsLegal(obj_id self, dictionary params) throws InterruptedException
     {
         final obj_id item = verifyCtsSuiId(self, params.getInt("pageId"));
@@ -1110,6 +1133,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void ctsDisplayDestGalaxyChoice(obj_id self, obj_id item, String messageHeader) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self) || !isIdValid(item) || !exists(item))
@@ -1122,7 +1146,8 @@ public class veteran_rewards extends script.base_script
             return;
         }
         Vector choices = new Vector();
-        for (String ctsDestinationCluster : ctsDestinationClusters) {
+        for (String ctsDestinationCluster : ctsDestinationClusters)
+        {
             choices.addElement(ctsDestinationCluster);
         }
         String announcement = "";
@@ -1138,6 +1163,7 @@ public class veteran_rewards extends script.base_script
         showSUIPage(pid);
         setCtsSuiId(self, item, pid);
     }
+
     public int handleCtsDestinationGalaxyChoice(obj_id self, dictionary params) throws InterruptedException
     {
         final obj_id item = verifyCtsSuiId(self, params.getInt("pageId"));
@@ -1162,6 +1188,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsValidateFailCannotCreateCharacter(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID))
@@ -1177,6 +1204,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsValidateFailDestGalaxyUnavailable(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID))
@@ -1192,6 +1220,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsValidateFailNameValidation(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID))
@@ -1208,6 +1237,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void ctsDisplayDestCharacterNameInput(obj_id self, obj_id item, String destinationGalaxy, String destinationCharacterName, String reason) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self) || !isIdValid(item) || !exists(item))
@@ -1232,6 +1262,7 @@ public class veteran_rewards extends script.base_script
         setCtsSuiId(self, item, pid);
         utils.setScriptVar(self, "ctsDestinationGalaxy", destinationGalaxy);
     }
+
     public int handleCtsDestinationCharacerNameInput(obj_id self, dictionary params) throws InterruptedException
     {
         final obj_id item = verifyCtsSuiId(self, params.getInt("pageId"));
@@ -1253,14 +1284,14 @@ public class veteran_rewards extends script.base_script
             {
                 utils.setScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID, item);
                 validateCts(self, destinationGalaxy, destinationCharacterName);
-            }
-            else 
+            } else
             {
                 ctsDisplayDestCharacterNameInput(self, item, destinationGalaxy, "", "Please enter a name.");
             }
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsValidateSuccess(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID))
@@ -1283,6 +1314,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsAreYouSure(obj_id self, dictionary params) throws InterruptedException
     {
         final obj_id item = verifyCtsSuiId(self, params.getInt("pageId"));
@@ -1322,6 +1354,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCtsConfirmation(obj_id self, dictionary params) throws InterruptedException
     {
         final obj_id item = verifyCtsSuiId(self, params.getInt("pageId"));
@@ -1354,6 +1387,7 @@ public class veteran_rewards extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public boolean verifyItemForCts(obj_id player, obj_id item) throws InterruptedException
     {
         if (!isValidId(player))
@@ -1392,8 +1426,7 @@ public class veteran_rewards extends script.base_script
                     removeObjVar(item, "ctsItemUsage.cluster");
                     removeObjVar(item, "ctsItemUsage.user");
                     removeObjVar(item, "ctsItemUsage.time");
-                }
-                else 
+                } else
                 {
                     sui.msgbox(player, player, "The item has already been used by someone else to perform a Character Transfer.", sui.OK_ONLY, "Star Wars Galaxies Character Transfer Service", "noHandler");
                     return false;
@@ -1402,6 +1435,7 @@ public class veteran_rewards extends script.base_script
         }
         return true;
     }
+
     public void setCtsSuiId(obj_id self, obj_id item, int pageId) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self) || !isIdValid(item) || !exists(item))
@@ -1412,6 +1446,7 @@ public class veteran_rewards extends script.base_script
         utils.setScriptVar(self, cts.SCRIPTVAR_CTS_ITEM_ID, item);
         utils.removeScriptVar(self, SCRIPTVAR_CTS_REQUEST_TIMEOUT);
     }
+
     public obj_id verifyCtsSuiId(obj_id self, int pageId) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))
@@ -1436,6 +1471,7 @@ public class veteran_rewards extends script.base_script
         }
         return null;
     }
+
     public int getSecondsUntilCanMakeAnotherCtsRequest(obj_id self) throws InterruptedException
     {
         if (!isIdValid(self) || !exists(self))

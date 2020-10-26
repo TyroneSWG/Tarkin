@@ -5,13 +5,14 @@ import script.library.sui;
 import script.library.utils;
 import script.obj_id;
 
-public class player_sui extends script.base_script
-{
+public class player_sui extends script.base_script {
+
     public player_sui()
     {
     }
     public static final String TERMINAL_LOGGING = "special_sign";
     public static final boolean LOGGING_ON = true;
+
     public int handleCloseSui(obj_id self, dictionary params) throws InterruptedException
     {
         if (params == null || params.isEmpty())
@@ -25,6 +26,7 @@ public class player_sui extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleSetSuiAssociate(obj_id self, dictionary params) throws InterruptedException
     {
         if (params == null || params.isEmpty())
@@ -50,6 +52,7 @@ public class player_sui extends script.base_script
         setSUIMaxRangeToObject(pid, range);
         return SCRIPT_CONTINUE;
     }
+
     public int handleDecorTypeSelect(obj_id self, dictionary params) throws InterruptedException
     {
         if (params == null || params.isEmpty())
@@ -121,6 +124,7 @@ public class player_sui extends script.base_script
         removeDecorVars(player);
         return SCRIPT_CONTINUE;
     }
+
     public int handleDecorSlotRemovalSelect(obj_id self, dictionary params) throws InterruptedException
     {
         if (params == null || params.isEmpty())
@@ -167,6 +171,7 @@ public class player_sui extends script.base_script
         blog("handleDecorSlotRemovalSelect: menuSelection: " + menuSelection);
         return SCRIPT_CONTINUE;
     }
+
     public boolean removeDecorVars(obj_id player) throws InterruptedException
     {
         if (!isValidId(player) || !exists(player))
@@ -175,6 +180,7 @@ public class player_sui extends script.base_script
         }
         return true;
     }
+
     public boolean blog(String msg) throws InterruptedException
     {
         if (msg == null || msg.equals(""))

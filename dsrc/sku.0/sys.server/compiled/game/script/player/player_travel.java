@@ -5,8 +5,8 @@ import script.library.*;
 
 import java.util.Vector;
 
-public class player_travel extends script.base_script
-{
+public class player_travel extends script.base_script {
+
     public player_travel()
     {
     }
@@ -45,6 +45,7 @@ public class player_travel extends script.base_script
     public static final int SHIP_TYPE_TCG_LOCATION_SHIP = 6;
     public static final int SHIP_TYPE_SNOWSPEEDER_SHIP = 7;
     public static final int SHIP_TYPE_TCG_SLAVE1_SHIP = 8;
+
     public int OnInitialize(obj_id self) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel.OnInitialize");
@@ -54,6 +55,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int OnPurchaseTicket(obj_id self, obj_id player, String departPlanetName, String departTravelPointName, String arrivePlanetName, String arriveTravelPointName, boolean roundTrip) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::OnPurchaseTicket");
@@ -75,8 +77,7 @@ public class player_travel extends script.base_script
             {
                 sendSystemMessage(self, new string_id("gcw", "static_base_shuttle_beacon_cant_not_rebel"));
                 return SCRIPT_CONTINUE;
-            }
-            else if ((arriveTravelPointName.contains("imperial")) && !factions.isImperial(self))
+            } else if ((arriveTravelPointName.contains("imperial")) && !factions.isImperial(self))
             {
                 sendSystemMessage(self, new string_id("gcw", "static_base_shuttle_beacon_cant_not_imperial"));
                 return SCRIPT_CONTINUE;
@@ -106,14 +107,14 @@ public class player_travel extends script.base_script
         travel.purchaseTicket(self, departPlanetName, departTravelPointName, arrivePlanetName, arriveTravelPointName, roundTrip, starport);
         return SCRIPT_CONTINUE;
     }
+
     public int OnPurchaseTicketInstantTravel(obj_id self, obj_id player, String departPlanetName, String departTravelPointName, String arrivePlanetName, String arriveTravelPointName, boolean roundTrip) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::OnPurchaseTicketInstantTravel");
         if (!utils.hasScriptVar(player, "instantTravel"))
         {
             return SCRIPT_CONTINUE;
-        }
-        else
+        } else
         {
             utils.removeScriptVar(player, "instantTravel");
         }
@@ -150,6 +151,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int OnAboutToTravelToGroupPickupPoint(obj_id self) throws InterruptedException
     {
         if (callable.hasAnyCallable(self))
@@ -159,17 +161,20 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int OnTravelToGroupPickupPoint(obj_id self, String planetName, String travelPointName) throws InterruptedException
     {
         travel.movePlayerToDestination(self, planetName, travelPointName, true);
         return SCRIPT_CONTINUE;
     }
+
     public int msgTicketPaymentFail(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", self + " ->You do not have enough money to complete the ticket purchase.");
         sendSystemMessage(self, new string_id(STF_FILE, "short_funds"));
         return SCRIPT_CONTINUE;
     }
+
     public int msgUseTravelCouponSui(obj_id self, dictionary params) throws InterruptedException
     {
         if ((params == null) || (params.isEmpty()))
@@ -200,41 +205,40 @@ public class player_travel extends script.base_script
         switch (bp)
         {
             case sui.BP_OK:
-            if (isIdValid(travel_coupon))
-            {
-                destroyObject(travel_coupon);
-                utils.setScriptVar(self, travel.VAR_PURCHASING_TICKET, 1);
-                String custLogMsg = "New Player Rewards: %TU sucessfully used a travel voucher.";
-                CustomerServiceLog("NEW_PLAYER_QUESTS", custLogMsg, self);
-                messageTo(self, "msgTicketPaymentComplete", webster, 1, false);
-            }
-            else
-            {
-                sendSystemMessage(self, new string_id("new_player", "travel_coupon_invaild"));
-            }
-            break;
-            case sui.BP_CANCEL:
-            if (hasEnoughMoney)
-            {
-                if (money.pay(self, money.ACCT_TRAVEL, total_cost, "msgTicketPaymentComplete", webster, true))
+                if (isIdValid(travel_coupon))
                 {
-                    params.put("amount", city_fee);
-                    if ((city_fee > 0) && !money.pay(self, city.getCityHall(starport), city_fee, "msgCityTicketPaymentComplete", webster, true))
-                    {
-                        return SCRIPT_CONTINUE;
-                    }
-                    LOG("LOG_CHANNEL", "Deducting " + total_cost);
+                    destroyObject(travel_coupon);
                     utils.setScriptVar(self, travel.VAR_PURCHASING_TICKET, 1);
+                    String custLogMsg = "New Player Rewards: %TU sucessfully used a travel voucher.";
+                    CustomerServiceLog("NEW_PLAYER_QUESTS", custLogMsg, self);
+                    messageTo(self, "msgTicketPaymentComplete", webster, 1, false);
+                } else
+                {
+                    sendSystemMessage(self, new string_id("new_player", "travel_coupon_invaild"));
                 }
-            }
-            else
-            {
-                sendSystemMessage(self, new string_id("new_player", "travel_coupon_cancelled"));
-            }
-            break;
+                break;
+            case sui.BP_CANCEL:
+                if (hasEnoughMoney)
+                {
+                    if (money.pay(self, money.ACCT_TRAVEL, total_cost, "msgTicketPaymentComplete", webster, true))
+                    {
+                        params.put("amount", city_fee);
+                        if ((city_fee > 0) && !money.pay(self, city.getCityHall(starport), city_fee, "msgCityTicketPaymentComplete", webster, true))
+                        {
+                            return SCRIPT_CONTINUE;
+                        }
+                        LOG("LOG_CHANNEL", "Deducting " + total_cost);
+                        utils.setScriptVar(self, travel.VAR_PURCHASING_TICKET, 1);
+                    }
+                } else
+                {
+                    sendSystemMessage(self, new string_id("new_player", "travel_coupon_cancelled"));
+                }
+                break;
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgTicketPaymentComplete(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::msgTicketPaymentComplete");
@@ -252,6 +256,7 @@ public class player_travel extends script.base_script
         sui.msgbox(self, new string_id(STF_FILE, "ticket_purchase_complete"));
         return SCRIPT_CONTINUE;
     }
+
     public int msgTravelComplete(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::msgTravelComplete");
@@ -263,8 +268,7 @@ public class player_travel extends script.base_script
         {
             departure_planet = utils.getStringScriptVar(self, travel.VAR_DEPARTURE_PLANET);
             utils.removeScriptVar(self, travel.VAR_DEPARTURE_PLANET);
-        }
-        else
+        } else
         {
             CustomerServiceLog("travel", getFirstName(self) + " has an invalid departure planet. Unable to check for travel success.");
             return SCRIPT_CONTINUE;
@@ -273,8 +277,7 @@ public class player_travel extends script.base_script
         {
             departure_point = utils.getStringScriptVar(self, travel.VAR_DEPARTURE_POINT);
             utils.removeScriptVar(self, travel.VAR_DEPARTURE_POINT);
-        }
-        else
+        } else
         {
             CustomerServiceLog("travel", getFirstName(self) + " has an invalid departure point. Unable to check for travel success.");
             return SCRIPT_CONTINUE;
@@ -283,8 +286,7 @@ public class player_travel extends script.base_script
         {
             arrival_planet = utils.getStringScriptVar(self, travel.VAR_ARRIVAL_PLANET);
             utils.removeScriptVar(self, travel.VAR_ARRIVAL_PLANET);
-        }
-        else
+        } else
         {
             CustomerServiceLog("travel", getFirstName(self) + " has an invalid arrival planet. Unable to check for travel success.");
             return SCRIPT_CONTINUE;
@@ -293,8 +295,7 @@ public class player_travel extends script.base_script
         {
             arrival_point = utils.getStringScriptVar(self, travel.VAR_ARRIVAL_POINT);
             utils.removeScriptVar(self, travel.VAR_ARRIVAL_POINT);
-        }
-        else
+        } else
         {
             CustomerServiceLog("travel", getFirstName(self) + " has an invalid arrival point. Unable to check for travel success.");
             return SCRIPT_CONTINUE;
@@ -314,13 +315,13 @@ public class player_travel extends script.base_script
             {
                 CustomerServiceLog("travel", getFirstName(self) + " arrived at the incorrect travel location. Unable to recreate ticket.");
             }
-        }
-        else
+        } else
         {
             CustomerServiceLog("travel", "Unable to find travel location for " + getFirstName(self) + ". Unable to check for travel success.");
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgBoardShuttle(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::msgBoardShuttle -- " + params);
@@ -490,8 +491,7 @@ public class player_travel extends script.base_script
                 destroyObject(ticket);
                 travel.movePlayerToDestination(self, arrival_planet, arrival_point);
             }
-        }
-        else
+        } else
         {
             if (hasObjVar(self, travel.VAR_TRAVEL))
             {
@@ -504,6 +504,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgTravelToStarport(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::msgTravelToStarport -- " + self + "  " + params);
@@ -511,6 +512,7 @@ public class player_travel extends script.base_script
         warpPlayer(self, loc.area, loc.x, loc.y, loc.z, null, 0.0f, 0.0f, 0.0f);
         return SCRIPT_CONTINUE;
     }
+
     public int msgSelectDungeonTicket(obj_id self, dictionary params) throws InterruptedException
     {
         String button = params.getString("buttonPressed");
@@ -537,13 +539,13 @@ public class player_travel extends script.base_script
                 return SCRIPT_CONTINUE;
             }
             space_dungeon.activateDungeonTicket(self, ticket, ticket_collector);
-        }
-        else
+        } else
         {
             utils.removeScriptVar(self, space_dungeon.SCRIPT_VAR_VALID_TICKETS);
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgDungeonTravelComplete(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("space_dungeon", "player_travel.msgDungeonTravelComplete -- " + self + " :" + space_dungeon.getDungeonSessionId(self));
@@ -590,6 +592,7 @@ public class player_travel extends script.base_script
         CustomerServiceLog("travel", getFirstName(self) + " (" + self + ") has traveled to dungeon " + dungeon_name);
         return SCRIPT_CONTINUE;
     }
+
     public int msgDungeonTravelConfirmed(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, space_dungeon.SCRIPT_VAR_DUNGEON_PENDING) || !utils.hasScriptVar(self, space_dungeon.SCRIPT_VAR_DUNGEON_ID_PENDING))
@@ -623,6 +626,7 @@ public class player_travel extends script.base_script
         space_dungeon.moveSinglePlayerIntoDungeon(self, dungeon, dungeon_name, dungeon_position);
         return SCRIPT_CONTINUE;
     }
+
     public int msgDungeonGroupTravelComplete(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("space_dungeon", "player_travel.msgDungeonGroupTravelComplete -- " + self + " :" + space_dungeon.getDungeonSessionId(self));
@@ -646,6 +650,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgCloseDungeonTravel(obj_id self, dictionary params) throws InterruptedException
     {
         if (utils.hasScriptVar(self, space_dungeon.SCRIPT_VAR_DUNGEON_PENDING) || utils.hasScriptVar(self, space_dungeon.SCRIPT_VAR_DUNGEON_ID_PENDING))
@@ -661,6 +666,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleConfirmGcwTravelSurcharge(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, SCRIPTVAR_ACCEPT_GCW_SURCHARGE_SUI_ID))
@@ -707,6 +713,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleConfirmGcwTravelRestrictionSkipShuttleWait(obj_id self, dictionary params) throws InterruptedException
     {
         if (!utils.hasScriptVar(self, SCRIPTVAR_ACCEPT_GCW_SURCHARGE_SUI_ID))
@@ -747,6 +754,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int boardShuttle(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_travel::boardShuttle");
@@ -783,13 +791,11 @@ public class player_travel extends script.base_script
                 LOG("LOG_CHANNEL", self + " ->The shuttle is not available at this time.");
                 sendSystemMessage(self, new string_id(STF_FILE, "shuttle_not_available"));
                 return SCRIPT_CONTINUE;
-            }
-            else
+            } else
             {
                 target = shuttle;
             }
-        }
-        else if (!travel.isTravelShuttle(target))
+        } else if (!travel.isTravelShuttle(target))
         {
             LOG("LOG_CHANNEL", self + " ->What shuttle do you wish to board?");
             sendSystemMessage(self, new string_id(STF_FILE, "boarding_what_shuttle"));
@@ -839,11 +845,14 @@ public class player_travel extends script.base_script
             valid_tickets.setSize(0);
             obj_id inventory = getObjectInSlot(self, "inventory");
             obj_id[] inv_contents = utils.getContents(inventory, false);
-            for (obj_id inv_content : inv_contents) {
-                if (travel.isTravelTicketValid(inv_content, planet, depart_point)) {
+            for (obj_id inv_content : inv_contents)
+            {
+                if (travel.isTravelTicketValid(inv_content, planet, depart_point))
+                {
                     String ticket_planet = travel.getTicketArrivalPlanet(inv_content);
                     String ticket_point = travel.getTicketArrivalPoint(inv_content);
-                    if (ticket_planet.equals("kashyyyk_main")) {
+                    if (ticket_planet.equals("kashyyyk_main"))
+                    {
                         ticket_planet = "kashyyyk";
                     }
                     ticket_planet = (ticket_planet.substring(0, 1)).toUpperCase() + (ticket_planet.substring(1)).toLowerCase();
@@ -860,8 +869,7 @@ public class player_travel extends script.base_script
                 LOG("LOG_CHANNEL", self + " ->You do not have a ticket to board this shuttle.");
                 sendSystemMessage(self, new string_id(STF_FILE, "no_ticket"));
                 return SCRIPT_CONTINUE;
-            }
-            else
+            } else
             {
                 if (!utils.hasScriptVar(self, "travel.hasTicketList"))
                 {
@@ -873,15 +881,13 @@ public class player_travel extends script.base_script
                         sendSystemMessage(self, "Bypassing the shuttle timer because you are a GCW officer and your faction currently controls the planet.", "");
                     }
                     sui.listbox(self, self, utils.packStringId(SID_SUI_SELECT_DESTINATION_TITLE), sui.OK_CANCEL, utils.packStringId(SID_SUI_SELECT_DESTINATION_HEADER), dsrc, "msgBoardShuttle");
-                }
-                else
+                } else
                 {
                     sendSystemMessage(self, new string_id(STF_FILE, "boarding_ticket_selection"));
                 }
                 return SCRIPT_CONTINUE;
             }
-        }
-        else
+        } else
         {
             if (!travel.isTravelTicketValid(ticket, planet, depart_point))
             {
@@ -955,8 +961,7 @@ public class player_travel extends script.base_script
                         utils.setScriptVar(self, SCRIPTVAR_ACCEPT_GCW_SURCHARGE_TICKET_ID, ticket);
                         utils.setScriptVar(self, SCRIPTVAR_ACCEPT_GCW_SURCHARGE_SHUTTLE_ID, target);
                         return SCRIPT_CONTINUE;
-                    }
-                    else
+                    } else
                     {
                         gcwTravelRestrictionsSkipWaitSurcharge = 50000;
                     }
@@ -991,8 +996,7 @@ public class player_travel extends script.base_script
                 {
                     sendSystemMessage(self, "You do not have enough credits to pay the " + totalSurcharge + " credits GCW travel surcharge.", "");
                     return SCRIPT_CONTINUE;
-                }
-                else
+                } else
                 {
                     final int bankBalance = getBankBalance(self);
                     if (bankBalance < totalSurcharge)
@@ -1017,6 +1021,7 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public void debugLogging(String section, String message) throws InterruptedException
     {
         if (CONST_FLAG_DO_LOGGING)
@@ -1024,7 +1029,9 @@ public class player_travel extends script.base_script
             LOG("debug/player_travel/" + section, message);
         }
     }
-    public int doCFP(obj_id self, int itvType) throws InterruptedException {
+
+    public int doCFP(obj_id self, int itvType) throws InterruptedException
+    {
         if (travel.isTravelBlocked(self, false))
         {
             return SCRIPT_CONTINUE;
@@ -1037,48 +1044,61 @@ public class player_travel extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int callForPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_INSTANT_XWING_TIE);
     }
+
     public int callForPrivateerPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_INSTANT_PRIVATEER);
     }
+
     public int callForRattleTrapPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_INSTANT_JALOPY);
     }
+
     public int callForRoyalPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_INSTANT_ROYAL_SHIP);
     }
+
     public int callForTcgHomePickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_TCG_HOME_SHIP);
     }
+
     public int callForTcgLocationPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_TCG_LOCATION_SHIP);
     }
+
     public int callForSnowspeederPickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_SNOWSPEEDER_SHIP);
     }
+
     public int callForTcgSlave1Pickup(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         return doCFP(self, SHIP_TYPE_TCG_SLAVE1_SHIP);
     }
+
     public boolean canCallForPickup(obj_id player) throws InterruptedException
     {
         debugLogging("//***// canCallForPickup", "////>>>> ENTERED");
         // get the setting for minimum ITV level (if its not set, make it the max player level)
         String minLevelSetting = getConfigSetting("GameServer", "itvMinUsageLevel");
-        if(minLevelSetting == null) minLevelSetting = "0";
+        if (minLevelSetting == null)
+        {
+            minLevelSetting = "0";
+        }
 
         int minimumLevel = Integer.parseInt(minLevelSetting);
         obj_id playerCurrentMount = getMountId(player);
-        if(getLevel(player) < minimumLevel){
+        if (getLevel(player) < minimumLevel)
+        {
             sendSystemMessage(player, "Instant Travel vehicles may not be used until you have reached level " + minLevelSetting, null);
             return false;
         }
@@ -1138,6 +1158,7 @@ public class player_travel extends script.base_script
         }
         return true;
     }
+
     public boolean spawnPickupCraft(obj_id player, int type) throws InterruptedException
     {
         if (!isIdValid(player))
@@ -1160,35 +1181,28 @@ public class player_travel extends script.base_script
                 pickupCraftType = "object/tangible/terminal/terminal_travel_instant_tie.iff";
                 spawnLoc.y += 5.0f;
             }
-        }
-        else if (type == SHIP_TYPE_INSTANT_PRIVATEER)
+        } else if (type == SHIP_TYPE_INSTANT_PRIVATEER)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_privateer.iff";
-        }
-        else if (type == SHIP_TYPE_INSTANT_ROYAL_SHIP)
+        } else if (type == SHIP_TYPE_INSTANT_ROYAL_SHIP)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_royal_ship.iff";
-        }
-        else if (type == SHIP_TYPE_INSTANT_JALOPY)
+        } else if (type == SHIP_TYPE_INSTANT_JALOPY)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_jalopy.iff";
-        }
-        else if (type == SHIP_TYPE_TCG_LOCATION_SHIP)
+        } else if (type == SHIP_TYPE_TCG_LOCATION_SHIP)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_tcg_location.iff";
             playClientEffectObj(player, "sound/g9_rigger_01.snd", player, "");
-        }
-        else if (type == SHIP_TYPE_TCG_HOME_SHIP)
+        } else if (type == SHIP_TYPE_TCG_HOME_SHIP)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_tcg_home.iff";
             playClientEffectObj(player, "sound/solar_sailer_01.snd", player, "");
-        }
-        else if (type == SHIP_TYPE_SNOWSPEEDER_SHIP)
+        } else if (type == SHIP_TYPE_SNOWSPEEDER_SHIP)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_snowspeeder.iff";
             playClientEffectObj(player, "sound/veh_t47snowspeeder_decel.snd", player, "");
-        }
-        else if (type == SHIP_TYPE_TCG_SLAVE1_SHIP)
+        } else if (type == SHIP_TYPE_TCG_SLAVE1_SHIP)
         {
             pickupCraftType = "object/tangible/terminal/terminal_travel_instant_slave_1.iff";
             playClientEffectObj(player, "sound/eng_flyby_firespray.snd", player, "");
@@ -1204,6 +1218,7 @@ public class player_travel extends script.base_script
         buff.applyBuff(player, ITV_PICKUP_BUFF);
         return true;
     }
+
     public int groupMemberLocationRequestHandler(obj_id self, dictionary params) throws InterruptedException
     {
         obj_id terminal = params.getObjId("terminal");

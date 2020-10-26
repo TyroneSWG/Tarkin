@@ -6,8 +6,8 @@ import script.obj_id;
 import script.prose_package;
 import script.string_id;
 
-public class player_collection extends script.base_script
-{
+public class player_collection extends script.base_script {
+
     public player_collection()
     {
     }
@@ -24,6 +24,7 @@ public class player_collection extends script.base_script
     public static final string_id SID_INTERRUPTED_DAMAGED = new string_id("quest/groundquests", "countdown_interrupted_damaged");
     public static final string_id SID_INVIS_COLLECTION_FAIL = new string_id("collection", "invis_collection_failed");
     public static final int GCW_INSURGENT_LOCKOUT = 3600;
+
     public int OnCollectionSlotModified(obj_id self, String bookName, String pageName, String collectionName, String slotName, boolean isCounterTypeSlot, int previousValue, int currentValue, int maxSlotValue, boolean slotCompleted) throws InterruptedException
     {
         if (bookName.equals(badge.BADGE_BOOK))
@@ -38,10 +39,13 @@ public class player_collection extends script.base_script
         boolean newCollection = true;
         boolean canResetCollection = false;
         prose_package pp = new prose_package();
-        for (String collectionSlot : collectionSlots) {
-            if (!collectionSlot.equals(slotName)) {
+        for (String collectionSlot : collectionSlots)
+        {
+            if (!collectionSlot.equals(slotName))
+            {
                 long value = getCollectionSlotValue(self, collectionSlot);
-                if (value > 0) {
+                if (value > 0)
+                {
                     newCollection = false;
                     break;
                 }
@@ -64,15 +68,20 @@ public class player_collection extends script.base_script
         String[] catagories = getCollectionSlotCategoryInfo(slotName);
         if (catagories != null && catagories.length > 0)
         {
-            for (String catagory : catagories) {
-                if (catagory.equals(collection.REWARD_ON_UPDATE_CATEGORY)) {
+            for (String catagory : catagories)
+            {
+                if (catagory.equals(collection.REWARD_ON_UPDATE_CATEGORY))
+                {
                     collection.grantCollectionReward(self, slotName, false);
                 }
-                if (catagory.startsWith(collection.CATEGORY_UPDATE_ON_COUNT)) {
+                if (catagory.startsWith(collection.CATEGORY_UPDATE_ON_COUNT))
+                {
                     String[] splitUpdateCount = split(catagory, ':');
-                    if (splitUpdateCount != null && splitUpdateCount.length > 0) {
+                    if (splitUpdateCount != null && splitUpdateCount.length > 0)
+                    {
                         int countToUpdateAt = utils.stringToInt(splitUpdateCount[1]);
-                        if ((countToUpdateAt == currentValue) && isCounterTypeSlot) {
+                        if ((countToUpdateAt == currentValue) && isCounterTypeSlot)
+                        {
                             collection.grantCollectionReward(self, slotName + ":" + splitUpdateCount[1], false);
                         }
                     }
@@ -84,17 +93,22 @@ public class player_collection extends script.base_script
             boolean giveMessage = true;
             if (catagories != null && catagories.length > 0)
             {
-                for (String catagory : catagories) {
-                    if (catagory.equals(collection.REWARD_ON_COMPLETE_CATEGORY)) {
+                for (String catagory : catagories)
+                {
+                    if (catagory.equals(collection.REWARD_ON_COMPLETE_CATEGORY))
+                    {
                         collection.grantCollectionReward(self, slotName, false);
                     }
-                    if (catagory.equals(collection.NO_MESSAGE_CATEGORY)) {
+                    if (catagory.equals(collection.NO_MESSAGE_CATEGORY))
+                    {
                         giveMessage = false;
                     }
-                    if (bookName.equals("saga_relic_book")) {
+                    if (bookName.equals("saga_relic_book"))
+                    {
                         giveMessage = false;
                     }
-                    if (catagory.equals(collection.CLEAR_ON_COMPLETE) && hasCompletedCollection(self, collectionName)) {
+                    if (catagory.equals(collection.CLEAR_ON_COMPLETE) && hasCompletedCollection(self, collectionName))
+                    {
                         canResetCollection = true;
                     }
                 }
@@ -106,8 +120,7 @@ public class player_collection extends script.base_script
                 prose.setTO(pp, new string_id("collection_n", collectionName));
                 sendSystemMessageProse(self, pp);
                 play2dNonLoopingSound(self, "sound/utinni.snd");
-            }
-            else if (giveMessage)
+            } else if (giveMessage)
             {
                 prose.setStringId(pp, SID_SLOT_ADDED);
                 prose.setTU(pp, new string_id("collection_n", slotName));
@@ -126,8 +139,7 @@ public class player_collection extends script.base_script
                     prose.setStringId(pp, SID_COLLECTION_COMPLETE);
                     sendSystemMessageProse(self, pp);
                     collection.grantCollectionReward(self, collectionName, canResetCollection);
-                }
-                else 
+                } else
                 {
                     collection.grantCollectionReward(self, collectionName, canResetCollection);
                 }
@@ -135,6 +147,7 @@ public class player_collection extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int OnCollectionServerFirst(obj_id self, String bookName, String pageName, String collectionName) throws InterruptedException
     {
         prose_package pp = new prose_package();
@@ -148,6 +161,7 @@ public class player_collection extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int modifySlot(obj_id self, dictionary params) throws InterruptedException
     {
         int pid = params.getInt("id");
@@ -189,19 +203,16 @@ public class player_collection extends script.base_script
             sui.removePid(self, collection.CONSUME_PID_NAME);
             utils.setScriptVar(self, VAR_ACCESS_DELAY, getGameTime());
             return SCRIPT_CONTINUE;
-        }
-        else if (bp == sui.BP_REVERT)
+        } else if (bp == sui.BP_REVERT)
         {
             int event = params.getInt("event");
             if (event == sui.CD_EVENT_LOCOMOTION)
             {
                 sendSystemMessage(self, SID_COUNTDOWN_LOCOMOTION);
-            }
-            else if (event == sui.CD_EVENT_INCAPACITATE)
+            } else if (event == sui.CD_EVENT_INCAPACITATE)
             {
                 sendSystemMessage(self, SID_INTERRUPTED_INCAPACITATED);
-            }
-            else if (event == sui.CD_EVENT_DAMAGED || event == sui.CD_EVENT_COMBAT)
+            } else if (event == sui.CD_EVENT_DAMAGED || event == sui.CD_EVENT_COMBAT)
             {
                 sendSystemMessage(self, SID_INTERRUPTED_DAMAGED);
             }
@@ -247,8 +258,7 @@ public class player_collection extends script.base_script
                 dict.put("triggerName", collectedId + "_collected");
                 messageTo(collectedParent, "triggerFired", dict, 0.0f, false);
             }
-        }
-        else 
+        } else
         {
             CustomerServiceLog("CollectionConsume: ", "collectionItem (" + collectionItem + ")" + " was NOT consumed into a collection, for player " + getFirstName(self) + "(" + self + ").");
             sendSystemMessage(self, SID_REPORT_CONSUME_ITEM_FAIL);

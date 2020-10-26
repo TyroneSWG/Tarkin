@@ -5,8 +5,8 @@ import script.library.*;
 
 import java.util.Vector;
 
-public class player_teaching extends script.base_script
-{
+public class player_teaching extends script.base_script {
+
     public player_teaching()
     {
     }
@@ -36,14 +36,17 @@ public class player_teaching extends script.base_script
     public static final string_id SID_NO_SKILLS_FOR_STUDENT = new string_id("teaching", "no_skills_for_student");
     public static final string_id SID_NOT_IN_SAME_GROUP = new string_id("teaching", "not_in_same_group");
     public static final float TEACHING_RANGE = 10.0f;
+
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {
         return SCRIPT_CONTINUE;
     }
+
     public int OnObjectMenuSelect(obj_id self, obj_id player, int item) throws InterruptedException
     {
         return SCRIPT_CONTINUE;
     }
+
     public int OnLogin(obj_id self) throws InterruptedException
     {
         if (utils.hasScriptVar(self, VAR_TEACHING))
@@ -52,6 +55,7 @@ public class player_teaching extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgTeachSkillSelected(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_teaching::msgTeachSkillSelected -- " + params);
@@ -114,7 +118,7 @@ public class player_teaching extends script.base_script
         java.util.Enumeration e = xp_cost.keys();
         while (e.hasMoreElements())
         {
-            String xp_type = (String)(e.nextElement());
+            String xp_type = (String) (e.nextElement());
             if (xp_type.length() > 0)
             {
                 int xp = xp_cost.getInt(xp_type);
@@ -140,6 +144,7 @@ public class player_teaching extends script.base_script
         sui.msgbox(student, student, prompt, sui.YES_NO, "msgTeachSkillConfirmed");
         return SCRIPT_CONTINUE;
     }
+
     public int msgTeachSkillConfirmed(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_teaching::msgTeachSkillConfirmed");
@@ -204,14 +209,14 @@ public class player_teaching extends script.base_script
             if (exp > 0)
             {
             }
-        }
-        else 
+        } else
         {
             LOG("LOG_CHANNEL", self + " -> Learning failed.");
             LOG("LOG_CHANNEL", teacher + " -> Teaching failed.");
         }
         return SCRIPT_CONTINUE;
     }
+
     public int teach(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_teaching::teach");
@@ -271,10 +276,13 @@ public class player_teaching extends script.base_script
         }
         Vector valid_skills = new Vector();
         valid_skills.setSize(0);
-        for (String qual_skill : qual_skills) {
+        for (String qual_skill : qual_skills)
+        {
             int idx = utils.getElementPositionInArray(teacher_skills, qual_skill);
-            if (idx != -1) {
-                if (!qual_skill.contains("novice") && !qual_skill.contains("force_sensitive")) {
+            if (idx != -1)
+            {
+                if (!qual_skill.contains("novice") && !qual_skill.contains("force_sensitive"))
+                {
                     valid_skills = utils.addElement(valid_skills, qual_skill);
                 }
             }
@@ -296,7 +304,7 @@ public class player_teaching extends script.base_script
         String[] valid_skills_id = new String[valid_skills.size()];
         for (int i = 0; i < valid_skills.size(); i++)
         {
-            valid_skills_id[i] = "@skl_n:" + ((String)valid_skills.get(i));
+            valid_skills_id[i] = "@skl_n:" + ((String) valid_skills.get(i));
         }
         sui.listbox(self, self, "Select a skill to teach.", sui.OK_CANCEL, "Select Skill", valid_skills_id, "msgTeachSkillSelected");
         return SCRIPT_CONTINUE;

@@ -8,8 +8,8 @@ import script.string_id;
 
 import java.util.Vector;
 
-public class player_dispenser extends script.base_script
-{
+public class player_dispenser extends script.base_script {
+
     public player_dispenser()
     {
     }
@@ -18,11 +18,13 @@ public class player_dispenser extends script.base_script
     public static final string_id SID_PURCHASE_COMPLETE = new string_id("dispenser", "purchase_complete");
     public static final string_id SID_INSUFFICIENT_FUNDS = new string_id("dispenser", "insufficient_funds");
     public static final string_id SID_INVENTORY_FULL = new string_id("dispenser", "inventory_full");
+
     public int OnInitialize(obj_id self) throws InterruptedException
     {
         detachScript(self, "player.player_dispenser");
         return SCRIPT_CONTINUE;
     }
+
     public int OnDetach(obj_id self) throws InterruptedException
     {
         if (hasObjVar(self, "dispenser"))
@@ -31,6 +33,7 @@ public class player_dispenser extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int msgMedicinePurchaseSelected(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_dispenser::msgMedicinePurchaseSelected");
@@ -69,6 +72,7 @@ public class player_dispenser extends script.base_script
         money.pay(self, money.ACCT_DISPENSER, 5, "msgMedicinePurchaseConfirmed", d, true);
         return SCRIPT_CONTINUE;
     }
+
     public int msgMedicinePurchaseConfirmed(obj_id self, dictionary params) throws InterruptedException
     {
         detachScript(self, "player.player_dispenser");
@@ -103,8 +107,7 @@ public class player_dispenser extends script.base_script
                 tmp = utils.createHealDamageAttribMod(i * 3, value);
                 am = utils.addElement(am, tmp);
             }
-        }
-        else 
+        } else
         {
             int attrib_type = healing.stringToAttribute(attribute.toUpperCase());
             if (attrib_type == -1)
@@ -119,19 +122,19 @@ public class player_dispenser extends script.base_script
         setObjVar(medicine, consumable.VAR_CONSUMABLE_MODS, am);
         setObjVar(medicine, consumable.VAR_CONSUMABLE_MEDICINE, true);
         setCount(medicine, charges);
-        int[] stomach = 
+        int[] stomach =
         {
             0,
             0,
             0
         };
         setObjVar(medicine, consumable.VAR_CONSUMABLE_STOMACH_VALUES, stomach);
-        String[] skill_mod = 
+        String[] skill_mod =
         {
             "healing_ability"
         };
         setObjVar(medicine, consumable.VAR_SKILL_MOD_REQUIRED, skill_mod);
-        int[] skill_min = 
+        int[] skill_min =
         {
             5
         };
@@ -140,6 +143,7 @@ public class player_dispenser extends script.base_script
         sendSystemMessage(self, SID_PURCHASE_COMPLETE);
         return SCRIPT_CONTINUE;
     }
+
     public int msgDispenserPurchaseSelected(obj_id self, dictionary params) throws InterruptedException
     {
         int row_selected = getSelection(self, params);
@@ -183,6 +187,7 @@ public class player_dispenser extends script.base_script
         money.pay(self, money.ACCT_DISPENSER, 5, "msgDispenserPurchaseConfirmed", d, true);
         return SCRIPT_CONTINUE;
     }
+
     public int msgDispenserPurchaseConfirmed(obj_id self, dictionary params) throws InterruptedException
     {
         LOG("LOG_CHANNEL", "player_dispenser::msgDispenserPurchaseConfirmed -- params " + params);
@@ -205,11 +210,13 @@ public class player_dispenser extends script.base_script
         sendSystemMessage(self, SID_PURCHASE_COMPLETE);
         return SCRIPT_CONTINUE;
     }
+
     public int msgPurchaseFailed(obj_id self, dictionary params) throws InterruptedException
     {
         sendSystemMessage(self, SID_INSUFFICIENT_FUNDS);
         return SCRIPT_CONTINUE;
     }
+
     public int getSelection(obj_id player, dictionary params) throws InterruptedException
     {
         obj_id dispenser = getObjIdObjVar(player, "dispenser.dispenser");

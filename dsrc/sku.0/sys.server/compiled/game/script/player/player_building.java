@@ -197,17 +197,17 @@ public class player_building extends script.base_script
                 int factionBaseCount = getIntObjVar(player, "factionBaseCount");
                 int updatedFactionBaseCount = factionBaseCount + 1;
                 setObjVar(player, "factionBaseCount", updatedFactionBaseCount);
-                if (updatedFactionBaseCount == player_structure.MAX_BASE_COUNT)
+                switch (updatedFactionBaseCount)
                 {
-                    sendSystemMessage(self, SID_PLACED_LAST_BASE);
-                }
-                else if (updatedFactionBaseCount == player_structure.MAX_BASE_COUNT - 1)
-                {
-                    sendSystemMessage(self, SID_PLACED_NEXT_TO_LAST);
-                }
-                else 
-                {
-                    sendSystemMessageProse(self, prose.getPackage(new string_id("faction_perk", "faction_base_unit_used"), (player_structure.MAX_BASE_COUNT - updatedFactionBaseCount)));
+                    case player_structure.MAX_BASE_COUNT:
+                        sendSystemMessage(self, SID_PLACED_LAST_BASE);
+                        break;
+                    case player_structure.MAX_BASE_COUNT - 1:
+                        sendSystemMessage(self, SID_PLACED_NEXT_TO_LAST);
+                        break;
+                    default:
+                        sendSystemMessageProse(self, prose.getPackage(new string_id("faction_perk", "faction_base_unit_used"), (player_structure.MAX_BASE_COUNT - updatedFactionBaseCount)));
+                        break;
                 }
             }
             else 
@@ -771,18 +771,17 @@ public class player_building extends script.base_script
             dist_str = (st.nextToken()).toUpperCase();
             if (direction.equals("COPY"))
             {
-                if (dist_str.equals("LOCATION"))
+                switch (dist_str)
                 {
-                    copyLocation = true;
-                }
-                else if (dist_str.equals("HEIGHT"))
-                {
-                    copyHeight = true;
-                }
-                else 
-                {
-                    sendSystemMessage(self, new string_id(STF, "format_movefurniture_distance"));
-                    return SCRIPT_CONTINUE;
+                    case "LOCATION":
+                        copyLocation = true;
+                        break;
+                    case "HEIGHT":
+                        copyHeight = true;
+                        break;
+                    default:
+                        sendSystemMessage(self, new string_id(STF, "format_movefurniture_distance"));
+                        return SCRIPT_CONTINUE;
                 }
             }
             else 
@@ -804,18 +803,17 @@ public class player_building extends script.base_script
             dist_str = dist_str.toUpperCase();
             if (direction.equals("COPY"))
             {
-                if (dist_str.equals("LOCATION"))
+                switch (dist_str)
                 {
-                    copyLocation = true;
-                }
-                else if (dist_str.equals("HEIGHT"))
-                {
-                    copyHeight = true;
-                }
-                else 
-                {
-                    sendSystemMessage(self, new string_id(STF, "format_movefurniture_distance"));
-                    return SCRIPT_CONTINUE;
+                    case "LOCATION":
+                        copyLocation = true;
+                        break;
+                    case "HEIGHT":
+                        copyHeight = true;
+                        break;
+                    default:
+                        sendSystemMessage(self, new string_id(STF, "format_movefurniture_distance"));
+                        return SCRIPT_CONTINUE;
                 }
             }
             else 
@@ -1614,7 +1612,7 @@ public class player_building extends script.base_script
         {
             tempList.addElement(resourceName);
         }
-        if ((contents == null) || (contents.length == 0) || (tempList.size() == 0))
+        if ((contents == null) || (contents.length == 0) || (tempList.isEmpty()))
         {
             return SCRIPT_CONTINUE;
         }
@@ -5405,11 +5403,7 @@ public class player_building extends script.base_script
             return false;
         }
         obj_id mayor = cityGetLeader(city_id);
-        if (mayor != player)
-        {
-            return false;
-        }
-        return true;
+        return mayor == player;
     }
     public boolean canPlaceUnique(obj_id player, obj_id deed, location position, String template) throws InterruptedException
     {
@@ -5425,14 +5419,7 @@ public class player_building extends script.base_script
         if (player_structure.isShuttleportTemplate(template))
         {
             int travelCost = cityGetTravelCost(city_id);
-            if (travelCost > 0)
-            {
-                return false;
-            }
-            else 
-            {
-                return true;
-            }
+            return travelCost <= 0;
         }
         else if (player_structure.isCloneTemplate(template))
         {
@@ -5480,11 +5467,7 @@ public class player_building extends script.base_script
         {
             return true;
         }
-        if (players.length > 1)
-        {
-            return false;
-        }
-        return true;
+        return players.length <= 1;
     }
     public boolean removeVendorVars(obj_id self) throws InterruptedException
     {

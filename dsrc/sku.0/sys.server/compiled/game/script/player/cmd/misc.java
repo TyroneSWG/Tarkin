@@ -5,12 +5,13 @@ import script.location;
 import script.obj_id;
 import script.string_id;
 
-public class misc extends script.base_script
-{
+public class misc extends script.base_script {
+
     public misc()
     {
     }
     public static final string_id SID_LAUNCH_FIREWORKS_INDOORS = new string_id("firework", "launch_fireworks_indoors");
+
     public int cmdLaunchFirework(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         if (!isIdValid(target))
@@ -30,8 +31,7 @@ public class misc extends script.base_script
         if (params == null || params.equals(""))
         {
             firework.launch(self, target);
-        }
-        else 
+        } else
         {
             if (params.equalsIgnoreCase("show"))
             {

@@ -256,7 +256,6 @@ public class player_beta extends script.base_script
             boolean boolGaveBlaster = giveRangedWeapon(self, inventory);
             obj_id craftStation = createObject("object/tangible/crafting/station/generic_tool.iff", self, "");
         }
-        return;
     }
     public boolean givePlayerArmor(obj_id self, obj_id inventory) throws InterruptedException
     {

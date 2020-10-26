@@ -8,8 +8,8 @@ import script.string_id;
 
 import java.util.Vector;
 
-public class register extends script.base_script
-{
+public class register extends script.base_script {
+
     public register()
     {
     }
@@ -20,6 +20,7 @@ public class register extends script.base_script
     public static final string_id SID_CANNOT_REGISTER_ALREADY_REG = new string_id("register", "cannot_register_already_reg");
     public static final string_id SID_SUCCESS_REGISTER = new string_id("register", "success_register");
     public static final string_id SID_CANNOT_REGISTER_LACK_SKILL = new string_id("register", "cannot_register_lack_skill");
+
     public int cmdRegisterWithLocation(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         obj_id updateTarget = null;
@@ -34,8 +35,7 @@ public class register extends script.base_script
                     updateTarget = camp;
                 }
             }
-        }
-        else 
+        } else
         {
             map_location maploc = getPlanetaryMapLocation(topMost);
             if (maploc == null)
@@ -85,8 +85,7 @@ public class register extends script.base_script
                 sendSystemMessage(self, SID_SUCCESS_REGISTER);
                 utils.setScriptVar(self, "registerWithLocation", updateTarget);
             }
-        }
-        else 
+        } else
         {
             sendSystemMessage(self, SID_CANNOT_REGISTER_LACK_SKILL);
         }

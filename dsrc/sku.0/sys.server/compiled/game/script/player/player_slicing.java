@@ -5,11 +5,12 @@ import script.library.slicing;
 import script.library.sui;
 import script.obj_id;
 
-public class player_slicing extends script.base_script
-{
+public class player_slicing extends script.base_script {
+
     public player_slicing()
     {
     }
+
     public int handleSlicingCategory(obj_id self, dictionary params) throws InterruptedException
     {
         int idx = sui.getListboxSelectedRow(params);
@@ -27,6 +28,7 @@ public class player_slicing extends script.base_script
         slicing.handleSlicingCategory(self, idx);
         return SCRIPT_CONTINUE;
     }
+
     public int handleSlicingSelect(obj_id self, dictionary params) throws InterruptedException
     {
         int idx = sui.getListboxSelectedRow(params);
@@ -44,6 +46,7 @@ public class player_slicing extends script.base_script
         slicing.handleSlicingSelect(self, idx);
         return SCRIPT_CONTINUE;
     }
+
     public int handleApplySlice(obj_id self, dictionary params) throws InterruptedException
     {
         int idx = sui.getListboxSelectedRow(params);

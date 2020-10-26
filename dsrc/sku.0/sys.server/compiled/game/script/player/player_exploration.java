@@ -5,11 +5,12 @@ import script.library.badge;
 import script.library.utils;
 import script.obj_id;
 
-public class player_exploration extends script.base_script
-{
+public class player_exploration extends script.base_script {
+
     public player_exploration()
     {
     }
+
     public int explorerBadge(obj_id self, dictionary params) throws InterruptedException
     {
         String badgeName = "";
@@ -17,8 +18,7 @@ public class player_exploration extends script.base_script
         {
             int badgeNum = params.getInt("badgeNumber");
             badgeName = getCollectionSlotName(badgeNum);
-        }
-        else if (params.containsKey("badgeName"))
+        } else if (params.containsKey("badgeName"))
         {
             badgeName = params.getString("badgeName");
         }
@@ -28,9 +28,11 @@ public class player_exploration extends script.base_script
         }
         int[] intExplorerBadges = dataTableGetIntColumn("datatables/badge/exploration_badges.iff", "intIndex");
         int intExplBadgeCount = 0;
-        for (int intExplorerBadge : intExplorerBadges) {
+        for (int intExplorerBadge : intExplorerBadges)
+        {
             badgeName = getCollectionSlotName(intExplorerBadge);
-            if ((badgeName != null) && (badgeName.length() > 0) && badge.hasBadge(self, badgeName)) {
+            if ((badgeName != null) && (badgeName.length() > 0) && badge.hasBadge(self, badgeName))
+            {
                 intExplBadgeCount = intExplBadgeCount + 1;
             }
         }
@@ -76,6 +78,7 @@ public class player_exploration extends script.base_script
         }
         return SCRIPT_CONTINUE;
     }
+
     public int handleCleanupHarassment(obj_id self, dictionary params) throws InterruptedException
     {
         if (utils.hasScriptVar(self, "being_scanned"))

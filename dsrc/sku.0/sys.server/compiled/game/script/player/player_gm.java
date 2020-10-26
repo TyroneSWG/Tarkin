@@ -4,18 +4,20 @@ import script.library.utils;
 import script.obj_id;
 import script.string_id;
 
-public class player_gm extends script.base_script
-{
+public class player_gm extends script.base_script {
+
     public player_gm()
     {
     }
     public static final string_id SID_HEAL_DAMAGE = new string_id("sui", "heal_damage");
     public static final string_id SID_HEAL_WOUND = new string_id("sui", "heal_wound");
     public static final string_id SID_FLY_DRAG = new string_id("base_player", "fly_drag");
+
     public int OnInitialize(obj_id self) throws InterruptedException
     {
         return SCRIPT_CONTINUE;
     }
+
     public int cmdGenerateCraftedItem(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
         if (!isGod(self))
@@ -51,8 +53,7 @@ public class player_gm extends script.base_script
             {
                 creationTarget = self;
             }
-        }
-        else 
+        } else
         {
             creationTarget = target;
         }

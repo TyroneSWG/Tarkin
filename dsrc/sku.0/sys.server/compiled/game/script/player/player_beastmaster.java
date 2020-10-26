@@ -675,7 +675,6 @@ public class player_beastmaster extends script.base_script
         beast_lib.setBCDBeastIsDead(bcd, false);
         beast_lib.setBCDBeastHealth(bcd, (int)(maxHealth * (float)(revivePercent / 100)));
         beast_lib.createBeastFromBCD(self, bcd);
-        return;
     }
     public int bm_follow_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException
     {
