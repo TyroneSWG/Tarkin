@@ -35,7 +35,7 @@ public class chapter_house extends script.base_script {
         }
         if (!hasSkill(item, "class_forcesensitive_phase1_novice"))
         {
-            sendSystemMessageTestingOnly(item, "You cannot enter this structure.");
+            sendSystemMessageTestingOnly(item, "The Force has blocked your entry.");
             return SCRIPT_OVERRIDE;
         }
         else 
