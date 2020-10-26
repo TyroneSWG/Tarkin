@@ -17,7 +17,7 @@ public class hub_main extends script.base_script {
 
 	public static int OnAttach(obj_id self) throws InterruptedException {
 
-		DISCORD_LOG("HUB", "Hub script attached");
+		//DISCORD_LOG("HUB", "Hub script attached");
 		return SCRIPT_CONTINUE;
 	}
 
@@ -25,7 +25,7 @@ public class hub_main extends script.base_script {
 		if (!getConfigSetting("Hub", "enabled").equals("true")) {
 			return SCRIPT_CONTINUE;
 		}
-		DISCORD_LOG("HUB", "Hub Online");
+		//DISCORD_LOG("HUB", "Hub Online");
 		return SCRIPT_CONTINUE;
 	}
 
