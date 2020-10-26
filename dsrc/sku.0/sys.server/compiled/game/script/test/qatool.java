@@ -1135,7 +1135,7 @@ public class qatool extends script.base_script
                     }
                 }
             }
-            catch(Exception e)
+            catch(InterruptedException e)
             {
                 sendSystemMessageTestingOnly(self, "You need to specify the object Id of the object you want to be serialized.");
                 sendSystemMessageTestingOnly(self, "/qatool serialize <OID>");
@@ -1209,7 +1209,7 @@ public class qatool extends script.base_script
                 System.arraycopy(QUEST_TOOL_MENU, 0, combinedMenu, allQuests.length, QUEST_TOOL_MENU.length);
                 qa.refreshMenu(self, QUEST_TOOL_PROMPT, QUEST_TOOL_TITLE, combinedMenu, "handleMainMenuOptions", true, "qaquest.pid", "qaquest.qaquestMenu");
             }
-            catch(Exception e)
+            catch(InterruptedException e)
             {
                 qa.refreshMenu(self, QUEST_TOOL_PROMPT + "\n\nNo quests found on character", QUEST_TOOL_TITLE, QUEST_TOOL_MENU, "handleMainMenuOptions", true, "qaquest.pid", "qaquest.qaquestMenu");
             }
@@ -2196,7 +2196,7 @@ public class qatool extends script.base_script
                 boolean contentsExported = exportTextBagContents(self, myBag, exportText, mobContentsByRow);
             }
         }
-        catch(Exception e)
+        catch(InterruptedException e)
         {
         }
         messageTo(self, "cleanAllScriptVars", null, 2.0f, true);
@@ -2394,11 +2394,12 @@ public class qatool extends script.base_script
                         System.arraycopy(QUEST_TOOL_MENU, 0, combinedMenu, allQuests.length, QUEST_TOOL_MENU.length);
                         qa.refreshMenu(self, QUEST_TOOL_PROMPT, QUEST_TOOL_TITLE, combinedMenu, "handleMainMenuOptions", true, "qaquest.pid", "qaquest.qaquestMenu");
                     }
-                    catch(Exception e)
+                    catch(InterruptedException e)
                     {
                         qa.refreshMenu(self, QUEST_TOOL_PROMPT + "\n\nNo quests found on character", QUEST_TOOL_TITLE, QUEST_TOOL_MENU, "handleMainMenuOptions", true, "qaquest.pid", "qaquest.qaquestMenu");
                     }
                     break;
+
                     case RESOURCETOOL_MENUOPTION:
                     utils.setScriptVar(player, "resource.mainMenu", RESOURCE_TOOL_MENU);
                     qa.refreshMenu(player, RESOURCE_TOOL_PROMPT, "QA Resource Tool", RESOURCE_TOOL_MENU, "startingMenuOptions", "resource.pid", sui.OK_CANCEL_REFRESH);
@@ -2564,7 +2565,7 @@ public class qatool extends script.base_script
                 warpPlayer(self, objLocation.area, objLocation.x, objLocation.y, objLocation.z, objLocation.cell, objLocation.x, objLocation.y, objLocation.z);
                 CustomerServiceLog("qaTool", "User: (" + self + ") " + getName(self) + " has warped to (" + objectId + ") " + utils.getStringName(objectId) + " at location " + objLocation.area + " " + objLocation.x + " " + objLocation.y + " " + objLocation.z + " " + objLocation.cell + " " + objLocation.x + " " + objLocation.y + " " + objLocation.z + " using a QA Tool.");
             }
-            catch(Exception e)
+            catch(InterruptedException e)
             {
                 sendSystemMessageTestingOnly(self, "Failed to create an object Id. " + e);
             }
@@ -3297,59 +3298,57 @@ public class qatool extends script.base_script
     {
         if (attributeString.length() > 0)
         {
-            if (searchType.equals("script"))
+            switch (searchType)
             {
-                obj_id[] allScriptObjectsRadius = getAllObjectsWithScript(getLocation(self), 10000000.0f, attributeString);
-                if (allScriptObjectsRadius.length > 0)
-                {
-                    String[] scriptObjMenu = getObjMenu(self, allScriptObjectsRadius);
-                    String scriptDynamicPrompt = "Script searched for: " + attributeString + "\n";
-                    scriptDynamicPrompt += "Found " + scriptObjMenu.length + " objects.\n\nSelect any object below to warp to it's location.";
-                    qa.refreshMenu(self, scriptDynamicPrompt, OBJECT_FINDER_TITLE, scriptObjMenu, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
-                }
-                else 
-                {
-                    sendSystemMessageTestingOnly(self, "No objects with that Script were found.");
-                    cleanAllScriptVars(self);
-                }
-            }
-            else if (searchType.equals("template"))
-            {
-                obj_id[] allTemplateObjectsRadius = getAllObjectsWithTemplate(getLocation(self), 10000000.0f, attributeString);
-                if (allTemplateObjectsRadius.length > -1)
-                {
-                    String[] templateObjMenu = getObjMenu(self, allTemplateObjectsRadius);
-                    String templateDynamicPrompt = "Template searched for: " + attributeString + "\n";
-                    if (templateObjMenu.length >= 1)
+                case "script":
+                    obj_id[] allScriptObjectsRadius = getAllObjectsWithScript(getLocation(self), 10000000.0f, attributeString);
+                    if (allScriptObjectsRadius.length > 0)
                     {
-                        templateDynamicPrompt += "Found " + templateObjMenu.length + " objects.\n\nSelect any object below to warp to it's location.";
-                        qa.refreshMenu(self, templateDynamicPrompt, OBJECT_FINDER_TITLE, templateObjMenu, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
+                        String[] scriptObjMenu = getObjMenu(self, allScriptObjectsRadius);
+                        String scriptDynamicPrompt = "Script searched for: " + attributeString + "\n";
+                        scriptDynamicPrompt += "Found " + scriptObjMenu.length + " objects.\n\nSelect any object below to warp to it's location.";
+                        qa.refreshMenu(self, scriptDynamicPrompt, OBJECT_FINDER_TITLE, scriptObjMenu, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
                     }
                     else 
                     {
-                        Vector convertOidToString = new Vector();
-                        for (obj_id allTemplateObjectsRadius1 : allTemplateObjectsRadius) {
-                            utils.addElement(convertOidToString, "" + allTemplateObjectsRadius1);
-                        }
-                        if (convertOidToString.size() >= 1)
+                        sendSystemMessageTestingOnly(self, "No objects with that Script were found.");
+                        cleanAllScriptVars(self);
+                    }   break;
+                case "template":
+                    obj_id[] allTemplateObjectsRadius = getAllObjectsWithTemplate(getLocation(self), 10000000.0f, attributeString);
+                    if (allTemplateObjectsRadius.length > -1)
+                    {
+                        String[] templateObjMenu = getObjMenu(self, allTemplateObjectsRadius);
+                        String templateDynamicPrompt = "Template searched for: " + attributeString + "\n";
+                        if (templateObjMenu.length >= 1)
                         {
-                            String[] oidList = new String[convertOidToString.size()];
-                            convertOidToString.toArray(oidList);
-                            templateDynamicPrompt += "Found " + oidList.length + " objects.\nTEMPLATE LOOK UP FAILED! Showing OIDs only.\n\nSelect any OID below to warp to it's location.";
-                            qa.refreshMenu(self, templateDynamicPrompt, OBJECT_FINDER_TITLE, oidList, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
+                            templateDynamicPrompt += "Found " + templateObjMenu.length + " objects.\n\nSelect any object below to warp to it's location.";
+                            qa.refreshMenu(self, templateDynamicPrompt, OBJECT_FINDER_TITLE, templateObjMenu, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
+                        }
+                        else
+                        {
+                            Vector convertOidToString = new Vector();
+                            for (obj_id allTemplateObjectsRadius1 : allTemplateObjectsRadius) {
+                                utils.addElement(convertOidToString, "" + allTemplateObjectsRadius1);
+                            }
+                            if (convertOidToString.size() >= 1)
+                            {
+                                String[] oidList = new String[convertOidToString.size()];
+                                convertOidToString.toArray(oidList);
+                                templateDynamicPrompt += "Found " + oidList.length + " objects.\nTEMPLATE LOOK UP FAILED! Showing OIDs only.\n\nSelect any OID below to warp to it's location.";
+                                qa.refreshMenu(self, templateDynamicPrompt, OBJECT_FINDER_TITLE, oidList, "objectFinderHandler", true, "objFinder.pid", "objFinder.objStrings");
+                            }
                         }
                     }
-                }
-                else 
-                {
-                    sendSystemMessageTestingOnly(self, "No objects with that Template were found. Make sure you include the entire object template to include the '.iff'.  Leave out the 'shared'.  If the tool still fails, try searching for the script attached to the object.");
+                    else
+                    {
+                        sendSystemMessageTestingOnly(self, "No objects with that Template were found. Make sure you include the entire object template to include the '.iff'.  Leave out the 'shared'.  If the tool still fails, try searching for the script attached to the object.");
+                        cleanAllScriptVars(self);
+                    }   break;
+                default:
+                    sendSystemMessageTestingOnly(self, "The tool did not know what type of object you were searching for.  Inform the tool team.");
                     cleanAllScriptVars(self);
-                }
-            }
-            else 
-            {
-                sendSystemMessageTestingOnly(self, "The tool did not know what type of object you were searching for.  Inform the tool team.");
-                cleanAllScriptVars(self);
+                    break;
             }
         }
     }
@@ -3414,7 +3413,7 @@ public class qatool extends script.base_script
                             {
                                 levelInt = Integer.parseInt(st.nextToken());
                             }
-                            catch(Exception e)
+                            catch(NumberFormatException e)
                             {
                                 sendSystemMessageTestingOnly(self, "You failed to specify a profession level.");
                                 return false;
@@ -3818,7 +3817,7 @@ public class qatool extends script.base_script
                 saveTextOnClient(self, "questData.txt", allQuestData);
             }
         }
-        catch(Exception e)
+        catch(InterruptedException e)
         {
             sendSystemMessageTestingOnly(self, "Unable to dump quest data due to internal exception or because the test character has no quests.");
         }
@@ -3859,7 +3858,7 @@ public class qatool extends script.base_script
             {
                 spamAmount = Integer.parseInt(st.nextToken());
             }
-            catch(Exception e)
+            catch(NumberFormatException e)
             {
                 sendSystemMessageTestingOnly(self, "You failed to specify the amount of spam.");
             }
