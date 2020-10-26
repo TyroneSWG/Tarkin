@@ -85,7 +85,7 @@ public class cmd extends script.base_script
                 cmdParams += tmp + " ";
             }
         }
-        cmdParams.trim();
+        String trim = cmdParams.trim();
         sendSystemMessageTestingOnly(self, "/forceCommand: attempting to queue command: '" + cmd + " " + cmdParams + "' for (" + target + ")" + getName(target));
         return SCRIPT_CONTINUE;
     }
@@ -1927,9 +1927,10 @@ public class cmd extends script.base_script
                 return SCRIPT_CONTINUE;
             }
             sendSystemMessageTestingOnly(self, "Weapon type IDs matching your query (" + kind + ") are:");
-            for (Object name : names) {
+            names.forEach((name) ->
+            {
                 sendSystemMessageTestingOnly(self, (String) name);
-            }
+            });
             sendSystemMessageTestingOnly(self, "Done listing " + names.size() + " matches.");
             return SCRIPT_CONTINUE;
         }
@@ -2159,9 +2160,10 @@ public class cmd extends script.base_script
                 if (names.indexOf(key) < 0)
                 {
                     sendSystemMessageTestingOnly(self, "'" + key + "' is not a valid camp name.  Valid camp names are:");
-                    for (Object name : names) {
+                    names.forEach((name) ->
+                    {
                         sendSystemMessageTestingOnly(self, (String) name);
-                    }
+                    });
                     return SCRIPT_CONTINUE;
                 }
                 sendSystemMessageTestingOnly(self, "Creating a remote for camp" + key + "...");
@@ -2350,9 +2352,10 @@ public class cmd extends script.base_script
             obj_id resource = createObject(template, inventory, "");
             if (!isIdNull(resource))
             {
-                for (Object attrib : attribs) {
+                attribs.forEach((attrib) ->
+                {
                     setObjVar(resource, (String) attrib, rand(500, 1000));
-                }
+                });
             }
             else
             {
@@ -3847,7 +3850,6 @@ public class cmd extends script.base_script
                 messageTo(spawnedItem, "incrimentPhase", null, 15, false);
                 messageTo(spawnedItem, "incrimentPhase", null, 35, false);
                 messageTo(spawnedItem, "incrimentPhase", null, 55, false);
-                continue;
             }
         }
         return SCRIPT_CONTINUE;
@@ -4124,30 +4126,37 @@ public class cmd extends script.base_script
                 obj_id planetId = getPlanetByName("tatooine");
                 if (!isIdNull(planetId))
                 {
-                    if (commandParams.equals("delete") || commandParams.equals("remove") || commandParams.equals("erase"))
+                    switch (commandParams)
                     {
-                        String strMessage = "\\#FF0000" + "Message deleted and reset to default. Check using /motd" + "\\#FFFFFF";
-                        sendConsoleMessage(self, strMessage);
-                        removeObjVar(planetId, "galaxyMessage");
-                        CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has erased the Galaxy-wide message. It is now the default welcome message.");
-                    }
-                    else if (commandParams.equals("get object") || commandParams.equals("getobject") || commandParams.equals("getObject"))
-                    {
-                        String strMessage = "\\#FF0000" + planetId + "\\#FFFFFF";
-                        sendConsoleMessage(self, strMessage);
-                        CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has retrieved the object ID for the Galaxy-wide message.");
-                    }
-                    else
-                    {
-                        if (commandParams.indexOf("set") == 0 && commandParams.length() > 4)
-                        {
-                            commandParams = commandParams.substring(4, commandParams.length());
-                            commandParams = commandParams.trim();
-                            setObjVar(planetId, "galaxyMessage", commandParams);
-                            String strMessage = "\\#FF0000" + "Give it a few moments, then check the new message with /motd" + "\\#FFFFFF";
-                            sendConsoleMessage(self, strMessage);
-                            CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has changed the Galaxy-wide message to read '" + commandParams + "'");
-                        }
+                        case "delete":
+                        case "remove":
+                        case "erase":
+                            {
+                                String strMessage = "\\#FF0000" + "Message deleted and reset to default. Check using /motd" + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                removeObjVar(planetId, "galaxyMessage");
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has erased the Galaxy-wide message. It is now the default welcome message.");
+                                break;
+                            }
+                        case "get object":
+                        case "getobject":
+                        case "getObject":
+                            {
+                                String strMessage = "\\#FF0000" + planetId + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has retrieved the object ID for the Galaxy-wide message.");
+                                break;
+                            }
+                        default:
+                            if (commandParams.indexOf("set") == 0 && commandParams.length() > 4)
+                            {
+                                commandParams = commandParams.substring(4, commandParams.length());
+                                commandParams = commandParams.trim();
+                                setObjVar(planetId, "galaxyMessage", commandParams);
+                                String strMessage = "\\#FF0000" + "Give it a few moments, then check the new message with /motd" + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has changed the Galaxy-wide message to read '" + commandParams + "'");
+                            }   break;
                     }
                 }
                 else
@@ -4180,30 +4189,37 @@ public class cmd extends script.base_script
                 obj_id planetId = getPlanetByName("tatooine");
                 if (!isIdNull(planetId))
                 {
-                    if (commandParams.equals("delete") || commandParams.equals("remove") || commandParams.equals("erase"))
+                    switch (commandParams)
                     {
-                        String strMessage = "\\#FF0000" + "Warden message deleted and reset to default. Check using /motd" + "\\#FFFFFF";
-                        sendConsoleMessage(self, strMessage);
-                        removeObjVar(planetId, "galaxyWardenMessage");
-                        CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has erased the warden Galaxy-wide message. It is now the default welcome message.");
-                    }
-                    else if (commandParams.equals("get object") || commandParams.equals("getobject") || commandParams.equals("getObject"))
-                    {
-                        String strMessage = "\\#FF0000" + planetId + "\\#FFFFFF";
-                        sendConsoleMessage(self, strMessage);
-                        CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has retrieved the object ID for the warden Galaxy-wide message.");
-                    }
-                    else
-                    {
-                        if (commandParams.indexOf("set") == 0 && commandParams.length() > 4)
-                        {
-                            commandParams = commandParams.substring(4, commandParams.length());
-                            commandParams = commandParams.trim();
-                            setObjVar(planetId, "galaxyWardenMessage", commandParams);
-                            String strMessage = "\\#FF0000" + "Give it a few moments, then check the new warden message with /motd" + "\\#FFFFFF";
-                            sendConsoleMessage(self, strMessage);
-                            CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has changed the warden Galaxy-wide message to read '" + commandParams + "'");
-                        }
+                        case "delete":
+                        case "remove":
+                        case "erase":
+                            {
+                                String strMessage = "\\#FF0000" + "Warden message deleted and reset to default. Check using /motd" + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                removeObjVar(planetId, "galaxyWardenMessage");
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has erased the warden Galaxy-wide message. It is now the default welcome message.");
+                                break;
+                            }
+                        case "get object":
+                        case "getobject":
+                        case "getObject":
+                            {
+                                String strMessage = "\\#FF0000" + planetId + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has retrieved the object ID for the warden Galaxy-wide message.");
+                                break;
+                            }
+                        default:
+                            if (commandParams.indexOf("set") == 0 && commandParams.length() > 4)
+                            {
+                                commandParams = commandParams.substring(4, commandParams.length());
+                                commandParams = commandParams.trim();
+                                setObjVar(planetId, "galaxyWardenMessage", commandParams);
+                                String strMessage = "\\#FF0000" + "Give it a few moments, then check the new warden message with /motd" + "\\#FFFFFF";
+                                sendConsoleMessage(self, strMessage);
+                                CustomerServiceLog("setGalaxyMessage", "CSR: (" + self + ") " + getName(self) + " has changed the warden Galaxy-wide message to read '" + commandParams + "'");
+                            }   break;
                     }
                 }
                 else
