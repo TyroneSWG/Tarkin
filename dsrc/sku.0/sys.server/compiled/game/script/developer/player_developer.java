@@ -58,6 +58,7 @@ public class player_developer extends script.base_script {
         {
             command = st.nextToken();
         }
+        debugServerConsoleMsg(self, "Developer " + getFirstName(self) + " has used the " + command + " shell!");
         if (command.equals(""))
         {
             systemMsg(self, "Compilers: [java, tpf, miff, tab, crc] | Git: [update_dsrc, update_data]");
