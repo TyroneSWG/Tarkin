@@ -6,5 +6,5 @@
 @class object_template 5
 
 portalLayoutFilename = "appearance/thm_spc_star_destroyer_s01.pob"
-
+clientDataFile = "clientData/ship/client_shared_star_destroyer.cdf"
 appearanceFilename = "appearance/star_destroyer_space.apt"
