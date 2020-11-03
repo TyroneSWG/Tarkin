@@ -202,10 +202,7 @@ public class qa extends script.base_script
     {
         closeOldWindow(player, scriptVar);
         String[] firstDimension = new String[options[0].length];
-        for (int i = 0; i < options[0].length; i++)
-        {
-            firstDimension[i] = options[0][i];
-        }
+        System.arraycopy(options[0], 0, firstDimension, 0, options[0].length);
         if (firstDimension.length > 0)
         {
             int pid = sui.listbox(player, player, prompt, sui.OK_CANCEL, title, firstDimension, myHandler, false, false);
@@ -315,9 +312,7 @@ public class qa extends script.base_script
         }
         int listingLength = arrayList.length;
         HashSet theSet = new HashSet();
-        for (String s : arrayList) {
-            theSet.add(s);
-        }
+        theSet.addAll(Arrays.asList(arrayList));
         String[] menuArray = new String[theSet.size()];
         theSet.toArray(menuArray);
         Arrays.sort(menuArray);
@@ -613,17 +608,17 @@ public class qa extends script.base_script
                 }
                 strTest += "\r\nGCW INFO:\r\n";
                 int intPlayerFaction = pvpGetAlignedFaction(objTarget);
-                if (intPlayerFaction == (-615855020))
+                switch (intPlayerFaction)
                 {
-                    strTest += "current faction: Imperial \r\n";
-                }
-                else if (intPlayerFaction == (370444368))
-                {
-                    strTest += "current faction: Rebel \r\n";
-                }
-                else 
-                {
-                    strTest += "current faction: Neutral \r\n";
+                    case -615855020:
+                        strTest += "current faction: Imperial \r\n";
+                        break;
+                    case 370444368:
+                        strTest += "current faction: Rebel \r\n";
+                        break;
+                    default:
+                        strTest += "current faction: Neutral \r\n";
+                        break;
                 }
                 strTest += "current GCW points: " + pvpGetCurrentGcwPoints(objTarget) + "\r\n";
                 strTest += "current GCW rating: " + pvpGetCurrentGcwRating(objTarget) + "\r\n";
@@ -1206,7 +1201,7 @@ public class qa extends script.base_script
     }
     public static boolean revokeAndGrantPilot(obj_id self, String factionType) throws InterruptedException
     {
-        if (toLower(factionType) == "rebel" || factionType.equals("Rebel Ships"))
+        if ("rebel".equals(toLower(factionType)) || factionType.equals("Rebel Ships"))
         {
             revokePilotingSkills(self);
             grantPilotingSkills(self, "rebel_navy");
@@ -1214,7 +1209,7 @@ public class qa extends script.base_script
             CustomerServiceLog("qaTool", "User: (" + self + ") " + getName(self) + " has attained Master Rebel Pilot by using a QA Tool or command.");
             return true;
         }
-        else if (factionType.equals("Imperial Ships") || toLower(factionType) == "imperial")
+        else if (factionType.equals("Imperial Ships") || "imperial".equals(toLower(factionType)))
         {
             revokePilotingSkills(self);
             grantPilotingSkills(self, "imperial_navy");
@@ -1222,7 +1217,7 @@ public class qa extends script.base_script
             CustomerServiceLog("qaTool", "User: (" + self + ") " + getName(self) + " has attained Master Imperial Pilot by using a QA Tool or command.");
             return true;
         }
-        else if (factionType.equals("Neutral/Freelancer Ships") || toLower(factionType) == "neutral")
+        else if (factionType.equals("Neutral/Freelancer Ships") || "neutral".equals(toLower(factionType)))
         {
             revokePilotingSkills(self);
             grantPilotingSkills(self, "neutral");
@@ -1337,11 +1332,7 @@ public class qa extends script.base_script
     }
     public static boolean checkGodLevel(obj_id tester) throws InterruptedException
     {
-        if (getGodLevel(tester) < 10)
-        {
-            return false;
-        }
-        return true;
+        return getGodLevel(tester) >= 10;
     }
     public static String[] getAllQuests(obj_id player) throws InterruptedException
     {
@@ -1352,15 +1343,11 @@ public class qa extends script.base_script
             Vector allQuestStringsCombined = new Vector();
             if (allActive != null)
             {
-                for (String s : allActive) {
-                    allQuestStringsCombined.add(s);
-                }
+                allQuestStringsCombined.addAll(Arrays.asList(allActive));
             }
             if (allComplete != null)
             {
-                for (String s : allComplete) {
-                    allQuestStringsCombined.add(s);
-                }
+                allQuestStringsCombined.addAll(Arrays.asList(allComplete));
             }
             if (allActive == null && allComplete == null)
             {
@@ -1740,7 +1727,6 @@ public class qa extends script.base_script
             return;
         }
         messageTo(lookAtTarget, "doSpawnEvent", null, fltRespawnTime, false);
-        return;
     }
     public static float getClosestSize(float fltOriginalSize) throws InterruptedException
     {

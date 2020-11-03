@@ -1065,11 +1065,7 @@ public class pvp extends script.base_script
             return false;
         }
         int bfState = utils.getIntScriptVar(controller, "battlefield.state");
-        if (bfState != pvp.PVP_STATE_BATTLE_ENGAGED)
-        {
-            return false;
-        }
-        return true;
+        return bfState == pvp.PVP_STATE_BATTLE_ENGAGED;
     }
     public static void bfCreditForDamage(obj_id attacker, int damage) throws InterruptedException
     {

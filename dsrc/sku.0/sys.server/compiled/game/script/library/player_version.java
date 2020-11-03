@@ -75,7 +75,7 @@ public class player_version extends script.base_script
                 ret.add(idx, skill);
             }
         }
-        if (ret.size() == 0)
+        if (ret.isEmpty())
         {
             return null;
         }

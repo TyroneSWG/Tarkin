@@ -320,11 +320,7 @@ public class food extends script.base_script
         cooldownReduction = 1.0f - cooldownReduction;
         utils.setScriptVar(target, "food.burst_run.cost", costReduction);
         utils.setScriptVar(target, "food.burst_run.cooldown", cooldownReduction);
-        if (!queueCommand(target, (-63103822), null, "", COMMAND_PRIORITY_FRONT))
-        {
-            return false;
-        }
-        return true;
+        return queueCommand(target, (-63103822), null, "", COMMAND_PRIORITY_FRONT);
     }
     public boolean instantCurePoisonEffect(obj_id target) throws InterruptedException
     {
@@ -338,11 +334,7 @@ public class food extends script.base_script
             return false;
         }
         int i = rand(0, (dot_ids.length - 1));
-        if (!dot.removeDotEffect(target, dot_ids[i]))
-        {
-            return false;
-        }
-        return true;
+        return dot.removeDotEffect(target, dot_ids[i]);
     }
     public boolean instantCureDiseaseEffect(obj_id target) throws InterruptedException
     {
@@ -356,11 +348,7 @@ public class food extends script.base_script
             return false;
         }
         int i = rand(0, (dot_ids.length - 1));
-        if (!dot.removeDotEffect(target, dot_ids[i]))
-        {
-            return false;
-        }
-        return true;
+        return dot.removeDotEffect(target, dot_ids[i]);
     }
     public boolean instantHungryEffect(obj_id target, float eff) throws InterruptedException
     {
@@ -369,11 +357,7 @@ public class food extends script.base_script
         {
             return false;
         }
-        if (!player_stomach.addToStomach(target, 0, (-1 * hunger)))
-        {
-            return false;
-        }
-        return true;
+        return player_stomach.addToStomach(target, 0, (-1 * hunger));
     }
     public String formatTime(int seconds) throws InterruptedException
     {

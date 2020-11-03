@@ -356,11 +356,7 @@ public class collection extends script.base_script
             return false;
         }
         float dist = utils.getDistance2D(objLoc, playerLoc);
-        if (dist > maxDist || dist < 0)
-        {
-            return false;
-        }
-        return true;
+        return !(dist > maxDist || dist < 0);
     }
     public static boolean giveAreaMobsHate(obj_id collectible, obj_id player) throws InterruptedException
     {
@@ -498,11 +494,7 @@ public class collection extends script.base_script
         }
         String[] activeCollections = new String[active_collection.size()];
         active_collection.toArray(activeCollections);
-        if (activeCollections.length >= 2)
-        {
-            return true;
-        }
-        return false;
+        return activeCollections.length >= 2;
     }
     public static boolean npcHasMoreCollections(obj_id player, obj_id npc, String columnName) throws InterruptedException
     {
@@ -543,11 +535,7 @@ public class collection extends script.base_script
         }
         String[] activeOrComplete = new String[playerCollections.size()];
         playerCollections.toArray(activeOrComplete);
-        if (activeOrComplete.length == allCollections.length)
-        {
-            return false;
-        }
-        return true;
+        return activeOrComplete.length != allCollections.length;
     }
     public static String[] getAllCollectionsForItem(obj_id collectible) throws InterruptedException
     {
@@ -791,11 +779,7 @@ public class collection extends script.base_script
         }
         String[] activeCollections = new String[active_collection.size()];
         active_collection.toArray(activeCollections);
-        if (activeCollections.length > 0)
-        {
-            return true;
-        }
-        return false;
+        return activeCollections.length > 0;
     }
     public static boolean spaceGetCreditForKills(obj_id player, String[] slotNames) throws InterruptedException
     {
@@ -817,41 +801,37 @@ public class collection extends script.base_script
             return false;
         }
         String s = "";
-        if (result == 1)
+        switch (result)
         {
-            s = "Error: Quest already active.";
-        }
-        else if (result == 2)
-        {
-            s = "Error: No such quest.";
-        }
-        else if (result == 3)
-        {
-            s = "Error: No such task.";
-        }
-        else if (result == 4)
-        {
-            s = "Error: Quest already completed, and not repeatable.";
-        }
-        else if (result == 5)
-        {
-            s = "Error: Failed prerequisites.";
-        }
-        else if (result == 6)
-        {
-            s = "Error: Failed exclusions.";
-        }
-        else if (result == 7)
-        {
-            s = "Error: Quest Not active.";
-        }
-        else if (result == 8)
-        {
-            s = "Error: Task not active.";
-        }
-        else if (result == 9)
-        {
-            s = "Error: No such player.";
+            case 1:
+                s = "Error: Quest already active.";
+                break;
+            case 2:
+                s = "Error: No such quest.";
+                break;
+            case 3:
+                s = "Error: No such task.";
+                break;
+            case 4:
+                s = "Error: Quest already completed, and not repeatable.";
+                break;
+            case 5:
+                s = "Error: Failed prerequisites.";
+                break;
+            case 6:
+                s = "Error: Failed exclusions.";
+                break;
+            case 7:
+                s = "Error: Quest Not active.";
+                break;
+            case 8:
+                s = "Error: Task not active.";
+                break;
+            case 9:
+                s = "Error: No such player.";
+                break;
+            default:
+                break;
         }
         if (s.equals("") || s.equals(""))
         {
@@ -1153,33 +1133,30 @@ public class collection extends script.base_script
             return false;
         }
         String planet = getCurrentSceneName();
-        if (baseFaction == gcw.REBEL_CONTROL)
+        switch (baseFaction)
         {
-            if ((toLower(playerFaction)).equals("imperial"))
-            {
-                utils.setScriptVar(factionObject, "collection.gcwSlotName", "col_gcw_insurgency_" + planet + "_imperial");
-                return true;
-            }
-            else 
-            {
+            case gcw.REBEL_CONTROL:
+                if ((toLower(playerFaction)).equals("imperial"))
+                {
+                    utils.setScriptVar(factionObject, "collection.gcwSlotName", "col_gcw_insurgency_" + planet + "_imperial");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            case gcw.IMPERIAL_CONTROL:
+                if ((toLower(playerFaction)).equals("rebel"))
+                {
+                    utils.setScriptVar(factionObject, "collection.gcwSlotName", "col_gcw_insurgency_" + planet + "_rebel");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            default:
                 return false;
-            }
-        }
-        else if (baseFaction == gcw.IMPERIAL_CONTROL)
-        {
-            if ((toLower(playerFaction)).equals("rebel"))
-            {
-                utils.setScriptVar(factionObject, "collection.gcwSlotName", "col_gcw_insurgency_" + planet + "_rebel");
-                return true;
-            }
-            else 
-            {
-                return false;
-            }
-        }
-        else 
-        {
-            return false;
         }
     }
     public static boolean canCollectCollectible(obj_id player, obj_id collectible) throws InterruptedException
@@ -1426,7 +1403,6 @@ public class collection extends script.base_script
             commPlayers(object, "object/mobile/r2.iff", "sound/dro_r2_3_danger.snd", 10.0f, player, pp);
             utils.setScriptVar(player, "newbie_comm_series", 1);
         }
-        return;
     }
     public static void grantQuestBasedCollections(String questString, obj_id player) throws InterruptedException
     {
@@ -1461,6 +1437,5 @@ public class collection extends script.base_script
         {
             modifyCollectionSlotValue(player, collectionName, 1);
         }
-        return;
     }
 }

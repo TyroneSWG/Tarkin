@@ -176,11 +176,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceDerivedFrom(resourceId, parent_class))
-        {
-            return true;
-        }
-        return false;
+        return isResourceDerivedFrom(resourceId, parent_class);
     }
     public static obj_id[] create(obj_id resourceId, int amt, obj_id targetContainer, obj_id playerId) throws InterruptedException
     {
@@ -226,7 +222,7 @@ public class resource extends script.base_script
                 }
             }
         }
-        if ((ret == null) || (ret.size() == 0))
+        if ((ret == null) || (ret.isEmpty()))
         {
             return null;
         }
@@ -366,7 +362,7 @@ public class resource extends script.base_script
             options = utils.addElement(options, "" + range + "m x " + ((int)res) + "pts");
             count++;
         }
-        if (ranges.size() == 0 || resolutions.size() == 0)
+        if (ranges.isEmpty() || resolutions.isEmpty())
         {
             return false;
         }
@@ -790,11 +786,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_ENERGY_GEO))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_ENERGY_GEO);
     }
     public static boolean isOrganic(String resource_class) throws InterruptedException
     {
@@ -814,11 +806,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_INORGANIC))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_INORGANIC);
     }
     public static boolean isSolid(String resource_class) throws InterruptedException
     {
@@ -854,11 +842,7 @@ public class resource extends script.base_script
         {
             return true;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_LIQUID_CHEMICAL))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_LIQUID_CHEMICAL);
     }
     public static boolean isCreatureResource(String resource_class) throws InterruptedException
     {
@@ -866,11 +850,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_CREATURE_RESOURCES))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_CREATURE_RESOURCES);
     }
     public static boolean isFloraResource(String resource_class) throws InterruptedException
     {
@@ -878,11 +858,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_FLORA_RESOURCES))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_FLORA_RESOURCES);
     }
     public static boolean isFloraFoodResource(String resource_class) throws InterruptedException
     {
@@ -890,11 +866,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_FLORA_FOOD))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_FLORA_FOOD);
     }
     public static boolean isFloraStructuralResource(String resource_class) throws InterruptedException
     {
@@ -902,11 +874,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_FLORA_STRUCTURAL))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_FLORA_STRUCTURAL);
     }
     public static boolean isEnergyWindResource(String resource_class) throws InterruptedException
     {
@@ -914,11 +882,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_ENERGY_WIND))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_ENERGY_WIND);
     }
     public static boolean isEnergySolarResource(String resource_class) throws InterruptedException
     {
@@ -926,11 +890,7 @@ public class resource extends script.base_script
         {
             return false;
         }
-        if (isResourceClassDerivedFrom(resource_class, RT_ENERGY_SOLAR))
-        {
-            return true;
-        }
-        return false;
+        return isResourceClassDerivedFrom(resource_class, RT_ENERGY_SOLAR);
     }
     public static String getResourceName(String resource_class) throws InterruptedException
     {
@@ -1033,16 +993,14 @@ public class resource extends script.base_script
             for (obj_id item : items) {
                 if (isGameObjectTypeOf(getGameObjectType(item), GOT_resource_container)) {
                     resourceType = getResourceContainerResourceType(item);
-                    if (isIdValid(resourceType)) {
-                        if (isResourceDerivedFrom(resourceType, "energy_renewable_site_limited_geothermal")) {
-                            if (tempListUniqueList.size() == 0) {
-                                tempListUniqueList.addElement(resourceType);
-                                resourceName = getResourceName(resourceType);
-                                resourceQuality = getResourceAttribute(resourceType, "res_quality");
-                            }
-                            if (tempListUniqueList.contains(resourceType)) {
-                                cnt += getResourceContainerQuantity(item);
-                            }
+                    if (isIdValid(resourceType) && isResourceDerivedFrom(resourceType, "energy_renewable_site_limited_geothermal")) {
+                        if (tempListUniqueList.isEmpty()) {
+                            tempListUniqueList.addElement(resourceType);
+                            resourceName = getResourceName(resourceType);
+                            resourceQuality = getResourceAttribute(resourceType, "res_quality");
+                        }
+                        if (tempListUniqueList.contains(resourceType)) {
+                            cnt += getResourceContainerQuantity(item);
                         }
                     }
                 }

@@ -851,7 +851,7 @@ public class utils extends script.base_script
         {
             return null;
         }
-        if (elements == null || elements.size() == 0)
+        if (elements == null || elements.isEmpty())
         {
             return array;
         }
@@ -2326,7 +2326,7 @@ public class utils extends script.base_script
                 buildings = addElement(buildings, item);
             }
         }
-        if ((buildings == null) || (buildings.size() == 0))
+        if ((buildings == null) || (buildings.isEmpty()))
         {
             return null;
         }
@@ -2367,7 +2367,7 @@ public class utils extends script.base_script
                 }
             }
         }
-        if ((ret == null) || (ret.size() == 0))
+        if ((ret == null) || (ret.isEmpty()))
         {
             return null;
         }
@@ -2410,7 +2410,7 @@ public class utils extends script.base_script
                 ret = addElement(ret, content);
             }
         }
-        if ((ret == null) || (ret.size() == 0))
+        if ((ret == null) || (ret.isEmpty()))
         {
             return null;
         }
@@ -2449,7 +2449,7 @@ public class utils extends script.base_script
                 ret = addElement(ret, content);
             }
         }
-        if ((ret == null) || (ret.size() == 0))
+        if ((ret == null) || (ret.isEmpty()))
         {
             return null;
         }
@@ -4026,7 +4026,7 @@ public class utils extends script.base_script
     }
     public static boolean setResizeableBatchObjVar(obj_id target, String base_path, Vector vector) throws InterruptedException
     {
-        if (!isIdValid(target) || (base_path == null) || (base_path.equals("")) || (vector == null) || (vector.size() == 0))
+        if (!isIdValid(target) || (base_path == null) || (base_path.equals("")) || (vector == null) || (vector.isEmpty()))
         {
             return false;
         }
@@ -4050,7 +4050,7 @@ public class utils extends script.base_script
     }
     public static boolean setObjectArrayObjVar(obj_id target, String path, Vector vec) throws InterruptedException
     {
-        if (!isIdValid(target) || (path == null) || (path.equals("")) || (vec == null) || (vec.size() == 0))
+        if (!isIdValid(target) || (path == null) || (path.equals("")) || (vec == null) || (vec.isEmpty()))
         {
             return false;
         }
@@ -4465,7 +4465,7 @@ public class utils extends script.base_script
         {
             return false;
         }
-        if ((array == null) || (array.size() == 0))
+        if ((array == null) || (array.isEmpty()))
         {
             return false;
         }
@@ -5051,7 +5051,7 @@ public class utils extends script.base_script
                 tmp.add(anArray);
             }
         }
-        if (tmp.size() == 0)
+        if (tmp.isEmpty())
         {
             return null;
         }
@@ -5059,7 +5059,7 @@ public class utils extends script.base_script
     }
     public static Vector alphabetizeStringArray(Vector array) throws InterruptedException
     {
-        if ((array == null) || (array.size() == 0))
+        if ((array == null) || (array.isEmpty()))
         {
             return null;
         }
@@ -5677,19 +5677,16 @@ public class utils extends script.base_script
         if (!isIdValid(objTarget))
         {
             debugServerConsoleMsg(null, "Null object id passed into notifyObject, exceptioning");
-            Thread.dumpStack();
             throw new InterruptedException();
         }
         if (strNotificationName == null)
         {
             debugServerConsoleMsg(null, "null notification name passed into notifyObject, exceptioning");
-            Thread.dumpStack();
             throw new InterruptedException();
         }
         if (strNotificationName.equals(""))
         {
             debugServerConsoleMsg(null, "Empty Notification name passed into notifyObject, exceptioning");
-            Thread.dumpStack();
             throw new InterruptedException();
         }
         try
@@ -5699,7 +5696,6 @@ public class utils extends script.base_script
         catch(Throwable err)
         {
             debugServerConsoleMsg(null, "Unable to call into callMessageHandlers ");
-            Thread.dumpStack();
             throw new InterruptedException();
         }
     }
@@ -5712,7 +5708,6 @@ public class utils extends script.base_script
         catch(Throwable err)
         {
             debugServerConsoleMsg(null, "Unable to call into callMessageHandlers ");
-            Thread.dumpStack();
             throw new InterruptedException();
         }
     }
@@ -6624,7 +6619,7 @@ public class utils extends script.base_script
             }
             utils.addElement(playersInArea, allPlayer);
         }
-        if (playersInArea.size() == 0)
+        if (playersInArea.isEmpty())
         {
             return null;
         }
@@ -6685,7 +6680,7 @@ public class utils extends script.base_script
             }
             objectsInArea.add(obj);
         }
-        if (objectsInArea.size() == 0)
+        if (objectsInArea.isEmpty())
         {
             return null;
         }
@@ -6703,7 +6698,7 @@ public class utils extends script.base_script
             newList = utils.addElement(newList, list.get(i));
             list = utils.removeElementAt(list, i);
         }
-        if (newList == null || newList.size() == 0)
+        if (newList == null || newList.isEmpty())
         {
             return null;
         }
@@ -7007,9 +7002,10 @@ public class utils extends script.base_script
             else 
             {
                 HashSet abilitiesCurrentNoDupes = new HashSet();
-                for (Object anAbilitiesCurrent : abilitiesCurrent) {
-                    abilitiesCurrentNoDupes.add(Integer.valueOf((Integer) anAbilitiesCurrent));
-                }
+                abilitiesCurrent.forEach((anAbilitiesCurrent) ->
+                {
+                    abilitiesCurrentNoDupes.add((Integer) anAbilitiesCurrent);
+                });
                 Integer ability;
                 for (Object abilitiesCurrentNoDupe : abilitiesCurrentNoDupes) {
                     ability = (Integer) abilitiesCurrentNoDupe;
@@ -7037,9 +7033,7 @@ public class utils extends script.base_script
                 String strAbilitiesCurrent = "";
                 if ((abilitiesCurrent != null) && (abilitiesCurrent.size() > 0))
                 {
-                    for (Object anAbilitiesCurrent : abilitiesCurrent) {
-                        strAbilitiesCurrent += "" + (Integer) anAbilitiesCurrent + ", ";
-                    }
+                    strAbilitiesCurrent = abilitiesCurrent.stream().map((anAbilitiesCurrent) -> "" + (Integer) anAbilitiesCurrent + ", ").reduce(strAbilitiesCurrent, String::concat);
                 }
                 CustomerServiceLog("CharacterTransferRetroactiveHistory", "changing " + beast_lib.PLAYER_KNOWN_SKILLS_LIST + " objvar for " + player + " from (" + strAbilitiesCurrent + ") to (" + strAbilitiesNew + ")");
                 utils.setBatchObjVar(player, beast_lib.PLAYER_KNOWN_SKILLS_LIST, abilitiesNew);

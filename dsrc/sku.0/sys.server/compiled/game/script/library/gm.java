@@ -282,7 +282,6 @@ public class gm extends script.base_script
             utils.setScriptVar(player, SCRIPTVAR_SETHUE_TARGET, target);
             utils.setScriptVar(player, SCRIPTVAR_SETHUE_DATA, varPath);
             attachHandlerScript(player);
-            return;
         }
         else 
         {
@@ -567,7 +566,6 @@ public class gm extends script.base_script
         }
         setObjVar(player, "jedi.usingSui", 1);
         attachScript(player, "player.player_jedi_conversion");
-        return;
     }
     public static String[] getRoadmapList() throws InterruptedException
     {
@@ -623,9 +621,7 @@ public class gm extends script.base_script
             if (allActive != null)
             {
                 allQuestStringsCombined.add("All Active Quests");
-                for (String s : allActive) {
-                    allQuestStringsCombined.add(s);
-                }
+                allQuestStringsCombined.addAll(Arrays.asList(allActive));
             }
             if (allComplete != null)
             {

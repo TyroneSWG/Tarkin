@@ -689,7 +689,7 @@ public class skill extends script.base_script
             LOG("jedi", "no array");
             return;
         }
-        if (strSkillsNeeded.size() == 0)
+        if (strSkillsNeeded.isEmpty())
         {
             LOG("jedi", "Array is 0?");
             return;
@@ -890,19 +890,19 @@ public class skill extends script.base_script
         }
         if (playerRace > 7)
         {
-            if (playerRace == 33)
+            switch (playerRace)
             {
-                playerRace = 8;
-            }
-            else if (playerRace == 49)
-            {
-                playerRace = 9;
-            }
-            else 
-            {
-                sendSystemMessageTestingOnly(player, "Unknown race, defaulting to human");
-                LOG("npe", "library.skill - getPlayerStatForLevel invalid race, using human defaults");
-                playerRace = 0;
+                case 33:
+                    playerRace = 8;
+                    break;
+                case 49:
+                    playerRace = 9;
+                    break;
+                default:
+                    sendSystemMessageTestingOnly(player, "Unknown race, defaulting to human");
+                    LOG("npe", "library.skill - getPlayerStatForLevel invalid race, using human defaults");
+                    playerRace = 0;
+                    break;
             }
         }
         int racialStatColumnReference = (playerRace * NUM_STATS);

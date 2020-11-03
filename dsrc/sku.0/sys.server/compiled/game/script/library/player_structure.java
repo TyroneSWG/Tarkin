@@ -1622,7 +1622,7 @@ public class player_structure extends script.base_script
             Vector adminList = getResizeableStringArrayObjVar(structure, VAR_ADMIN_LIST);
             if (removeNameFromRawList(adminList, nameToRemove))
             {
-                if (adminList.size() == 0)
+                if (adminList.isEmpty())
                 {
                     removeObjVar(structure, VAR_ADMIN_LIST);
                 }
@@ -4119,24 +4119,23 @@ public class player_structure extends script.base_script
                 {
                     sb.append("s");
                 }
-                if (num_left == 1)
+                switch (num_left)
                 {
-                    sb.append(".");
-                }
-                else if (num_left == 2)
-                {
-                    if (num_times > 2)
-                    {
-                        sb.append(", and ");
-                    }
-                    else 
-                    {
-                        sb.append(" and ");
-                    }
-                }
-                else 
-                {
-                    sb.append(", ");
+                    case 1:
+                        sb.append(".");
+                        break;
+                    case 2:
+                        if (num_times > 2)
+                        {
+                            sb.append(", and ");
+                        }
+                        else
+                        {
+                            sb.append(" and ");
+                        }   break;
+                    default:
+                        sb.append(", ");
+                        break;
                 }
                 num_left--;
             }

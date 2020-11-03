@@ -620,11 +620,7 @@ public class cloninglib extends script.base_script
     }
     public static boolean isDamagedOnCloneGOT(int got) throws InterruptedException
     {
-        if (isGameObjectTypeOf(got, GOT_armor) || isGameObjectTypeOf(got, GOT_clothing) || isGameObjectTypeOf(got, GOT_weapon) || isGameObjectTypeOf(got, GOT_tool) || isGameObjectTypeOf(got, GOT_jewelry) || isGameObjectTypeOf(got, GOT_cybernetic))
-        {
-            return true;
-        }
-        return false;
+        return isGameObjectTypeOf(got, GOT_armor) || isGameObjectTypeOf(got, GOT_clothing) || isGameObjectTypeOf(got, GOT_weapon) || isGameObjectTypeOf(got, GOT_tool) || isGameObjectTypeOf(got, GOT_jewelry) || isGameObjectTypeOf(got, GOT_cybernetic);
     }
     public static void damageItemsOnClone(obj_id player, int damage) throws InterruptedException
     {
