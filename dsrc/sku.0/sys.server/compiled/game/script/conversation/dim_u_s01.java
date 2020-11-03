@@ -67,13 +67,13 @@ int dim_u_s01_handleBranch1 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: Who are you?
-	if (response.equals("s_4")
+	if (response.equals("s_6"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
 		{
 			//-- NPC: I am Jerooba Vir. I arrived here on Taanab a while ago. I am looking for followers of Dim-U to join me in worship.
-			string_id message = new string_id (c_stringFile, "s_5");
+			string_id message = new string_id (c_stringFile, "s_8");
 			int numberOfResponses = 0;
 
 			boolean hasResponse = false;
@@ -93,7 +93,7 @@ int dim_u_s01_handleBranch1 (obj_id player, obj_id npc, string_id response) thro
 				string_id responses [] = new string_id [numberOfResponses];
 
 				if (hasResponse0)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_6");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_10");
 
 				utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 2);
 
@@ -124,13 +124,13 @@ int dim_u_s01_handleBranch2 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: What do you worship?
-	if (response.equals("s_6")
+	if (response.equals("s_10"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
 		{
 			//-- NPC: Banthas!
-			string_id message = new string_id (c_stringFile, "s_7");
+			string_id message = new string_id (c_stringFile, "s_12");
 			int numberOfResponses = 0;
 
 			boolean hasResponse = false;
@@ -159,10 +159,10 @@ int dim_u_s01_handleBranch2 (obj_id player, obj_id npc, string_id response) thro
 				string_id responses [] = new string_id [numberOfResponses];
 
 				if (hasResponse0)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_8");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_14");
 
 				if (hasResponse1)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_9");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_16");
 
 				utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 3);
 
@@ -193,7 +193,7 @@ int dim_u_s01_handleBranch3 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: Banthas? On second thought, I gotta go!
-	if (response.equals("s_8")
+	if (response.equals("s_14"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
@@ -201,7 +201,7 @@ int dim_u_s01_handleBranch3 (obj_id player, obj_id npc, string_id response) thro
 			doAnimationAction (npc, "wave1");
 
 			//-- NPC: Hello.
-			string_id message = new string_id (c_stringFile, "s_3");
+			string_id message = new string_id (c_stringFile, "s_4");
 			int numberOfResponses = 0;
 
 			boolean hasResponse = false;
@@ -221,7 +221,7 @@ int dim_u_s01_handleBranch3 (obj_id player, obj_id npc, string_id response) thro
 				string_id responses [] = new string_id [numberOfResponses];
 
 				if (hasResponse0)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_4");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_6");
 
 				utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 1);
 
@@ -242,13 +242,13 @@ int dim_u_s01_handleBranch3 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: Interesting! Tell me more!
-	if (response.equals("s_9")
+	if (response.equals("s_16"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
 		{
 			//-- NPC: We have a deep spiritual belief that the Banthas are the ones who bless the galaxy. Are you interested in joining?
-			string_id message = new string_id (c_stringFile, "s_10");
+			string_id message = new string_id (c_stringFile, "s_18");
 			int numberOfResponses = 0;
 
 			boolean hasResponse = false;
@@ -277,10 +277,10 @@ int dim_u_s01_handleBranch3 (obj_id player, obj_id npc, string_id response) thro
 				string_id responses [] = new string_id [numberOfResponses];
 
 				if (hasResponse0)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_11");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_20");
 
 				if (hasResponse1)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_12");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_24");
 
 				utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 4);
 
@@ -311,13 +311,13 @@ int dim_u_s01_handleBranch4 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: Yes
-	if (response.equals("s_11")
+	if (response.equals("s_20"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
 		{
 			//-- NPC: Oh wonderful! Here is a an orientation packet. Once you complete this you will have access to the sanctuary. 
-			string_id message = new string_id (c_stringFile, "s_14");
+			string_id message = new string_id (c_stringFile, "s_22");
 			utils.removeScriptVar (player, "conversation.dim_u_s01.branchId");
 
 			npcEndConversationWithMessage (player, message);
@@ -329,7 +329,7 @@ int dim_u_s01_handleBranch4 (obj_id player, obj_id npc, string_id response) thro
 
 	//-- [RESPONSE NOTE] 
 	//-- PLAYER: No
-	if (response.equals("s_12")
+	if (response.equals("s_24"))
 	{
 		//-- [NOTE] 
 		if (dim_u_s01_condition__defaultCondition (player, npc))
@@ -337,7 +337,7 @@ int dim_u_s01_handleBranch4 (obj_id player, obj_id npc, string_id response) thro
 			doAnimationAction (npc, "wave1");
 
 			//-- NPC: Hello.
-			string_id message = new string_id (c_stringFile, "s_3");
+			string_id message = new string_id (c_stringFile, "s_4");
 			int numberOfResponses = 0;
 
 			boolean hasResponse = false;
@@ -357,7 +357,7 @@ int dim_u_s01_handleBranch4 (obj_id player, obj_id npc, string_id response) thro
 				string_id responses [] = new string_id [numberOfResponses];
 
 				if (hasResponse0)
-					responses [responseIndex++] = new string_id (c_stringFile, "s_4");
+					responses [responseIndex++] = new string_id (c_stringFile, "s_6");
 
 				utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 1);
 
@@ -422,7 +422,6 @@ public int OnIncapacitated(obj_id self, obj_id killer) throws InterruptedExcepti
 	return SCRIPT_CONTINUE;
 }
 
-
 // ======================================================================
 // Script Triggers
 // ======================================================================
@@ -450,7 +449,7 @@ public int OnStartNpcConversation(obj_id self, obj_id player) throws Interrupted
 		doAnimationAction (npc, "wave1");
 
 		//-- NPC: Hello.
-		string_id message = new string_id (c_stringFile, "s_3");
+		string_id message = new string_id (c_stringFile, "s_4");
 		int numberOfResponses = 0;
 
 		boolean hasResponse = false;
@@ -470,7 +469,7 @@ public int OnStartNpcConversation(obj_id self, obj_id player) throws Interrupted
 			string_id responses [] = new string_id [numberOfResponses];
 
 			if (hasResponse0)
-				responses [responseIndex++] = new string_id (c_stringFile, "s_4");
+				responses [responseIndex++] = new string_id (c_stringFile, "s_6");
 
 			utils.setScriptVar (player, "conversation.dim_u_s01.branchId", 1);
 
