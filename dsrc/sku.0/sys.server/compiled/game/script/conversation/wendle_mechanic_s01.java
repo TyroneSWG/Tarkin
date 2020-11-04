@@ -325,7 +325,7 @@ public int OnStartNpcConversation(obj_id self, obj_id player) throws Interrupted
 
 public int OnNpcConversationResponse(obj_id self, String conversationId, obj_id player, string_id response) throws InterruptedException
 {
-	if (conversationId != "wendle_mechanic_s01")
+	if (!conversationId.equals("wendle_mechanic_s01"))
 		return SCRIPT_CONTINUE;
 
 	obj_id npc = self;

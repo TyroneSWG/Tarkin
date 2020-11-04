@@ -492,9 +492,10 @@ public int OnStartNpcConversation(obj_id self, obj_id player) throws Interrupted
 
 public int OnNpcConversationResponse(obj_id self, String conversationId, obj_id player, string_id response) throws InterruptedException
 {
-	if (conversationId != "dim_u_s01")
+	if (!conversationId.equals("dim_u_s01"))
+	{
 		return SCRIPT_CONTINUE;
-
+	}
 	obj_id npc = self;
 
 	int branchId = utils.getIntScriptVar (player, "conversation.dim_u_s01.branchId");
