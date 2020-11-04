@@ -7033,7 +7033,7 @@ public class utils extends script.base_script
                 String strAbilitiesCurrent = "";
                 if ((abilitiesCurrent != null) && (abilitiesCurrent.size() > 0))
                 {
-                    strAbilitiesCurrent = abilitiesCurrent.stream().map((anAbilitiesCurrent) -> "" + (Integer) anAbilitiesCurrent + ", ").reduce(strAbilitiesCurrent, String::concat);
+                    //strAbilitiesCurrent = abilitiesCurrent.stream().map((anAbilitiesCurrent) -> "" + (Integer) anAbilitiesCurrent + ", ").reduce(strAbilitiesCurrent, String::concat);
                 }
                 CustomerServiceLog("CharacterTransferRetroactiveHistory", "changing " + beast_lib.PLAYER_KNOWN_SKILLS_LIST + " objvar for " + player + " from (" + strAbilitiesCurrent + ") to (" + strAbilitiesNew + ")");
                 utils.setBatchObjVar(player, beast_lib.PLAYER_KNOWN_SKILLS_LIST, abilitiesNew);
