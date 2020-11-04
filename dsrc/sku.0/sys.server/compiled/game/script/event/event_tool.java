@@ -208,6 +208,7 @@ public class event_tool extends script.base_script
         doAnimationAction(myTarget, "heavy_cough_vomit");
         dictionary eDict = new dictionary();
         eDict.put("myTarget", myTarget);
+        chat.chat(self, "I find your lack of faith disturbing.");
         messageTo(self, "killTargetPlayer", eDict, 6, false);
         CustomerServiceLog("EventPerk", "[EventTool] /eventVaderChoke used by [" + getName(self) + ":" + self + "] on [" + getName(myTarget) + ":" + myTarget, null);
         return SCRIPT_CONTINUE;
