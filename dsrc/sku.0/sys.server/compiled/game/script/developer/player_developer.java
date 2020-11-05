@@ -72,7 +72,7 @@ public class player_developer extends script.base_script {
         {
             systemMsg(self, Integer.toString(getStringCrc(st.nextToken())));
         }
-        else if ((toLower(command)).equals("update_dsrc"))
+        else if ((toLower(command)).equals("dsrc"))
         {
             String prompt = runShell("/home/swg/swg-main/update_dsrc.sh");
             sui.msgbox(self, self, prompt, sui.OK_CANCEL, title, "noHandler");
@@ -108,7 +108,7 @@ public class player_developer extends script.base_script {
             String prompt = runShell("/home/swg/swg-main/proload_templates.sh");
             sui.msgbox(self, self, prompt, sui.OK_CANCEL, title, "noHandler");
         }
-        else if ((toLower(command)).equals("update_data"))
+        else if ((toLower(command)).equals("data"))
         {
             String prompt = runShell("/home/swg/swg-main/update_data.sh");
             sui.msgbox(self, self, prompt, sui.OK_CANCEL, title, "noHandler");
