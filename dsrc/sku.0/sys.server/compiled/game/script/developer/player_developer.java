@@ -33,7 +33,7 @@ public class player_developer extends script.base_script {
             int count = utils.stringToInt(st.nextToken());
             if (count > 1000)
             {
-                systemMsg(self, "That number is too high, try again.");
+                systemMsg(self, "That number is too high, try again please.");
                 return SCRIPT_CONTINUE;
             }
             setCount(getIntendedTarget(self), count);
