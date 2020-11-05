@@ -106,7 +106,7 @@ int taanab_pendath_corvette_pilot_handleBranch1 (obj_id player, obj_id npc, stri
 			else
 			{
 				utils.removeScriptVar (player, "conversation.taanab_pendath_corvette_pilot.branchId");
-				obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(self), 16000.0f, "object/building/general/space_dungeon_corellian_corvette_base.iffs");
+				obj_id[] targetLocs = getAllObjectsWithTemplate(getLocation(npc), 16000.0f, "object/building/general/space_dungeon_corellian_corvette_base.iffs");
 				obj_id cell = getCellId(targetLocs[0], "hall2");
 				warpPlayer(player, getCurrentSceneName(), -35.1f, 0.0f, 0.0f, cell, -35.1f, 0.0f, 0.0f);
 				npcEndConversationWithMessage (player, message);
