@@ -108,3 +108,5 @@ survivor	0	0	0
 afflicted	0	1	0		"survivor,survivor_guard"	
 survivor_guard	0	0	0		afflicted	
 sulfur_lake_pirate	0	1	0		nym	
+dim_u	1	1	0		"pendath_poachers"	
+pendath_poachers	1	1	0		"dim_u,meatlump"	

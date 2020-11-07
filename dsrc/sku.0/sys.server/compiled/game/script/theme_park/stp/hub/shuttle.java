@@ -6,7 +6,7 @@ import script.library.sui;
  *
  * @author Roachie
  * @purpose Shuttle to get off the hub.
- * Locations are preset and require a single objvar to advance. If you add a location make sure the objvar name is simple.
+ * Locations are preset and require a single obj_var to advance. If you add a location make sure the objvar name is simple.
  */
 public class shuttle extends script.base_script {
     public shuttle() {
