@@ -18,7 +18,7 @@ public class terminal_mechanic extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
-            open
+            sendSystemMessageTestingOnly(player, "pls compile");
         }
         return SCRIPT_CONTINUE;
     }
