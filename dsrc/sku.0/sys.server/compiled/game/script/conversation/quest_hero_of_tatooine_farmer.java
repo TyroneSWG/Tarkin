@@ -15,19 +15,11 @@ public class quest_hero_of_tatooine_farmer extends script.base_script
     }
     public boolean quest_hero_of_tatooine_farmer_condition_has_credits(obj_id player, obj_id npc) throws InterruptedException
     {
-        if (money.hasFunds(player, money.MT_CASH, 10000))
-        {
-            return true;
-        }
-        return false;
+        return money.hasFunds(player, money.MT_CASH, 10000);
     }
     public boolean quest_hero_of_tatooine_farmer_condition_already_helped(obj_id player, obj_id npc) throws InterruptedException
     {
-        if (utils.hasScriptVar(npc, "already_been_helped"))
-        {
-            return true;
-        }
-        return false;
+        return utils.hasScriptVar(npc, "already_been_helped");
     }
     public boolean quest_hero_of_tatooine_farmer_condition_quest_complete(obj_id player, obj_id npc) throws InterruptedException
     {
@@ -35,14 +27,7 @@ public class quest_hero_of_tatooine_farmer extends script.base_script
         {
             return true;
         }
-        else if (hasObjVar(player, "quest.hero_of_tatooine.altruism.complete"))
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        else return hasObjVar(player, "quest.hero_of_tatooine.altruism.complete");
     }
     public boolean quest_hero_of_tatooine_farmer_condition_lost_waypoint(obj_id player, obj_id npc) throws InterruptedException
     {
@@ -58,11 +43,7 @@ public class quest_hero_of_tatooine_farmer extends script.base_script
     }
     public boolean quest_hero_of_tatooine_farmer_condition_on_quest(obj_id player, obj_id npc) throws InterruptedException
     {
-        if (hasObjVar(player, "quest.hero_of_tatooine.altruism"))
-        {
-            return true;
-        }
-        return false;
+        return hasObjVar(player, "quest.hero_of_tatooine.altruism");
     }
     public boolean quest_hero_of_tatooine_farmer_condition_already_helped_player(obj_id player, obj_id npc) throws InterruptedException
     {
@@ -148,7 +129,6 @@ public class quest_hero_of_tatooine_farmer extends script.base_script
         setWaypointActive(waypoint, true);
         setObjVar(player, "quest.hero_of_tatooine.altruism", 1);
         setObjVar(player, "quest.hero_of_tatooine.altruism_waypoint", waypoint);
-        return;
     }
     public int quest_hero_of_tatooine_farmer_handleBranch3(obj_id player, obj_id npc, string_id response) throws InterruptedException
     {

@@ -58,7 +58,7 @@ public class player_developer extends script.base_script {
         {
             command = st.nextToken();
         }
-        debugServerConsoleMsg(self, "Developer " + getFirstName(self) + " has used the " + command + " shell!");
+        System.out.println("Developer " + getFirstName(self) + " has used the " + command + " shell!");
         if (command.equals(""))
         {
             systemMsg(self, "Compilers: [java, tpf, miff, tab, crc] | Git: [update_dsrc, update_data]");
@@ -68,7 +68,7 @@ public class player_developer extends script.base_script {
         {
             play2dNonLoopingMusic(self, "sound/" + st.nextToken() + ".snd");
         }
-        else if ((toLower(command)).equals("crc"))
+        else if ((toLower(command)).equals("string_crc"))
         {
             systemMsg(self, Integer.toString(getStringCrc(st.nextToken())));
         }

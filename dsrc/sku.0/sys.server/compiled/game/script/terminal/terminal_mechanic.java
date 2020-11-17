@@ -18,6 +18,13 @@ public class terminal_mechanic extends script.base_script {
     {
         if (item == menu_info_types.ITEM_USE)
         {
+            //open mechanic window
+            obj_id vehicle = getMountId(player);
+            if (!getTemplateName(vehicle).contains("vehicle"))
+            {
+                sendSystemMessageTestingOnly(self, "This terminal cannot work with organic mounts, only landspeeders, speederbikes and transports.");
+                return SCRIPT_CONTINUE;
+            }
             sendSystemMessageTestingOnly(player, "pls compile");
         }
         return SCRIPT_CONTINUE;
