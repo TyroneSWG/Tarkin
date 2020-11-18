@@ -40,6 +40,11 @@ public boolean dim_u_s01_condition__defaultCondition (obj_id player, obj_id npc)
 	return true;
 }
 
+public boolean dim_u_s01_condition__hasQuest (obj_id player, obj_id npc) throws InterruptedException
+{
+	return true;
+}
+
 // ======================================================================
 // Script Actions
 // ======================================================================
