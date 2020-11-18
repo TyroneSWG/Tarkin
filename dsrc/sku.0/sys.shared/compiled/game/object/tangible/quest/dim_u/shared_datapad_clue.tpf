@@ -1,0 +1,18 @@
+// Quest item - for 'Retrieve Item' quest task type
+//
+
+@base object/tangible/base/shared_retrieve_quest_base.iff
+
+@class tangible_object_template 6
+
+@class object_template 5
+
+
+
+objectName = "taan_item_n"  "dim_u_datapad"
+
+detailedDescription = "taan_item_d"  "dim_u_datapad"
+
+appearanceFilename = "appearance/eqp_collections_datapad_s02.apt"
+
+gameObjectType = GOT_terminal_misc
