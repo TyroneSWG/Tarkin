@@ -88,5 +88,5 @@ gcw_factional_presence	83
 gcw_factional_presence_rebel_only	84	0	1			
 gcw_factional_presence_imperial_only	85	0	1			
 gcw_factional_presence_rebel_and_imperial	86	0	1			
-casino	90	1	0	1		
-temple	91	1	0	1		
+casino	87	1	0	1		
+church	88	1	0	1		
