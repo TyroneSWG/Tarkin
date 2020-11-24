@@ -119,4 +119,4 @@ object/building/taanab/hospital_taanab_s02.iff		medicalcenter			1
 object/building/taanab/hotel_taanab.iff	@loc_n:wendle	casino			1
 object/building/taanab/shuttleport_taanab.iff		shuttleport			
 object/building/taanab/starport_taanab.iff		starport			
-pbject/building/taanab/salon_taanab.iff	@loc_n:dim_u	church			
+object/building/taanab/salon_taanab.iff	@loc_n:dim_u	church			
