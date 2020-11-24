@@ -1,4 +1,4 @@
-package theme_park.dim_u;
+package script.theme_park.dim_u;
 
 import script.*;
 import script.library.ai_lib;

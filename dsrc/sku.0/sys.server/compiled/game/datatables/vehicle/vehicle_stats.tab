@@ -10,12 +10,12 @@ object/mobile/vehicle/barc_speeder.iff	0	22.1	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0.
 object/mobile/vehicle/landspeeder_xp38.iff	0	17.9	1	154	77	2.9	8.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
 object/mobile/vehicle/landspeeder_v35.iff	0	17.9	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
 object/mobile/vehicle/landspeeder_ab1.iff	0	17.9	1	154	77	2.9	8.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
-object/mobile/vehicle/landspeeder_usv5.iff	0	17.9	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
-object/mobile/vehicle/landspeeder_desert_skiff.iff	0	22	1	154	77	2.9	7.9	7	2	3	4	2.5	30	0.5	0.25		vehicle_1	
-object/mobile/vehicle/landspeeder_tantive4.iff	0	15	1	150	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
-object/mobile/vehicle/landspeeder_lava_skiff.iff	0	17.9	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
-object/mobile/vehicle/landspeeder_x31.iff	0	16	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	
-object/mobile/vehicle/walker_at_rt_reg.iff	0	21.5	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0	0		vehicle_1	
+object/mobile/vehicle/landspeeder_usv5.iff	0	17.9	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	appearance/pt_psg_on_mark_3.prt
+object/mobile/vehicle/landspeeder_desert_skiff.iff	0	22	1	154	77	2.9	7.9	7	2	3	4	2.5	30	0.5	0.25		vehicle_1	appearance/pt_psg_on_mark_3.prt
+object/mobile/vehicle/landspeeder_tantive4.iff	0	15	1	150	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	appearance/pt_psg_on_mark_3.prt
+object/mobile/vehicle/landspeeder_lava_skiff.iff	0	17.9	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	appearance/pt_psg_on_mark_3.prt
+object/mobile/vehicle/landspeeder_x31.iff	0	16	1	154	77	2.9	7.9	7	2	3	4	2.5	45	0.5	0.25		vehicle_1	appearance/pt_psg_on_mark_3.prt
+object/mobile/vehicle/walker_at_rt_reg.iff	0	21.5	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0	0		vehicle_1	appearance/pt_psg_on_mark_3.prt
 object/mobile/vehicle/walker_at_rt_camo.iff	0	21.5	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0	0	vehicle_at_rt	vehicle_4	appearance/pt_psg_on_mark_3.prt
 object/mobile/vehicle/barc_speeder_rebel.iff	0	23.1	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0.5	0.25	vehicle_pvp_barc_rebel	vehicle_5	
 object/mobile/vehicle/barc_speeder_imperial.iff	0	23.1	1	190	95	2.9	9.9	7	2	3	4	2.5	45	0.5	0.25	vehicle_pvp_barc_imperial	vehicle_5	

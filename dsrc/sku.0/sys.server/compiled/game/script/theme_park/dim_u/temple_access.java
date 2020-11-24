@@ -17,7 +17,7 @@ public class temple_access extends script.base_script {
         int gating = getIntObjVar(item, "dim_u_access");
         if (gating != 1)
         {
-            sendSystemMessageTestingOnly(item, "This place looks sacred. It's best you don't disturb it.");
+            sendSystemMessageTestingOnly(item, "You are not a follower of the Dim-U");
             return SCRIPT_OVERRIDE;
         }
         else 

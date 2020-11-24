@@ -12,3 +12,6 @@ tatooine	16384
 yavin4	16384	
 mustafar	8000	The width for mustafar is not used as the ticket window gets its size from the buildout data. The value there is 8000.
 kashyyyk_main	4096	
+taanab	16384	Taanab is the default size. However the buildout is planet wide.
+dungeon_hub	16384	
+adventure3	16384	
