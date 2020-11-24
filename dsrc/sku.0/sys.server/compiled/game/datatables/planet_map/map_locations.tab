@@ -114,7 +114,7 @@ object/building/taanab/guild_combat_taanab_style_01.iff		guild	guild_combat
 object/building/taanab/guild_commerce_taanab_style_01.iff		guild	guild_commerce		
 object/building/taanab/guild_theater_taanab_s01.iff		guild	guild_theater		1
 object/building/taanab/guild_university_taanab_style_01.iff		guild	guild_university		
-object/building/taanab/hospital_taanab.iff		capital			1
+object/building/taanab/hospital_taanab.iff	@loc_n:pendath_cap	capitol			
 object/building/taanab/hospital_taanab_s02.iff		medicalcenter			1
 object/building/taanab/hotel_taanab.iff	@loc_n:wendle	casino			1
 object/building/taanab/shuttleport_taanab.iff		shuttleport			
