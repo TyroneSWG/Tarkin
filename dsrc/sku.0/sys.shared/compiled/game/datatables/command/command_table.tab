@@ -1908,3 +1908,5 @@ callforslave1pickup		normal	callForTcgSlave1Pickup					callforslave1pickup	1	1	1
 costume_esb_yoda	commandClicky	normal	costume_esb_yoda	failSpecialAttack			1	costume_esb_yoda	1	0	1	1	1	0	1	1	1	0	0	0	0	0	0	1	0	0	0			0	0	1	1		1	0	0	1	1	1	1	0	1	0	1	1	1	1	0	0	1								0		0	0	0	0		1							other	none		2		costume	0			costume				costume	0	0.25	10				
 setCount		immediate	cmdSetCount	failAdmin																																																																								0					50												
 shell		immediate	cmdServerShell	failAdmin																																																																													50												
+farmerPlant	commandClicky	immediate	cmdFarmerPlant				1	farmerPlant	1																																																																			2		farming				farming											
+farmerHarvest	commandClicky	immediate	cmdFarmerPlant				1	farmerHarvest	1																																																																			2		farming				farming											

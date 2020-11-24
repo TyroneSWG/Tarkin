@@ -302,5 +302,10 @@ chronicles	class_chronicles_12	appearance/eqp_booster_pack.apt	@static_item_n:it
 chronicles	class_chronicles_13	appearance/thm_sign_pgc_standing.apt	@static_item_n:item_special_sign_pgc_consumable_02	item_special_sign_pgc_consumable_02			
 chronicles	class_chronicles_14	appearance/eqp_booster_pack.apt	@static_item_n:item_pgc_booster_pack	item_pgc_booster_pack			
 chronicles	class_chronicles_15	appearance/ply_pgc_merchant_tent_s01_r0.apt	@static_item_n:item_pgc_chronicler_tent_deed	item_pgc_chronicler_tent_deed			
-chronicles	class_chronicles_16	appearance/eqp_booster_pack.apt	@static_item_n:item_pgc_booster_pack	item_pgc_booster_pack
-chronicles	class_chronicles_master	appearance/pgc_robe_s01_m.sat	@static_item_n:item_pgc_chronicle_master_robe	"item_pgc_booster_pack,item_pgc_chronicle_master_robe"
+chronicles	class_chronicles_16	appearance/eqp_booster_pack.apt	@static_item_n:item_pgc_booster_pack	item_pgc_booster_pack			
+chronicles	class_chronicles_master	appearance/pgc_robe_s01_m.sat	@static_item_n:item_pgc_chronicle_master_robe	"item_pgc_booster_pack,item_pgc_chronicle_master_robe"			
+farming	class_farming_novice	appearance/eqp_tool_computer_toolkit.apt	@static_item_n:item_farming_manual	item_trader_clicky_01_02			
+farming	class_farming_1	appearance/eqp_tool_computer_toolkit.apt	@static_item_n:item_farming_manual	item_trader_clicky_01_02			Farming
+farming	class_farming_2	appearance/eqp_tool_computer_toolkit.apt	@static_item_n:item_farming_manual	item_trader_clicky_01_02			^
+farming	class_farming_3	appearance/eqp_tool_computer_toolkit.apt	@static_item_n:item_farming_manual	item_trader_clicky_01_02			^^
+farming	class_farming_master	appearance/eqp_tool_computer_toolkit.apt	@static_item_n:item_farming_manual	item_trader_clicky_01_02			^^^
