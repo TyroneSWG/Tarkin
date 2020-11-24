@@ -2119,7 +2119,6 @@ object/building/endor/endr_lake_rail8m.iff	0	2394	32.2681	1862	1	0	0	0		$|
 object/building/endor/endor_tiki_torch.iff	0	2382	32.2682	1846	1	0	0	0	structure.filler.filler	$|
 object/building/endor/endor_tiki_torch.iff	0	2374	32.2682	1846	1	0	0	0	structure.filler.filler	$|
 object/tangible/spawning/simple_spawn_item.iff	0	13262.1	75	3566.71	1	0	0	0		$|
-object/tangible/quest/dim_u/crate_of_supplies.iff	0	2376.49	32.2683	1849.05	1	0	0	0	quest.task.ground.retrieve_item_on_item	$|
 object/tangible/quest/dim_u/datapad_clue.iff	0	2366.5	32.3424	1837.07	0.941316	0.322424	-0.0944466	-0.0323503	quest.task.ground.retrieve_item_on_item	$|
 object/tangible/quest/dim_u/crate_of_feed.iff	0	2389.66	32.2683	1837.65	0.801143	0	-0.598473	0	quest.task.ground.retrieve_item_on_item	$|
 object/tangible/quest/dim_u/crate_of_feed.iff	0	2388.7	32.2683	1837.94	0.738469	0	-0.674288	0	quest.task.ground.retrieve_item_on_item	$|

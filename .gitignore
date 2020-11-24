@@ -11,3 +11,5 @@ exe/linux/logs/
 local.properties
 *.log
 build_java.sh
+*.backup
+*.tab.bck
