@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCommonAPI.a  CMakeFiles/CommonAPI.dir/CommonAPI.cpp.o CMakeFiles/CommonAPI.dir/CommonClient.cpp.o CMakeFiles/CommonAPI.dir/CommonMessages.cpp.o
+/usr/bin/ranlib libCommonAPI.a

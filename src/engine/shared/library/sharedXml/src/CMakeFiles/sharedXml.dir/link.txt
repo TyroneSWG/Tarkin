@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedXml.a  CMakeFiles/sharedXml.dir/shared/core/SetupSharedXml.cpp.o CMakeFiles/sharedXml.dir/shared/tree/XmlTreeDocument.cpp.o CMakeFiles/sharedXml.dir/shared/tree/XmlTreeDocumentList.cpp.o CMakeFiles/sharedXml.dir/shared/tree/XmlTreeNode.cpp.o
+/usr/bin/ranlib libsharedXml.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedIoWin.a  CMakeFiles/sharedIoWin.dir/shared/ConfigSharedIoWin.cpp.o CMakeFiles/sharedIoWin.dir/shared/IoWin.cpp.o CMakeFiles/sharedIoWin.dir/shared/IoWinManager.cpp.o CMakeFiles/sharedIoWin.dir/shared/SetupSharedIoWin.cpp.o
+/usr/bin/ranlib libsharedIoWin.a

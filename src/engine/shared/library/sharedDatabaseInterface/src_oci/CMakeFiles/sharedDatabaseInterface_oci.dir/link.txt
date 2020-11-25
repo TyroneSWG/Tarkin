@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedDatabaseInterface_oci.a  CMakeFiles/sharedDatabaseInterface_oci.dir/DbBindableVarray.cpp.o CMakeFiles/sharedDatabaseInterface_oci.dir/OciQueryImplementation.cpp.o CMakeFiles/sharedDatabaseInterface_oci.dir/OciServer.cpp.o CMakeFiles/sharedDatabaseInterface_oci.dir/OciSession.cpp.o
+/usr/bin/ranlib libsharedDatabaseInterface_oci.a

@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+95c5b058da1ce9485785815c069603b2 engine/client/application/Miff/src/lex_yy.c
+d5f1682f040929e537216dbd99e4a22e engine/client/application/Miff/src/parser.c
+7d4220d7a9c6319ee90a07c665fe3093 engine/server/library/serverGame/src/shared/generated/Packager.cpp
+e84a6ac1d4350523fcabd5ad2547fa7c game/server/application/SwgDatabaseServer/src/shared/generated/Decoder.cpp
+b19d61780dab604639c84f0c95d9f653 game/server/application/SwgDatabaseServer/src/shared/generated/Encoder.cpp
+74c62b7533f5f49495893e78e4c33d7e game/server/application/SwgDatabaseServer/src/shared/generated/LoadObject.cpp
+ec7e524627af01d20ea84e6c81d8e39a game/server/application/SwgDatabaseServer/src/shared/generated/ObjectQueries.cpp
+bcb4b1655f42779c940463cdf221098e game/server/application/SwgDatabaseServer/src/shared/generated/ObjectQueries.h
+3de553fadcbc56fc3f2fc2ab7a94bcf1 game/server/application/SwgDatabaseServer/src/shared/generated/Schema.h

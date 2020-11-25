@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedCompression.a  CMakeFiles/sharedCompression.dir/shared/BitStream.cpp.o CMakeFiles/sharedCompression.dir/shared/Compressor.cpp.o CMakeFiles/sharedCompression.dir/shared/Lz77.cpp.o CMakeFiles/sharedCompression.dir/shared/SetupSharedCompression.cpp.o CMakeFiles/sharedCompression.dir/shared/ZlibCompressor.cpp.o
+/usr/bin/ranlib libsharedCompression.a

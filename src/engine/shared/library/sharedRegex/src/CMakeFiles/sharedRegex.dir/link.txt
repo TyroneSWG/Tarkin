@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedRegex.a  CMakeFiles/sharedRegex.dir/shared/ConfigSharedRegex.cpp.o CMakeFiles/sharedRegex.dir/shared/SetupSharedRegex.cpp.o CMakeFiles/sharedRegex.dir/linux/RegexServices.cpp.o
+/usr/bin/ranlib libsharedRegex.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedThread.a  CMakeFiles/sharedThread.dir/shared/RunThread.cpp.o CMakeFiles/sharedThread.dir/shared/SetupSharedThread.cpp.o CMakeFiles/sharedThread.dir/linux/Thread.cpp.o
+/usr/bin/ranlib libsharedThread.a

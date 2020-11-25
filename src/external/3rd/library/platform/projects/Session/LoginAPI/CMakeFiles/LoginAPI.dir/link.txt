@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLoginAPI.a  CMakeFiles/LoginAPI.dir/Client.cpp.o CMakeFiles/LoginAPI.dir/ClientCore.cpp.o CMakeFiles/LoginAPI.dir/Messages.cpp.o
+/usr/bin/ranlib libLoginAPI.a

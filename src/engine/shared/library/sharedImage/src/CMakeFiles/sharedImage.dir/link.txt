@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedImage.a  CMakeFiles/sharedImage.dir/shared/ConfigSharedImage.cpp.o CMakeFiles/sharedImage.dir/shared/Image.cpp.o CMakeFiles/sharedImage.dir/shared/ImageFormat.cpp.o CMakeFiles/sharedImage.dir/shared/ImageFormatList.cpp.o CMakeFiles/sharedImage.dir/shared/ImageManipulation.cpp.o CMakeFiles/sharedImage.dir/shared/SetupSharedImage.cpp.o CMakeFiles/sharedImage.dir/shared/TargaFormat.cpp.o
+/usr/bin/ranlib libsharedImage.a

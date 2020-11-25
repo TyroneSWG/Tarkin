@@ -36,6 +36,7 @@
 namespace AppearanceTemplateNamespace
 {
 	const Tag TAG_APPR = TAG (A,P,P,R);
+	const Tag TAG_DTLA = TAG (D,T,L,A);
 	const Tag TAG_HPTS = TAG (H,P,T,S);
 	const Tag TAG_HPNT = TAG (H,P,N,T);
 	const Tag TAG_FLOR = TAG (F,L,O,R);
@@ -144,6 +145,7 @@ AppearanceTemplate::~AppearanceTemplate(void)
 void AppearanceTemplate::install()
 {
 	AppearanceTemplateList::assignBinding(TAG_APPR, create);
+	AppearanceTemplateList::assignBinding(TAG_DTLA, create);
 
 	ms_crashReportInfo[0] = '\0';
 	CrashReportInformation::addDynamicText(ms_crashReportInfo);
@@ -168,6 +170,13 @@ AppearanceTemplate *AppearanceTemplate::create(const char *newName, Iff *iff)
 	return temp;
 }
 
+AppearanceTemplate *AppearanceTemplate::createDtla(const char *newName, Iff *iff)
+{
+	iff->enterForm(TAG_DTLA);
+	Tag version = iff->getCurrentName();
+	iff->enterForm(version);
+	return create(newName, iff);
+}
 // ----------------------------------------------------------------------
 /**
  * Create a unique Appearance for this AppearanceTemplate.

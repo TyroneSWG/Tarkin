@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/LoginServer.dir/shared/CentralServerConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/ClientConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/ConfigLoginServer.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/ConsoleCommandParser.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/ConsoleCommandParserLoginServer.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/ConsoleManager.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/CSToolConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/DatabaseConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/LoginServer.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/LoginServerRemoteDebugConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/LoginServerRemoteDebugSetup.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/PingConnection.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/PurgeManager.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/SessionApiClient.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskChangeStationId.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskClaimRewards.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskCreateCharacter.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskDeleteCharacter.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskEnableCharacter.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskGetAccountForPurge.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskGetAvatarList.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskGetCharactersForDelete.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskGetClusterList.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskGetValidationData.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskMapAccount.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskRegisterNewCluster.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskRenameCharacter.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskRestoreCharacter.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskSetPurgeStatus.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskToggleCharacterDisable.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskToggleCompletedTutorial.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskUpdatePurgeAccountList.cpp.o"
+  "CMakeFiles/LoginServer.dir/shared/TaskUpgradeAccount.cpp.o"
+  "CMakeFiles/LoginServer.dir/linux/main.cpp.o"
+  "../../../../../bin/LoginServer.pdb"
+  "../../../../../bin/LoginServer"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/LoginServer.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

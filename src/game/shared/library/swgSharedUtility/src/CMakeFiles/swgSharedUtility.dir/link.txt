@@ -1,0 +1,2 @@
+/usr/bin/ar qc libswgSharedUtility.a  CMakeFiles/swgSharedUtility.dir/shared/Attributes.cpp.o CMakeFiles/swgSharedUtility.dir/shared/CombatEngineData.cpp.o CMakeFiles/swgSharedUtility.dir/shared/JediConstants.cpp.o CMakeFiles/swgSharedUtility.dir/shared/Locomotions.cpp.o CMakeFiles/swgSharedUtility.dir/shared/Postures.cpp.o CMakeFiles/swgSharedUtility.dir/shared/SpeciesRestrictions.cpp.o CMakeFiles/swgSharedUtility.dir/shared/States.cpp.o
+/usr/bin/ranlib libswgSharedUtility.a

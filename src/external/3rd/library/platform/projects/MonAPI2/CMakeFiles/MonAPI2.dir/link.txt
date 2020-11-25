@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMonAPI2.a  CMakeFiles/MonAPI2.dir/MonitorAPI.cpp.o CMakeFiles/MonAPI2.dir/MonitorData.cpp.o
+/usr/bin/ranlib libMonAPI2.a

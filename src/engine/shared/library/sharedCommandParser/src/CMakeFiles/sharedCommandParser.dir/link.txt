@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedCommandParser.a  CMakeFiles/sharedCommandParser.dir/shared/CommandParser.cpp.o CMakeFiles/sharedCommandParser.dir/shared/CommandParserHistory.cpp.o CMakeFiles/sharedCommandParser.dir/shared/CommandPermissionManager.cpp.o
+/usr/bin/ranlib libsharedCommandParser.a

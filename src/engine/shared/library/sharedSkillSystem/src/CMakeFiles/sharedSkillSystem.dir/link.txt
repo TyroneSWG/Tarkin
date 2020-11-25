@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedSkillSystem.a  CMakeFiles/sharedSkillSystem.dir/shared/ExpertiseManager.cpp.o CMakeFiles/sharedSkillSystem.dir/shared/LevelManager.cpp.o CMakeFiles/sharedSkillSystem.dir/shared/SkillManager.cpp.o CMakeFiles/sharedSkillSystem.dir/shared/SkillObjectArchive.cpp.o CMakeFiles/sharedSkillSystem.dir/shared/SkillObject.cpp.o
+/usr/bin/ranlib libsharedSkillSystem.a

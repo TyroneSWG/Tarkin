@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarchive.a  CMakeFiles/archive.dir/shared/AutoByteStream.cpp.o CMakeFiles/archive.dir/shared/AutoDeltaByteStream.cpp.o CMakeFiles/archive.dir/shared/AutoDeltaPackedMap.cpp.o CMakeFiles/archive.dir/shared/ByteStream.cpp.o CMakeFiles/archive.dir/linux/ArchiveMutex.cpp.o
+/usr/bin/ranlib libarchive.a

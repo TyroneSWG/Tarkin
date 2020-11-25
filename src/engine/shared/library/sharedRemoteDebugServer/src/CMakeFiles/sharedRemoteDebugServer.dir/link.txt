@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedRemoteDebugServer.a  CMakeFiles/sharedRemoteDebugServer.dir/shared/FirstSharedRemoteDebugServer.cpp.o CMakeFiles/sharedRemoteDebugServer.dir/shared/SharedRemoteDebugServerConnection.cpp.o CMakeFiles/sharedRemoteDebugServer.dir/shared/SharedRemoteDebugServer.cpp.o
+/usr/bin/ranlib libsharedRemoteDebugServer.a

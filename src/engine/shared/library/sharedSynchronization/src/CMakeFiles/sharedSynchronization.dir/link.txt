@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedSynchronization.a  CMakeFiles/sharedSynchronization.dir/linux/ConditionVariable.cpp.o CMakeFiles/sharedSynchronization.dir/linux/Gate.cpp.o CMakeFiles/sharedSynchronization.dir/linux/Mutex.cpp.o CMakeFiles/sharedSynchronization.dir/linux/RecursiveMutex.cpp.o CMakeFiles/sharedSynchronization.dir/linux/Semaphore.cpp.o
+/usr/bin/ranlib libsharedSynchronization.a

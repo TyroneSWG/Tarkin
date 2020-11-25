@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsharedMessageDispatch.a  CMakeFiles/sharedMessageDispatch.dir/shared/Emitter.cpp.o CMakeFiles/sharedMessageDispatch.dir/shared/Message.cpp.o CMakeFiles/sharedMessageDispatch.dir/shared/MessageManager.cpp.o CMakeFiles/sharedMessageDispatch.dir/shared/Receiver.cpp.o CMakeFiles/sharedMessageDispatch.dir/shared/Transceiver.cpp.o
+/usr/bin/ranlib libsharedMessageDispatch.a

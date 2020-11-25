@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsingleton.a  
+/usr/bin/ranlib libsingleton.a

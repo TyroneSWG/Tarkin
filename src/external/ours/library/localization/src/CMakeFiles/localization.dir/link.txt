@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblocalization.a  CMakeFiles/localization.dir/shared/LocalizationManager.cpp.o CMakeFiles/localization.dir/shared/LocalizedString.cpp.o CMakeFiles/localization.dir/shared/LocalizedStringTable.cpp.o CMakeFiles/localization.dir/shared/LocalizedStringTableReaderWriter.cpp.o CMakeFiles/localization.dir/shared/StringId.cpp.o
+/usr/bin/ranlib liblocalization.a

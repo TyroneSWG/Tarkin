@@ -1,0 +1,2 @@
+/usr/bin/ar qc libunicode.a  CMakeFiles/unicode.dir/shared/UnicodeBlocks.cpp.o CMakeFiles/unicode.dir/shared/UnicodeCharacterData.cpp.o CMakeFiles/unicode.dir/shared/UnicodeCharacterDataMap.cpp.o CMakeFiles/unicode.dir/shared/Unicode.cpp.o CMakeFiles/unicode.dir/shared/UnicodeUtils.cpp.o CMakeFiles/unicode.dir/shared/utf8.cpp.o
+/usr/bin/ranlib libunicode.a
