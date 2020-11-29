@@ -145,7 +145,7 @@ AppearanceTemplate::~AppearanceTemplate(void)
 void AppearanceTemplate::install()
 {
 	AppearanceTemplateList::assignBinding(TAG_APPR, create);
-	AppearanceTemplateList::assignBinding(TAG_DTLA, create);
+	AppearanceTemplateList::assignBinding(TAG_DTLA, createDtla);
 
 	ms_crashReportInfo[0] = '\0';
 	CrashReportInformation::addDynamicText(ms_crashReportInfo);
