@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author TyroneSWG
  */
 package script.heroic.cloning;
 
@@ -11,10 +10,6 @@ import script.library.utils;
 import script.location;
 import script.dictionary;
 
-/**
- *
- * @author TyroneSWG
- */
 public class cloner extends script.base_script {
 
     public cloner()

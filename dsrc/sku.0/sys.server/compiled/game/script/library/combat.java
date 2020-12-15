@@ -266,11 +266,7 @@ public class combat extends script.base_script
     }
     public static boolean isAreaAttack(int attackType) throws InterruptedException
     {
-        if (attackType == CONE || attackType == AREA || attackType == TARGET_AREA)
-        {
-            return true;
-        }
-        return false;
+        return attackType == CONE || attackType == AREA || attackType == TARGET_AREA;
     }
     public static boolean breakMez(obj_id defender) throws InterruptedException
     {
@@ -667,11 +663,7 @@ public class combat extends script.base_script
     }
     public static boolean drainCombatActionAttributes(obj_id self, int[] actionCost) throws InterruptedException
     {
-        if (!(drainAttributes(self, actionCost[1], actionCost[2])))
-        {
-            return false;
-        }
-        return true;
+        return drainAttributes(self, actionCost[1], actionCost[2]);
     }
     public static boolean canDrainCombatActionAttributes(obj_id self, int actionCost) throws InterruptedException
     {
@@ -1622,11 +1614,7 @@ public class combat extends script.base_script
             }
         }
         obj_id[] groupMembers = getGroupMemberIds(groupId);
-        if (groupMembers == null || groupMembers.length < 2)
-        {
-            return false;
-        }
-        return true;
+        return !(groupMembers == null || groupMembers.length < 2);
     }
     public static void doPaintTarget(obj_id squadLeader, obj_id target) throws InterruptedException
     {
@@ -2305,11 +2293,7 @@ public class combat extends script.base_script
         {
             return false;
         }
-        if (ai_lib.aiGetNiche(objPlayer) == NICHE_DROID || vehicle.isVehicle(objPlayer) || ai_lib.isTurret(objPlayer) || ai_lib.isAndroid(objPlayer))
-        {
-            return false;
-        }
-        return true;
+        return !(ai_lib.aiGetNiche(objPlayer) == NICHE_DROID || vehicle.isVehicle(objPlayer) || ai_lib.isTurret(objPlayer) || ai_lib.isAndroid(objPlayer));
     }
     public static boolean hasCertification(obj_id objPlayer, obj_id objWeapon) throws InterruptedException
     {
@@ -2437,8 +2421,8 @@ public class combat extends script.base_script
         int delayStampEnd = delayStampStart + duration;
         utils.setScriptVar(target, "speedDelayEffectStart", delayStampStart);
         utils.setScriptVar(target, "speedDelayEffectEnd", delayStampEnd);
+        //assign return here... maybe.
         utils.setScriptVar(target, "speedDelayPotency", delay);
-        return;
     }
     public static void doCombatDebuffs(obj_id self) throws InterruptedException
     {
@@ -2465,7 +2449,7 @@ public class combat extends script.base_script
     }
     public static boolean isInCombat(obj_id objTarget) throws InterruptedException
     {
-        return getState(objTarget, STATE_COMBAT) > 0 ? true : false;
+        return getState(objTarget, STATE_COMBAT) > 0;
     }
     public static String getAttackName(obj_id self) throws InterruptedException
     {
@@ -3524,7 +3508,7 @@ public class combat extends script.base_script
                 }
             }
         }
-        if (validTargets == null || validTargets.size() == 0)
+        if (validTargets == null || validTargets.isEmpty())
         {
             return null;
         }
@@ -3677,7 +3661,6 @@ public class combat extends script.base_script
             return;
         }
         utils.setScriptVar(target, combat.PERSIST_COMBAT, 1);
-        return;
     }
     public static boolean isPersistCombatMode(obj_id self) throws InterruptedException
     {
@@ -3823,7 +3806,7 @@ public class combat extends script.base_script
         }
         int current = getKillMeter(player);
         int delta = current - value;
-        return delta < 0 ? false : true;
+        return delta >= 0;
     }
     public static boolean drainKillMeter(obj_id player, int value) throws InterruptedException
     {

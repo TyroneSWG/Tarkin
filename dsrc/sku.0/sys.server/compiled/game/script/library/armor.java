@@ -1509,7 +1509,7 @@ public class armor extends script.base_script
         {
             fltSpecialProts[intI] = fltSpecialProts[intI] / fltTotal;
             fltSpecialProts[intI] += fltInnateProtectionAll;
-			if ( !(DATATABLE_SPECIAL_PROTECTIONS[intI] == "energy") && !(DATATABLE_SPECIAL_PROTECTIONS[intI] == "kinetic") )//only apply buildabuff stat for elemental armors
+            if ( !(DATATABLE_SPECIAL_PROTECTIONS[intI] == "energy") && !("kinetic".equals(DATATABLE_SPECIAL_PROTECTIONS[intI])) )//only apply buildabuff stat for elemental armors
             {
                 fltSpecialProts[intI] += fltSpecialProtectionAll;
             }

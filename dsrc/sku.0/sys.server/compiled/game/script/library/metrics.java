@@ -20,11 +20,7 @@ public class metrics extends script.base_script
         {
             return false;
         }
-        if (enabled.equals("true") || enabled.equals("1"))
-        {
-            return true;
-        }
-        return false;
+        return enabled.equals("true") || enabled.equals("1");
     }
     public static void logBuffStatus(obj_id target) throws InterruptedException
     {
@@ -275,7 +271,6 @@ public class metrics extends script.base_script
             killLog += ";solo;" + killCredit + ";" + playerName + ";" + playerLevel + ";" + dmgAmount + ";" + dmgPercent;
         }
         logBalance(killLog);
-        return;
     }
     public static void doXpRateMetrics(obj_id player, String xpType, int xpAmount) throws InterruptedException
     {

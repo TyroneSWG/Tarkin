@@ -261,14 +261,7 @@ public class restuss_event extends script.base_script
         {
             return true;
         }
-        if (getPhase(restuss_controller) == 2)
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return getPhase(restuss_controller) == 2;
     }
     public static int getRestussPhase(obj_id npc) throws InterruptedException
     {

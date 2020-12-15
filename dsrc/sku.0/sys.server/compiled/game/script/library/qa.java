@@ -217,7 +217,7 @@ public class qa extends script.base_script
     }
     public static void showConfirmationSui(obj_id self, String titleText, String confirmationMessage, String handler) throws InterruptedException
     {
-        int pid = sui.msgbox(self, self, confirmationMessage, sui.YES_NO, titleText, handler);
+        sui.msgbox(self, self, confirmationMessage, sui.YES_NO, titleText, handler);
     }
     public static void checkParams(dictionary params, String scriptVar) throws InterruptedException
     {

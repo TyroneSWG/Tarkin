@@ -1,5 +1,6 @@
 package script.library;
 
+import java.util.Arrays;
 import script.*;
 
 import java.util.Enumeration;
@@ -130,7 +131,6 @@ public class loot extends script.base_script
             String err = "WARNING: loot::addLoot(" + target + ") returning false because getCreatureName failed. Template=" + getTemplateName(target) + ", IsAuthoritative=" + target.isAuthoritative() + ". Stack Trace as follows:";
             CustomerServiceLog("creatureNameErrors", err);
             debugServerConsoleMsg(target, err);
-            Thread.dumpStack();
             return false;
         }
         if (!hasObjVar(target, "storytellerid"))
@@ -171,7 +171,7 @@ public class loot extends script.base_script
             try {
                 dropChance = Double.parseDouble(getConfigSetting("EventTeam", "goldenTicketDropChance"));
             }
-            catch(Exception e){}
+            catch(NumberFormatException e){}
             double rng = Math.random() * 100;
             if(dropChance > 0 && rng <= dropChance) {
                 String goldenTicket = "object/tangible/travel/travel_ticket/dungeon_ticket.iff";
@@ -445,7 +445,7 @@ public class loot extends script.base_script
                 }
             }
         }
-        if ((ret == null) || (ret.size() == 0))
+        if ((ret == null) || (ret.isEmpty()))
         {
             return null;
         }
@@ -674,7 +674,7 @@ public class loot extends script.base_script
         }
         if (hasAttribBonus && attribBonus != null && attribBonus.length == NUM_ATTRIBUTES)
         {
-            LOG("loot", "loot:randomizeComponent: -> Calling Set Attributes : " + attribBonus.toString());
+            LOG("loot", "loot:randomizeComponent: -> Calling Set Attributes : " + Arrays.toString(attribBonus));
             for (int i = 0; i < attribBonus.length; i++)
             {
                 LOG("loot", "loot:randomizeComponent: -> Attribute " + i + " = " + attribBonus[i]);
@@ -945,66 +945,61 @@ public class loot extends script.base_script
                 setGroupLootRule(team, group.FREE_FOR_ALL);
                 return true;
             }
-            if (lootType == 1)
+            switch (lootType)
             {
-                obj_id master = getGroupMasterLooterId(team);
-                String masterName = getEncodedName(master);
-                if (master == player)
-                {
-                    return true;
-                }
-                else if (!isIdValid(master))
-                {
-                    return true;
-                }
-                else 
-                {
-                    prose_package pp = new prose_package();
-                    string_id masterMsg = new string_id(group.GROUP_STF, "master_only");
-                    pp = prose.setStringId(pp, masterMsg);
-                    pp = prose.setTO(pp, masterName);
-                    sendSystemMessageProse(player, pp);
-                    return false;
-                }
-            }
-            else if (lootType == 2)
-            {
-                if (hasObjVar(corpseId, "autoLootComplete"))
-                {
-                    return true;
-                }
-                if (hasObjVar(corpseId, "numWindowsOpen"))
-                {
-                    return false;
-                }
-                for (obj_id objMemberWhoExists : objMembersWhoExist) {
-                    if (numContents > 0 && !(numContents == 1 && isCashLootItem(contents[0]))) {
-                        openLotteryWindow(objMemberWhoExists, corpseInv);
-                    } else if (numContents == 1 && isCashLootItem(contents[0])) {
+                case 1:
+                    obj_id master = getGroupMasterLooterId(team);
+                    String masterName = getEncodedName(master);
+                    if (master == player)
+                    {
                         return true;
-                    } else {
-                        string_id emptyCorpse = new string_id(group.GROUP_STF, "corpse_empty");
-                        sendSystemMessage(objMemberWhoExists, emptyCorpse);
-                        lootAiCorpse(player, corpseId);
+                    }
+                    else if (!isIdValid(master))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        prose_package pp = new prose_package();
+                        string_id masterMsg = new string_id(group.GROUP_STF, "master_only");
+                        pp = prose.setStringId(pp, masterMsg);
+                        pp = prose.setTO(pp, masterName);
+                        sendSystemMessageProse(player, pp);
                         return false;
                     }
-                }
-                setObjVar(corpseId, "numWindowsOpen", objMembersWhoExist.length);
-                dictionary lotto = new dictionary();
-                lotto.put("player", player);
-                lotto.put("corpseInv", corpseInv);
-                messageTo(corpseId, "fireLotteryPulse", lotto, 2, true);
-                return false;
-            }
-            else if (lootType == 3)
-            {
-                return true;
-            }
-            else 
-            {
-                string_id cantLoot = new string_id(group.GROUP_STF, "no_loot_group");
-                sendSystemMessage(player, cantLoot);
-                return false;
+                case 2:
+                    if (hasObjVar(corpseId, "autoLootComplete"))
+                    {
+                        return true;
+                    }
+                    if (hasObjVar(corpseId, "numWindowsOpen"))
+                    {
+                        return false;
+                    }
+                    for (obj_id objMemberWhoExists : objMembersWhoExist) {
+                        if (numContents > 0 && !(numContents == 1 && isCashLootItem(contents[0]))) {
+                            openLotteryWindow(objMemberWhoExists, corpseInv);
+                        } else if (numContents == 1 && isCashLootItem(contents[0])) {
+                            return true;
+                        } else {
+                            string_id emptyCorpse = new string_id(group.GROUP_STF, "corpse_empty");
+                            sendSystemMessage(objMemberWhoExists, emptyCorpse);
+                            lootAiCorpse(player, corpseId);
+                            return false;
+                        }
+                    }
+                    setObjVar(corpseId, "numWindowsOpen", objMembersWhoExist.length);
+                    dictionary lotto = new dictionary();
+                    lotto.put("player", player);
+                    lotto.put("corpseInv", corpseInv);
+                    messageTo(corpseId, "fireLotteryPulse", lotto, 2, true);
+                    return false;
+                case 3:
+                    return true;
+                default:
+                    string_id cantLoot = new string_id(group.GROUP_STF, "no_loot_group");
+                    sendSystemMessage(player, cantLoot);
+                    return false;
             }
         }
         return false;

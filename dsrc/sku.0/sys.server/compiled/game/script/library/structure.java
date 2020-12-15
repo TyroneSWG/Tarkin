@@ -253,7 +253,7 @@ public class structure extends script.base_script
                 }
                 break;
         }
-        if ((cells == null) || (cells.size() == 0))
+        if ((cells == null) || (cells.isEmpty()))
         {
             return null;
         }
@@ -273,7 +273,7 @@ public class structure extends script.base_script
                 }
             }
         }
-        if ((players == null) || (players.size() == 0))
+        if ((players == null) || (players.isEmpty()))
         {
             return null;
         }
@@ -294,7 +294,7 @@ public class structure extends script.base_script
         if (hasObjVar(structure, utils.VAR_COOWNERS))
         {
             Vector coowners = getResizeableObjIdArrayObjVar(structure, utils.VAR_COOWNERS);
-            if ((coowners == null) || (coowners.size() == 0))
+            if ((coowners == null) || (coowners.isEmpty()))
             {
                 removeObjVar(structure, utils.VAR_COOWNERS);
                 return addStructureCoOwner(structure, owner, player);
@@ -328,7 +328,7 @@ public class structure extends script.base_script
         if (hasObjVar(structure, utils.VAR_COOWNERS))
         {
             Vector coowners = getResizeableObjIdArrayObjVar(structure, utils.VAR_COOWNERS);
-            if ((coowners == null) || (coowners.size() == 0))
+            if ((coowners == null) || (coowners.isEmpty()))
             {
                 removeObjVar(structure, utils.VAR_COOWNERS);
                 return false;
@@ -338,7 +338,7 @@ public class structure extends script.base_script
                 return false;
             }
             coowners = utils.removeElement(coowners, player);
-            if ((coowners == null) || (coowners.size() == 0))
+            if ((coowners == null) || (coowners.isEmpty()))
             {
                 removeObjVar(structure, utils.VAR_COOWNERS);
             }
@@ -469,7 +469,7 @@ public class structure extends script.base_script
                 }
             }
         }
-        if ((terminals == null) || (terminals.size() == 0))
+        if ((terminals == null) || (terminals.isEmpty()))
         {
             return null;
         }

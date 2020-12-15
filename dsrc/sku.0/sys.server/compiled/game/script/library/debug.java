@@ -92,19 +92,11 @@ public class debug extends script.base_script
     }
     public static boolean woundMob(obj_id target, int attrib, int amt) throws InterruptedException
     {
-        if ((target == null) || (!isMob(target)))
-        {
-            return false;
-        }
-        return true;
+        return !((target == null) || (!isMob(target)));
     }
     public static boolean healWounds(obj_id target) throws InterruptedException
     {
-        if ((target == null) || (!isMob(target)))
-        {
-            return false;
-        }
-        return true;
+        return !((target == null) || (!isMob(target)));
     }
     public static boolean getShock(obj_id target) throws InterruptedException
     {

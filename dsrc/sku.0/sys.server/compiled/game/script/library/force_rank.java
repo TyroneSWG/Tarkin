@@ -1023,14 +1023,7 @@ public class force_rank extends script.base_script
             return false;
         }
         int time = getChallengeVoteEndTime(terminal, challenged);
-        if (time < getGameTime())
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return time < getGameTime();
     }
     public static int getChallengeVoteRank(obj_id terminal, String challenged) throws InterruptedException
     {
@@ -1811,7 +1804,6 @@ public class force_rank extends script.base_script
         }
         setObjVar(enclave, VAR_VOTING_BASE + (playerRank + 1) + ".petition", petitioners);
         setObjVar(enclave, VAR_VOTING_BASE + (playerRank + 1) + ".votes", votes);
-        return;
     }
     public static Vector getAllPlayerNamesInForceRank(obj_id enclave) throws InterruptedException
     {
@@ -3062,7 +3054,6 @@ public class force_rank extends script.base_script
         {
             demoteDeadPlayerToRankZero(victim, darkEnclave);
         }
-        return;
     }
     public static void moveEnclavedPlayerToNeutralCell(obj_id player) throws InterruptedException
     {
@@ -3155,7 +3146,6 @@ public class force_rank extends script.base_script
             }
             adjustPermissionListForRoom(enclave, enclaveRoom, allowedRanks);
         }
-        return;
     }
     public static Vector playerNamesToIds(String[] playerNames) throws InterruptedException
     {
@@ -3189,7 +3179,6 @@ public class force_rank extends script.base_script
                 permissionsAddAllowed(cellId, allowedPlayer);
             }
         }
-        return;
     }
     public static void setAllCellsPrivate(obj_id enclave) throws InterruptedException
     {
@@ -3204,7 +3193,6 @@ public class force_rank extends script.base_script
                 clearCellAllowList(cellId);
             }
         }
-        return;
     }
     public static void clearCellBanList(obj_id cell) throws InterruptedException
     {
@@ -3216,7 +3204,6 @@ public class force_rank extends script.base_script
         for (String s : banned) {
             permissionsRemoveBanned(cell, s);
         }
-        return;
     }
     public static void clearCellAllowList(obj_id cell) throws InterruptedException
     {
@@ -3228,7 +3215,6 @@ public class force_rank extends script.base_script
         for (String s : allowed) {
             permissionsRemoveAllowed(cell, s);
         }
-        return;
     }
     public static void setCommonsRoomsToPublic(obj_id enclave) throws InterruptedException
     {
@@ -3252,7 +3238,6 @@ public class force_rank extends script.base_script
             }
             permissionsMakePublic(cellId);
         }
-        return;
     }
     public static boolean checkCellPermission(obj_id item, obj_id cell, boolean silent) throws InterruptedException
     {
@@ -3327,7 +3312,6 @@ public class force_rank extends script.base_script
             }
             attachScript(cellId, "systems.gcw.enclave_cell");
         }
-        return;
     }
     public static void makeAllCellsPublic(obj_id enclave) throws InterruptedException
     {
@@ -3352,12 +3336,10 @@ public class force_rank extends script.base_script
         trace.log("force_rank", "Setting PEF for " + player1 + " and " + player2 + " - now enemies.", null, trace.TL_CS_LOG | trace.TL_DEBUG);
         pvpSetPermanentPersonalEnemyFlag(player1, player2);
         pvpSetPermanentPersonalEnemyFlag(player2, player1);
-        return;
     }
     public static void makePlayersPermaFriends(obj_id player1, obj_id player2) throws InterruptedException
     {
         trace.log("force_rank", "Making players " + utils.getRealPlayerFirstName(player1) + " and " + utils.getRealPlayerFirstName(player2) + " friends. (not really)", null, trace.TL_DEBUG);
-        return;
     }
     public static void makePlayerEnemyOfGroup(obj_id player, obj_id[] enemyGroup) throws InterruptedException
     {
@@ -3370,7 +3352,6 @@ public class force_rank extends script.base_script
                 makePlayersPermaEnemies(player, obj_id);
             }
         }
-        return;
     }
     public static void makePlayerFriendsWithGroup(obj_id player, obj_id[] friendGroup) throws InterruptedException
     {
@@ -3383,7 +3364,6 @@ public class force_rank extends script.base_script
                 makePlayersPermaFriends(player, obj_id);
             }
         }
-        return;
     }
     public static void makePlayerGroupsEnemies(obj_id[] group1, obj_id[] group2) throws InterruptedException
     {
@@ -3394,7 +3374,6 @@ public class force_rank extends script.base_script
         for (obj_id obj_id : group1) {
             makePlayerEnemyOfGroup(obj_id, group2);
         }
-        return;
     }
     public static dictionary packageActionData(Vector initz, Vector victz, Vector startz) throws InterruptedException
     {
@@ -3445,7 +3424,6 @@ public class force_rank extends script.base_script
         setObjVar(darkEnclave, pvpAction + VAR_INITIATORS, inits);
         setObjVar(darkEnclave, pvpAction + VAR_VICTIMS, victs);
         setObjVar(darkEnclave, pvpAction + VAR_START_TIMESTAMPS, startTms);
-        return;
     }
     public static dictionary getAndValidatePvPActionData(String pvpAction, obj_id darkEnclave) throws InterruptedException
     {
@@ -3554,7 +3532,6 @@ public class force_rank extends script.base_script
             victimz.clear();
             initiatorz.clear();
         }
-        return;
     }
     public static void demoteDeadPlayerToRankZero(obj_id player, obj_id darkEnclave) throws InterruptedException
     {
@@ -3582,7 +3559,6 @@ public class force_rank extends script.base_script
             _clearPvPActionDataForPlayer(player, lists, action, darkEnclave);
         }
         removeObjVar(player, VAR_NOTIFY_ENCLAVE_OF_DEATH);
-        return;
     }
     public static boolean _clearPvPActionDataForPlayer(obj_id player, String[] whichLists, String pvpAction, obj_id darkEnclave) throws InterruptedException
     {
@@ -3603,13 +3579,17 @@ public class force_rank extends script.base_script
         utils.concatArrays(startTms, data.getIntArray("times"));
         for (String whichList : whichLists) {
             int idx = -1;
-            if (whichList.equals(VAR_INITIATORS)) {
-                idx = utils.getElementPositionInArray(inits, player);
-            } else if (whichList.equals(VAR_VICTIMS)) {
-                idx = utils.getElementPositionInArray(victs, player);
-            } else {
-                trace.log("force_rank", "force_rank::clearAllPvPActionsForPlayer passed bad value for @whichList array .  Bailing without clearing action status.", player, trace.TL_ERROR_LOG | trace.TL_DEBUG);
-                continue;
+            switch (whichList)
+            {
+                case VAR_INITIATORS:
+                    idx = utils.getElementPositionInArray(inits, player);
+                    break;
+                case VAR_VICTIMS:
+                    idx = utils.getElementPositionInArray(victs, player);
+                    break;
+                default:
+                    trace.log("force_rank", "force_rank::clearAllPvPActionsForPlayer passed bad value for @whichList array .  Bailing without clearing action status.", player, trace.TL_ERROR_LOG | trace.TL_DEBUG);
+                    continue;
             }
             while (idx > -1) {
                 inits = utils.removeElementAt(inits, idx);
@@ -3659,11 +3639,7 @@ public class force_rank extends script.base_script
     public static boolean isPvPActionInitiator(obj_id player, dictionary actionData1) throws InterruptedException
     {
         obj_id[] initiatorz = actionData1.getObjIdArray("initiators");
-        if (utils.getElementPositionInArray(initiatorz, player) > -1)
-        {
-            return true;
-        }
-        return false;
+        return utils.getElementPositionInArray(initiatorz, player) > -1;
     }
     public static boolean isPvPActionVictim(obj_id player, dictionary actionData2) throws InterruptedException
     {
@@ -3687,11 +3663,7 @@ public class force_rank extends script.base_script
         {
             return false;
         }
-        if (isPvPActionVictim(player1, suddenDeathData) && isPvPActionVictim(player2, suddenDeathData))
-        {
-            return true;
-        }
-        return false;
+        return isPvPActionVictim(player1, suddenDeathData) && isPvPActionVictim(player2, suddenDeathData);
     }
     public static boolean _initiateCouncilPurge(obj_id darkEnclave, obj_id purger) throws InterruptedException
     {
@@ -3756,7 +3728,7 @@ public class force_rank extends script.base_script
             utils.concatArrays(victimz, data.getObjIdArray("victims"));
             utils.concatArrays(timez, data.getIntArray("times"));
         }
-        for (int i = 0; i < allVictims.size(); i++)
+        for (Object allVictim : allVictims)
         {
             utils.addElement(initiatorz, initiator);
             utils.addElement(timez, time);
@@ -3765,9 +3737,7 @@ public class force_rank extends script.base_script
         dictionary newData = packageActionData(initiatorz, victimz, timez);
         setPvPActionData(newData, pvpAction, darkEnclave);
         String victimList = "";
-        for (Object allVictim : allVictims) {
-            victimList += "" + ((obj_id) allVictim) + ",";
-        }
+        //victimList = (String) allVictims.stream().map((allVictim) -> "" + ((obj_id) allVictim) + ",").reduce(victimList, (string, str) -> string.concat(str));
         trace.log("force_rank", "Dark Jedi PvP Action Started: " + pvpAction + ".  Initiator: " + initiator + ", Victims: " + victimList, null, trace.TL_CS_LOG | trace.TL_DEBUG);
         Vector recips = new Vector();
         recips.setSize(0);
@@ -3798,10 +3768,10 @@ public class force_rank extends script.base_script
         parms.put("pvpAction", pvpAction);
         parms.put("actionTargets", actionTargets);
         parms.put("enclave", darkEnclave);
-        for (Object msgRecipient : msgRecipients) {
+        msgRecipients.forEach((msgRecipient) ->
+        {
             messageTo(((obj_id) msgRecipient), "msgPvPActionStart", parms, 0, false);
-        }
-        return;
+        });
     }
     public static void notifyPlayerOfPvPActionEnd(obj_id killer, String pvpAction, Vector peaceTargets, Vector msgRecipients, boolean actionTimedOut) throws InterruptedException
     {
@@ -3818,10 +3788,10 @@ public class force_rank extends script.base_script
         parms.put("pvpAction", pvpAction);
         parms.put("peaceTargets", peaceTargets);
         parms.put("actionTimedOut", actionTimedOut);
-        for (Object msgRecipient : msgRecipients) {
+        msgRecipients.forEach((msgRecipient) ->
+        {
             messageTo(((obj_id) msgRecipient), "msgPvPActionEnd", parms, 0, false);
-        }
-        return;
+        });
     }
     public static obj_id[] getMyVendettaEnemies(dictionary vendettaData, obj_id player) throws InterruptedException
     {
@@ -3922,7 +3892,6 @@ public class force_rank extends script.base_script
         parms.put("sender", player);
         messageTo(myEnclave, "PEFSynchRequest", parms, 0, false);
         trace.log("force_rank", "force_rank::requestPEFs-> requesting enemy list from enclave", player, trace.TL_DEBUG);
-        return;
     }
     public static obj_id[] getCurrentDarkJediEnemies(obj_id player, obj_id enclave) throws InterruptedException
     {
@@ -3971,14 +3940,7 @@ public class force_rank extends script.base_script
     }
     public static boolean isPlayersEnclave(obj_id enclave, obj_id player) throws InterruptedException
     {
-        if (getCouncilAffiliation(enclave) == getCouncilAffiliation(player))
-        {
-            return true;
-        }
-        else 
-        {
-            return false;
-        }
+        return getCouncilAffiliation(enclave) == getCouncilAffiliation(player);
     }
     public static boolean createEnclaveTerminals(obj_id enclave) throws InterruptedException
     {

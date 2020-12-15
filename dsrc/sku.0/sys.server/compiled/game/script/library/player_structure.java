@@ -1694,7 +1694,7 @@ public class player_structure extends script.base_script
             Vector hopperList = getResizeableStringArrayObjVar(structure, VAR_HOPPER_LIST);
             if (removeNameFromRawList(hopperList, nameToRemove))
             {
-                if (hopperList.size() == 0)
+                if (hopperList.isEmpty())
                 {
                     removeObjVar(structure, VAR_HOPPER_LIST);
                 }

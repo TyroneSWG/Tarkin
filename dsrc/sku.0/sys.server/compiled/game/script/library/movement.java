@@ -60,11 +60,7 @@ public class movement extends script.base_script
         {
             return false;
         }
-        if (hasMovementModifier(target, name))
-        {
-            return false;
-        }
-        return true;
+        return !hasMovementModifier(target, name);
     }
     public static boolean applyMovementModifier(obj_id target, String name) throws InterruptedException
     {

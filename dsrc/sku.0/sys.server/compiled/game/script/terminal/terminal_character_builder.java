@@ -6,7 +6,6 @@ import script.library.*;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
-import java.lang.String;
 
 public class terminal_character_builder extends script.base_script
 {
@@ -2074,11 +2073,7 @@ public class terminal_character_builder extends script.base_script
         {
             return false;
         }
-        if (enabled.equals("true") || enabled.equals("1"))
-        {
-            return true;
-        }
-        return false;
+        return enabled.equals("true") || enabled.equals("1");
     }
     public int OnObjectMenuRequest(obj_id self, obj_id player, menu_info mi) throws InterruptedException
     {
@@ -2583,33 +2578,54 @@ public class terminal_character_builder extends script.base_script
                                 int armorLevel = Integer.parseInt(armorLevelName) - 1;
                                 int playerSpecies = getSpecies(player);
                                 String[] armorSet = null;
-                                if (armorCategoryName.equals("assault")) {
-                                    armorCategory = AC_assault;
-                                    if (playerSpecies == SPECIES_WOOKIEE) {
-                                        armorSet = ARMOR_SET_ASSAULT_WOOKIEE;
-                                    } else if (playerSpecies == SPECIES_ITHORIAN) {
-                                        armorSet = ARMOR_SET_ASSAULT_ITHORIAN;
-                                    } else {
-                                        armorSet = ARMOR_SETS_ASSAULT[rand(0, ARMOR_SETS_ASSAULT.length - 1)];
+                                switch (armorCategoryName)
+                                {
+                                    case "assault":
+                                        armorCategory = AC_assault;
+                                    switch (playerSpecies)
+                                    {
+                                        case SPECIES_WOOKIEE:
+                                            armorSet = ARMOR_SET_ASSAULT_WOOKIEE;
+                                            break;
+                                        case SPECIES_ITHORIAN:
+                                            armorSet = ARMOR_SET_ASSAULT_ITHORIAN;
+                                            break;
+                                        default:
+                                            armorSet = ARMOR_SETS_ASSAULT[rand(0, ARMOR_SETS_ASSAULT.length - 1)];
+                                            break;
                                     }
-                                } else if (armorCategoryName.equals("battle")) {
-                                    armorCategory = AC_battle;
-                                    if (playerSpecies == SPECIES_WOOKIEE) {
-                                        armorSet = ARMOR_SET_BATTLE_WOOKIEE;
-                                    } else if (playerSpecies == SPECIES_ITHORIAN) {
-                                        armorSet = ARMOR_SET_BATTLE_ITHORIAN;
-                                    } else {
-                                        armorSet = ARMOR_SETS_BATTLE[rand(0, ARMOR_SETS_BATTLE.length - 1)];
+                                    break;
+
+                                    case "battle":
+                                        armorCategory = AC_battle;
+                                    switch (playerSpecies)
+                                    {
+                                        case SPECIES_WOOKIEE:
+                                            armorSet = ARMOR_SET_BATTLE_WOOKIEE;
+                                            break;
+                                        case SPECIES_ITHORIAN:
+                                            armorSet = ARMOR_SET_BATTLE_ITHORIAN;
+                                            break;
+                                        default:
+                                            armorSet = ARMOR_SETS_BATTLE[rand(0, ARMOR_SETS_BATTLE.length - 1)];
+                                            break;
                                     }
-                                } else {
-                                    armorCategory = AC_reconnaissance;
-                                    if (playerSpecies == SPECIES_WOOKIEE) {
-                                        armorSet = ARMOR_SET_RECON_WOOKIEE;
-                                    } else if (playerSpecies == SPECIES_ITHORIAN) {
-                                        armorSet = ARMOR_SET_RECON_ITHORIAN;
-                                    } else {
-                                        armorSet = ARMOR_SETS_RECON[rand(0, ARMOR_SETS_RECON.length - 1)];
+                                    break;
+                                    default:
+                                        armorCategory = AC_reconnaissance;
+                                    switch (playerSpecies)
+                                    {
+                                        case SPECIES_WOOKIEE:
+                                            armorSet = ARMOR_SET_RECON_WOOKIEE;
+                                            break;
+                                        case SPECIES_ITHORIAN:
+                                            armorSet = ARMOR_SET_RECON_ITHORIAN;
+                                            break;
+                                        default:
+                                            armorSet = ARMOR_SETS_RECON[rand(0, ARMOR_SETS_RECON.length - 1)];
+                                            break;
                                     }
+                                    break;
                                 }
                                 if (armorSet == null) {
                                     sendSystemMessageTestingOnly(player, "Unable to get armor set for armor category " + armorCategoryName);
@@ -2845,21 +2861,18 @@ public class terminal_character_builder extends script.base_script
                 "rori",
                 "talus",
                 "tatooine"
+                //"taanab"
             };
             for (String planetName : planetNames) {
                 loc.area = planetName;
                 resource_density[] resources = requestResourceList(loc, 0.0f, 1.0f, topParent);
-                for (resource_density resource : resources) {
-                    allResources.add(resource);
-                }
+                boolean addAll = allResources.addAll(Arrays.asList(resources));
             }
         }
         else
         {
             resource_density[] resources = requestResourceList(loc, 0.0f, 1.0f, topParent);
-            for (resource_density resource : resources) {
-                allResources.add(resource);
-            }
+            allResources.addAll(Arrays.asList(resources));
         }
         String[] resourceTree = buildSortedResourceTree(allResources, topParent, 0);
         return resourceTree;
@@ -2870,29 +2883,25 @@ public class terminal_character_builder extends script.base_script
         resourceTree.setSize(0);
         if (resources != null)
         {
-            for (Object resource : resources) {
-                if (!isResourceDerivedFrom(((resource_density) resource).getResourceType(), topParent)) {
-                    continue;
-                }
+            resources.stream().filter((resource) -> !(!isResourceDerivedFrom(((resource_density) resource).getResourceType(), topParent))).forEachOrdered((resource) ->
+            {
                 String parent = getResourceClass(((resource_density) resource).getResourceType());
                 String child = null;
-                if (parent == null) {
-                    continue;
+                if (!(parent == null))
+                {
+                    while (!parent.equals(topParent)) {
+                        child = parent;
+                        parent = getResourceParentClass(child);
+                    }   if (child == null) {
+                        child = "\\#pcontrast1 " + getResourceName(((resource_density) resource).getResourceType()) + "\\#.";
+                    }   for (int j = 0; j < branchLevel; j++) {
+                        child = "    " + child;
+                    }   if (resourceTree.indexOf(child) == -1)
+                    {
+                        resourceTree.add(child);
+                    }
                 }
-                while (!parent.equals(topParent)) {
-                    child = parent;
-                    parent = getResourceParentClass(child);
-                }
-                if (child == null) {
-                    child = "\\#pcontrast1 " + getResourceName(((resource_density) resource).getResourceType()) + "\\#.";
-                }
-                for (int j = 0; j < branchLevel; j++) {
-                    child = "    " + child;
-                }
-                if (resourceTree.indexOf(child) == -1) {
-                    resourceTree.add(child);
-                }
-            }
+            });
         }
         for (int i = 0; i < resourceTree.size(); i++)
         {
@@ -2925,9 +2934,7 @@ public class terminal_character_builder extends script.base_script
     }
     public void handleBestResourceOption(obj_id player) throws InterruptedException
     {
-        obj_id self = getSelf();
         refreshMenu(player, "Select the desired resource category", "Test Center Terminal", BEST_RESOURCE_TYPES, "handleBestCategorySelection", false);
-        return;
     }
     public int handleBestCategorySelection(obj_id self, dictionary params) throws InterruptedException
     {
@@ -2960,8 +2967,6 @@ public class terminal_character_builder extends script.base_script
             refreshMenu(player, "Select the desired resource category", "Test Center Terminal", RESOURCE_TYPES, "handleBestCategorySelection", false);
             return SCRIPT_CONTINUE;
         }
-        location loc = getLocation(player);
-        String planet = "current";
         String[] resourceList = getResourceChildClasses(RESOURCE_BASE_TYPES[idx]);
         int goodResources = 0;
         for (int i = 0; i < resourceList.length; ++i)
@@ -3633,71 +3638,73 @@ public class terminal_character_builder extends script.base_script
             sendSystemMessageTestingOnly(player, "The system was unable to revoke your pilot skills.");
             return SCRIPT_OVERRIDE;
         }
-        if (idx == 0)
+        switch (idx)
         {
-            skill.grantSkill(player, "pilot_imperial_navy_novice");
-            skill.grantSkill(player, "pilot_imperial_navy_starships_01");
-            skill.grantSkill(player, "pilot_imperial_navy_starships_02");
-            skill.grantSkill(player, "pilot_imperial_navy_starships_03");
-            skill.grantSkill(player, "pilot_imperial_navy_starships_04");
-            skill.grantSkill(player, "pilot_imperial_navy_weapons_01");
-            skill.grantSkill(player, "pilot_imperial_navy_weapons_02");
-            skill.grantSkill(player, "pilot_imperial_navy_weapons_03");
-            skill.grantSkill(player, "pilot_imperial_navy_weapons_04");
-            skill.grantSkill(player, "pilot_imperial_navy_procedures_01");
-            skill.grantSkill(player, "pilot_imperial_navy_procedures_02");
-            skill.grantSkill(player, "pilot_imperial_navy_procedures_03");
-            skill.grantSkill(player, "pilot_imperial_navy_procedures_04");
-            skill.grantSkill(player, "pilot_imperial_navy_droid_01");
-            skill.grantSkill(player, "pilot_imperial_navy_droid_02");
-            skill.grantSkill(player, "pilot_imperial_navy_droid_03");
-            skill.grantSkill(player, "pilot_imperial_navy_droid_04");
-            skill.grantSkill(player, "pilot_imperial_navy_master");
-            sendSystemMessageTestingOnly(player, "Master Imperial Pilot skills received.");
-        }
-        else if (idx == 1)
-        {
-            skill.grantSkill(player, "pilot_rebel_navy_novice");
-            skill.grantSkill(player, "pilot_rebel_navy_starships_01");
-            skill.grantSkill(player, "pilot_rebel_navy_starships_02");
-            skill.grantSkill(player, "pilot_rebel_navy_starships_03");
-            skill.grantSkill(player, "pilot_rebel_navy_starships_04");
-            skill.grantSkill(player, "pilot_rebel_navy_weapons_01");
-            skill.grantSkill(player, "pilot_rebel_navy_weapons_02");
-            skill.grantSkill(player, "pilot_rebel_navy_weapons_03");
-            skill.grantSkill(player, "pilot_rebel_navy_weapons_04");
-            skill.grantSkill(player, "pilot_rebel_navy_procedures_01");
-            skill.grantSkill(player, "pilot_rebel_navy_procedures_02");
-            skill.grantSkill(player, "pilot_rebel_navy_procedures_03");
-            skill.grantSkill(player, "pilot_rebel_navy_procedures_04");
-            skill.grantSkill(player, "pilot_rebel_navy_droid_01");
-            skill.grantSkill(player, "pilot_rebel_navy_droid_02");
-            skill.grantSkill(player, "pilot_rebel_navy_droid_03");
-            skill.grantSkill(player, "pilot_rebel_navy_droid_04");
-            skill.grantSkill(player, "pilot_rebel_navy_master");
-            sendSystemMessageTestingOnly(player, "Master Rebel Pilot skills received.");
-        }
-        else if (idx == 2)
-        {
-            skill.grantSkill(player, "pilot_neutral_novice");
-            skill.grantSkill(player, "pilot_neutral_starships_01");
-            skill.grantSkill(player, "pilot_neutral_starships_02");
-            skill.grantSkill(player, "pilot_neutral_starships_03");
-            skill.grantSkill(player, "pilot_neutral_starships_04");
-            skill.grantSkill(player, "pilot_neutral_weapons_01");
-            skill.grantSkill(player, "pilot_neutral_weapons_02");
-            skill.grantSkill(player, "pilot_neutral_weapons_03");
-            skill.grantSkill(player, "pilot_neutral_weapons_04");
-            skill.grantSkill(player, "pilot_neutral_procedures_01");
-            skill.grantSkill(player, "pilot_neutral_procedures_02");
-            skill.grantSkill(player, "pilot_neutral_procedures_03");
-            skill.grantSkill(player, "pilot_neutral_procedures_04");
-            skill.grantSkill(player, "pilot_neutral_droid_01");
-            skill.grantSkill(player, "pilot_neutral_droid_02");
-            skill.grantSkill(player, "pilot_neutral_droid_03");
-            skill.grantSkill(player, "pilot_neutral_droid_04");
-            skill.grantSkill(player, "pilot_neutral_master");
-            sendSystemMessageTestingOnly(player, "Master Privateer Pilot skills received.");
+            case 0:
+                skill.grantSkill(player, "pilot_imperial_navy_novice");
+                skill.grantSkill(player, "pilot_imperial_navy_starships_01");
+                skill.grantSkill(player, "pilot_imperial_navy_starships_02");
+                skill.grantSkill(player, "pilot_imperial_navy_starships_03");
+                skill.grantSkill(player, "pilot_imperial_navy_starships_04");
+                skill.grantSkill(player, "pilot_imperial_navy_weapons_01");
+                skill.grantSkill(player, "pilot_imperial_navy_weapons_02");
+                skill.grantSkill(player, "pilot_imperial_navy_weapons_03");
+                skill.grantSkill(player, "pilot_imperial_navy_weapons_04");
+                skill.grantSkill(player, "pilot_imperial_navy_procedures_01");
+                skill.grantSkill(player, "pilot_imperial_navy_procedures_02");
+                skill.grantSkill(player, "pilot_imperial_navy_procedures_03");
+                skill.grantSkill(player, "pilot_imperial_navy_procedures_04");
+                skill.grantSkill(player, "pilot_imperial_navy_droid_01");
+                skill.grantSkill(player, "pilot_imperial_navy_droid_02");
+                skill.grantSkill(player, "pilot_imperial_navy_droid_03");
+                skill.grantSkill(player, "pilot_imperial_navy_droid_04");
+                skill.grantSkill(player, "pilot_imperial_navy_master");
+                sendSystemMessageTestingOnly(player, "Master Imperial Pilot skills received.");
+                break;
+            case 1:
+                skill.grantSkill(player, "pilot_rebel_navy_novice");
+                skill.grantSkill(player, "pilot_rebel_navy_starships_01");
+                skill.grantSkill(player, "pilot_rebel_navy_starships_02");
+                skill.grantSkill(player, "pilot_rebel_navy_starships_03");
+                skill.grantSkill(player, "pilot_rebel_navy_starships_04");
+                skill.grantSkill(player, "pilot_rebel_navy_weapons_01");
+                skill.grantSkill(player, "pilot_rebel_navy_weapons_02");
+                skill.grantSkill(player, "pilot_rebel_navy_weapons_03");
+                skill.grantSkill(player, "pilot_rebel_navy_weapons_04");
+                skill.grantSkill(player, "pilot_rebel_navy_procedures_01");
+                skill.grantSkill(player, "pilot_rebel_navy_procedures_02");
+                skill.grantSkill(player, "pilot_rebel_navy_procedures_03");
+                skill.grantSkill(player, "pilot_rebel_navy_procedures_04");
+                skill.grantSkill(player, "pilot_rebel_navy_droid_01");
+                skill.grantSkill(player, "pilot_rebel_navy_droid_02");
+                skill.grantSkill(player, "pilot_rebel_navy_droid_03");
+                skill.grantSkill(player, "pilot_rebel_navy_droid_04");
+                skill.grantSkill(player, "pilot_rebel_navy_master");
+                sendSystemMessageTestingOnly(player, "Master Rebel Pilot skills received.");
+                break;
+            case 2:
+                skill.grantSkill(player, "pilot_neutral_novice");
+                skill.grantSkill(player, "pilot_neutral_starships_01");
+                skill.grantSkill(player, "pilot_neutral_starships_02");
+                skill.grantSkill(player, "pilot_neutral_starships_03");
+                skill.grantSkill(player, "pilot_neutral_starships_04");
+                skill.grantSkill(player, "pilot_neutral_weapons_01");
+                skill.grantSkill(player, "pilot_neutral_weapons_02");
+                skill.grantSkill(player, "pilot_neutral_weapons_03");
+                skill.grantSkill(player, "pilot_neutral_weapons_04");
+                skill.grantSkill(player, "pilot_neutral_procedures_01");
+                skill.grantSkill(player, "pilot_neutral_procedures_02");
+                skill.grantSkill(player, "pilot_neutral_procedures_03");
+                skill.grantSkill(player, "pilot_neutral_procedures_04");
+                skill.grantSkill(player, "pilot_neutral_droid_01");
+                skill.grantSkill(player, "pilot_neutral_droid_02");
+                skill.grantSkill(player, "pilot_neutral_droid_03");
+                skill.grantSkill(player, "pilot_neutral_droid_04");
+                skill.grantSkill(player, "pilot_neutral_master");
+                sendSystemMessageTestingOnly(player, "Master Privateer Pilot skills received.");
+                break;
+            default:
+                break;
         }
         handlePilotSkillSelect(player);
         return SCRIPT_CONTINUE;
@@ -7674,13 +7681,13 @@ public class terminal_character_builder extends script.base_script
             setObjVar(player, "character_builder.object_tool.frog", 1);
             return SCRIPT_CONTINUE;
         }
-        else if (message5.equals("loot")) // this is hidden so only me and u guys know about it.
+        else if (message5.equals("loot"))
         {
-                    String lootManager = "";
-                    String lootboxtitle = "Loot Box Tool";
-                    String lootboxmenu = "Used to make loot boxes. Enter Loot table to spawn a treasure chest with 40 loots items.";
-                    sui.filteredInputbox(self, player, lootboxmenu, lootboxtitle, "handleLootBox", lootManager);
-                    return SCRIPT_CONTINUE;
+            String lootManager = "";
+            String lootboxtitle = "Loot Box Tool";
+            String lootboxmenu = "Used to make loot boxes. Enter Loot table to spawn a treasure chest with 40 loots items.";
+            sui.filteredInputbox(self, player, lootboxmenu, lootboxtitle, "handleLootBox", lootManager);
+            return SCRIPT_CONTINUE;
         }
         else
         {
@@ -9743,42 +9750,50 @@ public class terminal_character_builder extends script.base_script
                 sendSystemMessageTestingOnly(player, "You are an Imperial Pilot!  You must surrender your current space faction before you become a Rebel!");
                 return SCRIPT_OVERRIDE;
             }
-            if (factionName == null)
+            if (null == factionName)
             {
                 pvpSetAlignedFaction(player, (370444368));
                 pvpMakeCovert(player);
                 sendSystemMessageTestingOnly(player, "Faction Set.  You are now a Covert Rebel!");
             }
-            else if (factionName.equals("Imperial"))
+            else switch (factionName)
             {
-                sendSystemMessageTestingOnly(player, "You are an Imperial!  You must surrender your current faction before you become a Rebel!");
-            }
-            else if (factionName.equals("Rebel"))
-            {
-                sendSystemMessageTestingOnly(player, "You are already a Rebel!");
+                case "Imperial":
+                    sendSystemMessageTestingOnly(player, "You are an Imperial!  You must surrender your current faction before you become a Rebel!");
+                    break;
+                case "Rebel":
+                    sendSystemMessageTestingOnly(player, "You are already a Rebel!");
+                    break;
+                default:
+                    break;
             }
             break;
+
             case 2:
             if (space_flags.isRebelPilot(player))
             {
                 sendSystemMessageTestingOnly(player, "You are a Rebel Pilot!  You must surrender your current space faction before you become an Imperial!");
                 return SCRIPT_OVERRIDE;
             }
-            if (factionName == null)
+            if (null == factionName)
             {
                 pvpSetAlignedFaction(player, (-615855020));
                 pvpMakeCovert(player);
                 sendSystemMessageTestingOnly(player, "Faction Set.  You are now a Covert Imperial!");
             }
-            else if (factionName.equals("Rebel"))
+            else switch (factionName)
             {
-                sendSystemMessageTestingOnly(player, "You are a Rebel!  You must surrender your current faction before you become an Imperial!");
-            }
-            else if (factionName.equals("Imperial"))
-            {
-                sendSystemMessageTestingOnly(player, "You are already an Imperial!");
+                case "Rebel":
+                    sendSystemMessageTestingOnly(player, "You are a Rebel!  You must surrender your current faction before you become an Imperial!");
+                    break;
+                case "Imperial":
+                    sendSystemMessageTestingOnly(player, "You are already an Imperial!");
+                    break;
+                default:
+                    break;
             }
             break;
+
             case 3:
             if (factionName == null)
             {
@@ -9857,9 +9872,6 @@ public class terminal_character_builder extends script.base_script
             cleanScriptVars(player);
             return SCRIPT_OVERRIDE;
         }
-        String prompt = "Select the desired roadmap skill option";
-        String title = "Test Center Terminal";
-        int pid = 0;
         switch (idx)
         {
             case 0:
@@ -9938,7 +9950,6 @@ public class terminal_character_builder extends script.base_script
     }
     public void handleRoadmapChoice(obj_id player) throws InterruptedException
     {
-        obj_id self = getSelf();
         String[] roadmapList = getRoadmapList();
         if (roadmapList == null || roadmapList.length == 0)
         {
@@ -10156,10 +10167,7 @@ public class terminal_character_builder extends script.base_script
                 return SCRIPT_CONTINUE;
             }
             newAbilityList = new int[chAbilityList.length + 1];
-            for (int i = 0; i < chAbilityList.length; i++)
-            {
-                newAbilityList[i] = chAbilityList[i];
-            }
+            System.arraycopy(chAbilityList, 0, newAbilityList, 0, chAbilityList.length);
             newAbilityList[newAbilityList.length - 1] = petAbilityList[idx];
         }
         else
@@ -11381,9 +11389,9 @@ public class terminal_character_builder extends script.base_script
     }
     public void grantChronicleSkills(obj_id objPlayer, String[] strSkillList) throws InterruptedException
     {
-        for (int intI = 0; intI < strSkillList.length; intI++)
+        for (String strSkillList1 : strSkillList)
         {
-            grantSkill(objPlayer, strSkillList[intI]);
+            grantSkill(objPlayer, strSkillList1);
         }
     }
 }

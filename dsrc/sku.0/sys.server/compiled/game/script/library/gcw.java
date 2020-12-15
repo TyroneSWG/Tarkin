@@ -631,7 +631,6 @@ public class gcw extends script.base_script
         intScoreChange = intScoreChange * -1;
         String strFaction = getStringObjVar(objObject, "faction");
         changeGCWScore(locTest, intScoreChange, strFaction);
-        return;
     }
     public static boolean canPlaceFactionBaseByPlanet(obj_id player, obj_id deed, String planet) throws InterruptedException
     {
@@ -639,11 +638,7 @@ public class gcw extends script.base_script
         {
             return false;
         }
-        if (!canPlaceFactionBaseByScore(player, deed, planet))
-        {
-            return false;
-        }
-        return true;
+        return canPlaceFactionBaseByScore(player, deed, planet);
     }
     public static boolean canPlaceFactionBaseByScore(obj_id player, obj_id deed, String planet) throws InterruptedException
     {
@@ -973,7 +968,7 @@ public class gcw extends script.base_script
     }
     public static int findAttackerInArray(Vector attackList, obj_id attacker) throws InterruptedException
     {
-        if (attackList == null || attackList.size() == 0)
+        if (attackList == null || attackList.isEmpty())
         {
             return -1;
         }
@@ -1058,7 +1053,7 @@ public class gcw extends script.base_script
             return true;
         }
         Vector attackerList = utils.getResizeableStringBatchScriptVar(player, gcw.LIST_CREDIT_FOR_KILLS);
-        if (attackerList == null || attackerList.size() == 0)
+        if (attackerList == null || attackerList.isEmpty())
         {
             return false;
         }
@@ -1224,7 +1219,7 @@ public class gcw extends script.base_script
     }
     public static int getAccruedPoints(Vector attackList, obj_id attacker) throws InterruptedException
     {
-        if (attackList == null || attackList.size() == 0)
+        if (attackList == null || attackList.isEmpty())
         {
             return 0;
         }
@@ -1744,7 +1739,7 @@ public class gcw extends script.base_script
             return;
         }
         value *= GCW_PLAYER_BASE_DESTRUCTION;
-        if (filteredList == null || filteredList.size() == 0)
+        if (filteredList == null || filteredList.isEmpty())
         {
             CustomerServiceLog("GCW_points_player_base_busting", "There are no valid players in the filtered list");
             return;
@@ -1860,7 +1855,6 @@ public class gcw extends script.base_script
             utils.setScriptVar(controller, "pvp_region", regionName);
             registerPvpRegionControllerWithPlanet(controller, regionName);
         }
-        return;
     }
     public static boolean isPlayerValidOnBattlefield(obj_id player, obj_id controller) throws InterruptedException
     {
@@ -1918,11 +1912,7 @@ public class gcw extends script.base_script
             sendSystemMessage(player, SID_YOU_NEED_ENTERTAINMENT_QUEST);
             return false;
         }
-        if (buff.hasBuff(npc, GCW_NPC_ENTERTAINED_BUFF))
-        {
-            return false;
-        }
-        return true;
+        return !buff.hasBuff(npc, GCW_NPC_ENTERTAINED_BUFF);
     }
     public static boolean setEntertainGcwNonPlayerCharacter(obj_id player, obj_id npc) throws InterruptedException
     {
@@ -2085,11 +2075,7 @@ public class gcw extends script.base_script
                 sui.setPid(player, pid, gcw.TRADER_REPAIR_PID);
                 break;
         }
-        if (pid < 0)
-        {
-            return false;
-        }
-        return true;
+        return pid >= 0;
     }
     public static boolean repairGcwObject(obj_id object, obj_id player, int resourceCount) throws InterruptedException
     {
@@ -2516,11 +2502,7 @@ public class gcw extends script.base_script
         {
             return false;
         }
-        if (!utils.hasScriptVar(sequencer, "gcw.invasionRunning"))
-        {
-            return false;
-        }
-        return true;
+        return utils.hasScriptVar(sequencer, "gcw.invasionRunning");
     }
     public static void gcwSetCredits(obj_id who, int playerGCW, int playerPvpKills, int playerKills, int playerAssists, int playerCraftedItems, int playerDestroyedItems) throws InterruptedException
     {
@@ -2634,20 +2616,25 @@ public class gcw extends script.base_script
         }
         int lastPulse = utils.getIntScriptVar(planet, "gcw.calendar_time." + cityName);
         int nextPulseMultiplier = utils.getIntScriptVar(planet, "gcw.calendar_time_next." + cityName);
-        if (phase == GCW_CITY_PHASE_CONSTRUCTION)
+        switch (phase)
         {
-            int nextPulse = (lastPulse + GCW_CONSTRUCTION_END_TIMER);
-            return utils.padTimeHM(nextPulse - currentTime);
-        }
-        else if (phase == GCW_CITY_PHASE_COMBAT)
-        {
-            int nextPulse = (lastPulse + GCW_CONSTRUCTION_END_TIMER + GCW_COMBAT_END_TIMER);
-            return utils.padTimeHM(nextPulse - currentTime);
-        }
-        else if (phase == GCW_CITY_PHASE_UNKNOWN)
-        {
-            int nextPulse = gcwGetNextInvasionTime(cityName);
-            return utils.padTimeHM(nextPulse);
+            case GCW_CITY_PHASE_CONSTRUCTION:
+            {
+                int nextPulse = (lastPulse + GCW_CONSTRUCTION_END_TIMER);
+                return utils.padTimeHM(nextPulse - currentTime);
+            }
+            case GCW_CITY_PHASE_COMBAT:
+            {
+                int nextPulse = (lastPulse + GCW_CONSTRUCTION_END_TIMER + GCW_COMBAT_END_TIMER);
+                return utils.padTimeHM(nextPulse - currentTime);
+            }
+            case GCW_CITY_PHASE_UNKNOWN:
+            {
+                int nextPulse = gcwGetNextInvasionTime(cityName);
+                return utils.padTimeHM(nextPulse);
+            }
+            default:
+                break;
         }
         return "";
     }
