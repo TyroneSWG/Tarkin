@@ -1,0 +1,4 @@
+// Play Skeletal Animation Action - Posture
+// META(CHUNKID:PSTR)
+
+Rtag[New Server Posture Variable]

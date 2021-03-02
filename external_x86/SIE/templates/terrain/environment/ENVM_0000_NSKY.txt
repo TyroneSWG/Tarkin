@@ -1,0 +1,4 @@
+// Night Sky
+// META(CHUNKID:NSKY)
+
+String[Night Shader] // .SHT Path

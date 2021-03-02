@@ -1,0 +1,7 @@
+// Path Node
+// META(CHUNKID:PNOD)
+enum[PathNode]{CellPortal=0,CellWaypoint=1,CellPOI=2,BuildingEntrance=3,BuildingCell=4,BuildingPortal=5,CityBuildingEntrance=6,CityWaypoint=7,CityPOI=8,CityBuilding=9,CityEntrance=10,BuildingCellPart=11,Invalid=12}
+struct[Node]{Int[Index](default=-1),Int[ID](default=-1),Int[Key](default=-1),Int[Type](default=12,enum=PathNode),Vec3[Position],Float[Radius](default=-1)}
+
+Int[Count]
+Node[Path Node, Count]

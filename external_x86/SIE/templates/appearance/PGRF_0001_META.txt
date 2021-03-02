@@ -1,0 +1,5 @@
+// Path Graph Meta
+// META(CHUNKID:META)
+enum[Type]{Cell=0,Building=1,City=2,None=3}
+
+Int[Path Graph Type](default=3,enum=Type]

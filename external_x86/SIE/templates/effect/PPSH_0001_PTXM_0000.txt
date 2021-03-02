@@ -1,0 +1,15 @@
+// Pixel Texture Map
+// META(CHUNKID:0000)
+enum[TextureAddress]{Wrap=0,Mirror=1,Clamp=2,Border=3,MirrorOnce=4,Invalid=5}
+enum[TextureFilter]{None=0,Point=1,Linear=2,Anisotropic=3,FlatCubic=4,GaussianCubic=5,Invalid=6}
+
+Byte[Texture ID] // 0-15 (t0, t1, etc)
+Rtag[Texture Tag]
+Int[Unused1]
+Byte[Texture Address U](default=5,enum=TextureAddress)
+Byte[Texture Address V](default=5,enum=TextureAddress)
+Byte[Texture Address W](default=5,enum=TextureAddress)
+Byte[Texture Mip Filter](default=6,enum=TextureFilter)
+Byte[Texture Minification Filter](default=6,enum=TextureFilter)
+Byte[Texture Magnification Filter](default=6,enum=TextureFilter)
+Byte[Unused2]

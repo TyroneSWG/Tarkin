@@ -1,0 +1,17 @@
+// Swoosh
+// META(CHUNKID:0000)
+enum[SwooshEnum]{None=0,_0=1,_1=2,_2=3,_3=4,_4=5,_5=6,_6=7,_7=8,_8=9,_9=10,Count=11}
+enum[AppearancePosition]{Top=0,Middle=1,Bottom=2,Random=3}
+
+Rgbaf[Color]
+Float[Width](default=0.1)
+String[Start Appearance] // .PRT Path
+String[End Appearance] // .PRT Path
+String[Sound] // .SND Path
+Float[Shader Stretch Distance](default=0.5)
+Float[Shader Scroll Speed]
+Int[Fade Alpha](default=3,enum=SwooshEnum)
+Int[Taper Geometry](default=0,enum=SwooshEnum)
+Bool[Multiply Color By Alpha]
+Int[Start Appearance Position](default=1,enum=AppearancePosition)
+Int[End Appearance Position](default=1,enum=AppearancePosition)

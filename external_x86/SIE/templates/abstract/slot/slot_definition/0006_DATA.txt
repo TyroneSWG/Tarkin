@@ -1,0 +1,5 @@
+// Slot Definitions
+// META(CHUNKID:DATA)
+Struct[Slot]{String[Name],Bool[Can Accept Any Item],Bool[Is Player Modifiable],Bool[Is Appearance Related],String[Hardpoint],Short[Combat Bone],Bool[Observe With Parent],Bool[Expose With Parent]}
+
+Slot[Slot, -1]

@@ -1,0 +1,5 @@
+// Stars
+// META(CHUNKID:STAR)
+
+String[Star ColorRamp] // e.g. terrain/colorramp/filename.tga
+Int[Number Of Stars]

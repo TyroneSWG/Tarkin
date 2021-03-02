@@ -1,0 +1,6 @@
+// Affector Flora Non-Collidable Constant
+int[Family ID]
+int[Operation]
+int[Remove All Flora]
+int[Override Density]
+float[Density]

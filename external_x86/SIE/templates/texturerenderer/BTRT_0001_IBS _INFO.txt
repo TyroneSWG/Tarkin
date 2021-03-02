@@ -1,0 +1,4 @@
+// Index Buffer Info
+// META(CHUNKID:INFO)
+
+Int[Index Buffer Count]

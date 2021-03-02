@@ -1,0 +1,4 @@
+// Chat Command Types
+// META(CHUNKID:TYPS)
+
+String[Command, -1]

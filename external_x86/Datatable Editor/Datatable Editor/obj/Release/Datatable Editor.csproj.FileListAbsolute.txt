@@ -1,0 +1,10 @@
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\bin\Release\Datatable Editor.exe.config
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\bin\Release\Datatable Editor.exe
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\bin\Release\Datatable Editor.pdb
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable Editor.csprojAssemblyReference.cache
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable_Editor.Form1.resources
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable_Editor.Properties.Resources.resources
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable Editor.csproj.GenerateResource.cache
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable Editor.csproj.CoreCompileInputs.cache
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable Editor.exe
+C:\Users\jojoj\OneDrive\Desktop\Datatable Editor\Datatable Editor\obj\Release\Datatable Editor.pdb

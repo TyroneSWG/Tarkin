@@ -1,0 +1,3 @@
+// Multifractal family
+int[Family ID]
+string[Family Name]

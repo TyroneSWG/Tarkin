@@ -1,0 +1,4 @@
+// Lightsaber Flicker Secondary Color
+// META(CHUNKID:COLR)
+
+Rgba[Flicker Secondary Color] // Default: 32,32,32,255

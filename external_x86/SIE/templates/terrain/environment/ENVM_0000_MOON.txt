@@ -1,0 +1,7 @@
+// Moon
+// META(CHUNKID:MOON)
+
+String[Moon Shader] // .SHT Path
+Float[Moon Size]
+String[Moon Glow Shader] // .SHT Path
+Float[Moon Glow Size]

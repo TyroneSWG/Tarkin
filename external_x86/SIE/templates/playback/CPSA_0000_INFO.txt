@@ -1,0 +1,5 @@
+// Change Posture Action Template
+// META(CHUNKID:INFO)
+
+Short[Actor ID]
+Rtag[Destination Posture Variable]

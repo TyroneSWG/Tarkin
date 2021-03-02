@@ -1,0 +1,4 @@
+// Lightsaber Base
+// META(CHUNKID:BASE)
+
+String[Hilt] // e.g. appearance/ Path

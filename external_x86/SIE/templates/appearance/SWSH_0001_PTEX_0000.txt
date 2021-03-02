@@ -1,0 +1,11 @@
+// Particle Texture
+// META(CHUNKID:0000)
+
+String[Shader] // .SHT Path
+Int[Frame Count](default=1)
+Int[Frame Start]
+Int[Frame End]
+Float[Frame UV Size](default=1)
+Int[Frames Per Column](default=1)
+Float[Frames Per Second](default=-1)
+Bool[Is Texture Visible](default=true)

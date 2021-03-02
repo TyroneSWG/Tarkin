@@ -1,0 +1,7 @@
+// Set Shader Texture Factor From Palette Operation
+// META(CHUNKID:STFP)
+
+Int[Shader ID](default=-1)
+Rtag[Texture Tag]
+String[Palette] // .PAL Path
+String[Palette Variable] // e.g. index_color_0

@@ -1,0 +1,7 @@
+// Sprite
+// META(CHUNKID:0000)
+
+Vec3[Center]
+Float[Radius]
+Argbf[Color]
+String[Shader] // .SHT Path

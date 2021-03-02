@@ -1,0 +1,7 @@
+// PTAT environment family
+// META(CHUNKID:DATA)
+
+uint[ID]
+string[Name]("new_environment_family")
+rgb[Display colour]
+float[Weight](1.0)

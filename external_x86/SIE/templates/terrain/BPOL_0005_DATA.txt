@@ -1,0 +1,10 @@
+// Boundary Polygon
+struct[ControlPoint]{float[x],float[y]}
+int[particleCount]
+ControlPoint[points,particleCount]
+int[Feather Function]
+float[Feather Distance]
+int[UseLocalWaterTable]
+float[LocalWaterTableHeight]
+float[ShaderSize]
+string[ShaderName]

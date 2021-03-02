@@ -1,0 +1,4 @@
+// Lightsaber Blade Width
+// META(CHUNKID:WDTH)
+
+Float[Width](default=0.15)

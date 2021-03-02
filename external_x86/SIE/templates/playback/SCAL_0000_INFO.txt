@@ -1,0 +1,8 @@
+// Change Scale Action Template
+// META(CHUNKID:INFO)
+enum[BlendMode]{ObjectToTarget=0,TargetToObject=1}
+
+Short[Actor ID](default=-1)
+Byte[Blend Mode]
+Rtag[Target Scale Variable]
+Rtag[Time Duration Variable]

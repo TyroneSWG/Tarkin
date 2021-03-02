@@ -1,0 +1,6 @@
+// Start Trail Action
+// META(CHUNKID:INFO)
+
+Short[Actor ID]
+Rtag[Trail Bitfield Variable](default=FBRT)
+Rtag[Swoosh Variable](default=HSWS)

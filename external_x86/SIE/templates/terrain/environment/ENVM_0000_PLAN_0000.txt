@@ -1,0 +1,9 @@
+// Planet
+// META(CHUNKID:0000)
+
+String[Appearance]  // e.g. appearance/ File Path
+Vec3[Direction]
+Vec3[Orientation]
+Float[Halo Roll]
+Float[Halo Scale]
+Byte[Infinite Distance]

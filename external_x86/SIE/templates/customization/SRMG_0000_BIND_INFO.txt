@@ -1,0 +1,5 @@
+// Death
+// META(CHUNKID:INFO)
+
+String[Slot Type] // e.g. chest2
+String[Shared Owner] // e.g. /shared_owner/blend_jacket_belt Path

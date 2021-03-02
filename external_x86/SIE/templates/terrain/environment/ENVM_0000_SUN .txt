@@ -1,0 +1,7 @@
+// Sun
+// META(CHUNKID:SUN )
+
+String[Sun Shader]  // .SHT Path
+Float[Sun Size]
+String[Sun Glow Shader]  // .SHT Path
+Float[Sun Glow Size]

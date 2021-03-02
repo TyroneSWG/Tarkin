@@ -1,0 +1,10 @@
+// Set Shader Texture 2D Operation
+// META(CHUNKID:SST2)
+
+Int[Shader ID](default=-1)
+Rtag[Texture Tag]
+Int[Base Texture ID](default=-1)
+String[Texture Variable 0] // e.g. index_style_freckles
+Int[Entry Count Subscript 0](default=-1)
+String[Texture Variable 1] // e.g. index_style_freckles
+Int[Entry Count Subscript 1](default=-1)

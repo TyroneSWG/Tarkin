@@ -1,0 +1,5 @@
+// Integer Variable
+// META(CHUNKID:INT )
+
+Rtag[Tag]
+Int[Value]

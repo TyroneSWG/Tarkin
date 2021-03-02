@@ -1,0 +1,3 @@
+// Affector Height Terrace
+float[Flat Ratio]
+float[Terrace Height]

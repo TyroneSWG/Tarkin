@@ -1,0 +1,5 @@
+// String Variable
+// META(CHUNKID:STRN)
+
+Rtag[Tag]
+String[String]

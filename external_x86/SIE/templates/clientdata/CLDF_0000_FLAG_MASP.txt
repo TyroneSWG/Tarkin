@@ -1,0 +1,4 @@
+// Max Animation Speed
+// META(CHUNKID:MASP)
+
+Float[Max Animation Speed]

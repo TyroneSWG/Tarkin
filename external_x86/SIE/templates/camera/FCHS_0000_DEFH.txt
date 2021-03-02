@@ -1,0 +1,8 @@
+// Default Height
+// META(CHUNKID:DEFH)
+
+Float[Default Offset X]
+Float[Reticle Offset Shoulder]
+Float[Default Offset Z]
+Float[First Person X Offset]
+Float[Reticle Offset Center]

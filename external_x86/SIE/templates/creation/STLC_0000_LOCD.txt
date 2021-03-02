@@ -1,0 +1,9 @@
+// Starting Locations
+// META(CHUNKID:LOCD)
+
+String[City]
+String[Planet]
+Vec3[Location]
+String[Cell ID]
+String[Image]
+String[Description ID]

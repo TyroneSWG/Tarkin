@@ -1,0 +1,11 @@
+// Snapshot node
+// META(CHUNKID:DATA)
+
+uint[ID]
+uint[Parent ID]
+uint[Object index]
+uint[Cell ID]
+quat[Rotation]
+vec3[Position]
+float[Radius](0)
+uint[CRC](0)

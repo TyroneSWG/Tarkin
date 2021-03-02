@@ -1,0 +1,4 @@
+// Set Shader Texture Operation Count?
+// META(CHUNKID:INFO)
+
+Int[Count?] // Unsure

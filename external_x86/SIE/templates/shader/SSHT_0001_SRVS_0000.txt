@@ -1,0 +1,5 @@
+// Stencil Reference Value
+// META(CHUNKID:0000)
+struct[SRVS]{Rtag[Texture Tag],Float[Value]} 
+
+SRVS[Factor, -1]

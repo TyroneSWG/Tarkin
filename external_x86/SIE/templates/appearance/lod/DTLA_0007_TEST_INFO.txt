@@ -1,0 +1,4 @@
+// Test Shape
+// META(CHUNKID:INFO)
+
+Bool[Has Test Shape]

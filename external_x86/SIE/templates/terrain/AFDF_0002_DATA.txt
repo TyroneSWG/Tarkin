@@ -1,0 +1,6 @@
+// Affector Radial Far Constant
+int[Family ID]
+int[Operation]
+int[Remove All Radial Flora]
+int[Override Density]
+float[Density]

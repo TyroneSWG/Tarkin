@@ -1,0 +1,10 @@
+// Custom Texture Int Operation
+// META(CHUNKID:TX1D)
+
+Rtag[Texture Tag]
+Short[Base Texture ID]
+Short[Texture Count]
+String[Color Index] // e.g. index_color_0
+Byte[Is Variable Private]
+Short[Variable ID]
+

@@ -1,0 +1,4 @@
+// Space Combat Entry
+// META(CHUNKID:SENT)
+
+String[Sound] // .SND Path

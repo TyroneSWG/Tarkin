@@ -1,0 +1,4 @@
+// Shader Template Map Count
+// META(CHUNKID:INFO)
+
+Int[Shader Template Count]

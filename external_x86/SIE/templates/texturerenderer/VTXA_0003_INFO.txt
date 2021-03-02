@@ -1,0 +1,5 @@
+// Vertex Buffer Info
+// META(CHUNKID:INFO)
+
+Int[Bit Flag]
+Int[Number Of Vertices]

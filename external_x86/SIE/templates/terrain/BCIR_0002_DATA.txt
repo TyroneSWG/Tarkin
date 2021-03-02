@@ -1,0 +1,6 @@
+// Boundary Circle
+float[X Center]
+float[Y Center]
+float[Radius]
+int[Feathering Function]
+float[Feathering Distance]

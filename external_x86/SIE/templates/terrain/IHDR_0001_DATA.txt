@@ -1,0 +1,3 @@
+// Terrain Layers
+int[Layer On/Off]
+string[Layer Name]

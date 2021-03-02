@@ -1,0 +1,9 @@
+// Second/SupplementalMoon
+// META(CHUNKID:SMOO)
+
+String[Second Moon Shader] // .SHT Path
+Float[Second Moon Size]
+String[Second Moon Glow Shader] // .SHT Path
+Float[Second Moon Glow Size]
+Float[Second Moon Yaw] 
+Float[Second Moon Pitch]

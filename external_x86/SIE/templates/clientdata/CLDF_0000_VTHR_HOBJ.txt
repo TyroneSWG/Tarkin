@@ -1,0 +1,12 @@
+// Initial Hardpoint Child Object
+// META(CHUNKID:HOBJ)
+
+String[Name] 
+String[Dependency] 
+String[Exclusion] 
+String[Hardpoint] 
+Vec3[Point]
+Vec3[Point Delta]
+Vec3[Normal]
+Vec3[Normal Delta]
+Float[Probability]

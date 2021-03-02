@@ -1,0 +1,24 @@
+// Implementation Stage
+// META(CHUNKID:0001)
+enum[TextureOperation]{Disable=0,SelectArg1=1,SelectArg2=2,Modulate=3,ModulateX2=4,ModulateX4=5,Add=6,AddSigned=7,AddSignedX2=8,Subtract=9,AddSmooth=10,BlendDiffuseAlpha=11,BlendTextureAlpha=12,BlendFactor Alpha=13,BlendTextureAlphapm=14,BlendCurrentAlpha=15,Premodulate=16,ModulateAlpha(AddColor)=17,ModulateAlpha(AddAlpha)=18,ModulateInvalpha(AddColor)=19,ModulateInvcolor(AddAlpha)=20,BumpEnvMap=21,BumpEnvMapLuminance=22,Dot3=23,MultiplyAdd=24,Lerp=25}
+enum[TextureArgument]{Current=0,Diffuse=1,Specular=2,Temp=3,Texture=4,TextureFactor=5}
+enum[TextureCoordinateGeneration]{PassThrough=0,CameraSpacePosition=1,CameraSpaceNormal=2,CameraSpaceReflectionVector=3,Scroll1=4,Scroll2=5}
+Struct[ColorArgument0]{Byte[Argument](default=3,enum=TextureArgument),Bool[Compliment],Bool[Alpha Replicate]}
+Struct[ColorArgument1]{Byte[Argument](default=0,enum=TextureArgument),Bool[Compliment],Bool[Alpha Replicate]}
+Struct[ColorArgument2]{Byte[Argument](default=4,enum=TextureArgument),Bool[Compliment],Bool[Alpha Replicate]}
+Struct[AlphaArgument0]{Byte[Argument](default=3,enum=TextureArgument),Bool[Compliment]}
+Struct[AlphaArgument1]{Byte[Argument](default=0,enum=TextureArgument),Bool[Compliment]}
+Struct[AlphaArgument2]{Byte[Argument](default=4,enum=TextureArgument),Bool[Compliment]}
+
+Byte[Color Operation](default=3,enum=TextureOperation)
+ColorArgument0[Color Argument 0]
+ColorArgument1[Color Argument 1]
+ColorArgument2[Color Argument 2]
+Byte[Alpha Operation](default=3,enum=TextureOperation)
+AlphaArgument0[Alpha Argument 0]
+AlphaArgument1[Alpha Argument 1]
+AlphaArgument2[Alpha Argument 2]
+Byte[Result Argument](default=0,enum=TextureOperation)
+Rtag[Texture Tag]
+Rtag[Texture Coordinate Set Tag]
+Byte[Texture Coordinate Generation](default=0,enum=TextureCoordinateGeneration)

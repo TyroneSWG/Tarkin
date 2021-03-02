@@ -1,0 +1,4 @@
+// Mood Types
+// META(CHUNKID:TYPS)
+
+String[Mood, -1]

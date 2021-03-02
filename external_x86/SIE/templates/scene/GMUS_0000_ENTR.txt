@@ -1,0 +1,4 @@
+// Combat Entry
+// META(CHUNKID:ENTR)
+
+String[Sound] // .SND Path

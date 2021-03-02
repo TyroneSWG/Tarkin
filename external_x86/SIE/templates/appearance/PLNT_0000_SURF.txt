@@ -1,0 +1,10 @@
+// Planet Surface
+// META(CHUNKID:SURF)
+
+Float[Surface Rotation Rate]
+String[Surface Shader] // .SHT Path
+Float[Surface Radius]
+Float[Surface U Scale MAIN](default=1) // .SHT MAIN Tag?
+Float[Surface V Scale MAIN](default=1) // .SHT MAIN Tag?
+Float[Surface U Scale DETA](default=1) // .SHT DETA Tag?
+Float[Surface V Scale DETA](default=1) // .SHT DETA Tag?

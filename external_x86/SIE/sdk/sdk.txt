@@ -1,0 +1,6 @@
+To write a plugin:
+
+- Reference LibSIEPlugin.dll (source included for reference)
+- Implement a GUI class inheriting from DockContent and implementing IPlugin
+	-  See StfExample for some hints - it was thrown together very fast so don't copy it!
+- Optionally configure VS to copy your plugin .dll to your SIE plugins directory and run SIE. You could quite reasonably test the program as a stand-alone for the majority of purposes too.

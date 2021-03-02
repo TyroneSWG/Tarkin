@@ -1,0 +1,4 @@
+// Race/Creature
+// META(CHUNKID:NAME)
+
+String[Object] // Object .IFF Path

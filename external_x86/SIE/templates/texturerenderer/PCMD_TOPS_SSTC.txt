@@ -1,0 +1,6 @@
+// Set Shader Constant Texture Operation
+// META(CHUNKID:SSTC)
+
+Int[Shader ID](default=-1)
+Rtag[Texture Tag]
+Int[Texture ID](default=-1)

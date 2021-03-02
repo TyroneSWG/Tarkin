@@ -1,0 +1,14 @@
+// Grenade Lob Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Rtag[Hardpoint Variable]
+Rtag[Gravitational Force Variable]
+Rtag[Air Time Variable]
+Rtag[Sit Time Variable]
+Rtag[Is Hit Variable]
+Rtag[Thrown Center Variable]
+Short[Throw Animation Thread ID](default=-1)
+Short[Throw Animation Action ID](default=-1)
+Rtag[Throw Animation Message Variable]

@@ -1,0 +1,12 @@
+// Glow
+// META(CHUNKID:INFO)
+Struct[Color]{Float[a],Float[r],Float[g],Float[b]}
+
+String[Name]
+String[Hardpoint]
+String[Shader Front] // .SHT Path
+String[Shader Back] // .SHT Path
+Color[Color]
+Float[Scale Min]
+Float[Scale Max Front]
+Float[Scale Max Back]

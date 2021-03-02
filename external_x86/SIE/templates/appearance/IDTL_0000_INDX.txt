@@ -1,0 +1,4 @@
+// Indexed Triangle List Index
+// META(CHUNKID:INDX)
+
+Vec3[Index, NumberOfIndices]

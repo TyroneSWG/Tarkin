@@ -1,0 +1,7 @@
+// Arc Target Action Template
+// META(CHUNKID:INFO)
+
+Rtag[Arc Time Variable]
+Rtag[Distance Multiple Variable]
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)

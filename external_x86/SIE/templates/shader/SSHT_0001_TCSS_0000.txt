@@ -1,0 +1,7 @@
+// Texture Coordinate Sets
+// META(CHUNKID:0000)
+struct[TCSS]{Rtag[Texture Tag],Byte[ID]} 
+
+TCSS[Set, -1]
+
+// ID -  0-7

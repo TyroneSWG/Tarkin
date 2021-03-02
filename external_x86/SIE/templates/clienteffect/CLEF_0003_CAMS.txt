@@ -1,0 +1,7 @@
+// Camera Sake
+// META(CHUNKID:CAMS)
+
+Float[Magnitude] 
+Float[Frequency] // In Hz
+Float[Time] // In Seconds
+Float[Fall Off Radius] // In Meters

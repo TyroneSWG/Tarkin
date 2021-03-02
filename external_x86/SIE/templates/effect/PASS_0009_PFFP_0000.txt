@@ -1,0 +1,12 @@
+// Pass Fixed Function Pipeline
+// META(CHUNKID:0000)
+enum[MaterialSource]{Material=0,VertexColor0=1,VertexColor1=2}
+
+Bool[Lighting]
+Bool[Lighting Specular Enabled]
+Bool[Lighting Color Vertex]
+Rtag[Deprecated Lighting Material Tag]
+Byte[Lighting Ambient Color Source](default=0,enum=MaterialSource)
+Byte[Lighting Diffuse Color Source](default=0,enum=MaterialSource)
+Byte[Lighting Specular Color Source](default=0,enum=MaterialSource)
+Byte[Lighting Emissive Color Source](default=0,enum=MaterialSource)

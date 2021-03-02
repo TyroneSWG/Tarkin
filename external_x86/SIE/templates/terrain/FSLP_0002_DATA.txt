@@ -1,0 +1,5 @@
+// Filter Slope
+float[Minimum Angle]
+float[Maximum Angle]
+int[Feathering Function]
+float[Feathering Distance]

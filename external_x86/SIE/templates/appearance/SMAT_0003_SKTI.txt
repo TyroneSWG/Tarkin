@@ -1,0 +1,5 @@
+// Skeleton Info
+// META(CHUNKID:SKTI)
+Struct[SKTI]{String[Skeleton],String[Attachment Transformation]}
+
+SKTI[SKTI, -1] // Skeleton - .SKT Path

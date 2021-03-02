@@ -1,0 +1,5 @@
+// Affector Color Ramp Height
+int[Operation]
+float[Low Height]
+float[High Height]
+string[Ramp]

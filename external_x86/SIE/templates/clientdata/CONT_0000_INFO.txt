@@ -1,0 +1,9 @@
+// Contrail
+// META(CHUNKID:INFO)
+
+String[Name]
+String[Hardpoint 1]
+String[Hardpoint 2]
+String[Swoosh] // .SWH Path
+String[Override Name]
+Float[Width]

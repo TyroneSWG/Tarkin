@@ -1,0 +1,8 @@
+// Cell Light
+// META(CHUNKID:LGHT)
+enum[LightType]{Ambient=0,Parallel=1,Points=2}
+struct[Color]{Float[Alpha],Float[Red],Float[Green],Float[Blue]}
+struct[Light]{Byte[Type](enum=LightType),Color[Diffuse Color],Color[Specular Color],Mat4x3[Transform],Float[Constant Attenuation],Float[Linear Attenuation],Float[Quadric Attenuation]}
+
+Int[NumberOfLights]
+Light[Light, NumberOfLights]

@@ -1,0 +1,8 @@
+//Radial Flora Family
+struct[ShaderChild]{string[Shader Filename],float[Weight],float[Distance],float[Min Width],float[Max Width],float[Min Height],float[Max Height],int[Maintain Aspect Ratio],int[Sway Flora],float[Displacement(m)],float[Period],int[Align to Terrain],int[Create+]}
+int[Family ID]
+string[Family Name]
+rgb[Color]
+float[Density]
+int[ChildCount]
+ShaderChild[Child, ChildCount]

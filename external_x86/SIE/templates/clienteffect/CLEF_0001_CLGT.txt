@@ -1,0 +1,9 @@
+// Camera Light
+// META(CHUNKID:CLGT)
+
+rgb[Light Color]
+Float[Time] // In Seconds
+Float[Range] // In Meters
+Float[Constant Attenuation]
+Float[Linear Attenuation]
+Float[Quadric Attenuation]

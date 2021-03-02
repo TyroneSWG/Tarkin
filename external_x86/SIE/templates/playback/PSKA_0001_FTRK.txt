@@ -1,0 +1,4 @@
+// Play Skeletal Animation Action - Face Tracking
+// META(CHUNKID:FTRK)
+
+Short[Face Tracking Target Actor ID](default=-1)

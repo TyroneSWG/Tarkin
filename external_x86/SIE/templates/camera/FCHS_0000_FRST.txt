@@ -1,0 +1,4 @@
+// First Person Distance
+// META(CHUNKID:FRST)
+
+Float[Third Person Distance](default=0.5)

@@ -1,0 +1,6 @@
+// Cell
+// META(CHUNKID:DATA)
+
+Int[Number Of Portals]
+Bool[Can See Parent Cell]
+String[Appearance] // e.g. appearance/ File Path

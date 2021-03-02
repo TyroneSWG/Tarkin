@@ -1,0 +1,5 @@
+// Pixel Shader
+// META(CHUNKID:DATA)
+
+Byte[Pixel Texture Map Count]
+String[Pixel Shader] // .PSH Path

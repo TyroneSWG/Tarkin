@@ -1,0 +1,4 @@
+// Incapacitated
+// META(CHUNKID:INCP)
+
+String[Sound] // .SND Path

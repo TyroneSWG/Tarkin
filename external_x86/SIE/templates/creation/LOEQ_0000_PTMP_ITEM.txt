@@ -1,0 +1,5 @@
+// Equipment Item
+// META(CHUNKID:ITEM)
+
+Int[Arrangement]
+String[Object] // Object .IFF Path

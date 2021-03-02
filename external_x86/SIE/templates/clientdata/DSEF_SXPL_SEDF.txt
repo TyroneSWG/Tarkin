@@ -1,0 +1,5 @@
+// Ship Destruction Client Effect
+// META(CHUNKID:SEDF)
+
+String[Client Effect] // .CEF Path 
+Float[Normal Size]

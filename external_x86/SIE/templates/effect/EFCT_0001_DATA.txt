@@ -1,0 +1,5 @@
+// Effect Data
+// META(CHUNKID:DATA)
+
+Byte[Number of Implementations]
+Bool[Contains Precalculated Vertex Lighting]

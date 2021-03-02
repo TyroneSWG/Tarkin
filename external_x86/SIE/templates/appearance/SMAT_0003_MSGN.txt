@@ -1,0 +1,4 @@
+// Mesh Generator
+// META(CHUNKID:MSGN)
+
+String[Non Static Mesh LoD, -1] // .LMG Path

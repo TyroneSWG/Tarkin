@@ -1,0 +1,4 @@
+// Ambient Sound
+// META(CHUNKID:ASND)
+
+String[Sound] // .SND Path

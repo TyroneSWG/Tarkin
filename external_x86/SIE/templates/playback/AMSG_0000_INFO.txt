@@ -1,0 +1,5 @@
+// Animation Message Action Template
+// META(CHUNKID:INFO)
+
+Short[Actor ID](default=-1)
+Rtag[Message Name Variable]

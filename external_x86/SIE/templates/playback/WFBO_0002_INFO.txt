@@ -1,0 +1,5 @@
+// Wait For Bolt Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)

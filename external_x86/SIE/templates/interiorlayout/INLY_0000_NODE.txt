@@ -1,0 +1,6 @@
+// Interior Layout File Node
+// META(CHUNKID:NODE)
+
+String[Object] // Object .IFF Path
+String[Cell Name]
+mat4x3[Matrix] // Transform Object to Parent

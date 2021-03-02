@@ -1,0 +1,8 @@
+// Initial Hardpoint Child Object
+// META(CHUNKID:IHOB)
+
+String[Appearance] // e.g. appearance/ File Path
+String[Hardpoint] 
+Float[Recoil Distance]
+Float[Recoil Rate]
+Float[Recoil Return Rate]

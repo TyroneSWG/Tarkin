@@ -1,0 +1,5 @@
+// Client Effect
+// META(CHUNKID:CEFT)
+
+String[Action]
+String[Client Effect] // .CEF Path

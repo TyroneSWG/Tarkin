@@ -1,0 +1,11 @@
+// Vehicle Thruster Sound
+// META(CHUNKID:VSND)
+
+String[Hardpoint]
+String[Idle] // .SND Path
+String[Acceleration] // .SND Path
+String[Deceleration] // .SND Path
+String[Run] // .SND Path
+String[Damage Idle]
+String[Damage Acceleration]
+String[Damage Deceleration]

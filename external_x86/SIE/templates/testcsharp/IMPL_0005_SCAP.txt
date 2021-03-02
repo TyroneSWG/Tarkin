@@ -1,0 +1,44 @@
+// META(LANGUAGE:C#)
+// META(CLASS:ShaderCapsCollection)
+
+class ShaderCapsCollection : IIffSerialisable
+{
+	struct ShaderCaps
+	{
+		private int major;
+		public int Major { get { return major; } set { major = value; }}
+		
+		private int minor;
+		public int Minor { get { return minor; } set { minor = value; }}
+		
+		public ShaderCaps(int code)
+		{
+			major = (code >> 8) & 0xFF;
+			minor = code & 0xFF;
+		}
+	}
+
+	public List<ShaderCaps> Caps { get; private set; }
+
+	public ShaderCapsCollection(IffStream iffStream)
+	{
+		Caps = new List<ShaderCaps>();
+		ReadObject(iffStream);
+	}
+	
+	public void ReadObject(IffStream iffStream)
+	{
+		while (!iffStream.CurrentChunk.IsFullyRead())
+		{
+			Caps.Add(new ShaderCaps(iffStream.GetInt32()));
+		}
+	}
+	
+	public void WriteObject(IffWriter iffStream)
+	{
+		foreach (var v in Caps)
+		{
+			iffStream.Write(((v.Major & 0xFF) << 8) | (v.Minor & 0xFF));
+		}
+	}
+}

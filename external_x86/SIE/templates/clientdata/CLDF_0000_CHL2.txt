@@ -1,0 +1,11 @@
+// Child 2
+// META(CHUNKID:CHL2)
+
+String[Object] // Object .IFF Path
+Vec3[Position]
+Vec3[Orientation]
+Vec3[Rotations per Second]
+Vec3[Seesaws Per Second]
+Float[Seesaw Magnitude]
+Vec3[Spring Offset]
+Float[Springs Per Second]

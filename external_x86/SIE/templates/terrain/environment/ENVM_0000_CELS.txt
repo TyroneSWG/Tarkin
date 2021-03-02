@@ -1,0 +1,11 @@
+// Celestial Object
+// META(CHUNKID:CELS)
+
+String[Shader] // .SHT Path
+Float[Size]
+String[Glow Shader] // .SHT Path
+Float[Glow Size]
+Float[Yaw]
+Float[Pitch]
+Float[Pitch Direction]
+Float[Cycle Time]

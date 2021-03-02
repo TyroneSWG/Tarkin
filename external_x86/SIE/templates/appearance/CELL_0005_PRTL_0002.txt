@@ -1,0 +1,7 @@
+// Cell Portal
+// META(CHUNKID:0001)
+
+Bool[Is Passable]
+Int[Geometry ID]
+Bool[Is Geometry Winding Clockwise]
+Int[Unused]

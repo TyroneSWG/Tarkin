@@ -1,0 +1,7 @@
+// Wing Data
+// META(CHUNKID:DATA)
+
+String[Object] // Object .IFF Path
+Float[Rotation]
+Float[RotationTime]
+String[Sound] // .SND File

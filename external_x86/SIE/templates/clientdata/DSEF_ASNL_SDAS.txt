@@ -1,0 +1,5 @@
+// Ship Destruction Ambient Sound
+// META(CHUNKID:SDAS)
+
+String[Sound] // .SND Path 
+Float[Distance Factor]

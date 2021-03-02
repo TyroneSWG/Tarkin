@@ -1,0 +1,7 @@
+// Vehicle Ground Effect
+// META(CHUNKID:INFO)
+
+Bool[Is Water Effect]
+String[Sound] // .SND Path
+String[Hardpoint] 
+String[Particle] // .PRT Path

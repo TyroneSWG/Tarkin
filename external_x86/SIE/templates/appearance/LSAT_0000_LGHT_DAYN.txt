@@ -1,0 +1,4 @@
+// Lightsaber Flicker Day/Night Aware
+// META(CHUNKID:DAYN)
+
+Bool[Is Day/Night Aware]

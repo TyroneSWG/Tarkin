@@ -1,0 +1,11 @@
+// Fire Projectile Action Template
+// META(CHUNKID:INFO)
+
+Short[Emitting Actor ID](default=-1)
+Rtag[Hardpoint Variable]
+Rtag[Projectile Filename Variable]
+Rtag[Projectile Velocity Variable]
+Short[Target Actor ID](default=-1)
+Bool[Is Hit Successfully]
+Short[Watcher ID](default=-1)
+Short[Watcher Thread]

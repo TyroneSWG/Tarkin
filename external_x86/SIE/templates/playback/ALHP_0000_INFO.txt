@@ -1,0 +1,6 @@
+// Align To Hardpoint Action Template
+// META(CHUNKID:INFO)
+
+Short[Move Actor ID](default=-1)
+Short[Alignment Actor ID](default=-1)
+Rtag[Alignment Hardpoint Variable]

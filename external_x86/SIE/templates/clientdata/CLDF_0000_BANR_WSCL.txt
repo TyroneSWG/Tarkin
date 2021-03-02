@@ -1,0 +1,4 @@
+// Wind Speed Scale
+// META(CHUNKID:WSCL)
+
+Float[Wind Speed Scale]

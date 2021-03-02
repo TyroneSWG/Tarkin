@@ -1,0 +1,4 @@
+// Hyperspace
+// META(CHUNKID:HYPR)
+
+Vec3[Hyperspace Camera Offset]

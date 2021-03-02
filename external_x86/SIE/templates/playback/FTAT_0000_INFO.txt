@@ -1,0 +1,8 @@
+// Fire Turret Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Short[Watcher Thread ID](default=-1)
+Short[Watcher Action ID](default=-1)
+Rtag[Is Hit Variable]

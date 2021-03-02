@@ -1,0 +1,8 @@
+// Implementation Data
+// META(CHUNKID:DATA)
+
+Byte[Number of Passes]
+Rtag[Phase Tag](default=-1)
+Bool[Casts Shadows](default=true)
+Bool[Is Collidable](default=true)
+Byte[Unused] // Heat?

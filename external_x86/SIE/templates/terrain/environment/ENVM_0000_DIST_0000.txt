@@ -1,0 +1,8 @@
+// Distance
+// META(CHUNKID:0000)
+
+String[Appearance]  // e.g. appearance/ File Path
+Vec3[Direction]
+Vec3[Orientation]
+Bool[Infinite Distance]
+Int[Flag]

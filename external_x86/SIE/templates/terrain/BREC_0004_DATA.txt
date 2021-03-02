@@ -1,0 +1,13 @@
+// Boundary Rectangle
+float[Left X]
+Float[Near Z]
+Float[Right X]
+Float[Far Z]
+int[Feathering Function]
+float[Feathering Distance]
+int[Is Local Water Table]
+int[Is Global Water Table]
+float[Height]
+float[Shader Size]
+string[Shader]
+int[Water Type]

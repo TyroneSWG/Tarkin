@@ -1,0 +1,5 @@
+// Animation Priority Map
+// META(CHUNKID:INFO)
+Struct[Map]{String[Name]],Short[Value]}
+
+Map[Priority, -1]

@@ -1,0 +1,9 @@
+// Temporary Attached Object Action Template
+// META(CHUNKID:INFO)
+
+Bool[Is Create Command]
+Rtag[Object Variable]
+Rtag[Hardpoint Variable]
+Byte[Actor ID](default=-1)
+Byte[Create Command Thread ID](default=255)
+Byte[Create Command Action ID](default=255)

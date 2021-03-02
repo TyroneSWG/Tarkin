@@ -1,0 +1,4 @@
+// Lightsaber Blade Open
+// META(CHUNKID:OPEN)
+
+Float[Open Speed](default=0.5)

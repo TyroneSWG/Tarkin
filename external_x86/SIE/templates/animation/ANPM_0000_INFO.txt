@@ -1,0 +1,6 @@
+// Animation Posture Map
+// META(CHUNKID:INFO)
+Struct[Items]{Short[ID],String[Name]}
+
+Short[Posture Count]
+Items[Posture, -1]

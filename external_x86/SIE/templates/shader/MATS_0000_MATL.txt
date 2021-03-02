@@ -1,0 +1,8 @@
+// Material 
+// META(CHUNKID:MATL)
+
+Argbf[Ambient]
+Argbf[Diffuse]
+Argbf[Emissive]
+Argbf[Specular]
+Float[Strength]

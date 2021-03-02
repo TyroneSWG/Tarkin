@@ -1,0 +1,10 @@
+// Client Particle
+// META(CHUNKID:CPAP)
+
+String[Particle] // .PRT Path
+Float[Time] // In Seconds
+Bool[Soft Fade]
+Float[Scale Min](default=1)
+Float[Scale Max](default=1)
+Float[Play Rate Min](default=1)
+Float[Play Rate Max](default=1)

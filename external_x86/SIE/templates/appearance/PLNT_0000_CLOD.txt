@@ -1,0 +1,8 @@
+// Planet Cloud
+// META(CHUNKID:CLOD)
+
+Float[Cloud Rotation Rate]
+String[Cloud Shader] // .SHT Path
+Float[Cloud Radius]
+Float[Cloud U Scale MAIN](default=1) // .SHT MAIN Tag?
+Float[Cloud V Scale MAIN](default=1) // .SHT MAIN Tag?

@@ -1,0 +1,4 @@
+// Vehicle Thruster
+// META(CHUNKID:INFO)
+
+Single[Damage Level Min]

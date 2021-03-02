@@ -1,0 +1,3 @@
+// Affector Passable
+byte[Passable]
+float[Threshold]

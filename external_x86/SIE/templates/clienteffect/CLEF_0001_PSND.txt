@@ -1,0 +1,4 @@
+// Client Sound
+// META(CHUNKID:PSND)
+
+String[Sound] // .SND Path

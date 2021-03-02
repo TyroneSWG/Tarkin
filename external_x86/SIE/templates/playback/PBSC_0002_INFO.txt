@@ -1,0 +1,5 @@
+// Playback Script Template
+// META(CHUNKID:INFO)
+
+Short[Supported Actor Count]
+Byte[Actor Activity Vector, -1]

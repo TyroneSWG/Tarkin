@@ -1,0 +1,4 @@
+// Slot Descriptor
+// META(CHUNKID:DATA)
+
+String[Slot, -1]

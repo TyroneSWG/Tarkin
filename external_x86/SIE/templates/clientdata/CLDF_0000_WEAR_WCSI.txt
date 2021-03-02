@@ -1,0 +1,5 @@
+// Wearable Color Index
+// META(CHUNKID:WCSI)
+
+String[Private Index] // e.g. private/index_color_0
+Int[Color ID] // ID of the Palette color used by the .SHT

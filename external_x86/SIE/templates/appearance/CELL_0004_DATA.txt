@@ -1,0 +1,9 @@
+// Cell
+// META(CHUNKID:DATA)
+
+Int[Number Of Portals]
+Bool[Can See Parent Cell]
+String[Name]
+String[Appearance] // e.g. appearance/ File Path
+Bool[Has Floor]
+String[Floor] // .FLR Path

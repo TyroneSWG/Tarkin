@@ -1,0 +1,6 @@
+// Texture Scroll
+// META(CHUNKID:0000)
+struct[ScrollRate]{Float[U],Float[V]}
+struct[TextureScroll]{Rtag[Texture Tag],ScrollRate[Scroll Rate 1],ScrollRate[Scroll Rate 2]}
+
+TextureScroll[Texture Scroll, -1]

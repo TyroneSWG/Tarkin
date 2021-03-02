@@ -1,0 +1,5 @@
+// Hard Object
+// META(CHUNKID:HOBJ)
+
+String[Appearance] // e.g. appearance/ File Path
+String[Hardpoint]

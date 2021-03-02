@@ -1,0 +1,4 @@
+// Appearance File
+// META(CHUNKID:NAME)
+
+String[Level of Detail File] // .LOD Path

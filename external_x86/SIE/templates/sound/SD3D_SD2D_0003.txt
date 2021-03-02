@@ -1,0 +1,40 @@
+// Sound
+// META(CHUNKID:0003)
+enum[SoundType]{Ambience=0,Explosions=1,Item=2,Movement=3,UserInterface=4,Vehicle=5,Vocalisation=6,Weapon=7,BackgroundMusic=8,PlayerMusic=9,Machine=10,Installation=11,CombatMusic=12,Voiceover=13}
+enum[VolumeType]{FullVolume=0,Once=1,Everytime=2,Second(s)=3}
+enum[PitchType]{BasePitch=0,Once=1,Everytime=2,Second(s)=3}
+enum[PlayOrder]{Random=0,InOrder=1,Random(NoRepeats)=2}
+enum[PlayCount]{OneAtATime=0,AllAtOnce=1}
+enum[WhenTo]{Never=0,Initial=1,Everytime=2}
+enum[Priority]{_1(Highest)=0,_2=1,_3=2,_4=3,_5=4,_6=5,_7=6,_8=7,_9=8,_10(Lowest)=9}
+
+Int[FileCount]
+String[Audio File, FileCount] // Accepted Audio Files: .WAV, .MP3, typically found in: sample/, music/, player_music/sample/, voice/sample/
+Float[Start Delay Min (s)]
+Float[Start Delay Max (s)]
+Float[Fade In Min (s)]
+Float[Fade Out Max (s)]
+Int[Loop Count Min] // Loop/Play: -1 = Infinite = FF FF FF FF
+Int[Loop Count Max] // Loop/Play: -1 = Infinite = FF FF FF FF
+Float[Loop Delay Min (s)]
+Float[Loop Delay Max (s)]
+Float[Fade Out Min (s)]
+Float[Fade Out Max (s)]
+Int[Type](default=0,enum=SoundType)
+Int[Play Order](default=0,enum=PlayOrder)
+Int[Play Count](default=0,enum=PlayCount)
+Int[When to Loop Delay](default=0,enum=WhenTo)
+Int[When to Fade In](default=0,enum=WhenTo)
+Int[When to Fade Out](default=0,enum=WhenTo)
+Int[Vol Sample Rate Type](default=0,enum=VolumeType)
+Float[Vol Sample Rate]
+Float[Vol Min (%)]
+Float[Vol Max (%)]
+Float[Vol Interpol Rate(s)]
+Int[Pitch Sample Rate Type](default=0,enum=PitchType)
+Float[Pitch Sample Rate]
+Float[Pitch Min] // In Half Steps
+Float[Pitch Max] // In Half Steps
+Float[Pitch Interpol Rate (s)]
+Int[Priority](default=8,enum=Priority)
+Float[Soundstage Distance Max (m)]

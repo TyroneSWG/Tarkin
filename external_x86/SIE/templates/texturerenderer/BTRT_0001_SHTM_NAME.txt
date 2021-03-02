@@ -1,0 +1,4 @@
+// Shader Template Map
+// META(CHUNKID:NAME)
+
+String[Shader] // .SHT Path

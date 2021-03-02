@@ -1,0 +1,15 @@
+// Turret
+// META(CHUNKID:TURR)
+
+String[Turret Appearance] // e.g. appearance/ File Path
+String[Turret Hardpoint]
+Float[Turret Jaw Max Rads per Sec]
+String[Barrel Appearance] // e.g. appearance/ File Path
+String[Barrel Hardpoint]
+Float[Barrel Pitch Min Rads]
+Float[Barrel Pitch Max Rads]
+Float[Barrel Pitch max Rads per Sec]
+String[Weapon Object] // Object .IFF Path
+String[Muzzle Hardpoint]
+Float[Speed]
+Float[Expiration Time]

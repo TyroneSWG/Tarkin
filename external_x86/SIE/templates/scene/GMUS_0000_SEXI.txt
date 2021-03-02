@@ -1,0 +1,4 @@
+// Space Combat Exit
+// META(CHUNKID:SEXI)
+
+String[Sound] // .SND Path

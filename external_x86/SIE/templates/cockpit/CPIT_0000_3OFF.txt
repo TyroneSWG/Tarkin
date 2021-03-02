@@ -1,0 +1,4 @@
+// Third Person Camera Offset
+// META(CHUNKID:3OFF)
+
+Vec3[Third Person Camera Offset]

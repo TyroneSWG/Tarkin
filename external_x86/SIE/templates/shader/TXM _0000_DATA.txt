@@ -1,0 +1,5 @@
+// Texture Data
+// META(CHUNKID:DATA)
+
+Bool[Placeholder] // Use Default/Placeholder Texture
+Rtag[Texture Tag]

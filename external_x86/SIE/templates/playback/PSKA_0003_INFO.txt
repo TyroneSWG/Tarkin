@@ -1,0 +1,7 @@
+// Play Skeletal Animation Action
+// META(CHUNKID:INFO)
+
+Short[Actor ID]
+Rtag[Animation Name Variable]
+Bool[Stop Animation On Abort]
+Rtag[Special Attack Effect Variable]

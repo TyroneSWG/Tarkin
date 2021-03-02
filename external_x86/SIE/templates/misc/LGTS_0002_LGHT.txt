@@ -1,0 +1,10 @@
+// Cell Light
+// META(CHUNKID:LGHT)
+
+String[Type] // ambient, parallel, points
+Argbf[Diffuse Color]
+Argbf[Specular Color]
+Mat4x3[Transform]
+Float[Constant Attenuation]
+Float[Linear Attenuation]
+Float[Quadric Attenuation]

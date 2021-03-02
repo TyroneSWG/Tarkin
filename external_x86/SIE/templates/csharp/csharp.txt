@@ -1,0 +1,52 @@
+// META(LANGUAGE:C#)
+       
+struct ShaderCaps
+{
+	private int m_Major;
+	public int Major { get { return m_Major; } set {m_Major = value; }}
+	
+	private int m_Minor;
+	public int Minor { get { return m_Minor; } set {m_Minor = value; }}
+	
+	public ShaderCaps(int code)
+	{
+		m_Major = (code >> 8) & 0xFF;
+		m_Minor = code & 0xFF;
+	}
+}
+
+[RefreshProperties(RefreshProperties.All)]
+class TestObject : IffObject
+{
+	public List<ShaderCaps> caps {get; set;}
+	
+	public TestObject()
+	{
+		caps = new List<ShaderCaps>();
+	}
+	
+	public override void ReadObject(IffStream iffStream)
+    {
+	}
+	
+	public override void WriteObject(IffWriter iffStream)
+    {
+		foreach (var v in caps)
+		{
+			iffStream.Write(((v.Major & 0xFF) << 8) | (v.Minor & 0xFF));
+		}
+	}
+}
+
+public class ChunkReader
+{                
+	public static object Read(IffStream iff)
+	{
+		TestObject result = new TestObject();
+		while (!iff.CurrentChunk.IsFullyRead())
+		{
+			result.caps.Add(new ShaderCaps(iff.GetInt32()));
+		}
+		return result;
+	}
+}

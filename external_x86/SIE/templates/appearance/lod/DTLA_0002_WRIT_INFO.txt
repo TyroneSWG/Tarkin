@@ -1,0 +1,4 @@
+// Write Shape
+// META(CHUNKID:INFO)
+
+Bool[Has Write Shape]

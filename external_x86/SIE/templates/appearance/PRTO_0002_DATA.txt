@@ -1,0 +1,5 @@
+// Portal Data
+// META(CHUNKID:DATA)
+
+Int[Number Of Portals]
+Int[Number Of Cells]

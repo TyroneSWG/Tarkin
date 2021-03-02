@@ -1,0 +1,4 @@
+// Vertex Shader
+// META(CHUNKID:0000)
+
+String[Vertex Shader] // .VSH Path

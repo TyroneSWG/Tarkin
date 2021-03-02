@@ -1,0 +1,17 @@
+// Use Lightning Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Rtag[Appearance Variable]
+Rtag[Hardpoint 0 Variable]
+Rtag[Hardpoint 1 Variable]
+Rtag[Level Variable]
+Rtag[Total Time Variable]
+Rtag[Grow Time Fraction Variable]
+Rtag[Death Time Fraction Variable]
+Rtag[Begin Sound Variable]
+Rtag[Loop Sound Variable]
+Rtag[End Sound Variable]
+Rtag[Beam Rotation Radius Variable]
+Rtag[Beam Rotation Rate Variable]

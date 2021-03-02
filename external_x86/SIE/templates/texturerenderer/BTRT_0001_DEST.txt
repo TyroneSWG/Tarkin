@@ -1,0 +1,7 @@
+// Texture Renderer Destination
+// META(CHUNKID:DEST)
+
+Int[Preferred Width]
+Int[Preferred Height]
+Int[Count]
+Int[Format, Count]

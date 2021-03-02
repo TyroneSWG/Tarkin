@@ -1,0 +1,5 @@
+// Planet Longitude/Latitude
+// META(CHUNKID:INIT)
+
+Int[Number Of Latitude Lines]
+Int[Number Of Longitude Lines]

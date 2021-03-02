@@ -1,0 +1,8 @@
+// Face Target Action Template
+// META(CHUNKID:INFO)
+
+Short[Rotation Actor ID](default=-1)
+Short[Target Actor ID](default=-1)
+Rtag[Max Rotational Speed Variable]
+Rtag[On Target Threshold Angle Variable]
+Rtag[Max Time To Live Variable]

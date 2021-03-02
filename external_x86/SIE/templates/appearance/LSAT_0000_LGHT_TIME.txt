@@ -1,0 +1,5 @@
+// Lightsaber Flicker Duration
+// META(CHUNKID:TIME)
+
+Float[Flicker Time Min](default=0.02)
+Float[Flicker Time Max](default=0.10)

@@ -1,0 +1,6 @@
+// Special Move
+// META(CHUNKID:MOVE)
+
+Byte[Effect ID]
+String[Marker] // .MKR Path
+Float[Time Length] // In Seconds?

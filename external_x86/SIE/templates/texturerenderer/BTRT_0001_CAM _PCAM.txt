@@ -1,0 +1,4 @@
+// Parallel Projection Camera Setup
+// META(CHUNKID:PCAM)
+
+Float[Normalized Length]

@@ -1,0 +1,4 @@
+// Private/Whisper/Instant Message
+// META(CHUNKID:PRVT)
+
+String[Command]

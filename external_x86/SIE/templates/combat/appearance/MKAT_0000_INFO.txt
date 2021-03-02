@@ -1,0 +1,13 @@
+// Marker
+// META(CHUNKID:INFO)
+enum[TextureAnimationMode]{None=0,_2D=1,_3D=2}
+
+Float[Parent Radius Multiplier](default=1.1)
+Float[Parent Radius Addition]
+String[Shader] // .SHT Path
+Byte[x Texture Count]
+Byte[y Texture Count]
+Byte[Texture Start ID](default=1)
+Byte[Texture Stop ID] (default=1)
+Byte[Texture Animation Mode](default=0,enum=TextureAnimationMode)
+Float[Textures Per Second](default=1)

@@ -1,0 +1,4 @@
+// Glow Info 2
+// META(CHUNKID:INF2)
+
+Vec3[Position] // Unsure, needs to be verified

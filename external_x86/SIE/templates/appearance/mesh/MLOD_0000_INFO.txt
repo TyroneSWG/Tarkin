@@ -1,0 +1,4 @@
+// Non Static Mesh Count
+// META(CHUNKID:INFO)
+
+Short[Mesh Count]

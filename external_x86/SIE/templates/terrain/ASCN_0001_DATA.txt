@@ -1,0 +1,4 @@
+// Affector Shader Constant
+int[Family ID]
+int[Feather Clamp Override On/Off]
+float[Clamp]

@@ -1,0 +1,8 @@
+// Homing Target Action Template
+// META(CHUNKID:INFO)
+
+Rtag[Travel Time Variable]
+Rtag[Start Distance Fraction Variable]
+Rtag[End Distance Fraction Variable]
+Short[Attacker Actor ID]
+Short[Defender Actor ID](default=1)

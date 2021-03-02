@@ -1,0 +1,4 @@
+// Texture
+// META(CHUNKID:NAME)
+
+String[Texture] // .DDS Path

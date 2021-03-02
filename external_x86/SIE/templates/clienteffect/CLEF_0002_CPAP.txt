@@ -1,0 +1,6 @@
+// Client Particle
+// META(CHUNKID:CPAP)
+
+String[Particle] // .PRT Path
+Float[Time] // In Seconds
+Bool[Soft Fade]

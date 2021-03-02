@@ -1,0 +1,5 @@
+// Clear Flora Entry
+// META(CHUNKID:CNCF)
+
+Vec3[Center]
+Float[Radius]

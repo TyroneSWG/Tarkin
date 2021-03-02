@@ -1,0 +1,10 @@
+// Play Particle System Action Template
+// META(CHUNKID:INFO)
+
+Short[Emitting Actor ID](default=-1)
+Rtag[Hardpoint Variable] // Unsure if always there, if not comment it out
+Rtag[Appearance Variable]
+Rtag[Time Duration Variable]
+Rtag[Loop Sound Variable]
+Rtag[Start Sound Variable]
+Rtag[Stop Sound Variable]

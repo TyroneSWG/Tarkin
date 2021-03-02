@@ -1,0 +1,42 @@
+// Pass Data
+// META(CHUNKID:DATA)
+enum[ShadeMode]{Flat=0,Gouraud=1}
+enum[FogMode]{Normal=0,Black=1,White=2}
+enum[Compare]{Never=0,Less=1,Equal=2,LessOrEqual=3,Greater=4,GreaterOrEqual=5,NotEqual=6,Always=7}
+enum[BlendOperation]{Add=0,Subtract=1,ReverseSubtract=2,Min=3,Max=4}
+enum[Blend]{Zero=0,One=1,SourceColor=2,InverseSourceColor=3,SourceAlpha=4,InverseSourceAlpha=5,DestinationAlpha=6,InverseDestinationAlpha=7,DestinationColor=8,InverseDestinationColor=9,SourceAlphaSaturate=10}
+enum[WriteColor]{None=0,Blue=1,Green=2,GreenBlue=3,Red=4,RedBlue=5,RedGreen=6,RedGreenBlue=7,Alpha=8,AlphaBlue=9,AlphaGreen=10,AlphaBlueGreen=11,AlphaRed=12, AlphaRedBlue=13,AlphaRedGreen=14,AlphaRedGreenBlue=15}
+enum[StencilOperation]{Keep=0,Zero=1,Replace=2,IncrementSaturate=3,DecrementSaturate=4,Invert=5,IncrementWrap=6,DecrementWrap=7}
+
+Byte[Number Of Stages]
+Byte[Shade Mode](default=1,enum=ShadeMode)
+Byte[Fog Mode](default=0,enum=FogMode)
+Bool[Dither Enabled]
+Bool[Z Buffer Enabled](default=true)
+Bool[Z Buffer Write](default=true)
+Byte[Z Buffer Compare Function](default=3,enum=Compare)
+Bool[Alpha Blend Enable]
+Byte[Alpha Blend Operation](default=0,enum=BlendOperation)
+Byte[Alpha Blend Source](default=4,enum=Blend)
+Byte[Alpha Blend Destination](default=5,enum=Blend)
+Bool[Alpha Test Enabled](default=true)
+Rtag[Alpha Test Reference Tag]
+Byte[Alpha Test Compare Function](default=4,enum=Compare)
+Byte[Write Color](default=0,enum=WriteColor)
+Rtag[Texture Factor Tag]
+Rtag[Texture Factor 2 Tag]
+Rtag[Texture Scroll Tag]
+Bool[Stencil Enabled]
+Bool[Stencil Two Sided Mode]
+Rtag[Stencil Reference Tag]
+Byte[Stencil Compare Function](default=4,enum=Compare)
+Byte[Stencil Pass](default=0,enum=StencilOperation)
+Byte[Stencil Z Fail](default=0,enum=StencilOperation)
+Byte[Stencil Fail](default=0,enum=StencilOperation)
+Byte[Counter Clockwise Stencil Function](default=4,enum=Compare)
+Byte[Counter Clockwise Stencil Pass](default=0,enum=StencilOperation)
+Byte[Counter Clockwise Stencil Z Fail](default=0,enum=StencilOperation)
+Byte[Counter Clockwise Stencil Fail](default=0,enum=StencilOperation)
+Int[Stencil Write Mask]
+Int[Stencil Mask]
+Rtag[Material Tag]

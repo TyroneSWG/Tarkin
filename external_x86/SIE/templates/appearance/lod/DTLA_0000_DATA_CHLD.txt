@@ -1,0 +1,5 @@
+// Mesh Child
+// META(CHUNKID:CHLD)
+
+Int[Mesh ID]
+String[Mesh] // .MSH Path

@@ -1,0 +1,4 @@
+// Lift
+// META(CHUNKID:LIFT)
+
+Float[Lift Radians per Unit Speed]

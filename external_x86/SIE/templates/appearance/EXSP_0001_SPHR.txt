@@ -1,0 +1,5 @@
+// Extent Sphere
+// META(CHUNKID:SPHR)
+
+Vec3[Center]
+Float[Radius]

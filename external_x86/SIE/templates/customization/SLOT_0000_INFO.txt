@@ -1,0 +1,7 @@
+// Slot Rule
+// META(CHUNKID:INFO)
+String[Slot Type] // e.g. chest2
+
+// ANDT = And Rule
+// NEGT = Negate Rule
+// ORTS = Or Rule

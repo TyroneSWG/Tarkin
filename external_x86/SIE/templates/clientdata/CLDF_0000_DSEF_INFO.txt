@@ -1,0 +1,8 @@
+//  Destruction Sequence Effects
+// META(CHUNKID:INFO)
+
+Float[Sequence Time Length] // In Seconds?
+String[Client Effect Split] // .CEF Path
+Float[Split Normal Size]
+String[Client Effect Finale] // .CEF Path
+Float[Finale Normal Size]

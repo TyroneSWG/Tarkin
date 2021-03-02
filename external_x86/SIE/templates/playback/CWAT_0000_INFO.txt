@@ -1,0 +1,6 @@
+// Clone Weapon Action Template
+// META(CHUNKID:INFO)
+
+Short[Actor ID](default=-1)
+Rtag[Fallback Object Template Variable]
+Rtag[Hardpoint Variable]

@@ -1,0 +1,9 @@
+// Second/Supplemental Sun
+// META(CHUNKID:SSUN)
+
+String[Second Sun Shader] // .SHT Path
+Float[Second Sun Size]
+String[Second Sun Glow Shader] // .SHT Path
+Float[Second Sun Glow Size]
+Float[Second Sun Yaw]
+Float[Second Sun Pitch]

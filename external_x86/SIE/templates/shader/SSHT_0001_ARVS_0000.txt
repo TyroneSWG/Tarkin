@@ -1,0 +1,7 @@
+// Alpha Reference Values
+// META(CHUNKID:0000)
+struct[ARVS]{Rtag[Texture Tag],Byte[Value]} 
+
+ARVS[Set, -1]
+
+// Value - 0-255

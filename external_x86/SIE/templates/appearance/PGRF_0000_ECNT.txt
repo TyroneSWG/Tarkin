@@ -1,0 +1,5 @@
+// Path Entrance Count?
+// META(CHUNKID:ECNT)
+
+Int[Count]
+Byte[Value, Count]

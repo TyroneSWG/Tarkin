@@ -1,0 +1,4 @@
+// Indexed Triangle List Vertex
+// META(CHUNKID:VERT)
+
+Vec3[Vertex, -1]

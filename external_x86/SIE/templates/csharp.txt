@@ -1,0 +1,25 @@
+// META(LANGUAGE:C#)
+       
+struct ShaderCaps
+{
+	public int Major {get;set;}
+	public int Minor {get;set;}
+}
+
+class TestObject
+{
+	public List<ShaderCaps> caps {get; set;}
+	public float x {get; set;}
+	public float y {get; set;}
+}
+
+public class ChunkReader
+{                
+	public static object Read(IffStream iff)
+	{
+		TestObject result = new TestObject();
+		result.x = iff.GetFloat();
+		result.y = iff.GetFloat();
+		return result;
+	}
+}

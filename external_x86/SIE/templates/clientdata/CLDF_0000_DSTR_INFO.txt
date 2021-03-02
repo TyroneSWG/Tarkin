@@ -1,0 +1,4 @@
+// Destruction
+// META(CHUNKID:INFO)
+
+String[Client Effect] // .CEF Path

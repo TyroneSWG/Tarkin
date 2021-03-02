@@ -1,0 +1,4 @@
+// Tri Fan Render Commands
+// META(CHUNKID:RTFC)
+
+Int[Vertex Buffer ID]

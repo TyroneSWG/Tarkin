@@ -1,0 +1,4 @@
+// Death
+// META(CHUNKID:DETH)
+
+String[Sound] // .SND Path

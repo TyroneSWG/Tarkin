@@ -1,0 +1,4 @@
+// Hardpoint
+// META(CHUNKID:HPNT)
+
+String[Hardpoint]

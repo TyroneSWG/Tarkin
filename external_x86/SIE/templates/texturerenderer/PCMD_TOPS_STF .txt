@@ -1,0 +1,6 @@
+// Set Shader Texture Factor Operation
+// META(CHUNKID:STF )
+
+Int[Shader ID](default=-1)
+Rtag[Texture Tag]
+String[Texture Variable] // e.g. index_style_freckles

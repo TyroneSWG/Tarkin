@@ -1,0 +1,5 @@
+// Affector Shader Replace
+int[Source Family]
+int[Destination Family]
+int[Feather Clamp Override]
+float[Clamp]

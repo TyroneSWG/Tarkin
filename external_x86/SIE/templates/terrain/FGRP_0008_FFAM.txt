@@ -1,0 +1,9 @@
+//Flora Family
+struct[ShaderChild]{string[Appearance Filename],float[Weight],int[Sway Flora on/off],float[Displacement(m)],float[period],int[Align To Terrain],int[Scale on/off],float[Min Scale],float[Max Scale]}
+int[Family ID]
+string[Family Name]
+rgb[Color]
+float[Density]
+int[FloatsOnWater] // Boolean on/off
+int[ChildCount]
+ShaderChild[Child, ChildCount]

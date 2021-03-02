@@ -1,0 +1,12 @@
+// PTAT shader family
+// META(CHUNKID:SFAM)
+struct[ShaderChild]{string[Shader],float[Weight]}
+
+uint[ID]
+string[Name]("default_shader_name")
+string[Surface type]
+rgb[Display colour]
+float[Size](4.0)
+float[Weight](1.0)
+uint[ChildCount]
+ShaderChild[Child, ChildCount]

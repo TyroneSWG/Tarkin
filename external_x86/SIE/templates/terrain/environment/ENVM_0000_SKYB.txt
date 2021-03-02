@@ -1,0 +1,5 @@
+// Skybox (NGE Only)
+// META(CHUNKID:SKYB)
+
+Bool[Skybox CubeMap]
+String[Skybox Texture Mask]

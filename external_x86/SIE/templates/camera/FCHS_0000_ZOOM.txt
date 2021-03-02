@@ -1,0 +1,4 @@
+// Zoom
+// META(CHUNKID:ZOOM)
+
+Float[Zoom Level, -1] //  From 0 up

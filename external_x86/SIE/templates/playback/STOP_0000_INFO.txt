@@ -1,0 +1,5 @@
+// Stop Action Template
+// META(CHUNKID:INFO)
+
+Short[Thread ID](default=-1)
+Short[Action ID](default=-1)

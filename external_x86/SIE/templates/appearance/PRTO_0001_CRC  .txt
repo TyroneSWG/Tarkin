@@ -1,0 +1,4 @@
+// Object CRC
+// META(CHUNKID:CRC )
+
+Uint[CRC]

@@ -1,0 +1,15 @@
+// Throw Sword Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Rtag[Damage Variable]
+Rtag[Hardpoint Variable]
+Rtag[Yaw Rate Variable]
+Rtag[Throw Speed Variable]
+Rtag[Miss Extent Multiplier Variable]
+Rtag[Hit Extent Multiplier Variable]
+Rtag[Hit Event Variable]
+Rtag[Hit Defender Action Variable]
+Rtag[Catch Time Duration Variable]
+Rtag[Catch Sword Action Variable]

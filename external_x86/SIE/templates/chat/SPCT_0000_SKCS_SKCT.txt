@@ -1,0 +1,5 @@
+// Skills Providing?
+// META(CHUNKID:SKCT)
+
+String[Type]
+String[Skill]

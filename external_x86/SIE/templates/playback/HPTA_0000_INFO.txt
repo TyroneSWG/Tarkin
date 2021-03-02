@@ -1,0 +1,6 @@
+// Hardpoint Target Action Template
+// META(CHUNKID:INFO)
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Rtag[Hardpoint Variable]

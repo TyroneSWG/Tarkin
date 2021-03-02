@@ -1,0 +1,32 @@
+// The template system supports the following primitive types:
+// string, byte, bool, ushort, short, uint, be_uint (big endian), int, float, double, 
+// 8-bit per channel colours: rgb, bgr, rgba, argb
+// 32-bit per channel colours: rgbf, rgbaf, argbf
+// vec2, vec3, vec4, quat, mat3x3, mat4x3, mat4x4
+
+// The primitive types can be used to create structures and arrays using the syntax seen in the example below for v1 WVFM chunks (see .prt)
+// Arrays can be scaled (for example if you need to read a number of floats but the chunk gives the size in bytes) by Type[Name, ArraySize, ScaleFactor]
+// Arrays can read until the end of the chunk by Type[Name, inf] or Type[Name, -1] 
+// Structs are defined like this [color=#ff3333]struct[StructName]{Variable1,Variabl1}[/color]
+// Structs can be nested arrays can not
+
+// As some extra examples of structs, the vector types could have been implemented as follows:
+// struct[rgb]{byte[r],byte[g],byte[b]]}
+// struct[vec2]{float[x],float[y]}
+// struct[vec3]{float[x],float[y],float[z]}
+// struct[vec4]{float[x],float[y],float[z],float[w]}
+// struct[quat]{float[w],float[x],float[y],float[z]}
+// struct[mat3x3]{float[m00],float[m10],float[m20],float[m01],float[m11],float[m21],float[m02],float[m12],float[m22]}
+// struct[mat4x3]{float[m00],float[m10],float[m20],float[m01],float[m11],float[m21],float[m02],float[m12],float[m22],float[m03],float[m13],float[m23]}
+// struct[mat4x4]{float[m00],float[m10],float[m20],float[m30],float[m01],float[m11],float[m21],float[m31],float[m02],float[m12],float[m22],float[m32],float[m03],float[m13],float[m23],float[m33]}
+
+// As of version 3.0, you can create new forms from a template using the "Add Chunk from Template" button.
+// You can append default values to POD types: float[x](0.43), string[y]("hello_swg")
+// You can set the chunk type for the form to be added by adding a meta comment: // META(CHUNKID:DATA)
+
+// Below is an example for particle waveforms:
+struct[ControlPoint]{float[percent],float[value],float[randomMax],float[randomMin]}
+int[interpolationType]
+int[sampleType]
+int[particleCount]
+ControlPoint[points,particleCount]

@@ -1,0 +1,5 @@
+// Textures
+// META(CHUNKID:DATA)
+
+Short[Texture Count]
+String[Texture, -1]

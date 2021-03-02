@@ -1,0 +1,5 @@
+// Extent Box
+// META(CHUNKID:BOX )
+
+Vec3[Max]
+Vec3[Min]

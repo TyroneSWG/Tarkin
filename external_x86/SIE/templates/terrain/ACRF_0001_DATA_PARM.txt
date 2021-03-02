@@ -1,0 +1,4 @@
+// Affector Color Ramp Fractal
+int[Family ID]
+int[Operation]
+string[Ramp]

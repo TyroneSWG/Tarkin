@@ -1,0 +1,4 @@
+// Default Hair
+// META(CHUNKID:DEFA)
+
+String[Default Hair] // Object .IFF Path

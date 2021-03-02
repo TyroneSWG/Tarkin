@@ -1,0 +1,5 @@
+// META(CHUNKID:FLOR)
+struct[FloorTri]{int[CornerIndex1],int[CornerIndex2],int[CornerIndex3],int[Index],int[NIndex1],int[NIndex2],int[NIndex3],vec3[Normal],byte[EdgeType1],byte[EdgeType2],byte[EdgeType3],bool[FallThrough],int[PartTag],int[portalId1],int[portalId2],int[portalId3]}
+
+uint[ChildCount]
+FloorTri[Child, ChildCount]

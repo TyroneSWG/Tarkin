@@ -1,0 +1,5 @@
+// Animation Held Item Map
+// META(CHUNKID:INFO)
+Struct[Items]{String[Prefix],String[Type]}
+
+Items[Item, -1]

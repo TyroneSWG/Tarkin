@@ -1,0 +1,4 @@
+// Combat Exit
+// META(CHUNKID:EXIT)
+
+String[Sound] // .SND Path

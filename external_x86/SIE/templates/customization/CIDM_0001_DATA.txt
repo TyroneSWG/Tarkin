@@ -1,0 +1,8 @@
+// Customization ID Manager
+// META(CHUNKID:DATA)
+Struct[Customization]{Short[ID],String[Type]}
+
+Customization[Customization, -1]
+
+// Types:
+// /blend/, /private/, /shared_owner/

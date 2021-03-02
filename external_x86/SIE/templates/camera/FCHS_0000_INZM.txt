@@ -1,0 +1,4 @@
+// Zoom Integer
+// META(CHUNKID:INZM)
+
+Int[Current Setting]

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScintillaNET>
+	<Language Name="default">
+		<Styles>
+			<Style Name="Default" FontName="Consolas" ForeColor="#BBBBBB"/>
+		</Styles>
+	</Language>
+	
+    <Language Name="sytish">
+        <Indentation TabWidth="4"/>
+        <Lexer LineCommentPrefix=";" >
+			<Keywords List="0">string byte bool ushort short uint int float double rgb bgr rgba argb rgbf rgbaf argbf vec2 vec3 vec4 quat mat3x3 mat4x3 mat4x4 be_uint tag rtag bool2 bool4 enum struct default</Keywords>
+			<Keywords List="1">String Byte Bool Ushort Short Uint Int Float Double Rgb Bgr Rgba Argb Rgbf Rgbaf Argbf Vec2 Vec3 Vec4 Quat Mat3x3 Mat4x3 Mat4x4 Be_uint Tag Rtag Bool2 Bool4 Enum Struct Default</Keywords>
+        </Lexer>
+        <Styles>
+            <Style Name="CHARACTER" ForeColor="#66d9ef"/>
+            <Style Name="NUMBER" ForeColor="#ae75c7"/>
+			<Style Name="COMMENT" ForeColor="#a6e22d"/>
+			<Style Name="COMMENTLINE" ForeColor="#a6e22d"/>			
+			<Style Name="WORD" ForeColor="#52d9e2"/>
+            <Style Name="WORD2" ForeColor="#52d9e2"/>
+            <Style Name="WORD3" ForeColor="#ef6921"/>			
+        </Styles>
+    </Language>
+	
+	<Language Name="xml">
+        <Styles Inherit="True">
+			<SubLanguage Name="HTML">
+				<Style Name="DEFAULT" ForeColor="#66d9ef"/>
+				<Style Name="TAG" ForeColor="#b4b4b4"/>
+				<Style Name="TAGUNKNOWN" ForeColor="#d69d85"/>
+				<Style Name="ATTRIBUTE" ForeColor="#569cd6" />
+				<Style Name="ATTRIBUTEUNKNOWN" />
+				<Style Name="NUMBER" />
+				<Style Name="DOUBLESTRING"  ForeColor="#d69d85"/>
+				<Style Name="SINGLESTRING"  ForeColor="#d69d85"/>
+				<Style Name="OTHER" ForeColor="#b4b4b4"/>
+				<Style Name="COMMENT" ForeColor="Green"/>
+				<Style Name="ENTITY" ForeColor="#b4b4b4"/>
+				<Style Name="TAGEND" ForeColor="#b4b4b4"/>
+				<Style Name="XMLSTART" ForeColor="#b4b4b4"/>
+				<Style Name="XMLEND" ForeColor="#b4b4b4"/>
+				<Style Name="SCRIPT" ForeColor="#b4b4b4"/>
+				<Style Name="ASP" ForeColor="#b4b4b4"/>
+				<Style Name="ASPAT" ForeColor="#b4b4b4"/>
+				<Style Name="CDATA" ForeColor="#b4b4b4"/>
+				<Style Name="QUESTION" ForeColor="#b4b4b4"/>
+				<Style Name="VALUE" ForeColor="#b4b4b4"/>
+				<Style Name="XCCOMMENT" />
+			</SubLanguage>
+            <Style Name="CHARACTER" ForeColor="#66d9ef"/>
+            <Style Name="NUMBER" ForeColor="#ae75c7"/>
+			<Style Name="COMMENT" ForeColor="Green"/>
+			<Style Name="COMMENTLINE" ForeColor="Green"/>			
+			<Style Name="WORD" ForeColor="#52d9e2"/>
+            <Style Name="WORD2" ForeColor="#52d9e2"/>
+            <Style Name="WORD3" ForeColor="#e0e252"/>			
+        </Styles>
+    </Language>
+
+	<Language Name="lua">
+        <Styles Inherit="True">
+			<SubLanguage Name="HTML">
+				<Style Name="DEFAULT" ForeColor="#66d9ef"/>
+				<Style Name="TAG" ForeColor="#b4b4b4"/>
+				<Style Name="TAGUNKNOWN" ForeColor="#d69d85"/>
+				<Style Name="ATTRIBUTE" ForeColor="#569cd6" />
+				<Style Name="ATTRIBUTEUNKNOWN" />
+				<Style Name="NUMBER" />
+				<Style Name="DOUBLESTRING"  ForeColor="#d69d85"/>
+				<Style Name="SINGLESTRING"  ForeColor="#d69d85"/>
+				<Style Name="OTHER" ForeColor="#b4b4b4"/>
+				<Style Name="COMMENT" ForeColor="Green"/>
+				<Style Name="ENTITY" ForeColor="#b4b4b4"/>
+				<Style Name="TAGEND" ForeColor="#b4b4b4"/>
+				<Style Name="XMLSTART" ForeColor="#b4b4b4"/>
+				<Style Name="XMLEND" ForeColor="#b4b4b4"/>
+				<Style Name="SCRIPT" ForeColor="#b4b4b4"/>
+				<Style Name="ASP" ForeColor="#b4b4b4"/>
+				<Style Name="ASPAT" ForeColor="#b4b4b4"/>
+				<Style Name="CDATA" ForeColor="#b4b4b4"/>
+				<Style Name="QUESTION" ForeColor="#b4b4b4"/>
+				<Style Name="VALUE" ForeColor="#b4b4b4"/>
+				<Style Name="XCCOMMENT" />
+			</SubLanguage>
+            <Style Name="CHARACTER" ForeColor="#66d9ef"/>
+            <Style Name="NUMBER" ForeColor="#ae75c7"/>
+			<Style Name="COMMENT" ForeColor="#80FF80"/>
+			<Style Name="COMMENTLINE" ForeColor="#80FF80"/>			
+			<Style Name="WORD" ForeColor="#52d9e2"/>
+            <Style Name="WORD2" ForeColor="#52d9e2"/>
+            <Style Name="WORD3" ForeColor="#e0e252"/>
+	    <style name="String" ForeColor="#66d9ef" />			
+        </Styles>
+    </Language>
+</ScintillaNET>

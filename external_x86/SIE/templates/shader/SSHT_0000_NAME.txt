@@ -1,0 +1,4 @@
+// Effect
+// META(CHUNKID:NAME)
+
+String[Effect] // .EFT Path

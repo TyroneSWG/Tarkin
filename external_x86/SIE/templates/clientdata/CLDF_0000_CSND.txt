@@ -1,0 +1,5 @@
+// Creature Sound
+// META(CHUNKID:CSND)
+
+String[Action]
+String[Sound] // .SND Path

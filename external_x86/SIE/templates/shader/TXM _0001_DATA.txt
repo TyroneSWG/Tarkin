@@ -1,0 +1,13 @@
+// Texture Data
+// META(CHUNKID:DATA)
+enum[TextureAddressMode]{Wrap=0,Mirror=1,Clamp=2,Border=3,MirrorOnce=4,Invalid=5}
+enum[TextureFilterMode]{None=0,Point=1,Linear=2,Anisotropic=3,FlatCubic=4,GaussianCubic=5,Invalid=6}
+
+Rtag[Texture Tag]
+Bool[Placeholder] // Use Default/Placeholder Texture
+Byte[Texture Address U](enum=TextureAddressMode)
+Byte[Texture Address V](enum=TextureAddressMode)
+Byte[Texture Address W](enum=TextureAddressMode)
+Byte[Texture Mipmap Filter](enum=TextureFilterMode)
+Byte[Texture Minifcation Filter](enum=TextureFilterMode)
+Byte[Texture Magnification Filter](enum=TextureFilterMode)

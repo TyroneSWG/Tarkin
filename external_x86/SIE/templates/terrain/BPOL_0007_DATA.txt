@@ -1,0 +1,11 @@
+//Boundary Polygon
+struct[ControlPoint]{float[x],float[y]}
+int[numControlPointSets]
+ControlPoint[points,numControlPointSets]
+int[Feathering Function]
+float[Feathering Distance (m)]
+int[Is Local Water Table]
+float[Height]
+float[Shader Size]
+int[Water Type]
+string[Water Shader]

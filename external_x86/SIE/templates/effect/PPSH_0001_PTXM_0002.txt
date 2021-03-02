@@ -1,0 +1,5 @@
+// Pixel Texture Map
+// META(CHUNKID:0002)
+
+Byte[Texture ID] // 0-15 (t0, t1, etc)
+Rtag[Texture Tag]

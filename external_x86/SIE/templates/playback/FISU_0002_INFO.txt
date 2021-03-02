@@ -1,0 +1,9 @@
+// Fire Setup Action Template
+// META(CHUNKID:INFO)
+enum[TargetMode]{Normal=0,AnimationTargetNoTrack=1,AnimationTargetTrackRicochet=2,AnimationTargetTrackReflect=3,AnimationTargetReflectTarget=4,Location=5}
+
+Short[Attacker Actor ID](default=-1)
+Short[Defender Actor ID](default=-1)
+Short[Target Mode ID](default=0,enum=TargetMode)
+Short[Animation Thread ID](default=-1)
+Short[Animation Action ID](default=-1)

@@ -1,0 +1,4 @@
+// Default Posture ID
+// META(CHUNKID:POST)
+
+Short[Default Posture ID]

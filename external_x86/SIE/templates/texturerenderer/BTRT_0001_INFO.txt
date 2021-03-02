@@ -1,0 +1,4 @@
+// Texture Renderer Count?
+// META(CHUNKID:INFO)
+
+Int[Count?] // Unsure

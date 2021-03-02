@@ -1,0 +1,6 @@
+// Force Feedback
+// META(CHUNKID:FFBK)
+
+String[ForceFeedback] // .FFE Path
+Int[Iterations](default=1)
+Float[Range] // In Meters

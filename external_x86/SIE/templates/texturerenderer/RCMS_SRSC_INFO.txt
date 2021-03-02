@@ -1,0 +1,5 @@
+// Shader Render Set Command
+// META(CHUNKID:INFO)
+
+Int[Shader ID]
+Int[Render Command Count]

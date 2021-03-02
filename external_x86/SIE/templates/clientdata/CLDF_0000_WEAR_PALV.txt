@@ -1,0 +1,6 @@
+// Palette Variable
+// META(CHUNKID:PALV)
+
+String[Private Index] // e.g. private/index_color_0
+String[Palette] // .PAL Path
+Short[Palette ID]

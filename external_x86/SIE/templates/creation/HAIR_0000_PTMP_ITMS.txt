@@ -1,0 +1,4 @@
+// Hair Items/Styles
+// META(CHUNKID:ITMS)
+
+String[Hair, -1] // Object .IFF Path

@@ -1,0 +1,4 @@
+// Radar
+// META(CHUNKID:INFO)
+
+Bool[Has Radar]

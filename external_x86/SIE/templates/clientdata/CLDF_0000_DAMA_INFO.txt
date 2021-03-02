@@ -1,0 +1,6 @@
+// Damage Level
+// META(CHUNKID:INFO)
+
+Float[Damage Level Min]
+Float[Damage Level Max]
+String[Client Effect] // .CEF Path

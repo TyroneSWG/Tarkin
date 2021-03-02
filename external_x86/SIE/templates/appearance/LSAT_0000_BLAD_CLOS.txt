@@ -1,0 +1,4 @@
+// Lightsaber Blade Close
+// META(CHUNKID:CLOS)
+
+Float[Close Speed](default=0.5)

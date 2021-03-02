@@ -1,0 +1,7 @@
+// Boundary Rectangle
+float[Left X]
+Float[Near Z]
+Float[Right X]
+Float[Far Z]
+int[Feathering Function]
+float[Feathering Distance]

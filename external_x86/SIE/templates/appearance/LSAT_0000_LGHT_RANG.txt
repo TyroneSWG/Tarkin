@@ -1,0 +1,5 @@
+// Lightsaber Flicker Range
+// META(CHUNKID:RANG)
+
+Float[Flicker Range Min](default=1)
+Float[Flicker Range Max](default=2)

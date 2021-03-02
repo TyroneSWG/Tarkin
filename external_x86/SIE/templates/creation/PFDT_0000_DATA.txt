@@ -1,0 +1,5 @@
+// Profession Defaults
+// META(CHUNKID:DATA)
+
+String[Profession]
+String[Filename] // e.g. creation/profession_defaults_ .IFF

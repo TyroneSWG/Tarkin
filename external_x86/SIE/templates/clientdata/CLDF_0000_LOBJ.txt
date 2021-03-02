@@ -1,0 +1,17 @@
+// Light Object
+// META(CHUNKID:LOBJ)
+Struct[Color]{Float[r],Float[g],Float[b]}
+
+Int[Type] // 0 - Ambient, 1 - Parallel, 2 - Point
+String[Particle] // .PRT Path
+Color[Color1]
+Color[Color2]
+Float[Range 1]
+Float[Range 2]
+Float[Time 1]
+Float[Time 2]
+Float[Constant Attenuation]
+Float[Linear Attenuation]
+Float[Quadratic Attenuation]
+Int[Time Of Day/OnOff Aware] // Handled in bits, can't be edited here
+Vec3[Position]

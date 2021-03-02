@@ -1,0 +1,4 @@
+// Water/Shore
+// META(CHUNKID:WATR)
+
+String[Sound] // .SND Path

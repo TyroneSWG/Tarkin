@@ -1,0 +1,6 @@
+// Path Edge
+// META(CHUNKID:PEDG)
+struct[Edge]{Int[Index A](default=-1),Int[Index B](default=-1),Float[Lane Width Right],Float[Lane Width Left]}
+
+Int[Count]
+Edge[Path Edge, Count]

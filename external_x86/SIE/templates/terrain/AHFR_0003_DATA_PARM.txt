@@ -1,0 +1,4 @@
+// Affector Height Fractal
+int[Family ID]
+int[Operation]
+float[Y Scale]

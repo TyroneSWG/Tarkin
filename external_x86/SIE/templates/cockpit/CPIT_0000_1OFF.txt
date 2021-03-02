@@ -1,0 +1,4 @@
+// First Person Camera Offset
+// META(CHUNKID:1OFF)
+
+Vec3[First Person Camera Offset]

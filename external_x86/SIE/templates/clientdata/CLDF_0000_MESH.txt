@@ -1,0 +1,4 @@
+// Mesh
+// META(CHUNKID:MESH)
+
+String[Mesh] // e.g. appearance/ File Path

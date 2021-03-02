@@ -1,0 +1,6 @@
+// Vehicle Lightning Effect
+// META(CHUNKID:INFO)
+
+String[Start Hardpoint]
+String[End Hardpoint] 
+String[Appearance] // e.g. appearance/ File Path

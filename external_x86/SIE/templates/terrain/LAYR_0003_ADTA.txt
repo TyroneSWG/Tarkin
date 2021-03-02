@@ -1,0 +1,4 @@
+// Terrain Layer
+int[Invert Boundaries]
+int[Invert Filters]
+int[Layer on/off]

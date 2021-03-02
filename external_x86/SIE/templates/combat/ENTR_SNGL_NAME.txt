@@ -1,0 +1,5 @@
+// Single Script Selector
+// META(CHUNKID:NAME)
+
+String[Playback File] // .PST Path
+Byte[Priority]

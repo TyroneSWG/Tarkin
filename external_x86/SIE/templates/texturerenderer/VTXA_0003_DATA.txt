@@ -1,0 +1,4 @@
+// Vertex Buffer
+// META(CHUNKID:DATA)
+
+// Might be added later

@@ -1,0 +1,7 @@
+// Filter Fractal
+int[Family ID]
+int[Feathering Function]
+float[Feathering Distance]
+float[Low]
+float[High]
+float[Gain] // Leave set to 1

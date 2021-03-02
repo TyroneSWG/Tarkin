@@ -1,0 +1,4 @@
+// Lightsaber Blade Length
+// META(CHUNKID:LGTH)
+
+Float[Length](default=1.8)

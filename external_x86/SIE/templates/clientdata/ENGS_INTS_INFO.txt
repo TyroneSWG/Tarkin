@@ -1,0 +1,11 @@
+// Interpolated Sound
+// META(CHUNKID:INFO)
+
+String[Hardpoint]
+String[Sound] // .SND Path
+Float[Volume Min]
+Float[Volume Max]
+Float[Pitch Delta Min]
+Float[Pitch Delta Max]
+Float[Interpolation Rate Up]
+Float[Interpolation Rate Down]

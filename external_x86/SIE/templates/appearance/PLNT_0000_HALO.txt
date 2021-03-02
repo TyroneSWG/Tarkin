@@ -1,0 +1,5 @@
+// Planet Halo
+// META(CHUNKID:HALO)
+
+String[Halo Shader] // .SHT Path
+Float[Halo Scale]

@@ -1,0 +1,4 @@
+// Lightsaber Blade Shader
+// META(CHUNKID:SHDR)
+
+String[Blade](default=shader/lightsaberblade.sht) // .SHT Path

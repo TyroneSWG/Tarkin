@@ -1,0 +1,11 @@
+// Child
+// META(CHUNKID:CHLD)
+
+String[Appearance] // e.g. appearance/ File Path
+Vec3[Position]
+Vec3[Orientation]
+Vec3[Rotations per Second]
+Vec3[Seesaws Per Second]
+Float[Seesaw Magnitude]
+Vec3[Spring Offset]
+Float[Springs Per Second]

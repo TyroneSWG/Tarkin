@@ -1,0 +1,8 @@
+// Palette
+// META(CHUNKID:PAL )
+
+String[Color Index] // e.g. index_color_0
+Byte[Is Color Private]
+Rtag[Texture Tag]
+String[Palette] // .PAL Path
+Int[Palette ID] // 0-255 (Depending on Palette size)

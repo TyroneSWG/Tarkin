@@ -1,0 +1,3 @@
+// Affector Color Constant
+int[Operation]
+rgb[Color]

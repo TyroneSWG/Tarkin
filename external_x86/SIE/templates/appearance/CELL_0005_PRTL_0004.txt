@@ -1,0 +1,10 @@
+// Cell Portal
+// META(CHUNKID:0004)
+
+Bool[Is Passable]
+Int[Geometry ID]
+Bool[Is Geometry Winding Clockwise]
+Int[Unused]
+String[Door Style] // e.g. thm_spc_asteroid_door
+Bool[Has Door Hardpoint]
+Mat4x3[Door Hardpoint]

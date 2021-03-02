@@ -1,0 +1,5 @@
+// Path Entrance String?
+// META(CHUNKID:ESTR)
+
+Int[Count]
+Byte[Value, Count]

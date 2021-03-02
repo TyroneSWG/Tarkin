@@ -1,0 +1,5 @@
+// Position/Orientation
+// META(CHUNKID:PSOR)
+
+Vec3[Position]
+Vec3[Orientation]

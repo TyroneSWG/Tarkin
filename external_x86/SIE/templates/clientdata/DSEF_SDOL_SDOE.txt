@@ -1,0 +1,6 @@
+// Ship Destruction Object E.. ?
+// META(CHUNKID:SDOE)
+
+String[Object] // Object .IFF Path
+String[Appearance] // e.g. appearance/ File Path 
+String[Hardpoint]

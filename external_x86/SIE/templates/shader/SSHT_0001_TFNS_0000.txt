@@ -1,0 +1,5 @@
+// Texture Factors
+// META(CHUNKID:0000)
+struct[TFNS]{Rtag[Texture Tag],Rgba[Texture Factor]} 
+
+TFNS[Factor, -1]

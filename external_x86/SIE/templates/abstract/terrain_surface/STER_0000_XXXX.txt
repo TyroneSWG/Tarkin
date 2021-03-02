@@ -1,0 +1,13 @@
+// First XXXX - Cover Parameter
+// META(CHUNKID:XXXX)
+
+String[Parameter Name]
+Bool[Is On]
+Byte[Ignore] // Space (Char(20))
+Float[Cover Parameter]
+
+
+// Second XXXX - Surface Type Parameter (Comment out the above values, if you want to view the second XXXX Chunk)
+String[Parameter Name]
+Bool[Is On]
+String[Surface Type]

@@ -1,0 +1,4 @@
+// Non Static Mesh
+// META(CHUNKID:NAME)
+
+String[Mesh] // .MGN Path

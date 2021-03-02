@@ -1,0 +1,5 @@
+// Filter Height
+float[Low Height]
+float[High Height]
+int[Feathering Function]
+float[Feathering Distance]

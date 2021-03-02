@@ -1,0 +1,4 @@
+// Shader Capability Levels
+// META(CHUNKID:SCAP)
+
+Int[Shader Version, -1]

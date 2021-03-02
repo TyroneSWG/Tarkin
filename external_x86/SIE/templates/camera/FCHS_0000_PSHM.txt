@@ -1,0 +1,5 @@
+// Offset Posture State Map
+// META(CHUNKID:PSHM)
+Struct[Map]{Int[Posture],Int[State],Float[Offset]}
+
+Map[Map, -1]
